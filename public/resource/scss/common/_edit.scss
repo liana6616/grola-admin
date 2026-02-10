@@ -1,0 +1,33 @@
+.edit {
+    position: relative;
+    height: 0;
+    z-index: 20;
+    > div {
+        position: absolute;
+        bottom: 100%;
+        left: 0px;
+        margin-bottom: 15px;
+    }
+    a {
+        color: #fff !important;
+        background: #9c9c9c;
+        border-radius: 7px;
+        padding: 3px 9px;
+        line-height: 1.4em;
+        display: inline-block;
+        margin-right: 5px;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 11px !important;
+        font-weight: 400;
+        line-height: 1em;
+        -webkit-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+        z-index: 10;
+        letter-spacing: 0.1px;
+        border: 1px solid #d0d0d0;
+        &:hover {
+           opacity: 0.8;
+        }
+    }
+}

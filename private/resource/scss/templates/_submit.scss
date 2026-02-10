@@ -1,0 +1,11 @@
+@use '../common/variables' as *;
+@use '../common/fonts' as *;
+
+.submit_block {
+	& button {
+		min-width: 200px;
+	}
+	&:not(:first-child) {
+		margin-top: 30px;
+	}
+}

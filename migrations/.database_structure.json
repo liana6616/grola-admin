@@ -1,0 +1,3016 @@
+{
+    "tables": {
+        "admins": {
+            "create_sql": "CREATE TABLE `admins` (\n  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,\n  `login` varchar(255) DEFAULT NULL COMMENT '\u041b\u043e\u0433\u0438\u043d \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f',\n  `password` varchar(255) DEFAULT NULL COMMENT '\u041f\u0430\u0440\u043e\u043b\u044c (\u0437\u0430\u0448\u0438\u0444\u0440\u043e\u0432\u0430\u043d)',\n  `name` varchar(255) DEFAULT NULL COMMENT '\u0418\u043c\u044f \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f',\n  `phone` varchar(20) DEFAULT NULL COMMENT '\u0422\u0435\u043b\u0435\u0444\u043e\u043d',\n  `image` varchar(255) DEFAULT NULL COMMENT '\u0424\u043e\u0442\u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f',\n  `class_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u043a\u043b\u0430\u0441\u0441\u0430 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f',\n  `date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0414\u0430\u0442\u0430 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438',\n  `date_visit` datetime DEFAULT NULL COMMENT '\u0414\u0430\u0442\u0430 \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0433\u043e \u0432\u0438\u0437\u0438\u0442\u0430',\n  `hash` varchar(255) DEFAULT NULL COMMENT '\u0425\u044d\u0448',\n  `hash_forgot` varchar(255) DEFAULT NULL COMMENT '\u0425\u044d\u0448 \u0434\u043b\u044f \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u043f\u0430\u0440\u043e\u043b\u044f',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_user_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f',\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `id` (`id`),\n  KEY `hash` (`hash`),\n  KEY `class` (`class_id`),\n  KEY `login` (`login`),\n  KEY `phone` (`phone`),\n  KEY `date_visit` (`date_visit`),\n  KEY `edit_user_id` (`edit_user_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COMMENT='\u0410\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u044b'",
+            "columns": {
+                "id": {
+                    "type": "int(11) unsigned",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "login": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "password": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "phone": {
+                    "type": "varchar(20)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "class_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "date_visit": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "hash": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "hash_forgot": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_user_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "admins_class": {
+            "create_sql": "CREATE TABLE `admins_class` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043a\u043b\u0430\u0441\u0441\u0430',\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COMMENT='\u041a\u043b\u0430\u0441\u0441\u044b \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u043e\u0432'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "admins_ip": {
+            "create_sql": "CREATE TABLE `admins_ip` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT 'IP-\u0430\u0434\u0440\u0435\u0441',\n  `text` varchar(255) DEFAULT NULL COMMENT '\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_user_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_user_id`)\n) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COMMENT='\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0434\u043e\u0441\u0442\u0443\u043f\u0430 \u043f\u043e IP'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_user_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "advantages": {
+            "create_sql": "CREATE TABLE `advantages` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043f\u0440\u0435\u0438\u043c\u0443\u0449\u0435\u0441\u0442\u0432\u0430',\n  `text` varchar(511) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `rate` tinyint(4) DEFAULT '0',\n  `show` tinyint(1) DEFAULT '1',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='\u041f\u0440\u0435\u0438\u043c\u0443\u0449\u0435\u0441\u0442\u0432\u0430 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "varchar(511)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "tinyint(4)",
+                    "null": "YES",
+                    "key": "",
+                    "default": "0",
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": "1",
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "articles": {
+            "create_sql": "CREATE TABLE `articles` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `section_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0440\u0430\u0437\u0434\u0435\u043b\u0430',\n  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0441\u0442\u0430\u0442\u044c\u0438',\n  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0441\u0442\u0430\u0442\u044c\u044e',\n  `date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0414\u0430\u0442\u0430 \u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438',\n  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `image_preview` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u043f\u0440\u0435\u0432\u044c\u044e',\n  `text` mediumtext COLLATE utf8mb4_unicode_ci COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `text2` text COLLATE utf8mb4_unicode_ci COMMENT '\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `textshort` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041a\u0440\u0430\u0442\u043a\u043e\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043f\u0440\u0435\u0432\u044c\u044e',\n  `rate` tinyint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  `title` varchar(1024) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u0434\u043b\u044f SEO',\n  `keywords` varchar(1024) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430 \u0434\u043b\u044f SEO',\n  `description` varchar(1024) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f SEO',\n  `is_draft` tinyint(1) DEFAULT '0' COMMENT '\u0424\u043b\u0430\u0433 \u0447\u0435\u0440\u043d\u043e\u0432\u0438\u043a\u0430 (1 - \u0447\u0435\u0440\u043d\u043e\u0432\u0438\u043a, 0 - \u0447\u0438\u0441\u0442\u043e\u0432\u0438\u043a)',\n  `original_id` int(11) DEFAULT NULL COMMENT 'ID \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u043e\u0433\u043e \u0447\u0438\u0441\u0442\u043e\u0432\u0438\u043a\u0430',\n  PRIMARY KEY (`id`),\n  KEY `section_id` (`section_id`),\n  KEY `date` (`date`,`show`),\n  KEY `section_date_show_idx` (`section_id`,`date`,`show`),\n  KEY `edit_user_id` (`edit_admin_id`),\n  KEY `is_draft_idx` (`is_draft`),\n  KEY `draft_id_idx` (`original_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPRESSED COMMENT='\u0421\u0442\u0430\u0442\u044c\u0438'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "section_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "url": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image_preview": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "mediumtext",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text2": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "textshort": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "tinyint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "title": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "keywords": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "description": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "is_draft": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": "0",
+                    "extra": ""
+                },
+                "original_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "articles_sections": {
+            "create_sql": "CREATE TABLE `articles_sections` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0440\u0430\u0437\u0434\u0435\u043b\u0430',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COMMENT='\u0420\u0430\u0437\u0434\u0435\u043b\u044b \u0441\u0442\u0430\u0442\u0435\u0439'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "banners": {
+            "create_sql": "CREATE TABLE `banners` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `video` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0412\u0438\u0434\u0435\u043e',\n  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043d\u0430 \u0431\u0430\u043d\u043d\u0435\u0440\u0435',\n  `text` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0422\u0435\u043a\u0441\u0442 \u043d\u0430 \u0431\u0430\u043d\u043d\u0435\u0440\u0435',\n  `price` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0411\u043b\u043e\u043a \u0441 \u0446\u0435\u043d\u043e\u0439 \u043d\u0430 \u0431\u0430\u043d\u043d\u0435\u0440\u0435',\n  `button_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0422\u0435\u043a\u0441\u0442 \u043d\u0430 \u043a\u043d\u043e\u043f\u043a\u0435',\n  `button_link` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0421\u0441\u044b\u043b\u043a\u0430 \u0441 \u043a\u043d\u043e\u043f\u043a\u0438',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='\u0411\u0430\u043d\u043d\u0435\u0440\u044b'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "video": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "price": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "button_name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "button_link": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "catalog": {
+            "create_sql": "CREATE TABLE `catalog` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `category_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438',\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0442\u043e\u0432\u0430\u0440\u0430',\n  `url` varchar(255) DEFAULT NULL COMMENT '\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0442\u043e\u0432\u0430\u0440',\n  `image_preview` varchar(255) DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u043f\u0440\u0435\u0432\u044c\u044e',\n  `price` int(11) DEFAULT NULL COMMENT '\u0421\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c',\n  `price_old` int(11) DEFAULT NULL COMMENT '\u0421\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c \u0434\u043e \u0441\u043a\u0438\u0434\u043a\u0438',\n  `count` int(11) DEFAULT NULL COMMENT '\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0435 \u043a\u043e\u043b-\u0432\u043e \u0442\u043e\u0432\u0430\u0440\u0430',\n  `text` text COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `text2` text COMMENT '\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `textshort` text COMMENT '\u041a\u0440\u0430\u0442\u043a\u043e\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `manufacturer_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044f',\n  `action` tinyint(1) DEFAULT NULL COMMENT '\u0428\u0438\u043b\u044c\u0434\u0438\u043a \"\u0410\u043a\u0446\u0438\u044f\"',\n  `new` tinyint(1) DEFAULT NULL COMMENT '\u0428\u0438\u043b\u044c\u0434\u0438\u043a \"\u041d\u043e\u0432\u0438\u043d\u043a\u0430\"',\n  `popular` tinyint(1) DEFAULT NULL COMMENT '\u0428\u0438\u043b\u044c\u0434\u0438\u043a \"\u041f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u043e\u0435\"',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  `title` varchar(1024) DEFAULT NULL COMMENT '\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u0434\u043b\u044f SEO',\n  `keywords` varchar(1024) DEFAULT NULL COMMENT '\u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430 \u0434\u043b\u044f SEO',\n  `description` varchar(1024) DEFAULT NULL COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f SEO',\n  `is_draft` tinyint(1) DEFAULT '0' COMMENT '\t\u0424\u043b\u0430\u0433 \u0447\u0435\u0440\u043d\u043e\u0432\u0438\u043a\u0430 (1 - \u0447\u0435\u0440\u043d\u043e\u0432\u0438\u043a, 0 - \u0447\u0438\u0441\u0442\u043e\u0432\u0438\u043a)\t',\n  `original_id` int(11) DEFAULT NULL COMMENT 'ID \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u043e\u0433\u043e \u0447\u0438\u0441\u0442\u043e\u0432\u0438\u043a\u0430',\n  PRIMARY KEY (`id`),\n  KEY `new` (`new`,`popular`,`action`),\n  KEY `status_rate_idx` (`show`,`rate`,`new`,`popular`,`action`),\n  KEY `idx_category_show_rate` (`category_id`,`show`,`rate`) COMMENT '\u0414\u043b\u044f \u0441\u043f\u0438\u0441\u043a\u0430 \u0442\u043e\u0432\u0430\u0440\u043e\u0432 \u043f\u043e \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f\u043c',\n  KEY `manufacturer_id` (`manufacturer_id`),\n  KEY `edit_user_id` (`edit_admin_id`),\n  KEY `is_draft` (`is_draft`),\n  KEY `original_id` (`original_id`),\n  FULLTEXT KEY `ft_name_text` (`name`,`textshort`,`text`,`text2`,`title`,`keywords`,`description`)\n) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPRESSED COMMENT='\u041a\u0430\u0442\u0430\u043b\u043e\u0433 \u0442\u043e\u0432\u0430\u0440\u043e\u0432'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "category_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "url": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image_preview": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "price": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "price_old": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "count": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text2": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "textshort": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "manufacturer_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "action": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "new": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "popular": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "title": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "keywords": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "description": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "is_draft": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": "0",
+                    "extra": ""
+                },
+                "original_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "catalog_params": {
+            "create_sql": "CREATE TABLE `catalog_params` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `catalog_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0442\u043e\u0432\u0430\u0440\u0430',\n  `param_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u0430',\n  `value` varchar(1024) DEFAULT NULL COMMENT '\u0417\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u0430',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8mb4 COMMENT='\u0417\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432 \u0442\u043e\u0432\u0430\u0440\u043e\u0432'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "catalog_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "param_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "value": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "catalog_prices": {
+            "create_sql": "CREATE TABLE `catalog_prices` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `catalog_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0442\u043e\u0432\u0430\u0440\u0430',\n  `weight` double DEFAULT NULL COMMENT '\u0412\u0435\u0441 \u0442\u043e\u0432\u0430\u0440\u0430',\n  `price` int(11) DEFAULT NULL COMMENT '\u0421\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c',\n  `count` int(11) DEFAULT NULL COMMENT '\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0435 \u043a\u043e\u043b-\u0432\u043e \u0442\u043e\u0432\u0430\u0440\u0430',\n  `unit` varchar(50) DEFAULT NULL COMMENT '\u0415\u0434\u0438\u043d\u0438\u0446\u0430 \u0438\u0437\u043c\u0435\u0440\u0435\u043d\u0438\u044f',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `catalog_id` (`catalog_id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COMMENT='\u0421\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u0438 \u0442\u043e\u0432\u0430\u0440\u043e\u0432 \u0432 \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u043e\u0442 \u0432\u0435\u0441\u0430'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "catalog_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "weight": {
+                    "type": "double",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "price": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "count": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "unit": {
+                    "type": "varchar(50)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "categories": {
+            "create_sql": "CREATE TABLE `categories` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `parent` int(11) DEFAULT NULL COMMENT '\u0420\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0430\u044f \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f',\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438',\n  `name_menu` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 \u0432 \u043c\u0435\u043d\u044e',\n  `url` varchar(255) DEFAULT NULL COMMENT '\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044e',\n  `image` varchar(255) DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `text` text COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `template_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0448\u0430\u0431\u043b\u043e\u043d\u0430 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `title` varchar(1024) DEFAULT NULL COMMENT '\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u0434\u043b\u044f SEO',\n  `keywords` varchar(1024) DEFAULT NULL COMMENT '\u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430 \u0434\u043b\u044f SEO',\n  `description` varchar(1024) DEFAULT NULL COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f SEO',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `parent` (`parent`),\n  KEY `template_id` (`template_id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COMMENT='\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 \u0442\u043e\u0432\u0430\u0440\u043e\u0432'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "parent": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "name_menu": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "url": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "template_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "title": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "keywords": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "description": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "changes_log": {
+            "create_sql": "CREATE TABLE `changes_log` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `table_name` varchar(255) NOT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0442\u0430\u0431\u043b\u0438\u0446\u044b',\n  `record_id` int(11) DEFAULT NULL COMMENT 'ID \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u043d\u043e\u0439 \u0437\u0430\u043f\u0438\u0441\u0438',\n  `field_name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u043d\u043e\u0433\u043e \u043f\u043e\u043b\u044f',\n  `action` enum('INSERT','UPDATE','DELETE','PUBLICATION') NOT NULL COMMENT '\u0422\u0438\u043f \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f',\n  `old_value` longtext COMMENT '\u0421\u0442\u0430\u0440\u043e\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435',\n  `new_value` longtext COMMENT '\u041d\u043e\u0432\u043e\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435',\n  `admin_id` int(11) DEFAULT NULL COMMENT 'ID \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430 (\u0435\u0441\u043b\u0438 \u0435\u0441\u0442\u044c)',\n  `admin_name` varchar(255) DEFAULT NULL COMMENT '\u0418\u043c\u044f \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  `admin_ip` varchar(45) DEFAULT NULL COMMENT 'IP \u0430\u0434\u0440\u0435\u0441 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  `comment` text COMMENT '\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439 \u043a \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044e',\n  `change_type` varchar(50) DEFAULT 'field_change' COMMENT '\u0422\u0438\u043f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f (field_change, publication)',\n  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  PRIMARY KEY (`id`),\n  KEY `idx_table_record` (`table_name`,`record_id`),\n  KEY `idx_field` (`field_name`),\n  KEY `idx_action` (`action`),\n  KEY `idx_created_at` (`created_at`),\n  KEY `idx_admin` (`admin_id`),\n  KEY `idx_change_type` (`change_type`)\n) ENGINE=InnoDB AUTO_INCREMENT=3140 DEFAULT CHARSET=utf8mb4 COMMENT='\u041b\u043e\u0433 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439 \u0432 \u0431\u0430\u0437\u0435 \u0434\u0430\u043d\u043d\u044b\u0445'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "table_name": {
+                    "type": "varchar(255)",
+                    "null": "NO",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "record_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "field_name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "action": {
+                    "type": "enum('INSERT','UPDATE','DELETE','PUBLICATION')",
+                    "null": "NO",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "old_value": {
+                    "type": "longtext",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "new_value": {
+                    "type": "longtext",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "admin_name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "admin_ip": {
+                    "type": "varchar(45)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "comment": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "change_type": {
+                    "type": "varchar(50)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": "field_change",
+                    "extra": ""
+                },
+                "created_at": {
+                    "type": "timestamp",
+                    "null": "NO",
+                    "key": "MUL",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                }
+            }
+        },
+        "directories": {
+            "create_sql": "CREATE TABLE `directories` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0441\u043f\u0440\u0430\u0432\u043e\u0447\u043d\u0438\u043a\u0430',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COMMENT='\u0421\u043f\u0440\u0430\u0432\u043e\u0447\u043d\u0438\u043a\u0438'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "directories_values": {
+            "create_sql": "CREATE TABLE `directories_values` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `directory_id` int(11) DEFAULT NULL COMMENT 'ID \u0441\u043f\u0440\u0430\u0432\u043e\u0447\u043d\u0438\u043a\u0430',\n  `value` varchar(255) DEFAULT NULL COMMENT '\u0417\u043d\u0430\u0447\u0435\u043d\u0438\u0435',\n  `image` varchar(255) DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `directory_id` (`directory_id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=150 DEFAULT CHARSET=utf8mb4 COMMENT='\u041d\u0430\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0435 \u0441\u043f\u0440\u0430\u0432\u043e\u0447\u043d\u0438\u043a\u043e\u0432'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "directory_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "value": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "faq": {
+            "create_sql": "CREATE TABLE `faq` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `section_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0440\u0430\u0437\u0434\u0435\u043b\u0430',\n  `quest` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0412\u043e\u043f\u0440\u043e\u0441',\n  `answer` text COLLATE utf8_unicode_ci COMMENT '\u041e\u0442\u0432\u0435\u0442',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `section` (`section_id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='\u0412\u043e\u043f\u0440\u043e\u0441-\u043e\u0442\u0432\u0435\u0442'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "section_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "quest": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "answer": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "faq_sections": {
+            "create_sql": "CREATE TABLE `faq_sections` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0440\u0430\u0437\u0434\u0435\u043b\u0430',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0414\u0430\u0442\u0430 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='\u0420\u0430\u0437\u0434\u0435\u043b\u044b FAQ'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "files": {
+            "create_sql": "CREATE TABLE `files` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041a \u0447\u0435\u043c\u0443 \u043f\u0440\u0438\u0432\u044f\u0437\u043a\u0430 (\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430, \u0442\u043e\u0432\u0430\u0440, \u043d\u043e\u0432\u043e\u0441\u0442\u044c \u0438 \u0442.\u0434.)',\n  `ids` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0434\u043b\u044f \u043f\u0440\u0438\u0432\u044f\u0437\u043a\u0438',\n  `file` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0424\u0430\u0439\u043b',\n  `filename` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0444\u0430\u0439\u043b\u0430',\n  `extension` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 \u0444\u0430\u0439\u043b\u0430',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `ids` (`ids`),\n  KEY `edit_admin_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='\u0424\u0430\u0439\u043b\u044b'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "type": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "ids": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "file": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "filename": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "extension": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "finished_products": {
+            "create_sql": "CREATE TABLE `finished_products` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `parent` int(11) DEFAULT NULL COMMENT '\u0420\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0430\u044f \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f',\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `id` (`id`,`parent`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COMMENT='\u0413\u043e\u0442\u043e\u0432\u0430\u044f \u043f\u0440\u043e\u0434\u0443\u043a\u0446\u0438\u044f'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "parent": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "finished_products_catalog": {
+            "create_sql": "CREATE TABLE `finished_products_catalog` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `product_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0433\u043e\u0442\u043e\u0432\u043e\u0439 \u043f\u0440\u043e\u0434\u0443\u043a\u0446\u0438\u0438',\n  `catalog_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0442\u043e\u0432\u0430\u0440\u0430',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `Catalog_id` (`catalog_id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb4 COMMENT='\u041f\u0440\u0438\u0432\u044f\u0437\u043a\u0430 \u0442\u043e\u0432\u0430\u0440\u043e\u0432 \u043a \u0433\u043e\u0442\u043e\u0432\u043e\u0439 \u043f\u0440\u043e\u0434\u0443\u043a\u0446\u0438\u0438'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "product_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "catalog_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "forms": {
+            "create_sql": "CREATE TABLE `forms` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `type_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0444\u043e\u0440\u043c\u044b \u0437\u0430\u044f\u0432\u043a\u0438',\n  `user_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f',\n  `name` varchar(255) DEFAULT NULL COMMENT '\u0424\u0418\u041e \u043a\u043b\u0438\u0435\u043d\u0442\u0430',\n  `phone` varchar(255) DEFAULT NULL COMMENT '\u0422\u0435\u043b\u0435\u0444\u043e\u043d \u043a\u043b\u0438\u0435\u043d\u0442\u0430',\n  `email` varchar(255) DEFAULT NULL COMMENT '\u042d\u043b. \u0430\u0434\u0440\u0435\u0441 \u043a\u043b\u0438\u0435\u043d\u0442\u0430',\n  `text` text COMMENT '\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u043e\u0442 \u043a\u043b\u0438\u0435\u043d\u0442\u0430',\n  `date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0414\u0430\u0442\u0430 \u0437\u0430\u044f\u0432\u043a\u0438',\n  `link` varchar(1024) DEFAULT NULL COMMENT '\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u0441 \u0444\u043e\u0440\u043c\u043e\u0439',\n  `ip` varchar(255) DEFAULT NULL COMMENT 'IP-\u0430\u0434\u0440\u0435\u0441 \u043a\u043b\u0438\u0435\u043d\u0442\u0430',\n  `status` tinyint(3) DEFAULT '0' COMMENT '\u0421\u0442\u0430\u0442\u0443\u0441 \u0437\u0430\u044f\u0432\u043a\u0438',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `type` (`type_id`),\n  KEY `user_id` (`user_id`),\n  KEY `date` (`date`),\n  KEY `status` (`status`),\n  KEY `date_status_idx` (`date`,`status`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='\u0417\u0430\u044f\u0432\u043a\u0438'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "type_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "user_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "phone": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "email": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "link": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "ip": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "status": {
+                    "type": "tinyint(3)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": "0",
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "forms_type": {
+            "create_sql": "CREATE TABLE `forms_type` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0444\u043e\u0440\u043c\u044b',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='\u0424\u043e\u0440\u043c\u044b \u0437\u0430\u044f\u0432\u043e\u043a'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "gallery": {
+            "create_sql": "CREATE TABLE `gallery` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `type` varchar(255) DEFAULT NULL COMMENT '\u041a \u0447\u0435\u043c\u0443 \u043f\u0440\u0438\u0432\u044f\u0437\u043a\u0430 (\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430, \u0442\u043e\u0432\u0430\u0440, \u043d\u043e\u0432\u043e\u0441\u0442\u044c \u0438 \u0442.\u0434.)',\n  `ids` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0434\u043b\u044f \u043f\u0440\u0438\u0432\u044f\u0437\u043a\u0438',\n  `image` varchar(255) DEFAULT NULL COMMENT '\u0411\u043e\u043b\u044c\u0448\u043e\u0435 \u043e\u0431\u0440\u0435\u0437\u0430\u043d\u043d\u043e\u0435 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `image_small` varchar(255) DEFAULT NULL COMMENT '\u041c\u0430\u043b\u0435\u043d\u044c\u043a\u043e\u0435 \u043e\u0431\u0440\u0435\u0437\u0430\u043d\u043d\u043e\u0435 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `image_origin` varchar(255) DEFAULT NULL COMMENT '\u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u044c\u043d\u043e\u0435 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `alt` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0434\u043b\u044f SEO',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `ids` (`ids`),\n  KEY `type` (`type`),\n  KEY `edit_admin_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COMMENT='\u0424\u043e\u0442\u043e\u0433\u0430\u043b\u0435\u0440\u0435\u044f'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "type": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "ids": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image_small": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image_origin": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "alt": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "main": {
+            "create_sql": "CREATE TABLE `main` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `num1` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `txt1` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `num2` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `txt2` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `num3` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `txt3` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `about_text` text COLLATE utf8_unicode_ci,\n  `about_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `about_position` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `about_image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `about_btn` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `info_text` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `info_image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `faq_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `faq_text` text COLLATE utf8_unicode_ci,\n  `opt_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `opt_text` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `opt_image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='\u0413\u043b\u0430\u0432\u043d\u0430\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "num1": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "txt1": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "num2": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "txt2": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "num3": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "txt3": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "about_text": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "about_name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "about_position": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "about_image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "about_btn": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "info_text": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "info_image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "faq_name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "faq_text": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "opt_name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "opt_text": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "opt_image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "manufacturers": {
+            "create_sql": "CREATE TABLE `manufacturers` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435',\n  `image` varchar(255) DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `text` text COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `rate` tinyint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442\u0435',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COMMENT='\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u0438'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "tinyint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "messengers": {
+            "create_sql": "CREATE TABLE `messengers` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435',\n  `image` varchar(255) DEFAULT NULL COMMENT '\u0418\u043a\u043e\u043d\u043a\u0430',\n  `image_hover` varchar(255) DEFAULT NULL COMMENT '\u0418\u043a\u043e\u043d\u043a\u0430 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438',\n  `image2` varchar(255) DEFAULT NULL COMMENT '\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u0438\u043a\u043e\u043d\u043a\u0430',\n  `image2_hover` varchar(255) DEFAULT NULL COMMENT '\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u0438\u043a\u043e\u043d\u043a\u0430 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438',\n  `link` varchar(255) DEFAULT NULL COMMENT '\u0421\u0441\u044b\u043b\u043a\u0430',\n  `rate` tinyint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='\u041c\u0435\u0441\u0441\u0435\u043d\u0434\u0436\u0435\u0440\u044b \u0438 \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0435 \u0441\u0435\u0442\u0438'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image_hover": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image2": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image2_hover": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "link": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "tinyint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "news": {
+            "create_sql": "CREATE TABLE `news` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `section_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0440\u0430\u0437\u0434\u0435\u043b\u0430',\n  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043d\u043e\u0432\u043e\u0441\u0442\u0438',\n  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u043d\u043e\u0432\u043e\u0441\u0442\u044c',\n  `date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0414\u0430\u0442\u0430 \u043d\u043e\u0432\u043e\u0441\u0442\u0438',\n  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `image_preview` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u043f\u0440\u0435\u0432\u044c\u044e',\n  `text` mediumtext COLLATE utf8mb4_unicode_ci COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `text2` text COLLATE utf8mb4_unicode_ci COMMENT '\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `textshort` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041a\u0440\u0430\u0442\u043a\u043e\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043f\u0440\u0435\u0432\u044c\u044e',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `title` varchar(1024) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u0434\u043b\u044f SEO',\n  `keywords` varchar(1024) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430 \u0434\u043b\u044f SEO',\n  `description` varchar(1024) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f SEO',\n  `is_draft` tinyint(1) DEFAULT NULL COMMENT '\u0427\u0435\u0440\u043d\u043e\u0432\u0438\u043a (1) \u0438\u043b\u0438 \u0447\u0438\u0441\u0442\u043e\u0432\u0438\u043a (0)',\n  `original_id` int(11) DEFAULT NULL COMMENT 'ID \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u043e\u0433\u043e \u0447\u0438\u0441\u0442\u043e\u0432\u0438\u043a\u0430 \u0434\u043b\u044f \u0447\u0435\u0440\u043d\u043e\u0432\u0438\u043a\u0430',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `section_id` (`section_id`),\n  KEY `date` (`date`,`show`),\n  KEY `section_date_show_idx` (`section_id`,`date`,`show`),\n  KEY `edit_user_id` (`edit_admin_id`),\n  KEY `is_draft_idx` (`is_draft`),\n  KEY `original_id_idx` (`original_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPRESSED COMMENT='\u041d\u043e\u0432\u043e\u0441\u0442\u0438'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "section_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "url": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image_preview": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "mediumtext",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text2": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "textshort": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "title": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "keywords": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "description": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "is_draft": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "original_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "news_sections": {
+            "create_sql": "CREATE TABLE `news_sections` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0440\u0430\u0437\u0434\u0435\u043b\u0430',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COMMENT='\u0420\u0430\u0437\u0434\u0435\u043b\u044b \u043d\u043e\u0432\u043e\u0441\u0442\u0435\u0439'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "pages": {
+            "create_sql": "CREATE TABLE `pages` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `parent` int(11) DEFAULT NULL COMMENT '\u0420\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u0441\u043a\u0430\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430',\n  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b (\u041d1)',\n  `name_menu` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b \u0432 \u043c\u0435\u043d\u044e',\n  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443',\n  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435',\n  `text` longtext COLLATE utf8mb4_unicode_ci COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) NOT NULL DEFAULT '0' COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `menu` tinyint(1) NOT NULL DEFAULT '0' COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u0432 \u043c\u0435\u043d\u044e',\n  `menu_footer` tinyint(1) NOT NULL DEFAULT '0' COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u0432 \u043f\u043e\u0434\u0432\u0430\u043b',\n  `title` varchar(1024) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u0434\u043b\u044f SEO',\n  `keywords` varchar(1024) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430 \u0434\u043b\u044f SEO',\n  `description` varchar(1024) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f SEO',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  `video` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '\u0412\u0438\u0434\u0435\u043e \u0444\u0430\u0439\u043b',\n  `is_draft` tinyint(1) NOT NULL DEFAULT '0' COMMENT '\u0427\u0435\u0440\u043d\u043e\u0432\u0438\u043a (1 - \u0447\u0435\u0440\u043d\u043e\u0432\u0438\u043a, 0 - \u043e\u043f\u0443\u0431\u043b\u0438\u043a\u043e\u0432\u0430\u043d\u043d\u0430\u044f \u0432\u0435\u0440\u0441\u0438\u044f)',\n  `original_id` int(11) DEFAULT NULL COMMENT 'ID \u043e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u044c\u043d\u043e\u0439 \u043e\u043f\u0443\u0431\u043b\u0438\u043a\u043e\u0432\u0430\u043d\u043d\u043e\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 (\u0434\u043b\u044f \u0447\u0435\u0440\u043d\u043e\u0432\u0438\u043a\u043e\u0432)',\n  PRIMARY KEY (`id`),\n  KEY `parent` (`parent`) USING BTREE,\n  KEY `edit_user_id` (`edit_admin_id`),\n  KEY `is_draft` (`is_draft`),\n  KEY `original_id` (`original_id`)\n) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC COMMENT='\u0421\u0442\u0440\u0430\u043d\u0438\u0446\u044b'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "parent": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "name_menu": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "url": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "longtext",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "NO",
+                    "key": "",
+                    "default": "0",
+                    "extra": ""
+                },
+                "menu": {
+                    "type": "tinyint(1)",
+                    "null": "NO",
+                    "key": "",
+                    "default": "0",
+                    "extra": ""
+                },
+                "menu_footer": {
+                    "type": "tinyint(1)",
+                    "null": "NO",
+                    "key": "",
+                    "default": "0",
+                    "extra": ""
+                },
+                "title": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "keywords": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "description": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "video": {
+                    "type": "varchar(255)",
+                    "null": "NO",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "is_draft": {
+                    "type": "tinyint(1)",
+                    "null": "NO",
+                    "key": "MUL",
+                    "default": "0",
+                    "extra": ""
+                },
+                "original_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "params": {
+            "create_sql": "CREATE TABLE `params` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u0430',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COMMENT='\u041f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b \u0442\u043e\u0432\u0430\u0440\u043e\u0432'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "params_groups": {
+            "create_sql": "CREATE TABLE `params_groups` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `template_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0448\u0430\u0431\u043b\u043e\u043d\u0430 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432',\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0433\u0440\u0443\u043f\u043f\u044b \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `template_id` (`template_id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COMMENT='\u0413\u0440\u0443\u043f\u043f\u044b \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432 \u0432\u043d\u0443\u0442\u0440\u0438 \u0448\u0430\u0431\u043b\u043e\u043d\u0430'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "template_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "params_groups_items": {
+            "create_sql": "CREATE TABLE `params_groups_items` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `group_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0433\u0440\u0443\u043f\u043f\u044b \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432',\n  `param_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u0430',\n  `type` tinyint(1) DEFAULT NULL COMMENT '\u0422\u0438\u043f \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u0430 (1 - \u0442\u0435\u043a\u0441\u0442, 2 - \u0441\u043f\u0440\u0430\u0432\u043e\u0447\u043d\u0438\u043a)',\n  `directory_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0441\u043f\u0440\u0430\u0432\u043e\u0447\u043d\u0438\u043a\u0430',\n  `filter` tinyint(1) DEFAULT NULL COMMENT '\u0422\u0438\u043f \u0444\u0438\u043b\u044c\u0442\u0440\u0430 (0 - \u043d\u0435\u0442, 1 - \u0441\u043f\u0438\u0441\u043e\u043a \u0447\u0435\u043a\u0431\u043e\u043a\u0441\u043e\u0432, 2 - \u0432\u044b\u043f\u0430\u0434\u0430\u044e\u0449\u0438\u0439 \u0441\u043f\u0438\u0441\u043e\u043a, 3 - \u0434\u0438\u0430\u043f\u0430\u0437\u043e\u043d \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439)',\n  `filter_rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438 \u0432 \u0441\u043f\u0438\u0441\u043a\u0435 \u0444\u0438\u043b\u044c\u0442\u0440\u043e\u0432',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438 \u0432 \u043a\u0430\u0440\u0442\u043e\u0447\u043a\u0435 \u0442\u043e\u0432\u0430\u0440\u0430',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `group_id` (`group_id`),\n  KEY `param_id` (`param_id`),\n  KEY `directory_id` (`directory_id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COMMENT='\u041f\u0440\u0438\u0432\u044f\u0437\u043a\u0430 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432 \u0442\u043e\u0432\u0430\u0440\u043e\u0432 \u043a \u0433\u0440\u0443\u043f\u043f\u0435 \u0438 \u0438\u0445 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "group_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "param_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "type": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "directory_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "filter": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "filter_rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "params_templates": {
+            "create_sql": "CREATE TABLE `params_templates` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0448\u0430\u0431\u043b\u043e\u043d\u0430 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COMMENT='\u0428\u0430\u0431\u043b\u043e\u043d\u044b \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "partners": {
+            "create_sql": "CREATE TABLE `partners` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435',\n  `image` varchar(255) DEFAULT NULL COMMENT '\u041b\u043e\u0433\u043e\u0442\u0438\u043f',\n  `link` varchar(255) DEFAULT NULL COMMENT '\u0421\u0441\u044b\u043b\u043a\u0430',\n  `rate` tinyint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT 'ID \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_admin_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='\u041f\u0430\u0440\u0442\u043d\u0451\u0440\u044b'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "link": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "tinyint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "publication_versions": {
+            "create_sql": "CREATE TABLE `publication_versions` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `table_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '\u0418\u043c\u044f \u0442\u0430\u0431\u043b\u0438\u0446\u044b \u043c\u043e\u0434\u0443\u043b\u044f',\n  `record_id` int(11) NOT NULL COMMENT 'ID \u043e\u043f\u0443\u0431\u043b\u0438\u043a\u043e\u0432\u0430\u043d\u043d\u043e\u0439 \u0437\u0430\u043f\u0438\u0441\u0438',\n  `version_data` json DEFAULT NULL COMMENT '\u0414\u0430\u043d\u043d\u044b\u0435 \u0432\u0435\u0440\u0441\u0438\u0438 \u0432 \u0444\u043e\u0440\u043c\u0430\u0442\u0435 JSON',\n  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '\u0414\u0430\u0442\u0430 \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u044f \u0432\u0435\u0440\u0441\u0438\u0438',\n  `admin_id` int(11) DEFAULT NULL COMMENT 'ID \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430, \u0432\u044b\u043f\u043e\u043b\u043d\u0438\u0432\u0448\u0435\u0433\u043e \u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u044e',\n  `admin_ip` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'IP \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  `comment` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439 \u043a \u0432\u0435\u0440\u0441\u0438\u0438',\n  `metadata` json DEFAULT NULL COMMENT '\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043c\u0435\u0442\u0430\u0434\u0430\u043d\u043d\u044b\u0435',\n  PRIMARY KEY (`id`),\n  KEY `table_record_idx` (`table_name`,`record_id`),\n  KEY `created_at_idx` (`created_at`),\n  KEY `admin_id_idx` (`admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='\u0412\u0435\u0440\u0441\u0438\u0438 \u043e\u043f\u0443\u0431\u043b\u0438\u043a\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u0437\u0430\u043f\u0438\u0441\u0435\u0439 \u0434\u043b\u044f \u043e\u0442\u043a\u0430\u0442\u0430'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "table_name": {
+                    "type": "varchar(100)",
+                    "null": "NO",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "record_id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "version_data": {
+                    "type": "json",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "created_at": {
+                    "type": "timestamp",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "admin_ip": {
+                    "type": "varchar(45)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "comment": {
+                    "type": "varchar(500)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "metadata": {
+                    "type": "json",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "reviews": {
+            "create_sql": "CREATE TABLE `reviews` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `date` datetime DEFAULT NULL COMMENT '\u0414\u0430\u0442\u0430 \u043e\u0442\u0437\u044b\u0432\u0430',\n  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0424\u0418\u041e \u043a\u043b\u0438\u0435\u043d\u0442\u0430',\n  `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0424\u043e\u0442\u043e \u043a\u043b\u0438\u0435\u043d\u0442\u0430',\n  `text` varchar(511) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0422\u0435\u043a\u0441\u0442 \u043e\u0442\u0437\u044b\u0432\u0430',\n  `video` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0412\u0438\u0434\u0435\u043e \u043e\u0442\u0437\u044b\u0432\u0430',\n  `stars` tinyint(1) DEFAULT NULL COMMENT '\u041e\u0446\u0435\u043d\u043a\u0430 (\u043a\u043e\u043b-\u0432\u043e \u0437\u0432\u0451\u0437\u0434)',\n  `rate` smallint(5) DEFAULT NULL COMMENT '\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u0434\u043b\u044f \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438',\n  `show` tinyint(1) DEFAULT NULL COMMENT '\u0412\u043a\u043b.\/\u0432\u044b\u043a\u043b. \u0432\u044b\u0432\u043e\u0434 \u043d\u0430 \u0441\u0430\u0439\u0442',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='\u041e\u0442\u0437\u044b\u0432\u044b'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "text": {
+                    "type": "varchar(511)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "video": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "stars": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "rate": {
+                    "type": "smallint(5)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "show": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "seo": {
+            "create_sql": "CREATE TABLE `seo` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `url` varchar(255) DEFAULT NULL COMMENT '\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443',\n  `title` varchar(1024) DEFAULT NULL COMMENT '\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u0434\u043b\u044f SEO',\n  `keywords` varchar(1024) DEFAULT NULL COMMENT '\u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430 \u0434\u043b\u044f SEO',\n  `description` varchar(1024) DEFAULT NULL COMMENT '\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f SEO',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  PRIMARY KEY (`id`),\n  KEY `edit_user_id` (`edit_admin_id`)\n) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COMMENT='SEO'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "url": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "title": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "keywords": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "description": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "settings": {
+            "create_sql": "CREATE TABLE `settings` (\n  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,\n  `sitename` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0441\u0430\u0439\u0442\u0430 \u0434\u043b\u044f Title',\n  `copyright` varchar(255) DEFAULT NULL COMMENT '\u041f\u043e\u0434\u043f\u0438\u0441\u044c \u0434\u043b\u044f \u043a\u043e\u043f\u0438\u0440\u0430\u0439\u0442\u0430',\n  `email_sends` varchar(255) DEFAULT NULL COMMENT '\u042d\u043b. \u0430\u0434\u0440\u0435\u0441 \u0434\u043b\u044f \u0437\u0430\u044f\u0432\u043e\u043a',\n  `email` varchar(255) DEFAULT NULL COMMENT '\u042d\u043b. \u0430\u0434\u0440\u0435\u0441',\n  `phone` varchar(255) DEFAULT NULL COMMENT '\u0422\u0435\u043b\u0435\u0444\u043e\u043d',\n  `phone2` varchar(255) DEFAULT NULL COMMENT '\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0442\u0435\u043b\u0435\u0444\u043e\u043d',\n  `postcode` varchar(255) DEFAULT NULL COMMENT '\u0418\u043d\u0434\u0435\u043a\u0441',\n  `region` varchar(255) DEFAULT NULL COMMENT '\u0420\u0435\u0433\u0438\u043e\u043d',\n  `city` varchar(255) DEFAULT NULL COMMENT '\u0413\u043e\u0440\u043e\u0434',\n  `address` varchar(255) DEFAULT NULL COMMENT '\u0410\u0434\u0440\u0435\u0441',\n  `coords` varchar(255) DEFAULT NULL COMMENT '\u041a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442\u044b \u0442\u043e\u0447\u043a\u0438 \u043d\u0430 \u043a\u0430\u0440\u0442\u0435',\n  `company` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438',\n  `time_job` varchar(511) DEFAULT NULL COMMENT '\u0412\u0440\u0435\u043c\u044f \u0440\u0430\u0431\u043e\u0442\u044b',\n  `requisites` text COMMENT '\u0420\u0435\u043a\u0432\u0438\u0437\u0438\u0442\u044b',\n  `image` varchar(255) DEFAULT NULL COMMENT '\u0424\u043e\u0442\u043e \u0434\u043b\u044f \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u043e\u0432',\n  `file` varchar(255) DEFAULT NULL COMMENT '\u0424\u0430\u0439\u043b \u0441 \u0440\u0435\u043a\u0432\u0438\u0437\u0438\u0442\u0430\u043c\u0438',\n  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0412\u0440\u0435\u043c\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f',\n  `edit_admin_id` int(11) DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430',\n  `is_draft` tinyint(1) DEFAULT '0' COMMENT '\u0424\u043b\u0430\u0433 \u0447\u0435\u0440\u043d\u043e\u0432\u0438\u043a\u0430 (1 - \u0447\u0435\u0440\u043d\u043e\u0432\u0438\u043a, 0 - \u0447\u0438\u0441\u0442\u043e\u0432\u0438\u043a)',\n  `draft_id` int(11) DEFAULT NULL COMMENT 'ID \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u043e\u0433\u043e \u0447\u0435\u0440\u043d\u043e\u0432\u0438\u043a\u0430\/\u0447\u0438\u0441\u0442\u043e\u0432\u0438\u043a\u0430',\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `id` (`id`),\n  KEY `edit_user_id` (`edit_admin_id`),\n  KEY `is_draft_idx` (`is_draft`),\n  KEY `draft_id_idx` (`draft_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438'",
+            "columns": {
+                "id": {
+                    "type": "bigint(20) unsigned",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "sitename": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "copyright": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "email_sends": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "email": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "phone": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "phone2": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "postcode": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "region": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "city": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "address": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "coords": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "company": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "time_job": {
+                    "type": "varchar(511)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "requisites": {
+                    "type": "text",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "image": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "file": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "edit_date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "edit_admin_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                },
+                "is_draft": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": "0",
+                    "extra": ""
+                },
+                "draft_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "subscribe": {
+            "create_sql": "CREATE TABLE `subscribe` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0414\u0430\u0442\u0430 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u0438',\n  `user_id` int(11) DEFAULT '0' COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f',\n  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u042d\u043b. \u0430\u0434\u0440\u0435\u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u0447\u0438\u043a\u0430',\n  `active` tinyint(1) DEFAULT '1' COMMENT '\u0410\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u044c \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u0438',\n  `ip` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'IP-\u0430\u0434\u0440\u0435\u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u0447\u0438\u043a\u0430',\n  PRIMARY KEY (`id`),\n  KEY `user` (`user_id`) USING BTREE\n) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='\u041f\u043e\u0434\u043f\u0438\u0441\u0447\u0438\u043a\u0438'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "user_id": {
+                    "type": "int(11)",
+                    "null": "YES",
+                    "key": "MUL",
+                    "default": "0",
+                    "extra": ""
+                },
+                "email": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "active": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": "1",
+                    "extra": ""
+                },
+                "ip": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "telegram_errors": {
+            "create_sql": "CREATE TABLE `telegram_errors` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `chat_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0447\u0430\u0442\u0430',\n  `error` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '\u0422\u0435\u043a\u0441\u0442 \u043e\u0448\u0438\u0431\u043a\u0438',\n  `date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '\u0414\u0430\u0442\u0430',\n  `ip` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'IP-\u0430\u0434\u0440\u0435\u0441',\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='\u041e\u0448\u0438\u0431\u043a\u0438 \u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c-\u0431\u043e\u0442\u0430'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "chat_id": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "error": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": "CURRENT_TIMESTAMP",
+                    "extra": ""
+                },
+                "ip": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "telegram_message": {
+            "create_sql": "CREATE TABLE `telegram_message` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `chat_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '0' COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0447\u0430\u0442\u0430 \u0432 \u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c-\u0431\u043e\u0442\u0430',\n  `mess_id` varchar(1024) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f \u0432 \u0447\u0430\u0442\u0435',\n  `message` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435',\n  `date` datetime DEFAULT NULL COMMENT '\u0414\u0430\u0442\u0430 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f',\n  `answer_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u043e\u0442\u0432\u0435\u0442\u0430 \u043d\u0430 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435',\n  `answer` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0422\u0435\u043a\u0441\u0442 \u043e\u0442\u0432\u0435\u0442\u0430',\n  `date_answer` datetime DEFAULT NULL COMMENT '\u0414\u0430\u0442\u0430 \u043e\u0442\u0432\u0435\u0442\u0430 \u043d\u0430 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435',\n  `img` tinyint(1) DEFAULT '0' COMMENT '\u041d\u0430\u043b\u0438\u0447\u0438\u0435 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u0432 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0438',\n  `type_keyboard` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '\u0422\u0438\u043f \u043a\u043b\u0430\u0432\u0438\u0430\u0442\u0443\u0440\u044b \u0432 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0438',\n  `keyboard` tinyint(1) DEFAULT '0' COMMENT '\u041d\u0430\u043b\u0438\u0447\u0438\u0435 \u043a\u043b\u0430\u0432\u0438\u0430\u0442\u0443\u0440\u044b \u0432 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0438',\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0439 \u0432 \u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c-\u0431\u043e\u0442\u0435'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "chat_id": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": "0",
+                    "extra": ""
+                },
+                "mess_id": {
+                    "type": "varchar(1024)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "message": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "date": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "answer_id": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "answer": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "date_answer": {
+                    "type": "datetime",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "img": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": "0",
+                    "extra": ""
+                },
+                "type_keyboard": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "keyboard": {
+                    "type": "tinyint(1)",
+                    "null": "YES",
+                    "key": "",
+                    "default": "0",
+                    "extra": ""
+                }
+            }
+        },
+        "telegram_settings": {
+            "create_sql": "CREATE TABLE `telegram_settings` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `token` varchar(255) DEFAULT NULL COMMENT 'Token \u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c-\u0431\u043e\u0442\u0430',\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c-\u0431\u043e\u0442\u0430',\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0422\u0435\u043b\u0435\u0433\u0440\u0430\u043c-\u0431\u043e\u0442\u0430'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "token": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        },
+        "users_class": {
+            "create_sql": "CREATE TABLE `users_class` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(255) DEFAULT NULL COMMENT '\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043a\u043b\u0430\u0441\u0441\u0430',\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='\u041a\u043b\u0430\u0441\u0441\u044b \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439'",
+            "columns": {
+                "id": {
+                    "type": "int(11)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "default": null,
+                    "extra": "auto_increment"
+                },
+                "name": {
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "key": "",
+                    "default": null,
+                    "extra": ""
+                }
+            }
+        }
+    },
+    "version": "2026-02-09 11:21:03",
+    "checksum": "e960de39255233da39a8a311d4ed3eb7"
+}

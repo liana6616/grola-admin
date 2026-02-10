@@ -1,0 +1,180 @@
+[10-Feb-2026 11:00:18 Europe/Moscow] Ошибка в PageController::main: Главная страница не найдена в базе данных
+[10-Feb-2026 11:00:18 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/new-site.potok8.ru/public_html/public/views/errors/main_unavailable.php not found
+[10-Feb-2026 11:00:56 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 11:01:05 Europe/Moscow] uploadGallery called: inputName=gallery, id=17
+[10-Feb-2026 11:01:05 Europe/Moscow] FILES array exists: yes
+[10-Feb-2026 11:01:05 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[10-Feb-2026 11:01:08 Europe/Moscow] uploadGallery called: inputName=gallery, id=17
+[10-Feb-2026 11:01:08 Europe/Moscow] FILES array exists: yes
+[10-Feb-2026 11:01:08 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[10-Feb-2026 11:01:35 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[10-Feb-2026 11:01:35 Europe/Moscow] FILES array exists: yes
+[10-Feb-2026 11:01:35 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[10-Feb-2026 11:01:38 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[10-Feb-2026 11:01:38 Europe/Moscow] FILES array exists: yes
+[10-Feb-2026 11:01:38 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[10-Feb-2026 13:32:43 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:32:45 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:15 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:15 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:16 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:17 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:18 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:54 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:34:18 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:34:19 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:34:19 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:34:28 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:34:28 Europe/Moscow] Неудачная попытка входа: test, IP: 91.234.152.117
+[10-Feb-2026 13:34:31 Europe/Moscow] Неудачная попытка входа: test, IP: 91.234.152.117
+[10-Feb-2026 13:34:31 Europe/Moscow] Неудачная попытка входа: test, IP: 91.234.152.117
+[10-Feb-2026 13:34:31 Europe/Moscow] Неудачная попытка входа: test, IP: 91.234.152.117
+[10-Feb-2026 13:35:12 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:35:37 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:36:45 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:37:35 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 31.134.187.28
+[10-Feb-2026 13:38:15 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:39:49 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:39:53 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:39:59 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:40:22 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:41:32 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:42:11 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:42:15 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:42:26 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:58:52 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:58:55 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:58:58 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:59:03 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 91.234.152.117

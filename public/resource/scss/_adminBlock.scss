@@ -1,0 +1,17 @@
+.adminBlock {
+	position: fixed;
+	top: 10px;
+	right: 5px;
+	z-index: 110;
+	display: flex;
+	flex-flow: row wrap;
+	transition: all 0.2s linear;
+	& .adminEdit,
+	& .adminSeo {
+		height: 30px;
+		font-size: 14px;
+		letter-spacing: normal;
+		padding: 0px 15px;
+		margin-left: 5px;
+	}
+}

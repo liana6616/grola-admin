@@ -1,0 +1,74 @@
+.black {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 98;
+	background: rgba(0,0,0,0.45);
+}
+.mod {
+	position: fixed;
+	top: 50%;
+	left: 50%; 
+	z-index: 99; 
+	&.hidden {
+		opacity: 0;
+	}
+}
+.close {
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-image: url('/public/src/images/close2.svg'); 
+	//background-size: 200%; 
+	position: absolute; 
+	right: 20px; 
+	top: 20px; 
+	width: 20px; 
+	height: 20px; 
+	border: 0px; 
+	cursor: pointer; 
+	z-index: 99;
+}
+.dialog {
+	cursor: pointer
+}
+.modbox {
+	padding: 70px 70px; 
+	max-width: 750px;
+	background: #ffffff;
+	color: $default;
+	font-family: "Wix Madefor Display", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.4;
+	letter-spacing: -0.16px;
+	& .mod_name {
+		font-size: 18px;
+	}
+	&.set {
+		padding: 18px 60px 18px 30px; 
+	}
+}
+
+
+@media (max-width: 1279px) {
+	.modbox {
+		padding: 40px 40px; 
+	}
+}
+@media (max-width: 959px) {
+	.modbox {
+		padding: 30px 30px; 
+	}
+}
+@media (max-width: 767px) {
+	.mod {
+		width: calc(100% - 30px);
+	}
+	.modbox {
+		width: 100%;
+		padding: 20px 20px; 
+	}
+}

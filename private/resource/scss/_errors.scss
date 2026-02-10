@@ -1,0 +1,155 @@
+.error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+}
+
+.error-left {
+    font-size: 15rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #e9ecef;
+    margin-right: 2rem;
+}
+
+.error-right {
+    text-align: left;
+    max-width: 500px;
+}
+
+.error-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.error-message {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.error-solution {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 2rem;
+}
+
+.error-solution a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.error-solution a:hover {
+    color: #0056b3;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.error-actions .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.error-actions .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.error-actions .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.error-actions .btn-outline {
+    background-color: transparent;
+    color: #6c757d;
+    border: 1px solid #6c757d;
+}
+
+.error-actions .btn-outline:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+.error-actions .btn-link {
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    text-decoration: underline;
+}
+
+.error-actions .btn-link:hover {
+    color: #0056b3;
+}
+
+.error-admin-info,
+.error-tech-info,
+.error-details {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.error-admin-info small,
+.error-tech-info small {
+    font-size: 0.875rem;
+}
+
+.error-tech-info details,
+.error-details details {
+    margin-top: 1rem;
+}
+
+.error-tech-info summary,
+.error-details summary {
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.error-tech-info pre,
+.error-details pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.8rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+    color: #495057;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .error-page {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .error-left {
+        font-size: 10rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .error-right {
+        text-align: center;
+    }
+    
+    .error-actions {
+        justify-content: center;
+    }
+}

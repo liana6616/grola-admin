@@ -1,0 +1,16 @@
+@use '../common/variables' as *;
+@use '../common/fonts' as *;
+
+.label_block {
+	color: $gray2;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.4;
+	& span {
+		color: $blue;
+	}
+	&:not(:first-child) {
+		margin: 5px 0px 0px;
+	}
+}

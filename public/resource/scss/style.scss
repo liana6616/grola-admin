@@ -1,0 +1,15 @@
+@import 'common/normalize.scss';
+@import 'common/fonts.scss';
+@import 'common/variables.scss';
+@import 'common/common.scss';
+
+@import 'layouts/header.scss';
+@import 'layouts/footer.scss';
+
+@import 'adminBlock.scss';
+@import 'pages.scss';
+@import 'modals.scss';
+
+@import 'errors.scss';
+
+@import 'media.scss';

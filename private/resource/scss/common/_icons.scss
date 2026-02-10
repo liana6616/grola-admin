@@ -1,0 +1,269 @@
+// ============================================
+// TABLE ICONS - CSS Data URI спрайт
+// Все иконки встроены в CSS как Data URI
+// ============================================
+
+// Базовый класс для всех иконок таблицы
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  &:hover {
+    filter: invert(22%) sepia(83%) saturate(2316%) hue-rotate(345deg) brightness(94%) contrast(101%);
+  }
+}
+
+// ============================================
+// ОСНОВНЫЕ ИКОНКИ ДЕЙСТВИЙ ТАБЛИЦЫ
+// ============================================
+
+// Иконка: Переместить (move)
+.icon_move {
+  @extend .icon;
+  width: 20px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='15' viewBox='0 0 17 15' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M0.75 13.3312H15.75' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M0.75 7.04059H15.75' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M0.75 0.75H15.75' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+  
+  &:hover {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='15' viewBox='0 0 17 15' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M0.75 13.3312H15.75' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M0.75 7.04059H15.75' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M0.75 0.75H15.75' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+// Иконка: Копировать (copy)
+.icon_copy {
+  @extend .icon;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M12.75 10.05V12.3C12.75 15.3 11.55 16.5 8.55 16.5H5.7C2.7 16.5 1.5 15.3 1.5 12.3V9.45C1.5 6.45 2.7 5.25 5.7 5.25H7.95' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.75 10.05H10.35C8.54995 10.05 7.94995 9.45 7.94995 7.65V5.25L12.75 10.05Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.69995 1.5H11.7' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.25 3.75C5.25 2.505 6.255 1.5 7.5 1.5H9.465' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 6V10.6425C16.5 11.805 15.555 12.75 14.3925 12.75' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 6H14.25C12.5625 6 12 5.4375 12 3.75V1.5L16.5 6Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+  
+  &:hover {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M12.75 10.05V12.3C12.75 15.3 11.55 16.5 8.55 16.5H5.7C2.7 16.5 1.5 15.3 1.5 12.3V9.45C1.5 6.45 2.7 5.25 5.7 5.25H7.95' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.75 10.05H10.35C8.54995 10.05 7.94995 9.45 7.94995 7.65V5.25L12.75 10.05Z' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.69995 1.5H11.7' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.25 3.75C5.25 2.505 6.255 1.5 7.5 1.5H9.465' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 6V10.6425C16.5 11.805 15.555 12.75 14.3925 12.75' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 6H14.25C12.5625 6 12 5.4375 12 3.75V1.5L16.5 6Z' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+// Иконка: Глаз (eye) - показать/скрыть
+.icon_show {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M11.9236 9.18372C11.9236 10.699 10.6991 11.9235 9.18378 11.9235C7.66847 11.9235 6.44397 10.699 6.44397 9.18372C6.44397 7.66841 7.66847 6.44391 9.18378 6.44391C10.6991 6.44391 11.9236 7.66841 11.9236 9.18372Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.18376 15.5129C11.8853 15.5129 14.4032 13.921 16.1557 11.1659C16.8445 10.0868 16.8445 8.27301 16.1557 7.19392C14.4032 4.4388 11.8853 2.84695 9.18376 2.84695C6.48221 2.84695 3.96434 4.4388 2.21178 7.19392C1.523 8.27301 1.523 10.0868 2.21178 11.1659C3.96434 13.921 6.48221 15.5129 9.18376 15.5129Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Редактировать (edit)
+.icon_edit {
+  @extend .icon;
+  width: 17px;
+  height: 17px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M7.65312 1.39148H6.26164C2.78295 1.39148 1.39148 2.78295 1.39148 6.26164V10.4361C1.39148 13.9148 2.78295 15.3062 6.26164 15.3062H10.4361C13.9148 15.3062 15.3062 13.9148 15.3062 10.4361V9.04459' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.1596 2.10112L5.67717 7.58353C5.46845 7.79225 5.25973 8.20273 5.21799 8.5019L4.91882 10.5961C4.8075 11.3544 5.34322 11.8832 6.10157 11.7788L8.19574 11.4797C8.48795 11.4379 8.89844 11.2292 9.11412 11.0205L14.5965 5.53806C15.5427 4.59186 15.988 3.49259 14.5965 2.10112C13.2051 0.709642 12.1058 1.15491 11.1596 2.10112Z' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.3734 2.8873C10.8396 4.55011 12.1406 5.85114 13.8104 6.32424' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Удалить (delete)
+.icon_delete {
+  @extend .icon;
+  width: 22px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M5.29495 5.29504L15.8849 15.885' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.29504 15.885L15.885 5.29504' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// ============================================
+// ДОПОЛНИТЕЛЬНЫЕ ИКОНКИ ДЛЯ ТАБЛИЦЫ
+// ============================================
+
+// Иконка: Добавить (add)
+.icon_add {
+  @extend .icon;
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M0.75 6.75H12.75' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.75 12.75V0.75' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  
+  &:hover {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M0.75 6.75H12.75' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.75 12.75V0.75' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+}
+
+// Иконка: Поиск (search)
+.icon_search {
+  @extend .icon;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 16.5L15 15' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+// Иконка: Стрелка вниз (arr-bottom)
+.icon_arr_bottom {
+  @extend .icon;
+  width: 9px;
+  height: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6' viewBox='0 0 9 6' fill='none'%3E%3Cpath d='M9.53674e-07 1.0605L4.28025 5.34075L8.5605 1.0605L7.5 0L4.28025 3.21975L1.0605 0L9.53674e-07 1.0605Z' fill='%23202227'/%3E%3C/svg%3E");
+}
+
+// Иконка: Стрелка вверх (arr-top)
+.icon_arr_top {
+  @extend .icon;
+  width: 9px;
+  height: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6' viewBox='0 0 9 6' fill='none'%3E%3Cpath d='M8.5605 4.9395L4.28025 0.65925L0 4.9395L1.0605 6L4.28025 2.78025L7.5 6L8.5605 4.9395Z' fill='%23202227'/%3E%3C/svg%3E");
+}
+
+// Иконка: Стрелка влево (arr-left)
+.icon_arr_left {
+  @extend .icon;
+  width: 7px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='14' viewBox='0 0 7 14' fill='none'%3E%3Cpath d='M6.07312 12.63L1.18312 7.74C0.60562 7.1625 0.60562 6.2175 1.18312 5.64L6.07312 0.75' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+// Иконка: Стрелка вправо (arr-right)
+.icon_arr_right {
+  @extend .icon;
+  width: 7px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='14' viewBox='0 0 7 14' fill='none'%3E%3Cpath d='M0.75 12.63L5.64 7.74C6.2175 7.1625 6.2175 6.2175 5.64 5.64L0.75 0.75' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+// ============================================
+// ИКОНКИ ДЛЯ ТИПОВ КОНТЕНТА
+// ============================================
+
+// Иконка: Сумка (bag)
+.icon_bag {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M7.08333 11.875C7.08333 13.475 8.4 14.7917 10 14.7917C11.6 14.7917 12.9167 13.475 12.9167 11.875' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.34167 1.66667L4.325 4.69167' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.6583 1.66667L15.675 4.69167' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.66667 6.54167C1.66667 5 2.49167 4.875 3.51667 4.875H16.4833C17.5083 4.875 18.3333 5 18.3333 6.54167C18.3333 8.33333 17.5083 8.20833 16.4833 8.20833H3.51667C2.49167 8.20833 1.66667 8.33333 1.66667 6.54167Z' stroke='%23202227' stroke-width='1.5'/%3E%3Cpath d='M2.91667 8.33334L4.09167 15.5333C4.35833 17.15 5 18.3333 7.38333 18.3333H12.4083C15 18.3333 15.3833 17.2 15.6833 15.6333L17.0833 8.33334' stroke='%23202227' stroke-width='1.5' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Книга (book)
+.icon_book {
+  @extend .icon;
+  width: 21px;
+  height: 21px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M3.0625 15.75V6.125C3.0625 2.625 3.9375 1.75 7.4375 1.75H13.5625C17.0625 1.75 17.9375 2.625 17.9375 6.125V14.875C17.9375 14.9975 17.9375 15.12 17.9287 15.2425' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.55625 13.125H17.9375V16.1875C17.9375 17.8762 16.5637 19.25 14.875 19.25H6.125C4.43625 19.25 3.0625 17.8762 3.0625 16.1875V15.6188C3.0625 14.245 4.1825 13.125 5.55625 13.125Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7 6.125H14' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7 9.1875H11.375' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Карта (card) - дублирует book
+.icon_card {
+  @extend .icon_book;
+}
+
+// Иконка: Скидка (discount)
+.icon_discount {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M3.32408 12.217L2.05742 10.9504C1.54076 10.4337 1.54076 9.58368 2.05742 9.06701L3.32408 7.80033C3.54075 7.58366 3.71575 7.15866 3.71575 6.85866V5.06697C3.71575 4.33364 4.31575 3.73366 5.04909 3.73366H6.84075C7.14075 3.73366 7.56575 3.55869 7.78242 3.34202L9.04908 2.07534C9.56574 1.55867 10.4158 1.55867 10.9324 2.07534L12.1991 3.34202C12.4158 3.55869 12.8407 3.73366 13.1407 3.73366H14.9324C15.6658 3.73366 16.2657 4.33364 16.2657 5.06697V6.85866C16.2657 7.15866 16.4407 7.58366 16.6574 7.80033L17.9241 9.06701C18.4408 9.58368 18.4408 10.4337 17.9241 10.9504L16.6574 12.217C16.4407 12.4337 16.2657 12.8587 16.2657 13.1587V14.9503C16.2657 15.6836 15.6658 16.2837 14.9324 16.2837H13.1407C12.8407 16.2837 12.4158 16.4587 12.1991 16.6754L10.9324 17.942C10.4158 18.4587 9.56574 18.4587 9.04908 17.942L7.78242 16.6754C7.56575 16.4587 7.14075 16.2837 6.84075 16.2837H5.04909C4.31575 16.2837 3.71575 15.6836 3.71575 14.9503V13.1587C3.71575 12.8504 3.54075 12.4254 3.32408 12.217Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.5 12.5L12.5 7.5' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.0788 12.0833H12.0862' stroke='%23202227' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.91209 7.91667H7.91957' stroke='%23202227' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Папка (folder)
+.icon_folder {
+  @extend .icon;
+  width: 19px;
+  height: 19px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M17.4167 8.70834V13.4583C17.4167 16.625 16.625 17.4167 13.4583 17.4167H5.54167C2.375 17.4167 1.58333 16.625 1.58333 13.4583V5.54167C1.58333 2.375 2.375 1.58334 5.54167 1.58334H6.72917C7.91667 1.58334 8.17791 1.93167 8.62916 2.53334L9.81666 4.11667C10.1175 4.5125 10.2917 4.75 11.0833 4.75H13.4583C16.625 4.75 17.4167 5.54167 17.4167 8.70834Z' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Слои (layer)
+.icon_layer {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M7.5 18.3333H12.5C16.6667 18.3333 18.3333 16.6667 18.3333 12.5V7.49999C18.3333 3.33332 16.6667 1.66666 12.5 1.66666H7.5C3.33333 1.66666 1.66667 3.33332 1.66667 7.49999V12.5C1.66667 16.6667 3.33333 18.3333 7.5 18.3333Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.33333 1.66666V18.3333' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.33333 10H18.3333' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Местоположение (location)
+.icon_location {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M10 11.1917C11.4359 11.1917 12.6 10.0276 12.6 8.59167C12.6 7.15573 11.4359 5.99167 10 5.99167C8.56406 5.99167 7.4 7.15573 7.4 8.59167C7.4 10.0276 8.56406 11.1917 10 11.1917Z' stroke='%23202227' stroke-width='1.5'/%3E%3Cpath d='M3.01667 7.07499C4.65833 -0.141675 15.35 -0.133341 16.9833 7.08333C17.9417 11.3167 15.3083 14.9 13 17.1167C11.325 18.7333 8.675 18.7333 6.99167 17.1167C4.69167 14.9 2.05833 11.3083 3.01667 7.07499Z' stroke='%23202227' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Модуль (module) - дублирует layer
+.icon_module {
+  @extend .icon_layer;
+}
+
+// Иконка: Открыть (open)
+.icon_open {
+  @extend .icon;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M8.6665 7.33385L14.1332 1.86719' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.6668 4.53398V1.33398H11.4668' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.3335 1.33398H6.00016C2.66683 1.33398 1.3335 2.66732 1.3335 6.00065V10.0007C1.3335 13.334 2.66683 14.6673 6.00016 14.6673H10.0002C13.3335 14.6673 14.6668 13.334 14.6668 10.0007V8.66732' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Открыть черновик (draft)
+.icon_draft {
+  @extend .icon;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13 11L21.2 2.80005' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.9999 6.83V2H17.1699' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+// Иконка: Профиль (profile)
+.icon_profile {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M15.1167 18.0167C14.3833 18.2333 13.5167 18.3333 12.5 18.3333H7.5C6.48333 18.3333 5.61667 18.2333 4.88334 18.0167C5.06667 15.85 7.29167 14.1416 10 14.1416C12.7083 14.1416 14.9333 15.85 15.1167 18.0167Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5 1.66667H7.5C3.33333 1.66667 1.66667 3.33334 1.66667 7.50001V12.5C1.66667 15.65 2.61667 17.375 4.88334 18.0167C17.3833 17.375 18.3333 15.65 18.3333 12.5V7.50001C18.3333 3.33334 16.6667 1.66667 12.5 1.66667ZM10 11.8083C8.35 11.8083 7.01667 10.4667 7.01667 8.81669C7.01667 7.16669 8.35 5.83334 10 5.83334C11.65 5.83334 12.9833 7.16669 12.9833 8.81669C12.9833 10.4667 11.65 11.8083 10 11.8083Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.9833 8.81668C12.9833 10.4667 11.65 11.8083 10 11.8083C8.35 11.8083 7.01667 10.4667 7.01667 8.81668C7.01667 7.16668 8.35 5.83333 10 5.83333C11.65 5.83333 12.9833 7.16668 12.9833 8.81668Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: SEO
+.icon_seo {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M4.91666 14.1667H15.075C16.6583 14.1667 17.4917 13.3334 17.4917 11.75V1.66669H2.49166V11.75C2.49999 13.3334 3.33333 14.1667 4.91666 14.1667Z' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.66667 1.66669H18.3333' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.66667 18.3334L10 16.6667V14.1667' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.3333 18.3334L10 16.6667' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.25 9.16669L8.87499 6.97502C9.08333 6.80002 9.35833 6.85002 9.49999 7.08335L10.5 8.75002C10.6417 8.98335 10.9167 9.02502 11.125 8.85836L13.75 6.66669' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Настройки (setting)
+.icon_setting {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M2.5 7.59169V12.4C2.5 14.1667 2.5 14.1667 4.16667 15.2917L8.75 17.9417C9.44167 18.3417 10.5667 18.3417 11.25 17.9417L15.8333 15.2917C17.5 14.1667 17.5 14.1667 17.5 12.4084V7.59169C17.5 5.83336 17.5 5.83336 15.8333 4.70836L11.25 2.05836C10.5667 1.65836 9.44167 1.65836 8.75 2.05836L4.16667 4.70836C2.5 5.83336 2.5 5.83336 2.5 7.59169Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Иконка: Текст (text)
+.icon_text {
+  @extend .icon;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cg opacity='0.7'%3E%3Cpath d='M18.3333 8.33332V12.5C18.3333 16.6667 16.6667 18.3333 12.5 18.3333H7.5C3.33333 18.3333 1.66667 16.6667 1.66667 12.5V7.49999C1.66667 3.33332 3.33333 1.66666 7.5 1.66666H11.6667' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.3333 8.33332H15C12.5 8.33332 11.6667 7.49999 11.6667 4.99999V1.66666L18.3333 8.33332Z' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.83333 10.8333H10.8333' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.83333 14.1667H9.16667' stroke='%23202227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.icon_calendar {
+  @extend .icon;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M8 2V5' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 2V5' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 9.09009H20.5' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z' stroke='%23202227' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.6947 13.7H15.7037' stroke='%23202227' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.6947 16.7H15.7037' stroke='%23202227' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.9955 13.7H12.0045' stroke='%23202227' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.9955 16.7H12.0045' stroke='%23202227' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.29431 13.7H8.30329' stroke='%23202227' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.29431 16.7H8.30329' stroke='%23202227' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+// ============================================
+// ЛОГОТИПЫ (особые размеры)
+// ============================================
+
+// Логотип: Lindera
+.logo_lindera {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  width: 97px;
+  height: 27px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='97' height='27' viewBox='0 0 97 27' fill='none'%3E%3Cpath d='M32.1837 18.7028V10.8843H33.6558V17.3132H37.0183V18.686H32.1837V18.7028Z' fill='%235D6D63'/%3E%3Cpath d='M40.214 18.7028V10.8843H41.6861V18.686H40.214V18.7028Z' fill='%235D6D63'/%3E%3Cpath d='M45.4668 18.7028V10.8843H46.9557L50.3516 16.091V10.8843H51.8405V18.686H50.3516L46.9557 13.4793V18.686H45.4668V18.7028Z' fill='%235D6D63'/%3E%3Cpath d='M55.5369 18.7028V10.8843H58.0629C58.1298 10.8843 58.2469 10.8843 58.4477 10.8843C58.6317 10.8843 58.8157 10.9011 58.9997 10.9178C59.6354 11.0015 60.154 11.2192 60.589 11.5708C61.0239 11.9391 61.3585 12.3911 61.5927 12.9436C61.8269 13.4961 61.9273 14.1155 61.9273 14.7684C61.9273 15.4214 61.8102 16.0408 61.5927 16.5933C61.3585 17.1458 61.0406 17.6145 60.589 17.9661C60.154 18.3344 59.6187 18.5521 58.9997 18.619C58.8157 18.6358 58.6317 18.6525 58.4477 18.6525C58.2637 18.6525 58.1298 18.6525 58.0629 18.6525H55.5369V18.7028ZM57.0257 17.3132H58.0462C58.1466 17.3132 58.2804 17.3132 58.4477 17.3132C58.615 17.3132 58.7655 17.2964 58.8994 17.263C59.2339 17.196 59.5183 17.0286 59.7358 16.7942C59.9533 16.5431 60.1038 16.2417 60.2042 15.8901C60.3046 15.5386 60.3548 15.1702 60.3548 14.8019C60.3548 14.4169 60.3046 14.0485 60.1875 13.697C60.0871 13.3454 59.9198 13.044 59.7023 12.8096C59.4849 12.5753 59.2172 12.4078 58.8826 12.3409C58.7488 12.3074 58.5982 12.2907 58.4309 12.2907C58.2637 12.2907 58.1298 12.2907 58.0295 12.2907H57.009V17.3132H57.0257Z' fill='%235D6D63'/%3E%3Cpath d='M65.3906 18.7028V10.8843H70.4761V12.2572H66.8627V13.9313H69.8237V15.3042H66.8627V17.3132H70.4761V18.686H65.3906V18.7028Z' fill='%235D6D63'/%3E%3Cpath d='M78.6066 15.8064C78.9579 15.6557 79.2255 15.4381 79.4263 15.1535C79.7441 14.6847 79.9114 14.1322 79.9114 13.4793C79.9114 13.044 79.8445 12.6422 79.694 12.2907C79.5434 11.9391 79.3259 11.6377 79.0415 11.4033C78.7404 11.169 78.3556 11.0183 77.904 10.9346C77.8036 10.9178 77.6865 10.9011 77.5527 10.9011C77.4188 10.9011 77.3185 10.8843 77.2348 10.8843H73.9392V18.686H75.4114V16.0408H77.0508L78.3389 18.686H79.9951L78.6066 15.8064ZM75.4114 12.2739H77.1679C77.2515 12.2739 77.3185 12.2739 77.4188 12.2739C77.5192 12.2907 77.5861 12.3074 77.6698 12.3241C77.8705 12.3744 78.0211 12.4748 78.1382 12.592C78.2385 12.7259 78.3222 12.8599 78.3556 13.0273C78.3891 13.178 78.4226 13.3454 78.4226 13.4793C78.4226 13.6133 78.4058 13.7639 78.3556 13.9313C78.3055 14.082 78.2385 14.2327 78.1382 14.3499C78.0211 14.4838 77.8705 14.5675 77.6698 14.6345C77.5861 14.6512 77.5192 14.668 77.4188 14.668C77.3185 14.668 77.2515 14.6847 77.1679 14.6847H75.4114V12.2739Z' fill='%235D6D63'/%3E%3Cpath d='M87.4059 10.8843H85.2144L82.8389 18.686H84.3445L84.8464 17.0621H87.7906L88.2925 18.686H89.8148L87.4059 10.8843ZM85.2479 15.6892L86.285 12.2739L87.339 15.6892H85.2479Z' fill='%235D6D63'/%3E%3Cpath d='M13.538 20.58C14.095 20.6872 14.6733 20.7301 15.2303 20.7301C20.6926 20.7301 25.1267 16.2925 25.1267 10.8259C25.1267 8.36063 24.2056 5.98106 22.5562 4.15888C22.4277 4.03025 22.342 3.92306 22.2349 3.81588C22.1278 3.70869 22.0421 3.62294 21.8922 3.49431C19.493 1.24337 16.3442 0 13.0239 0C5.84791 0 0 5.85244 0 13.0554C0 20.2584 5.84791 26.0894 13.0239 26.0894H25.1481V25.0604H13.538V20.58ZM12.5098 19.2723C11.2888 18.8864 10.1535 18.2219 9.21099 17.3429C9.12531 17.2572 8.88968 17.0214 8.73973 16.8713C7.79721 15.8209 7.28311 14.4489 7.28311 13.0554C7.28311 12.6053 7.32595 12.1765 7.43306 11.7692L12.5098 16.8499V19.2723ZM12.5098 15.3921L7.79721 10.6759C8.13995 9.90413 8.65405 9.23956 9.27525 8.68219L12.5098 11.9193V15.3921ZM12.5098 10.4615L10.1321 8.08194C10.839 7.65319 11.653 7.39594 12.5098 7.31019V10.4615ZM6.25491 13.0554C6.25491 14.7276 6.87611 16.3354 7.99 17.5788C8.13995 17.7288 8.41842 18.0075 8.52552 18.1147C9.68225 19.1866 11.0532 19.9583 12.5312 20.3656V25.0604C6.1478 24.8032 1.04962 19.5081 1.04962 13.0554C1.04962 6.43125 6.42627 1.029 13.0453 1.029C16.0871 1.029 19.0003 2.16519 21.2281 4.24463C21.3566 4.37325 21.4423 4.43756 21.5494 4.54475C21.6565 4.65194 21.7422 4.73769 21.8493 4.84488C23.3274 6.47413 24.1628 8.59644 24.1628 10.8259C24.1199 15.7351 20.1357 19.7225 15.2303 19.7225C14.6519 19.7225 14.095 19.6582 13.538 19.551V17.15H14.1378C17.0082 17.15 19.3431 14.8133 19.3431 11.9407C19.3431 10.7188 18.9147 9.53969 18.1435 8.61788C17.9936 8.44638 17.8222 8.25344 17.6294 8.08194C16.3656 6.92431 14.7376 6.25975 13.0239 6.25975C9.29667 6.25975 6.25491 9.30388 6.25491 13.0554ZM17.865 10.0542C18.1649 10.633 18.3149 11.2761 18.3149 11.9407C18.3149 14.2559 16.4298 16.121 14.1378 16.121H13.538V14.3846L17.865 10.0542ZM13.538 12.9268V7.31019C14.8018 7.41738 16.0014 7.95331 16.9439 8.83225C17.0725 8.93944 17.1796 9.06806 17.2867 9.17525L13.538 12.9268Z' fill='%235D6D63'/%3E%3C/svg%3E");
+}
+
+// Логотип: VisualTeam
+.logo_visualteam {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  width: 95px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='95' height='14' viewBox='0 0 95 14' fill='none'%3E%3Cpath d='M27.783 10.9326L25 3.06742H26.8592L28.8237 8.88764L30.835 3.06742H32.6475L29.8761 10.9326H27.783Z' fill='%23B2B8C3'/%3E%3Cpath d='M33.3525 10.9326V3.06742H35.1065V10.9326H33.3525Z' fill='%23B2B8C3'/%3E%3Cpath d='M36.1654 8.34831L37.8844 8.37079C37.9428 9.13483 38.5743 9.66292 39.5799 9.66292C40.3867 9.66292 40.9831 9.32584 40.9831 8.70787C40.9831 8.04494 40.3166 7.91011 38.9485 7.65169C37.5686 7.40449 36.3525 6.97753 36.3525 5.38202C36.3525 3.98876 37.5569 3 39.4045 3C41.3339 3 42.5617 3.96629 42.5851 5.47191H40.8662C40.7843 4.80899 40.2581 4.34831 39.4045 4.34831C38.6561 4.34831 38.1182 4.65169 38.1182 5.25843C38.1182 5.89888 38.7614 6.03371 40.1178 6.2809C41.521 6.52809 42.7605 6.93258 42.7488 8.51685C42.7371 9.98876 41.4742 11 39.5565 11C37.4751 11 36.1771 9.94382 36.1654 8.34831Z' fill='%23B2B8C3'/%3E%3Cpath d='M43.7427 7.53933V3.06742H45.4967V7.62921C45.4967 8.8764 45.9762 9.55056 47.0987 9.55056C48.233 9.55056 48.7124 8.8764 48.7124 7.62921V3.06742H50.4664V7.53933C50.4664 9.77528 49.3088 11 47.0987 11C44.9004 11 43.7427 9.77528 43.7427 7.53933Z' fill='%23B2B8C3'/%3E%3Cpath d='M52.4728 10.9326H50.6603L53.6538 3.06742H55.7586L58.7287 10.9326H56.8461L56.2146 9.21348H53.1042L52.4728 10.9326ZM54.6477 4.86517L53.5719 7.85393H55.7352L54.6477 4.86517Z' fill='%23B2B8C3'/%3E%3Cpath d='M64.4847 10.9326H59.4799V3.06742H61.2339V9.48315H64.4847V10.9326Z' fill='%23B2B8C3'/%3E%3Cpath d='M63.7055 4.51685V3.06742H70.1953V4.51685H67.8216V10.9326H66.0676V4.51685H63.7055Z' fill='%23B2B8C3'/%3E%3Cpath d='M71.1276 10.9326V3.06742H76.6235V4.51685H72.8816V6.2809H75.9219V7.66292H72.8816V9.48315H76.7521V10.9326H71.1276Z' fill='%23B2B8C3'/%3E%3Cpath d='M78.9656 10.9326H77.1531L80.1466 3.06742H82.2514L85.2215 10.9326H83.3389L82.7074 9.21348H79.597L78.9656 10.9326ZM81.1405 4.86517L80.0647 7.85393H82.228L81.1405 4.86517Z' fill='%23B2B8C3'/%3E%3Cpath d='M85.9727 10.9326V3.06742H88.2763L90.5448 8.8427L92.7432 3.06742H95V10.9326H93.3279V5.66292L91.1997 10.9326H89.7731L87.6449 5.66292V10.9326H85.9727Z' fill='%23B2B8C3'/%3E%3Cpath d='M11.1864 4.27778L9.15254 7.38889L4.40678 0H0L7.79661 12.4444C8.48339 13.5419 9.82169 13.5326 10.5085 12.4444L15.5932 4.27778H11.1864Z' fill='%23B2B8C3'/%3E%3Cpath d='M17.2879 3.5H7.7964L5.7625 0H19.3218' fill='%23B2B8C3'/%3E%3C/svg%3E");
+}

@@ -1,0 +1,371 @@
+# Запрещаем доступ к файлам из вне
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Запрещаем доступ к конфиденциальным файлам
+<FilesMatch "^(composer\.(json|lock)|\.env|\.gitignore|.htaccess|README\.md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Запрещаем доступ к системным директориям
+RedirectMatch 403 ^/app/.*$
+RedirectMatch 403 ^/gulp/.*$
+RedirectMatch 403 ^/logs/.*$
+RedirectMatch 403 ^/vendor/.*$
+
+# Базовые настройки
+AddDefaultCharset UTF-8
+DefaultLanguage ru-RU
+
+# Включаем перезапись URL
+RewriteEngine On
+
+# ----------------------------------------------------------------------
+# РЕДИРЕКТЫ И БАЗОВЫЕ НАСТРОЙКИ
+# ----------------------------------------------------------------------
+
+# Принудительный HTTPS (раскомментировать для продакшена)
+ RewriteCond %{HTTPS} off
+ RewriteCond %{HTTP:X-Forwarded-Proto} !https
+ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Удаляем www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# Удаляем trailing slash (кроме директорий)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# Блокируем доступ к index.php в URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\s
+RewriteRule ^index\.php/?$ / [R=301,L]
+
+# Блокируем доступ к распространенным уязвимостям
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteRule ^(.*)$ - [F,L]
+
+# Защита от инъекций
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} (\<|%3C).*iframe.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+RewriteCond %{QUERY_STRING} boot\.ini [NC,OR]
+RewriteCond %{QUERY_STRING} etc/passwd [NC,OR]
+RewriteCond %{QUERY_STRING} \.\.\/\.\.\/ [NC,OR]
+RewriteCond %{QUERY_STRING} \=PHP[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} [NC]
+RewriteRule .* - [F,L]
+
+# ----------------------------------------------------------------------
+# СЖАТИЕ И КЭШИРОВАНИЕ
+# ----------------------------------------------------------------------
+
+# Включаем deflate для gzip сжатия
+<IfModule mod_deflate.c>
+    # Включаем сжатие для указанных типов файлов
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE font/ttf font/otf font/woff font/woff2
+    
+    # Исключения для старых браузеров
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    
+    # Устанавливаем заголовки Vary
+    Header append Vary User-Agent env=!dont-vary
+</IfModule>
+
+# Настройки кэширования через заголовки
+<IfModule mod_headers.c>
+    # Защита от Clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Защита от XSS
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Предотвращение MIME-sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # HSTS (раскомментировать для продакшена)
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # CSP политика (настроить под ваше приложение)
+    # Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Запрет кэширования для динамических файлов
+    <FilesMatch "\.(php|cgi|pl|spl|scgi|fcgi)$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+    </FilesMatch>
+    
+    # Кэширование статических ресурсов
+    <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|svg|webp|swf)$">
+        Header set Cache-Control "public, max-age=2592000, immutable"
+    </FilesMatch>
+    
+    <FilesMatch "\.(js|css)$">
+        Header set Cache-Control "public, max-age=604800, immutable"
+    </FilesMatch>
+    
+    <FilesMatch "\.(xml|txt)$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+    
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+    
+    # Кэширование шрифтов
+    <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# Настройки Expires через mod_expires
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Кэш по умолчанию
+    ExpiresDefault "access plus 1 month"
+    
+    # Изображения
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Видео
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/mpeg "access plus 1 year"
+    
+    # CSS, JavaScript
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+    
+    # Шрифты
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+    
+    # Другие
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+    
+    # HTML, XML
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType application/xhtml+xml "access plus 1 hour"
+    ExpiresByType text/xml "access plus 10 minutes"
+    ExpiresByType application/xml "access plus 10 minutes"
+    ExpiresByType application/rss+xml "access plus 10 minutes"
+    ExpiresByType application/atom+xml "access plus 10 minutes"
+    
+    # Данные
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/ld+json "access plus 0 seconds"
+    
+    # Динамические файлы (без кэша)
+    ExpiresByType text/php "access plus 0 seconds"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# ОПТИМИЗАЦИЯ ПРОИЗВОДИТЕЛЬНОСТИ
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+    # Включаем Keep-Alive
+    Header set Connection keep-alive
+</IfModule>
+
+<IfModule mod_gzip.c>
+    mod_gzip_on Yes
+    mod_gzip_dechunk Yes
+    mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+    mod_gzip_item_include mime ^text/.*
+    mod_gzip_item_include mime ^application/x-javascript.*
+    mod_gzip_item_exclude mime ^image/.*
+    mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+# ----------------------------------------------------------------------
+# НАСТРОЙКИ PHP (если разрешено)
+# ----------------------------------------------------------------------
+
+<IfModule mod_php.c>
+    # Безопасность
+    php_flag allow_url_fopen Off
+    php_flag allow_url_include Off
+    php_flag expose_php Off
+    php_flag session.cookie_httponly On
+    php_flag session.cookie_secure On
+    php_flag session.use_strict_mode On
+    
+    # Отладка (только для разработки)
+     php_flag display_errors On
+     php_flag display_startup_errors On
+     php_value error_reporting E_ALL
+    
+    # Для продакшена
+    #php_flag display_errors Off
+    #php_flag display_startup_errors Off
+    #php_flag log_errors On
+    #php_value error_log /logs/php_errors.log
+    
+    # Лимиты
+    php_value max_execution_time 300
+    php_value max_input_time 300
+    php_value max_input_vars 3000
+    php_value memory_limit 256M
+    php_value post_max_size 64M
+    php_value upload_max_filesize 64M
+    
+    # Оптимизация
+    php_value opcache.enable 1
+    php_value opcache.memory_consumption 256
+    php_value opcache.max_accelerated_files 20000
+    php_value opcache.validate_timestamps 0
+    php_value realpath_cache_size 4096K
+    php_value realpath_cache_ttl 600
+</IfModule>
+
+# ----------------------------------------------------------------------
+# МЕДИА ТИПЫ И КОДИРОВКИ
+# ----------------------------------------------------------------------
+
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType application/json .json
+    AddType application/x-font-woff .woff
+    AddType application/x-font-woff2 .woff2
+    AddType application/x-font-ttf .ttf
+    AddType application/x-font-otf .otf
+    AddType image/svg+xml .svg
+    AddType image/webp .webp
+    AddType video/mp4 .mp4
+    AddType video/webm .webm
+</IfModule>
+
+# ----------------------------------------------------------------------
+# ПРАВИЛА ПЕРЕЗАПИСИ ДЛЯ SPA И API
+# ----------------------------------------------------------------------
+
+# Для SPA приложений - все запросы на index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.php [L]
+
+# Прямой доступ к статическим файлам
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Блокировка скрытых файлов
+RewriteRule (^\.|/\.) - [F]
+
+# ----------------------------------------------------------------------
+# НАСТРОЙКИ ДЛЯ ОПРЕДЕЛЕННЫХ ФАЙЛОВ
+# ----------------------------------------------------------------------
+
+# Защита robots.txt
+<Files "robots.txt">
+    Header set X-Robots-Tag "noindex, nofollow"
+</Files>
+
+# Защита sitemap.xml
+<Files "sitemap.xml">
+    Header set Content-Type "application/xml"
+</Files>
+
+# Настройки для favicon
+<Files "favicon.ico">
+    Header set Cache-Control "public, max-age=86400"
+</Files>
+<Files "favicon.svg">
+    Header set Cache-Control "public, max-age=86400"
+</Files>
+
+# ----------------------------------------------------------------------
+# КРОСС-ДОМЕННЫЕ НАСТРОЙКИ (CORS)
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+    # Разрешаем кросс-доменные шрифты
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|svg)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+    
+    # Разрешаем кросс-доменные изображения
+    <FilesMatch "\.(jpg|jpeg|png|gif|ico|svg)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# КОМПРЕССИЯ И ОПТИМИЗАЦИЯ
+# ----------------------------------------------------------------------
+
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml application/rss+xml image/svg+xml
+</IfModule>
+
+# ----------------------------------------------------------------------
+# БЛОКИРОВКА ВРЕДОНОСНЫХ USER AGENT
+# ----------------------------------------------------------------------
+
+<IfModule mod_setenvif.c>
+    SetEnvIfNoCase User-Agent "^libwww-perl" bad_bot
+    SetEnvIfNoCase User-Agent "^Wget" bad_bot
+    Deny from env=bad_bot
+</IfModule>
+
+# ----------------------------------------------------------------------
+# ПЕРЕНАПРАВЛЕНИЕ ОШИБОК
+# ----------------------------------------------------------------------
+
+# Кастомные страницы ошибок
+ErrorDocument 400 /error/400
+ErrorDocument 401 /error/401
+ErrorDocument 403 /error/403
+ErrorDocument 404 /error/404
+ErrorDocument 500 /error/500
+ErrorDocument 503 /error/503
+
+# ----------------------------------------------------------------------
+# ФИНАЛЬНЫЕ НАСТРОЙКИ
+# ----------------------------------------------------------------------
+
+# Отключаем просмотр директорий
+Options -Indexes
+
+# Включаем симлинки (опционально)
+# Options +FollowSymLinks
+
+# Устанавливаем индексный файл
+DirectoryIndex index.php
+
+# Запрещаем выполнение PHP в определенных директориях
+<Files ~ "\.(logs)$">
+    Order allow,deny
+    Deny from all
+</Files>
