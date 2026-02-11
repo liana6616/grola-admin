@@ -283,9 +283,25 @@
     padding: 0 10px;
   }
 
-  .hero::after {
+  /* .hero::after {
     background: url(/public/images/hero-mob.jpg) no-repeat;
     background-size: cover;
+  } */
+
+  .hero__img {
+    display: none;
+  }
+
+  .hero__img-mob {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    display: block;
   }
 
   .hero__big-title::after {
@@ -384,9 +400,9 @@
     top: 0;
   }
 
-  .categories__item.swiper-slide:nth-child(5) {
+  /* .categories__item.swiper-slide:nth-child(5) {
     max-width: 221px;
-  } 
+  }  */
 
   .categories__item::after {
     top: 0;

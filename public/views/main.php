@@ -4,7 +4,7 @@
     <section class="hero">
       <div class="hero__wrapper-block">
         <div>
-          <h1 class="hero__big-title hero__big-title--alt">Производство металлических изделий</h1>
+          <h1 class="hero__big-title hero__big-title--alt"><?= $this->page->name ?></h1>
           <span class="hero__text">Любой сложности</span>
         </div>
         <ul class="hero__list">
@@ -25,6 +25,8 @@
           </li>
         </ul>
       </div>
+      <img class="hero__img" src="<?= $this->page->image ?>">
+      <img class="hero__img-mob" src="<?= $this->page->image2 ?>">
     </section>
 
     <section class="categories">
@@ -32,14 +34,15 @@
       <div class="categories__swiper swiper" id="swiper-categories">
 
         <? if(!empty($this->advantages)): ?>
-                <ul class="categories__list swiper-wrapper">
+          <ul class="categories__list swiper-wrapper">
             <? foreach($this->advantages AS $item): ?>
                   <li class="categories__item swiper-slide">
+                    <img class="categories__item__img" src="<?= $item->image ?>">
                     <h3 class="categories__title title-small"><?= $item->name ?></h3>
                     <p class="categories__text"> <?= $item->text?></p>
                   </li>
             <? endforeach; ?>
-                </ul>
+          </ul>
         <? endif; ?>
 <!--          <li class="categories__item swiper-slide">-->
 <!--            <h3 class="categories__title title-small">В сжатые  <br>  сроки</h3>-->
@@ -277,7 +280,35 @@
     <section class="photo" id="galery">
       <h2 class="photo__title title">Фото выполненных <br> работ</h2>
         <div class="photo__swiper swiper" id="swiper-photo">
-          <ul class="photo__list swiper-wrapper">
+          <? if(!empty($this->gallery_works)): ?>
+            <ul class="photo__list swiper-wrapper">
+              <? foreach($this->gallery_works AS $item): ?>
+                <li class="photo__item swiper-slide swiper-slide-photo">
+                  <img src="<?= $item->image ?>">
+
+                  <a class="photo__wrapper-text" href="/catalog-category.php">
+                    <div>
+                      <h3 class="photo__title-small title-small"><?= $item->name ?></h3>
+                      <p class="photo_popular__name popular__name"><?= $item->text?></p>
+                    </div>
+
+                    <div class="photo__wrapper-parameters">
+                      <div>
+                        <span class="photo_popular__name popular__name"><?= $item->item1_name?></span>
+                        <span class="photo__parameters"><?= $item->item1_text?></span>
+                      </div>
+
+                      <div>
+                        <span class="photo_popular__name popular__name"><?= $item->item3_name?></span>
+                        <span class="photo__parameters"><?= $item->item2_text?></span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              <? endforeach; ?>
+            </ul>
+          <? endif; ?>
+          <!-- <ul class="photo__list swiper-wrapper">
             <li class="photo__item swiper-slide swiper-slide-photo">
               <img src="/public/images/photo-1.jpg" width="470" height="505">
 
@@ -398,7 +429,7 @@
                 </div>
               </a>
             </li>
-          </ul>
+          </ul> -->
           
           <div class="swiper-pagination swiper-pagination-photo swiper-pagination-alt"></div>
 
@@ -413,7 +444,21 @@
       <h2 class="scheme__title scheme__title-decorate title">Схема работы с нами</h2>
       
       <div class="scheme__swiper swiper" id="swiper-scheme">
-        <ol class="scheme__list swiper-wrapper">
+        
+        <? if(!empty($this->scheme_work)): ?>
+          <ol class="scheme__list swiper-wrapper">
+            <? foreach($this->scheme_work AS $item): ?>
+              <li class="scheme__item swiper-slide">
+                <span class="scheme__number">01</span>
+                <div class="scheme__content">
+                  <h3 class="scheme__item-title title-small"><?= $item->name ?></h3>
+                  <p class="scheme__text"><?= $item->text?></p>
+                </div>
+              </li>
+            <? endforeach; ?>
+          </ul>
+        <? endif; ?>
+        <!-- <ol class="scheme__list swiper-wrapper">
           <li class="scheme__item swiper-slide">
             <span class="scheme__number">01</span>
             <div class="scheme__content">
@@ -461,7 +506,7 @@
               <p class="scheme__text">Вы платите только после того, как принимаете все работы</p>
             </div>
           </li>
-        </ol>
+        </ol> -->
           
         <div class="swiper-pagination swiper-pagination-alt swiper-pagination-scheme"></div>
       </div>
@@ -471,7 +516,18 @@
       <div class="choose__block">
         <h2 class="choose__title title">Почему выбирают нас</h2>
       </div>
-      <ul class="choose__list">
+        <? if(!empty($this->why_choose_us)): ?>
+          <ul class="choose__list">
+            <? foreach($this->why_choose_us AS $item): ?>
+              <li class="choose__item">
+                <img class="choose__svg" src="<?= $item->image ?>">
+                <h3 class="scheme__title title-small"><?= $item->name ?></h3>
+                <p class="scheme__text"><?= $item->text?></p>
+              </li>
+            <? endforeach; ?>
+          </ul>
+        <? endif; ?>
+      <!-- <ul class="choose__list">
         <li class="choose__item">
           <div class="choose__svg">
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -502,66 +558,24 @@
           <h3 class="scheme__title title-small">Заботливый <br> сервис</h3>
           <p class="scheme__text">Работаем 24/7  и решаем любые проблемы с дверью. Не берем предоплату и выезжаем на замер.</p>
         </li>
-      </ul>
+      </ul> -->
     </section>
 
     <section class="partners" id="partners">
       <h2 class="partners__title title">Наши партнеры</h2>
 
       <div class="partners__swiper swiper" id="swiper-partners">
-      <ul class="partners__list swiper-wrapper">
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/rosneft.svg" alt="Картинка партнера Роснефть.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/leroy.svg" alt="Картинка партнера Леруа Мерлен.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/vtb.svg" alt="Картинка партнера ВТБ.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/perekrestok.svg" alt="Картинка партнера Перекрестка.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/petrovich.svg" alt="Картинка партнера Петрович.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/teremok.svg" alt="Картинка партнера Теремок.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/vtb.svg" alt="Картинка партнера ВТБ.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/gazprom.svg" alt="Картинка партнера Газпром.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/rosneft.svg" alt="Картинка партнера Роснефть.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/leroy.svg" alt="Картинка партнера Леруа Мерлен.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/vtb.svg" alt="Картинка партнера ВТБ.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/perekrestok.svg" alt="Картинка партнера Перекрестка.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/petrovich.svg" alt="Картинка партнера Петрович.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/teremok.svg" alt="Картинка партнера Теремок.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/teremok.svg" alt="Картинка партнера ВТБ.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/vtb.svg" alt="Картинка партнера ВТБ.">
-        </li>
-        <li class="partners__item swiper-slide">
-          <img src="/public/images/icons/gazprom.svg" alt="Картинка партнера Газпром.">
-        </li>
-      </ul>
+
+        <? if(!empty($this->partners)): ?>
+          <ul class="partners__list swiper-wrapper">
+            <? foreach($this->partners AS $item): ?>
+              <li class="partners__item swiper-slide">
+                <img src="<?= $item->image ?>">
+              </li>
+            <? endforeach; ?>
+          </ul>
+        <? endif; ?>
+
         <div class="swiper-pagination swiper-pagination-alt swiper-pagination-partners"></div>
 
         <div class="swiper-button-wrapper swiper-button-wrapper-alt swiper-button-wrapper-partners">
