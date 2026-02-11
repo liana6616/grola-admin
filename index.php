@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-echo "test";
+echo "test1";
 // Включаем строгий режим типизации
 
 

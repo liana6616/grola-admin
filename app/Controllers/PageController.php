@@ -8,6 +8,7 @@ use app\Models\Pages;
 use app\Models\Admins;
 use app\Models\News;
 use app\Models\Faq;
+use app\Models\Advantages;
 use app\Models\FaqSections;
 use app\Models\Pagination;
 
@@ -107,7 +108,7 @@ class PageController extends Controller {
             
             $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
             $view->page = $page;
-            
+            $view->advantages = Advantages::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
             // Устанавливаем SEO для главной страницы
             self::setSeo($view, $page);
             
