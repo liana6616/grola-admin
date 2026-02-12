@@ -250,8 +250,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'Отзывы';
-    $add = 'отзыв';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = false;
 

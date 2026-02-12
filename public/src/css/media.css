@@ -650,6 +650,10 @@
   .photo.photo-about {
     margin: 90px auto 90px;
   } 
+
+  .photo__item img {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 765px) {
@@ -661,6 +665,10 @@
   .photo.photo-about {
     margin: 45px auto;
   } 
+
+  .photo__item img {
+    min-height: 236px;
+  }
 
   .photo__title {
     margin-bottom: 20px;
@@ -1113,10 +1121,6 @@
 }
 
 @media (max-width: 980px) {
-  .hero-about::after {
-    height: 400px;
-  }
-
   .hero__list-about {
     margin-top: 85px;
     padding: 15px 20px; /* Добавляем padding */
@@ -1169,7 +1173,7 @@
     margin-top: 30px;
   }
 
-  .hero-about::after {
+  /* .hero-about::after {
     height: 350px;
     position: absolute;
     content: "";
@@ -1180,6 +1184,22 @@
     background: url(/public/images/about/about-mob.jpg) no-repeat center;
     background-size: cover;
     z-index: -1;
+  } */
+
+  .hero-about__img {
+    display: none;
+  }
+
+  .hero-about__img-mob {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    display: block;
   }
 
   .hero-about::before {

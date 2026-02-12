@@ -59,10 +59,13 @@
 
         // Для администраторов
         case 'app\Models\Admins':
-            
             if($is_system_user && $_SESSION['admin']['id'] != $obj->id) $noEdit = true;
             if($is_system_user) $noDelete = true;
+            break;
 
+        // Для заявок используем view вместо edit
+        case 'app\Models\Forms':
+            $editParam = 'view';
             break;
             
         // Для обычных объектов (старая логика)
@@ -94,12 +97,12 @@
     }
     ?>
     
-    <?php if ($canCopy): ?>
+    <?php if ($canCopy && $className !== 'app\Models\Forms'): // Заявки нельзя копировать ?>
         <a href='?<?= $copyParam ?>=<?= $obj->id ?><?= $urlParams ?>' class='action icon_copy tooltip-trigger' data-tooltip='Копировать'></a>
     <?php endif; ?>
 
     <?php if (\app\Models\Admins::canEdit() && !$noEdit): ?>
-        <a href='?<?= $editParam ?>=<?= $obj->id ?><?= $urlParams ?>' class='action icon_edit tooltip-trigger' data-tooltip='Редактировать'></a>
+        <a href='?<?= $editParam ?>=<?= $obj->id ?><?= $urlParams ?>' class='action icon_edit tooltip-trigger' data-tooltip='<?= $editParam === 'view' ? 'Просмотр' : 'Редактировать' ?>'></a>
     <?php endif; ?>
     
     <?php if (\app\Models\Admins::canDelete() && !$noDelete): ?>

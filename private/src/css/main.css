@@ -3632,6 +3632,10 @@ fieldset legend {
   margin: 25px 0px 0px;
 }
 
+.status_inactive {
+  color: #E7411D;
+}
+
 .error-page {
   display: -webkit-box;
   display: -ms-flexbox;

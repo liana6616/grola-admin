@@ -8,8 +8,15 @@ use app\Models\Pages;
 use app\Models\Admins;
 use app\Models\News;
 use app\Models\Faq;
+use app\Models\Categories;
 use app\Models\Advantages;
+use app\Models\SchemeWork;
+use app\Models\WhyChooseUs;
 use app\Models\FaqSections;
+use app\Models\GalleryWorks;
+use app\Models\Partners;
+use app\Models\KeyIndicators;
+
 use app\Models\Pagination;
 
 class PageController extends Controller {
@@ -23,6 +30,7 @@ class PageController extends Controller {
             // Главная
             if (empty($url)) return self::main($view);
 
+
             // Страницы
             $page = Pages::findByUrl($url);
 
@@ -34,6 +42,7 @@ class PageController extends Controller {
                 self::setSeo($view, $page);
                 
                 switch ($page->id) {
+                    case 4: return self::about($view); break; // about
                     case 8: return self::news($view); break; // Новости
                     case 9: return self::faq($view); break; // FAQ
                     default: return $view->show('page.php'); break; // Обычные страницы
@@ -109,6 +118,12 @@ class PageController extends Controller {
             $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
             $view->page = $page;
             $view->advantages = Advantages::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+            $view->scheme_work = SchemeWork::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+            $view->why_choose_us = WhyChooseUs::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+            $view->partners = Partners::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+            $view->gallery_works = GalleryWorks::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+            $view->categories = Categories::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+
             // Устанавливаем SEO для главной страницы
             self::setSeo($view, $page);
             
@@ -122,6 +137,38 @@ class PageController extends Controller {
             // Если главная страница недоступна, показываем минимальную версию
             $view->error_message = $e->getMessage();
             return $view->show('errors/main_unavailable.php');
+        }
+    }
+    protected static function about($view){
+        try {
+            $page = Pages::findById(9);
+            if (!$page) {
+                throw new \Exception('Страница About не найдена');
+            }
+
+            $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
+            $view->breadCrumbs = Pages::breadCrumbs($page->id);
+
+            $view->scheme_work = SchemeWork::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+            $view->why_choose_us = WhyChooseUs::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+            $view->key_indicators = KeyIndicators::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+            $view->partners = Partners::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+            $view->gallery_works = GalleryWorks::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
+
+            // Устанавливаем SEO для страницы FAQ
+            self::setSeo($view, $page);
+
+
+
+            return $view->show('pages/about.php');
+
+        } catch (\Exception $e) {
+            error_log('Ошибка в PageController::about: ' . $e->getMessage());
+
+            // Показываем страницу FAQ с сообщением об ошибке
+            $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
+
+            return $view->show('pages/about.php');
         }
     }
 

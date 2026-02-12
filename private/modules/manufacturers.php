@@ -161,8 +161,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'Производители';
-    $add = 'производителя';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = true;
 

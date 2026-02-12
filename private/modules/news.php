@@ -12,7 +12,6 @@ use app\Form;
 
 $configPath = '/config/modules/news.php';
 
-// Проверяем существование конфигурационного файла
 if (!file_exists(ROOT.$configPath)):
     ?>
     <div class="alert alert-danger">
@@ -22,7 +21,6 @@ if (!file_exists(ROOT.$configPath)):
 
     $config = require_once ROOT.$configPath;
 
-    // Проверяем, поддерживает ли таблица черновики
     $supportsDrafts = News::supportsDrafts();
     $useDrafts = $supportsDrafts && ($config['drafts']['enabled'] ?? false);
 
@@ -31,8 +29,7 @@ if (!file_exists(ROOT.$configPath)):
         $obj = new News();
         $original = $obj;
         
-        // Устанавливаем значения по умолчанию
-        $obj->show = 1; // Явно устанавливаем boolean значение
+        $obj->show = 1;
         $obj->date = date('Y-m-d H:i:s', time());
         $obj->section_id = 0;
         $obj->edit_date = date('Y-m-d H:i:s', time());
@@ -80,14 +77,11 @@ if (!file_exists(ROOT.$configPath)):
 
         if(!empty($obj->url)) $obj->url = str_replace('draft-','',$obj->url);
 
-        // Убедимся, что $obj->show всегда boolean
         $obj->show = (bool)($obj->show ?? 1);
 
-        // Проверяем наличие изменений для кнопки "Опубликовать"
         $has_changes = false;
 
         if (isset($_GET['edit'])) {
-            // Для редактирования сравниваем с оригиналом
             if(empty($original)) {
                 $has_changes = true;
             }
@@ -95,7 +89,6 @@ if (!file_exists(ROOT.$configPath)):
                 $has_changes = true;
             }
         } else {
-            // Для добавления или копирования всегда есть изменения
             $has_changes = true;
         }
 
@@ -121,7 +114,6 @@ if (!file_exists(ROOT.$configPath)):
                 <?php endif; ?>
 
                 <?php if ($config['actions']['open'] && !empty($_GET['edit']) && $useDrafts): ?>
-
                     <a href='<?= News::getUrl($id) ?>' class='btn btn_white' rel='external' target="_blank">Предпросмотр черновика</a>
                 <?php endif; ?>
 
@@ -133,19 +125,15 @@ if (!file_exists(ROOT.$configPath)):
                   enctype='multipart/form-data'>
                 
                 <?php if (isset($_GET['copy']) && $config['actions']['copy']): ?>
-                    <!-- При копировании сохраняем ID оригинала как hidden поле -->
                     <input type="hidden" name="copy_from" value="<?= $_GET['copy'] ?>">
                 <?php endif; ?>
                                 
                 <?php if ($useDrafts && $obj->original_id): ?>
-                    <!-- Сохраняем ID связанного чистовика -->
                     <input type="hidden" name="original_id" value="<?= $obj->original_id ?>">
                 <?php endif; ?>
 
-                <!-- Поле для публикации -->
                 <input type="hidden" name="publish" id="publish" value="0">
 
-                <!-- Вкладки -->
                 <div class="edit_tabs">
                     <div class="edit_tabs_nav">
                         <?php if ($config['fields']['enabled']): ?>
@@ -166,7 +154,6 @@ if (!file_exists(ROOT.$configPath)):
                     </div>
                     
                     <div class="edit_tabs_content">
-                        <!-- Вкладка "Контент" -->
                         <?php if ($config['fields']['enabled']): ?>
                         <div class="edit_tab_content active" id="tab_content">
 
@@ -244,6 +231,30 @@ if (!file_exists(ROOT.$configPath)):
                         <!-- Вкладка "Фотогалерея" -->
                         <?php if ($config['gallery']['enabled']): ?>
                         <div class="edit_tab_content" id="tab_gallery">
+                            
+                            <!-- Заголовок и описание фотогалереи -->
+                            <?php if ($config['gallery']['gallery_name']['enabled'] ?? false): ?>
+                                <?= Form::input(
+                                    $config['gallery']['gallery_name']['title'] ?? 'Заголовок фотогалереи', 
+                                    'gallery_name', 
+                                    $obj->gallery_name ?? '', 
+                                    0, 
+                                    '', 
+                                    '', 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
+                            <?php if ($config['gallery']['gallery_text']['enabled'] ?? false): ?>
+                                <?= Form::textarea(
+                                    $config['gallery']['gallery_text']['title'] ?? 'Описание фотогалереи', 
+                                    'gallery_text', 
+                                    $obj->gallery_text ?? '', 
+                                    80, 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
                             <?= Form::gallery($config['gallery']['title'] ?? 'Фотогалерея', 'gallery', Gallery::findGallery('news',$obj->id)) ?>
                         </div>
                         <?php endif; ?>
@@ -251,6 +262,30 @@ if (!file_exists(ROOT.$configPath)):
                         <!-- Вкладка "Файлы" -->
                         <?php if ($config['files']['enabled']): ?>
                         <div class="edit_tab_content" id="tab_files">
+                            
+                            <!-- Заголовок и описание файлов -->
+                            <?php if ($config['files']['files_name']['enabled'] ?? false): ?>
+                                <?= Form::input(
+                                    $config['files']['files_name']['title'] ?? 'Заголовок файлов', 
+                                    'files_name', 
+                                    $obj->files_name ?? '', 
+                                    0, 
+                                    '', 
+                                    '', 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
+                            <?php if ($config['files']['files_text']['enabled'] ?? false): ?>
+                                <?= Form::textarea(
+                                    $config['files']['files_text']['title'] ?? 'Описание файлов', 
+                                    'files_text', 
+                                    $obj->files_text ?? '', 
+                                    80, 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
                             <?= Form::files($config['files']['title'] ?? 'Файлы', 'files', Files::findFiles('news',$obj->id)) ?>
                         </div>
                         <?php endif; ?>
@@ -266,12 +301,12 @@ if (!file_exists(ROOT.$configPath)):
                             
                             <?php if ($config['seo']['keywords']['enabled'] ?? false): ?>
                                 <?= Form::textarea($config['seo']['keywords']['title'] ?? 'Keywords (ключевые слова)', 'keywords', $obj->keywords ?? '', 140, '') ?>
-                                <small>Description: рекомендуется до 160 символов</small>
+                                <small>Keywords: через запятую, до 1024 символов</small>
                             <?php endif; ?>
                             
                             <?php if ($config['seo']['description']['enabled'] ?? false): ?>
                                 <?= Form::textarea($config['seo']['description']['title'] ?? 'Description (описание)', 'description', $obj->description ?? '', 140, '') ?>
-                                <small>Keywords: через запятую, до 1024 символов</small>
+                                <small>Description: рекомендуется до 160 символов</small>
                             <?php endif; ?>
 
                         </div>
@@ -281,7 +316,6 @@ if (!file_exists(ROOT.$configPath)):
                 </div>
 
                 <div class="button_block">
-                    <!-- Кнопка Сохранить -->
                     <?= Form::submit($id, $obj->id, 'Сохранить', '') ?>
 
                     <?php if ($useDrafts && Admins::canPublish()): ?>
@@ -299,16 +333,14 @@ if (!file_exists(ROOT.$configPath)):
         $publish = $_POST['publish'] ?? 0;
         $id = $_POST['edit'] ?? 0;
         
-        // Инициализируем объект $obj в зависимости от ситуации
         if (isset($_POST['edit']) && $id > 0) {
-            // Редактирование существующей записи
+            FileUpload::deleteImageFile();
             $obj = News::findById($id);
             if (!$obj) {
                 header("Location: {$_SERVER['REDIRECT_URL']}");
                 exit;
             }
         } else {
-            // Добавление новой записи
             $obj = new News();
         }
         
@@ -329,7 +361,6 @@ if (!file_exists(ROOT.$configPath)):
         if ($url <> '' && ($config['fields']['url']['enabled'] ?? false)) {
             $i = 1;
             $u = $url;
-            // Исправляем проверку уникальности URL
             $existingId = $obj->id ?? 0;
             $pg = News::findWhere("WHERE url='" . $url . "' AND id<>'" . $existingId . "' AND original_id<>0 LIMIT 1");
             while ($pg) {
@@ -342,13 +373,11 @@ if (!file_exists(ROOT.$configPath)):
         $url = str_replace('draft-','',$url);
         $url = 'draft-'.$url;
 
-        // Сохраняем старые данные для сравнения (только для черновиков)
         $oldData = null;
         if ($useDrafts && isset($_POST['edit']) && $id > 0) {
             $oldData = News::findById($id)->toArray();
         }
 
-        // Заполняем данные из формы В ЧЕРНОВИК
         $obj->url = ($config['fields']['url']['enabled'] ?? false) ? $url : '';
         $obj->name = ($config['fields']['name']['enabled'] ?? false) ? trim($_POST['name'] ?? '') : '';
         $obj->text = ($config['fields']['text']['enabled'] ?? false) ? trim($_POST['text'] ?? '') : '';
@@ -359,46 +388,35 @@ if (!file_exists(ROOT.$configPath)):
         $obj->section_id = ($config['fields']['section_id']['enabled'] ?? false) ? (int)($_POST['section_id'] ?? 0) : 0;
         $obj->rate = ($config['fields']['rate']['enabled'] ?? false) ? (int)($_POST['rate'] ?? 0) : 0;
         
-        // SEO поля
+        // Поля галереи и файлов
+        if ($config['gallery']['enabled']) {
+            $gallery_name = $_POST['gallery_name'] ?? '';
+            $gallery_text = $_POST['gallery_text'] ?? '';
+            
+            $obj->gallery_name = ($config['gallery']['gallery_name']['enabled'] ?? false) ? (is_array($gallery_name) ? '' : trim($gallery_name)) : '';
+            $obj->gallery_text = ($config['gallery']['gallery_text']['enabled'] ?? false) ? (is_array($gallery_text) ? '' : trim($gallery_text)) : '';
+        }
+        
+        if ($config['files']['enabled']) {
+            $files_name = $_POST['files_name'] ?? '';
+            $files_text = $_POST['files_text'] ?? '';
+            
+            $obj->files_name = ($config['files']['files_name']['enabled'] ?? false) ? (is_array($files_name) ? '' : trim($files_name)) : '';
+            $obj->files_text = ($config['files']['files_text']['enabled'] ?? false) ? (is_array($files_text) ? '' : trim($files_text)) : '';
+        }
+        
         if ($config['seo']['enabled']) {
             $obj->title = ($config['seo']['title']['enabled'] ?? false) ? trim($_POST['title'] ?? '') : '';
             $obj->keywords = ($config['seo']['keywords']['enabled'] ?? false) ? trim($_POST['keywords'] ?? '') : '';
             $obj->description = ($config['seo']['description']['enabled'] ?? false) ? trim($_POST['description'] ?? '') : '';
         }
         
-        // Системные поля
         $obj->edit_date = date("Y-m-d H:i:s");
         $obj->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
-        $obj->is_draft = 1; // Признак черновика
+        $obj->is_draft = 1;
 
-        // Сохраняем текущие данные
-        $currentData = $obj->toArray();
-
-        // Получаем ID администратора
-        $adminId = $_SESSION['admin']['id'] ?? 0;
-
-        // Сохраняем запись
         $obj->save();
 
-        // Логируем изменения ТОЛЬКО для черновиков
-        if ($useDrafts && $config['history']['enabled']) {
-            // Определяем поля для проверки
-            $fieldsToCheck = [];
-            if ($config['fields']['name']['enabled'] ?? false) $fieldsToCheck[] = 'name';
-            if ($config['fields']['url']['enabled'] ?? false) $fieldsToCheck[] = 'url';
-            if ($config['fields']['text']['enabled'] ?? false) $fieldsToCheck[] = 'text';
-            if ($config['fields']['text2']['enabled'] ?? false) $fieldsToCheck[] = 'text2';
-            if ($config['fields']['preview']['textshort']['enabled'] ?? false) $fieldsToCheck[] = 'textshort';
-            if ($config['fields']['show']['enabled'] ?? false) $fieldsToCheck[] = 'show';
-            if ($config['fields']['date']['enabled'] ?? false) $fieldsToCheck[] = 'date';
-            if ($config['fields']['section_id']['enabled'] ?? false) $fieldsToCheck[] = 'section_id';
-            if ($config['fields']['rate']['enabled'] ?? false) $fieldsToCheck[] = 'rate';
-            if ($config['seo']['title']['enabled'] ?? false) $fieldsToCheck[] = 'title';
-            if ($config['seo']['keywords']['enabled'] ?? false) $fieldsToCheck[] = 'keywords';
-            if ($config['seo']['description']['enabled'] ?? false) $fieldsToCheck[] = 'description';
-        }
-
-        // Загрузка изображений в ЧЕРНОВИК
         if (($config['fields']['image']['enabled'] ?? false)) {
             $width = $config['fields']['image']['width'] ?? 1200;
             $height = $config['fields']['image']['height'] ?? 800;
@@ -431,16 +449,11 @@ if (!file_exists(ROOT.$configPath)):
             );
         }
 
-        // --- Фотогалерея --- //
         FileUpload::updateGallery();
         FileUpload::uploadGallery('gallery', 'news', $obj->id, 800, 600, '/public/src/images/news/', 400, 300, 1);
-        // --- // --- //
 
-        // --- Файлы --- //
         FileUpload::updateFiles();
         FileUpload::uploadFiles('files', 'news', $obj->id, '/public/src/files/news/');
-        // --- // --- //
-
 
         if ($publish || !$useDrafts) {
 
@@ -449,11 +462,9 @@ if (!file_exists(ROOT.$configPath)):
             if($obj->original_id) {
                 $published = News::findById($obj->original_id);
             } else {
-                // Создаем пустой чистовик для нового черновика
                 $published = new News();
             }
             
-            // Копируем данные из черновика в опубликованную версию
             $published = News::copyData($obj, $published, ['id', 'is_draft', 'original_id','image','image_preview']);
 
             $published->url = str_replace('draft-','',$published->url);
@@ -462,7 +473,6 @@ if (!file_exists(ROOT.$configPath)):
             $published->edit_date = date("Y-m-d H:i:s");
             $published->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
 
-            // Удаляем опубликованные изображения, если они существуют
             if(!empty($published->image) && file_exists(ROOT . $published->image)) {
                 unlink(ROOT . $published->image);
                 $published->image = '';
@@ -471,7 +481,7 @@ if (!file_exists(ROOT.$configPath)):
                 unlink(ROOT . $published->image_preview);
                 $published->image_preview = '';
             }
-            // Копируем новые изображения
+            
             if(!empty($obj->image) && file_exists(ROOT . $obj->image)) {
                 $extension = pathinfo(ROOT.$obj->image, PATHINFO_EXTENSION);
                 $image = '/public/src/images/news/'.uniqid().'.'.$extension;
@@ -488,11 +498,9 @@ if (!file_exists(ROOT.$configPath)):
 
             $published->save();
 
-            // Копируем галерею
             $draftGallery = Gallery::where("WHERE type = 'news' AND ids = ?", [$obj->id]);
             $publishedGallery = Gallery::where("WHERE type = 'news' AND ids = ?", [$published->id]);
 
-            // Удаляем старую галерею опубликованной версии
             foreach ($publishedGallery as $item) {
                 if (!empty($item->image) && file_exists(ROOT . $item->image)) {
                     unlink(ROOT . $item->image);
@@ -506,7 +514,6 @@ if (!file_exists(ROOT.$configPath)):
                 $item->delete();
             }
 
-            // Копируем галерею из черновика в опубликованную версию
             foreach ($draftGallery as $item) {
                 $newGallery = new Gallery();
                 $newGallery->type = 'news';
@@ -517,7 +524,6 @@ if (!file_exists(ROOT.$configPath)):
                 $newGallery->edit_date = date("Y-m-d H:i:s");
                 $newGallery->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
                 
-                // Копируем файлы
                 if (!empty($item->image) && file_exists(ROOT . $item->image)) {
                     $extension = pathinfo(ROOT . $item->image, PATHINFO_EXTENSION);
                     $newImage = '/public/src/images/news/gallery_' . uniqid() . '.' . $extension;
@@ -542,11 +548,9 @@ if (!file_exists(ROOT.$configPath)):
                 $newGallery->save();
             }
 
-            // Копируем файлы
             $draftFiles = Files::where("WHERE type = 'news' AND ids = ?", [$obj->id]);
             $publishedFiles = Files::where("WHERE type = 'news' AND ids = ?", [$published->id]);
 
-            // Удаляем старые файлы опубликованной версии
             foreach ($publishedFiles as $item) {
                 if (!empty($item->file) && file_exists(ROOT . $item->file)) {
                     unlink(ROOT . $item->file);
@@ -554,7 +558,6 @@ if (!file_exists(ROOT.$configPath)):
                 $item->delete();
             }
 
-            // Копируем файлы из черновика в опубликованную версию
             foreach ($draftFiles as $item) {
                 $newFile = new Files();
                 $newFile->type = 'news';
@@ -566,7 +569,6 @@ if (!file_exists(ROOT.$configPath)):
                 $newFile->edit_date = date("Y-m-d H:i:s");
                 $newFile->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
                 
-                // Копируем файл
                 if (!empty($item->file) && file_exists(ROOT . $item->file)) {
                     $extension = pathinfo(ROOT . $item->file, PATHINFO_EXTENSION);
                     $newFilePath = '/public/src/files/news/' . uniqid() . '.' . $extension;
@@ -577,7 +579,6 @@ if (!file_exists(ROOT.$configPath)):
                 $newFile->save();
             }
 
-            // Обновляем связь черновика
             $obj->original_id = $published->id;
             $obj->save();
         }
@@ -600,7 +601,6 @@ if (!file_exists(ROOT.$configPath)):
             $published = News::findById($obj->original_id);
         }
         
-        // Удаление изображений, если они есть
         if (($config['fields']['image']['enabled'] ?? false) && !empty($obj->image) && file_exists(ROOT . $obj->image)) {
             unlink(ROOT . $obj->image);
         }
@@ -608,21 +608,15 @@ if (!file_exists(ROOT.$configPath)):
             unlink(ROOT . $obj->image_preview);
         }
 
-        // Удаляем галерею черновика
         Gallery::delAll('news', $obj->id);
-
-        // Удаляем файлы черновика
         Files::delAll('news', $obj->id);
         
         $obj->delete();
 
-        // Если есть опубликованная версия и черновик был последним, удаляем и её
         if ($published && $useDrafts) {
-            // Проверяем есть ли другие черновики для этой новости
             $otherDrafts = News::where("WHERE original_id = ? AND id != ?", [$published->id, $obj->id]);
             
             if (empty($otherDrafts)) {
-                // Удаление изображений опубликованной версии
                 if (($config['fields']['image']['enabled'] ?? false) && !empty($published->image) && file_exists(ROOT . $published->image)) {
                     unlink(ROOT . $published->image);
                 }
@@ -630,10 +624,7 @@ if (!file_exists(ROOT.$configPath)):
                     unlink(ROOT . $published->image_preview);
                 }
 
-                // Удаляем галерею опубликованной версии
                 Gallery::delAll('news', $published->id);
-
-                // Удаляем файлы опубликованной версии
                 Files::delAll('news', $published->id);
                 
                 $published->delete();
@@ -646,12 +637,10 @@ if (!file_exists(ROOT.$configPath)):
         exit;
 
     else :
-        $title = 'Новости';
-        $add = 'новость';
+        $title = $config['module']['title'] ?? '';
 
         $filter = false;
 
-        // Формируем условия WHERE
         $whereConditions = [];
         $params = [];
         
@@ -660,10 +649,8 @@ if (!file_exists(ROOT.$configPath)):
             $whereConditions[] = "(`name` like '%{$search}%' OR `text` like '%{$search}%' OR `textshort` like '%{$search}%' OR `text2` like '%{$search}%')";
         }
         
-        // Фильтр по статусу черновика
         $whereConditions[] = "is_draft = 1";
 
-        // Формируем полное WHERE условие
         $where = '';
         if (!empty($whereConditions)) {
             $where = 'WHERE ' . implode(' AND ', $whereConditions);
@@ -672,7 +659,6 @@ if (!file_exists(ROOT.$configPath)):
         $perPage = $_SESSION['news']['per_page'] ?? $config['pagination']['default_per_page'];
         $order_by = $config['pagination']['order_by'] ?? 'ORDER BY date DESC, id DESC';
 
-        // Вызов пагинации
         $result = Pagination::create(
             modelClass: News::class,
             where: $where,
@@ -726,7 +712,6 @@ if (!file_exists(ROOT.$configPath)):
                         $pageUrl = News::getUrl($obj->original_id);
                     }
                     
-                    // Проверяем наличие изменений в черновике
                     $has_changes = false;
                     if ($useDrafts && !empty($original) && $obj->edit_date != $original->edit_date || empty($original)) {
                         $has_changes = true;

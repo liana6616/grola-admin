@@ -7,11 +7,12 @@
  * @var int|null $selectedId Выбранный ID
  * @var bool $null Добавить пустой элемент
  * @var string $nullTitle Заголовок пустого элемента
- * @var string $fieldName Имя поля для отображения (бывший $pole)
+ * @var string $fieldName Имя поля для отображения
  * @var int $no_obj Тип отображения объектов
  * @var string $class CSS классы
  * @var int $data_id ID данных (для data-атрибута)
  * @var string $form_id ID формы (опционально)
+ * @var bool $disabled Отключить поле (НОВОЕ)
  */
 ?>
 <div class='input_block <?= htmlspecialchars($class, ENT_QUOTES, 'UTF-8') ?>'>
@@ -24,7 +25,8 @@
             id='<?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?>' 
             class='chosen' 
             data-id='<?= (int)$data_id ?>' 
-            <?= !empty($form_id) ? 'form="' . htmlspecialchars($form_id, ENT_QUOTES, 'UTF-8') . '"' : '' ?>>
+            <?= !empty($form_id) ? 'form="' . htmlspecialchars($form_id, ENT_QUOTES, 'UTF-8') . '"' : '' ?>
+            <?= $disabled ? 'disabled' : '' ?>>
         
         <?php if ($null): ?>
             <option value='0'><?= htmlspecialchars($nullTitle, ENT_QUOTES, 'UTF-8') ?></option>
@@ -33,7 +35,7 @@
         <?php if (!empty($object) && empty($no_obj)): ?>
             <?php foreach ($object as $item): ?>
                 <option value='<?= (int)$item->id ?>' <?= $selectedId == $item->id ? 'selected' : '' ?>>
-                    <?= htmlspecialchars($item->$fieldName ?? '', ENT_QUOTES, 'UTF-8') ?>  <!-- Исправлено с $pole на $fieldName -->
+                    <?= htmlspecialchars($item->$fieldName ?? '', ENT_QUOTES, 'UTF-8') ?>
                 </option>
             <?php endforeach; ?>
         

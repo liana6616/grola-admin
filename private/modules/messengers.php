@@ -8,9 +8,6 @@ use app\Helpers;
 use app\Pagination;
 use app\Form;
 
-$title = 'Мессенджеры и социальные сети';
-$add = 'мессенджер/соцсеть';
-
 if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
 
     $obj = new Messengers();
@@ -19,16 +16,16 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
     $obj->show = 1;
     $obj->rate = 0;
     
-    $title_form = 'Добавление';
+    $$title = 'Добавление';
     $id = false;
     
     if(!empty($_GET['edit'])) {
         $id = $_GET['edit'];
-        $title_form = 'Редактирование';
+        $$title = 'Редактирование';
     }
     if(!empty($_GET['copy']) && $config['actions']['copy']) {
         $id = $_GET['copy'];
-        $title_form = 'Копирование';
+        $$title = 'Копирование';
     }
     
     if(!empty($id)) {
@@ -53,7 +50,7 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
 
     ?>
     <div class="editHead">
-        <h1><?= $title_form . ' ' . $add ?></h1>
+        <h1><?= $$title ?></h1>
         <div class="button_block">
             <a href='<?= $_SERVER['REDIRECT_URL'] ?>' class='btn btn_white btn_back'>Вернуться назад</a>
         </div>
@@ -255,6 +252,9 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
+
     $filter = true;
 
     // Формируем условия WHERE

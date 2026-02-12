@@ -73,7 +73,7 @@
             $urlParams = '&parent=' . $parent;
         }
 
-        if(!empty($add) && \app\Models\Admins::canCreate() && !in_array(str_replace(ADMIN_LINK.'/','',URI),['subscribe','forms'])): ?>
+        if(\app\Models\Admins::canCreate() && !in_array(str_replace(ADMIN_LINK.'/','',URI),['subscribe','forms'])): ?>
             <a href="?<?= $addParam ?><?= $urlParams ?>" class="btn btn_red btn_add">
                 <span><?= !empty($add_text) ? $add_text : 'Добавить' ?></span>
             </a>

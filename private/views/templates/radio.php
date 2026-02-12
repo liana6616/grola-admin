@@ -8,6 +8,7 @@
  * @var string $class Дополнительные CSS классы
  * @var bool $horizontal Горизонтальное расположение
  * @var string $size Размер (small, normal, large)
+ * @var bool $disabled Отключить поле (НОВОЕ)
  */
 $radioClasses = 'radio_block';
 if (!empty($class)) {
@@ -34,7 +35,8 @@ if (!empty($size) && in_array($size, ['small', 'large'])) {
                    name='<?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?>' 
                    id='radio_<?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?>_<?= $i ?>'
                    value='<?= htmlspecialchars($value, ENT_QUOTES, 'UTF-8') ?>' 
-                   <?= $value == $checked ? 'checked' : '' ?>>
+                   <?= $value == $checked ? 'checked' : '' ?>
+                   <?= $disabled ? 'disabled' : '' ?>>
             <label for='radio_<?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?>_<?= $i ?>'>
                 <?= htmlspecialchars($label, ENT_QUOTES, 'UTF-8') ?>
             </label>

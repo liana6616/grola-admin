@@ -215,6 +215,7 @@ if (!file_exists(ROOT.$configPath)):
         // Инициализируем объект $obj в зависимости от ситуации
         if (isset($_POST['edit']) && $id > 0) {
             // Редактирование существующей записи
+            FileUpload::deleteImageFile();
             $obj = Categories::findById($id);
             if (!$obj) {
                 header("Location: {$_SERVER['REDIRECT_URL']}?parent=" . ($_POST['parent'] ?? 0));
@@ -344,8 +345,8 @@ if (!file_exists(ROOT.$configPath)):
         exit;
 
     else :
-        $title = 'Категории товаров';
-        $add = 'категорию';
+        // Заголовок модуля из конфига
+        $title = $config['module']['title'] ?? '';
 
         $filter = false;
 

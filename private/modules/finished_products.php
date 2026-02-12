@@ -180,8 +180,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'Готовая продукция';
-    $add = 'категорию';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = false;
 

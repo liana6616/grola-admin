@@ -38,23 +38,23 @@ class Form
      * @param string|null $value Значение поля
      * @param bool $required Обязательное поле
      * @param string $type Тип поля (text, number, password и т.д.)
-     * @param string $disabled Атрибут disabled
+     * @param bool $disabled Отключить поле
      * @param string $class CSS классы
      * @return string HTML-код поля ввода
      */
     public static function input(
         string $title,
         string $name,
-        ?string $value = '',  // Изменено на ?string
+        ?string $value = '',
         bool $required = false,
         string $type = 'text',
-        string $disabled = '',
+        bool $disabled = false,
         string $class = ''
     ): string {
         return self::renderTemplate('input.php', [
             'title' => $title,
             'name' => $name,
-            'value' => $value ?? '',  // Преобразуем null в пустую строку
+            'value' => $value ?? '',
             'required' => $required,
             'type' => $type,
             'disabled' => $disabled,
@@ -124,6 +124,7 @@ class Form
      * @param string $title Заголовок чекбокса
      * @param string $value Значение поля
      * @param string|null $id ID поля (опционально)
+     * @param bool $disabled Отключить поле
      * @return string HTML-код чекбокса
      */
     public static function checkbox(
@@ -131,14 +132,16 @@ class Form
         bool $checked,
         string $title = 'Показывать на сайте',
         string $value = '1',
-        ?string $id = null
+        ?string $id = null,
+        bool $disabled = false
     ): string {
         return self::renderTemplate('checkbox.php', [
             'name' => $name,
             'checked' => $checked,
             'title' => $title,
             'value' => $value,
-            'id' => $id
+            'id' => $id,
+            'disabled' => $disabled
         ]);
     }
 
@@ -152,6 +155,7 @@ class Form
      * @param string $class Дополнительные CSS классы
      * @param bool $horizontal Горизонтальное расположение
      * @param string $size Размер (small, normal, large)
+     * @param bool $disabled Отключить группу полей
      * @return string HTML-код группы радиокнопок
      */
     public static function radio(
@@ -161,7 +165,8 @@ class Form
         ?string $checked = null,
         string $class = '',
         bool $horizontal = false,
-        string $size = 'normal'
+        string $size = 'normal',
+        bool $disabled = false
     ): string {
         return self::renderTemplate('radio.php', [
             'title' => $title,
@@ -170,7 +175,8 @@ class Form
             'checked' => $checked,
             'class' => $class,
             'horizontal' => $horizontal,
-            'size' => $size
+            'size' => $size,
+            'disabled' => $disabled
         ]);
     }
 
@@ -181,21 +187,24 @@ class Form
      * @param string $name Имя поля
      * @param string|null $value Значение поля
      * @param int|null $height Высота поля в пикселях
+     * @param bool $disabled Отключить поле
      * @param string $class CSS классы
      * @return string HTML-код текстового поля
      */
     public static function textarea(
         string $title,
         string $name,
-        ?string $value = '',  // Изменено на ?string
+        ?string $value = '',
         ?int $height = null,
+        bool $disabled = false,
         string $class = ''
     ): string {
         return self::renderTemplate('textarea.php', [
             'title' => $title,
             'name' => $name,
-            'value' => $value ?? '',  // Преобразуем null в пустую строку
+            'value' => $value ?? '',
             'height' => $height,
+            'disabled' => $disabled,
             'class' => $class
         ]);
     }
@@ -206,19 +215,22 @@ class Form
      * @param string $title Заголовок поля
      * @param string $name Имя поля
      * @param string|null $value Значение поля (HTML)
+     * @param bool $disabled Отключить поле
      * @param string $class CSS классы
      * @return string HTML-код поля текстового редактора
      */
     public static function textbox(
         string $title,
         string $name,
-        ?string $value = '',  // Изменено на ?string
+        ?string $value = '',
+        bool $disabled = false,
         string $class = ''
     ): string {
         return self::renderTemplate('textbox.php', [
             'title' => $title,
             'name' => $name,
-            'value' => $value ?? '',  // Преобразуем null в пустую строку
+            'value' => $value ?? '',
+            'disabled' => $disabled,
             'class' => $class
         ]);
     }
@@ -227,22 +239,31 @@ class Form
      * Создает поле для загрузки изображения
      *
      * @param string $title Заголовок поля
-     * @param string $name Имя поля
+     * @param string $name Имя поля (name атрибут input)
      * @param mixed $object Объект с данными изображения
+     * @param string $dbField Название поля в базе данных (если отличается от name)
      * @param bool $required Обязательное поле
+     * @param bool $disabled Отключить поле
      * @return string HTML-код поля для изображения
      */
     public static function image(
         string $title,
         string $name,
         $object,
-        bool $required = false
+        bool $required = false,
+        bool $disabled = false,
+        string $dbField = ''
     ): string {
+        // Если dbField не указано, используем name
+        $field = !empty($dbField) ? $dbField : $name;
+        
         return self::renderTemplate('image.php', [
             'title' => $title,
             'name' => $name,
+            'dbField' => $field,
             'object' => $object,
-            'required' => $required
+            'required' => $required,
+            'disabled' => $disabled
         ]);
     }
 
@@ -250,22 +271,31 @@ class Form
      * Создает поле для загрузки файла
      *
      * @param string $title Заголовок поля
-     * @param string $name Имя поля
+     * @param string $name Имя поля (name атрибут input)
      * @param mixed $object Объект с данными файла
+     * @param string $dbField Название поля в базе данных (если отличается от name)
      * @param bool $required Обязательное поле
+     * @param bool $disabled Отключить поле
      * @return string HTML-код поля для файла
      */
     public static function file(
         string $title,
         string $name,
         $object,
-        bool $required = false
+        bool $required = false,
+        bool $disabled = false,
+        string $dbField = ''
     ): string {
+        // Если dbField не указано, используем name
+        $field = !empty($dbField) ? $dbField : $name;
+        
         return self::renderTemplate('file.php', [
             'title' => $title,
             'name' => $name,
+            'dbField' => $field,
             'object' => $object,
-            'required' => $required
+            'required' => $required,
+            'disabled' => $disabled
         ]);
     }
 
@@ -277,6 +307,7 @@ class Form
      * @param mixed $objects Массив объектов с файлами
      * @param bool $required Обязательное поле
      * @param string $accept Разрешенные типы файлов
+     * @param bool $disabled Отключить поле
      * @return string HTML-код поля для множественной загрузки файлов
      */
     public static function files(
@@ -284,14 +315,16 @@ class Form
         string $name,
         $objects,
         bool $required = false,
-        string $accept = ''
+        string $accept = '',
+        bool $disabled = false
     ): string {
         return self::renderTemplate('files.php', [
             'title' => $title,
             'name' => $name,
             'objects' => $objects,
             'required' => $required,
-            'accept' => $accept
+            'accept' => $accept,
+            'disabled' => $disabled
         ]);
     }
 
@@ -301,17 +334,20 @@ class Form
      * @param string $title Заголовок галереи
      * @param string $name Имя поля
      * @param mixed $gallerys Массив объектов галереи
+     * @param bool $disabled Отключить поле
      * @return string HTML-код галереи
      */
     public static function gallery(
         string $title,
         string $name,
-        $gallerys
+        $gallerys,
+        bool $disabled = false
     ): string {
         return self::renderTemplate('gallery.php', [
             'title' => $title,
             'name' => $name,
-            'gallerys' => $gallerys
+            'gallerys' => $gallerys,
+            'disabled' => $disabled
         ]);
     }
 
@@ -329,20 +365,22 @@ class Form
      * @param string $class CSS классы
      * @param int $data_id ID данных для data-атрибута
      * @param string $form_id ID формы
+     * @param bool $disabled Отключить поле
      * @return string HTML-код выпадающего списка
      */
     public static function select(
         string $title,
         string $name,
         $object,
-        $selectedId = null,  // Изменено с ?int на mixed
+        $selectedId = null,
         bool $null = true,
         string $nullTitle = 'Не выбрано',
         string $fieldName = 'name',
         int $no_obj = 0,
         string $class = '',
         int $data_id = 0,
-        string $form_id = ''
+        string $form_id = '',
+        bool $disabled = false
     ): string {
         return self::renderTemplate('select.php', [
             'title' => $title,
@@ -355,7 +393,8 @@ class Form
             'no_obj' => $no_obj,
             'class' => $class,
             'data_id' => $data_id,
-            'form_id' => $form_id
+            'form_id' => $form_id,
+            'disabled' => $disabled
         ]);
     }
 
@@ -367,6 +406,7 @@ class Form
      * @param mixed $object Данные для выбора
      * @param string $value Строка с выбранными ID через '|'
      * @param string $info Дополнительная информация
+     * @param bool $disabled Отключить поле
      * @return string HTML-код поля множественного выбора
      */
     public static function multiple(
@@ -374,14 +414,16 @@ class Form
         string $name,
         $object,
         string $value = '',
-        string $info = ''
+        string $info = '',
+        bool $disabled = false
     ): string {
         return self::renderTemplate('selectMultiple.php', [
             'title' => $title,
             'name' => $name,
             'object' => $object,
             'value' => $value,
-            'info' => $info
+            'info' => $info,
+            'disabled' => $disabled
         ]);
     }
 
@@ -390,13 +432,15 @@ class Form
      *
      * @param string $title Заголовок метки
      * @param mixed $value Значение метки
+     * @param string $class CSS классы
      * @return string HTML-код метки
      */
-    public static function label(string $title, $value): string
+    public static function label(string $title, $value, string $class = ''): string
     {
         return self::renderTemplate('label.php', [
             'title' => $title,
-            'value' => $value
+            'value' => $value,
+            'class' => $class
         ]);
     }
 }

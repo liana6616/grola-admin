@@ -1,8 +1,7 @@
 <?php
-declare(strict_types=1);
-echo "test1";
-// Включаем строгий режим типизации
 
+// Включаем строгий режим типизации
+declare(strict_types=1);
 
 // Базовые настройки безопасности и окружения
 define('ROOT', dirname(__DIR__.'/public_html/'));
@@ -71,10 +70,27 @@ spl_autoload_register(function ($class) {
             error_log("Class file not found: {$classFile}".PHP_EOL.PHP_EOL);
 
             // В production можно логировать, но не прерывать выполнение
-	      // throw new \Exception("Class {$class} not found");
+          // throw new \Exception("Class {$class} not found");
         //}
     }
 });
+
+
+// --- Middleware обработка города ---
+try {
+    // Обрабатываем определение города
+    \app\Middleware\CityDetector::handle();
+    
+    // Логируем для отладки
+    if ($debugMode && defined('CURRENT_CITY')) {
+        error_log("Current city after detection: " . CURRENT_CITY);
+        error_log("Request URI after city detection: " . ($_SERVER['REQUEST_URI'] ?? '/'));
+    }
+} catch (\Exception $e) {
+    error_log("City detection error: " . $e->getMessage());
+    define('CURRENT_CITY', 'default');
+}
+// --- КОНЕЦ Middleware обработки ---
 
 
 // Определяем константы для текущего запроса
@@ -135,6 +151,33 @@ if ($debugMode) {
     $_REQUEST = cleanInput($_REQUEST);
 }
 
+// Функция для безопасного показа ошибки 500
+// Функция для безопасного показа ошибки 500
+function show500Page($debugMode, $technicalInfo = null) {
+    try {
+        // Пробуем использовать контроллер ошибок
+        $controller = new \app\Controllers\Errors();
+        $controller->show500($technicalInfo);
+        exit(1);
+    } catch (Exception $e) {
+        // Если контроллер не работает, делаем редирект на главную
+        if (!$debugMode) {
+            // В production режиме - редирект на главную
+            header("Location: /");
+            exit;
+        } else {
+            // В debug режиме показываем информацию
+            header("HTTP/1.0 500 Internal Server Error");
+            echo "<div style='background:#f8d7da;color:#721c24;padding:10px;margin:10px;border:1px solid #f5c6cb;border-radius:4px;'>
+                    <strong>500 Internal Server Error</strong><br>
+                    <small>Controller error: " . htmlspecialchars($e->getMessage()) . "</small><br>
+                    <small>Original error: " . ($technicalInfo ? htmlspecialchars(substr($technicalInfo, 0, 500)) : '') . "</small>
+                  </div>";
+        }
+        exit(1);
+    }
+}
+
 // Обработка глобальных ошибок
 set_error_handler(function ($errno, $errstr, $errfile, $errline) use ($debugMode) {
     if (!(error_reporting() & $errno)) {
@@ -176,10 +219,8 @@ set_error_handler(function ($errno, $errstr, $errfile, $errline) use ($debugMode
     // Для фатальных ошибок завершаем выполнение
     if (in_array($errno, [E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR])) {
         http_response_code(500);
-        if (!$debugMode) {
-            include VIEWS_DIR . '/errors/500.php';
-        }
-        exit(1);
+        $technicalInfo = $debugMode ? "{$errorType}: {$errstr} in {$errfile} on line {$errline}" : null;
+        show500Page($debugMode, $technicalInfo);
     }
     
     return true;
@@ -199,17 +240,12 @@ set_exception_handler(function ($exception) use ($debugMode) {
     
     http_response_code(500);
     
-    if ($debugMode) {
-        echo "<div style='background:#f8d7da;color:#721c24;padding:10px;margin:10px;border:1px solid #f5c6cb;border-radius:4px;'>
-                <strong>Exception:</strong> {$exception->getMessage()}<br>
-                <small>File: {$exception->getFile()} (Line: {$exception->getLine()})</small>
-                <pre style='background:#fff;padding:10px;margin-top:5px;border-radius:3px;overflow:auto;'>{$exception->getTraceAsString()}</pre>
-              </div>";
-    } else {
-        include VIEWS_DIR . '/errors/500.php';
-    }
+    $technicalInfo = $debugMode ? 
+        "Exception: {$exception->getMessage()} in {$exception->getFile()} on line {$exception->getLine()}\n" . 
+        $exception->getTraceAsString() : 
+        null;
     
-    exit(1);
+    show500Page($debugMode, $technicalInfo);
 });
 
 // Функция для завершения работы при фатальных ошибках
@@ -229,14 +265,11 @@ register_shutdown_function(function () use ($debugMode) {
         
         http_response_code(500);
         
-        if ($debugMode) {
-            echo "<div style='background:#f8d7da;color:#721c24;padding:10px;margin:10px;border:1px solid #f5c6cb;border-radius:4px;'>
-                    <strong>Fatal Error:</strong> {$error['message']}<br>
-                    <small>File: {$error['file']} (Line: {$error['line']})</small>
-                  </div>";
-        } else {
-            include VIEWS_DIR . '/errors/500.php';
-        }
+        $technicalInfo = $debugMode ? 
+            "Fatal Error: {$error['message']} in {$error['file']} on line {$error['line']}" : 
+            null;
+        
+        show500Page($debugMode, $technicalInfo);
     }
 });
 
@@ -249,17 +282,9 @@ try {
     
 } catch (Exception $e) {
     // Резервная обработка ошибок на случай, если роутер не справился
-    http_response_code(500);
+    $technicalInfo = $debugMode ? 
+        "Application Error: {$e->getMessage()}\n" . $e->getTraceAsString() : 
+        null;
     
-    if ($debugMode) {
-        echo "<div style='background:#f8d7da;color:#721c24;padding:10px;margin:10px;border:1px solid #f5c6cb;border-radius:4px;'>
-                <strong>Application Error:</strong> {$e->getMessage()}<br>
-                <pre style='background:#fff;padding:10px;margin-top:5px;border-radius:3px;overflow:auto;'>{$e->getTraceAsString()}</pre>
-              </div>";
-    } else {
-        echo '<h1>Application Error</h1>';
-        echo '<p>Sorry, something went wrong. Please try again later.</p>';
-    }
-    
-    error_log($e->getMessage() . "\n" . $e->getTraceAsString().PHP_EOL.PHP_EOL, 3, LOG_DIR . '/app_errors.log');
+    show500Page($debugMode, $technicalInfo);
 }

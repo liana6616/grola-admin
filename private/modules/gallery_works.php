@@ -277,8 +277,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'Галерея выполненных работ';
-    $add = 'работу';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = false;
 

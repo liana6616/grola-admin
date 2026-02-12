@@ -21,11 +21,11 @@
 	<meta property="og:description" content= "<?= $this->description ?>">
 	<meta property="og:image" content = "https://<?= $_SERVER['SERVER_NAME'] ?>/public/src/images/logo.svg">
 
-    <link rel="preload" href="./public/fonts/Aeonik-Pro-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/public/fonts/Aeonik-Pro-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/public/fonts/Aeonik-Pro-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/public/fonts/Gordita-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/public/fonts/Gordita-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./public/src/fonts/Aeonik-Pro-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/public/src/fonts/Aeonik-Pro-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/public/src/fonts/Aeonik-Pro-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/public/src/fonts/Gordita-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/public/src/fonts/Gordita-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
 		    <!-- jQuery UI CSS -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
@@ -51,25 +51,25 @@
 
 	  <header class="header">
         <a href="/index.php" class="header__logo-mob">
-            <img src="/public/images/icons/logo-dark.svg" alt="Иконка лого">
+            <img src="/public/src/images/icons/logo-dark.svg" alt="Иконка лого">
         </a>
         <div class="header__wrapper-block">
             <div class="header__wrapper header__wrapper-mob">
                 <a href="/index.php" class="header__logo">
-                    <img src="/public/images/icons/logo-dark.svg" alt="Иконка лого">
+                    <img src="/public/src/images/icons/logo-dark.svg" alt="Иконка лого">
                 </a>
                 <ul class="header__list">
                     <li class="header__item header__item-mob">
-                        <a class="header__link" href="/index.php">Главная</a>
+                        <a class="header__link" href="/index">Главная</a>
                     </li>
                     <li class="header__item">
-                        <a class="header__link" href="/catalog.php">Каталог</a>
+                        <a class="header__link" href="/catalog">Каталог</a>
                     </li>
                     <li class="header__item header__item-link">
-                        <a class="header__link filter" href="/about.php">О компании</a>
+                        <a class="header__link filter" href="/about">О компании</a>
                     </li>
                     <li class="header__item header__item-link">
-                        <a class="header__link filter" href="/contacts.php">Контакты</a>
+                        <a class="header__link filter" href="/contacts">Контакты</a>
                     </li>
                 </ul>
             </div>

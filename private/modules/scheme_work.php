@@ -154,8 +154,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'Схема работы с нами';
-    $add = 'этап';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = false;
 

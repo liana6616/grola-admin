@@ -63,12 +63,17 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
                 <!-- При копировании сохраняем ID оригинала как hidden поле -->
                 <input type="hidden" name="copy_from" value="<?= $_GET['copy'] ?>">
             <?php endif; ?>
+        
+
+            <?php if ($config['fields']['name']['enabled'] ?? false): ?>
+                <?= Form::input($config['fields']['name']['title'] ?? 'Название формы', 'name', $obj->name, 0, '', '', '') ?>
+            <?php endif; ?>
 
             <?php if ($config['fields']['image']['enabled'] ?? false): ?>
                 <?= Form::image(
                     $config['fields']['image']['title'] . ' (' . 
-                    ($config['fields']['image']['width'] ?? 500) . '×' . 
-                    ($config['fields']['image']['height'] ?? 500) . ')', 
+                    ($config['fields']['image']['width'] ?? 862) . '×' . 
+                    ($config['fields']['image']['height'] ?? 658) . ')', 
                     'image', 
                     $obj, 
                     false, 
@@ -76,16 +81,77 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
                 ) ?>
             <?php endif; ?>
 
-            <?php if ($config['fields']['name']['enabled'] ?? false): ?>
-                <?= Form::input($config['fields']['name']['title'] ?? 'Название формы', 'name', $obj->name, 0, '', '', '') ?>
-            <?php endif; ?>
+            <?php if (($config['fields']['text_block']['enabled'] ?? false) && 
+                     (($config['fields']['text_block']['title_field']['enabled'] ?? false) || 
+                      ($config['fields']['text_block']['text']['enabled'] ?? false) || 
+                      ($config['fields']['text_block']['text2']['enabled'] ?? false))): ?>
+            <fieldset class="input_block">
+                <legend><?= $config['fields']['text_block']['title'] ?? 'Текстовый блок' ?></legend>
             
-            <?php if ($config['fields']['text']['enabled'] ?? false): ?>
-                <?= Form::textarea($config['fields']['text']['title'] ?? 'Описание', 'text', $obj->text, 100, '') ?>
+                <?php if ($config['fields']['text_block']['title_field']['enabled'] ?? false): ?>
+                    <?= Form::input(
+                        $config['fields']['text_block']['title_field']['title'] ?? 'Заголовок над описанием', 
+                        'title', 
+                        $obj->title, 
+                        0, 
+                        '', 
+                        '', 
+                        ''
+                    ) ?>
+                <?php endif; ?>
+                
+                <?php if ($config['fields']['text_block']['text']['enabled'] ?? false): ?>
+                    <?= Form::textarea(
+                        $config['fields']['text_block']['text']['title'] ?? 'Описание', 
+                        'text', 
+                        $obj->text, 
+                        100, 
+                        ''
+                    ) ?>
+                <?php endif; ?>
+
+                <?php if ($config['fields']['text_block']['text2']['enabled'] ?? false): ?>
+                    <?= Form::textarea(
+                        $config['fields']['text_block']['text2']['title'] ?? 'Дополнительное описание', 
+                        'text2', 
+                        $obj->text2, 
+                        100, 
+                        ''
+                    ) ?>
+                <?php endif; ?>
+
+            </fieldset>
             <?php endif; ?>
 
-            <?php if ($config['fields']['text2']['enabled'] ?? false): ?>
-                <?= Form::textarea($config['fields']['text2']['title'] ?? 'Дополнительное описание', 'text2', $obj->text2, 100, '') ?>
+            <?php if (($config['fields']['button_block']['enabled'] ?? false) && 
+                     (($config['fields']['button_block']['button_name']['enabled'] ?? false) || 
+                      ($config['fields']['button_block']['button_link']['enabled'] ?? false))): ?>
+            <fieldset class="input_block">
+                <legend><?= $config['fields']['button_block']['title'] ?? 'Кнопка' ?></legend>
+                <?php if ($config['fields']['button_block']['button_name']['enabled'] ?? false): ?>
+                    <?= Form::input(
+                        $config['fields']['button_block']['button_name']['title'] ?? 'Текст на кнопке', 
+                        'button_name', 
+                        $obj->button_name, 
+                        0, 
+                        '', 
+                        '', 
+                        ''
+                    ) ?>
+                <?php endif; ?>
+                
+                <?php if ($config['fields']['button_block']['button_link']['enabled'] ?? false): ?>
+                    <?= Form::input(
+                        $config['fields']['button_block']['button_link']['title'] ?? 'Ссылка с кнопки', 
+                        'button_link', 
+                        $obj->button_link, 
+                        0, 
+                        '', 
+                        '', 
+                        ''
+                    ) ?>
+                <?php endif; ?>
+            </fieldset>
             <?php endif; ?>
 
             <?= Form::submit($id, $obj->id, 'Сохранить', '') ?>
@@ -119,17 +185,36 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
         }
     }
 
-    // Заполняем данные из формы
+    // Заполняем данные из формы с проверкой доступности полей
     if ($config['fields']['name']['enabled'] ?? false) {
         $obj->name = trim($_POST['name'] ?? '');
     }
     
-    if ($config['fields']['text']['enabled'] ?? false) {
+    // Текстовый блок
+    if (($config['fields']['text_block']['enabled'] ?? false) && 
+        ($config['fields']['text_block']['title_field']['enabled'] ?? false)) {
+        $obj->title = trim($_POST['title'] ?? '');
+    }
+    
+    if (($config['fields']['text_block']['enabled'] ?? false) && 
+        ($config['fields']['text_block']['text']['enabled'] ?? false)) {
         $obj->text = trim($_POST['text'] ?? '');
     }
     
-    if ($config['fields']['text2']['enabled'] ?? false) {
+    if (($config['fields']['text_block']['enabled'] ?? false) && 
+        ($config['fields']['text_block']['text2']['enabled'] ?? false)) {
         $obj->text2 = trim($_POST['text2'] ?? '');
+    }
+    
+    // Блок кнопки
+    if (($config['fields']['button_block']['enabled'] ?? false) && 
+        ($config['fields']['button_block']['button_name']['enabled'] ?? false)) {
+        $obj->button_name = trim($_POST['button_name'] ?? '');
+    }
+    
+    if (($config['fields']['button_block']['enabled'] ?? false) && 
+        ($config['fields']['button_block']['button_link']['enabled'] ?? false)) {
+        $obj->button_link = trim($_POST['button_link'] ?? '');
     }
     
     // Системные поля
@@ -140,8 +225,8 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
 
     // Загрузка изображения
     if ($config['fields']['image']['enabled'] ?? false) {
-        $width = $config['fields']['image']['width'] ?? 500;
-        $height = $config['fields']['image']['height'] ?? 500;
+        $width = $config['fields']['image']['width'] ?? 862;
+        $height = $config['fields']['image']['height'] ?? 658;
         $path = '/public/src/images/forms_type/';
         
         FileUpload::uploadImage(
@@ -182,8 +267,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'Формы заявок';
-    $add = 'форму';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = false;
 
@@ -197,11 +282,25 @@ else :
         if ($config['fields']['name']['enabled'] ?? false) {
             $searchFields[] = "`name` like '%{$search}%'";
         }
-        if ($config['fields']['text']['enabled'] ?? false) {
-            $searchFields[] = "`text` like '%{$search}%'";
+        
+        // Поиск по полям текстового блока
+        if (($config['fields']['text_block']['enabled'] ?? false)) {
+            if (($config['fields']['text_block']['title_field']['enabled'] ?? false)) {
+                $searchFields[] = "`title` like '%{$search}%'";
+            }
+            if (($config['fields']['text_block']['text']['enabled'] ?? false)) {
+                $searchFields[] = "`text` like '%{$search}%'";
+            }
+            if (($config['fields']['text_block']['text2']['enabled'] ?? false)) {
+                $searchFields[] = "`text2` like '%{$search}%'";
+            }
         }
-        if ($config['fields']['text2']['enabled'] ?? false) {
-            $searchFields[] = "`text2` like '%{$search}%'";
+        
+        // Поиск по полям блока кнопки
+        if (($config['fields']['button_block']['enabled'] ?? false)) {
+            if (($config['fields']['button_block']['button_name']['enabled'] ?? false)) {
+                $searchFields[] = "`button_name` like '%{$search}%'";
+            }
         }
         
         if (!empty($searchFields)) {
@@ -235,20 +334,9 @@ else :
     if (!empty($objs)): ?>
         <div class="table_container">
             <div class="table_header">
-                <?php if ($config['list']['handler']): ?>
-                    <div class="handler_block"></div>
-                <?php endif; ?>
-                
-                <?php if (($config['list']['image']['enabled'] ?? false) && ($config['fields']['image']['enabled'] ?? false)): ?>
-                    <div class="image"><?= $config['list']['image']['title'] ?? 'Изображение' ?></div>
-                <?php endif; ?>
                 
                 <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
                     <div class="info"><?= $config['list']['name']['title'] ?? 'Название формы' ?></div>
-                <?php endif; ?>
-                
-                <?php if (($config['list']['text']['enabled'] ?? false) && ($config['fields']['text']['enabled'] ?? false)): ?>
-                    <div class="description"><?= $config['list']['text']['title'] ?? 'Описание' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
@@ -257,51 +345,32 @@ else :
                 
                 <div class="actions"></div>
             </div>
-            <div class="table_body<?= ($totalCount <= $perPage && empty($_GET['search']) && $config['list']['handler']) ? ' sortbox-items' : '' ?>">
+            <div class="table_body">
             <?php foreach ($objs as $obj): ?>
 
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
-                    <?php if ($config['list']['handler']): ?>
-                        <div class="handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
-                    <?php endif; ?>
-                    
-                    <?php if (($config['list']['image']['enabled'] ?? false) && ($config['fields']['image']['enabled'] ?? false)): ?>
-                        <div class="image">
-                            <?php if (!empty($obj->image)): ?>
-                                <img src="<?= $obj->image ?>" alt="<?= htmlspecialchars($obj->name, ENT_QUOTES, 'UTF-8') ?>">
-                            <?php else: ?>
-                                <div class="no-image">Нет фото</div>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
-                    
+                                        
                     <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
                         <div class="info">
                             <div class="name"><?= $obj->name ?></div>
                         </div>
                     <?php endif; ?>
-                    
-                    <?php if (($config['list']['text']['enabled'] ?? false) && ($config['fields']['text']['enabled'] ?? false)): ?>
-                        <div class="description">
-                            <div class="text"><?= $obj->text ?></div>
-                        </div>
-                    <?php endif; ?>
-                    
+                                 
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="modified_date"><?= $obj->edit_date ?></div>
                     <?php endif; ?>
 
-                    <? include ROOT.'/private/views/components/actions.php' ?>
+                    <?php include ROOT.'/private/views/components/actions.php' ?>
                     
                 </div>
 
-            <? endforeach; ?>
+            <?php endforeach; ?>
             </div>
         </div>
 
         <?= !empty($pagination) ? $pagination : '' ?>
 
-    <? else: ?>
+    <?php else: ?>
         <div class='not_found'>Ничего не найдено</div>
     <?php
     endif;

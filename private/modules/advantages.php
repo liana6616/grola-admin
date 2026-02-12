@@ -196,8 +196,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'Плюсы работы с нами';
-    $add = 'преимущество';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = false;
 

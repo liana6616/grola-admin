@@ -39,7 +39,7 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
 
     ?>
     <div class="editHead">
-        <h1><?= $title ?> SEO</h1>
+        <h1><?= $title ?></h1>
         <div class="button_block">
             <a href='<?= $_SERVER['REDIRECT_URL'] ?>' class='btn btn_white btn_back'>Вернуться назад</a>
         </div>
@@ -135,8 +135,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'SEO настройки';
-    $add = 'SEO запись';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = true;
 

@@ -492,10 +492,12 @@ $('body').on('click', '.action.icon_delete', function () {
 });
 
 $('body').on('click', '.image_delete', function () {
+    let i = $(this).data('field');
     let item = $(this).closest('.image_card');
     if(!item.length) item = $(this).closest('.file_card');
     modalConfirm('Подтвердить удаление?',function(){
-        item.remove();
+        item.hide();
+        $('.image_del',item).val(i);
     },function(){});
 
     return false;

@@ -244,6 +244,30 @@ if (!file_exists(ROOT.$configPath)):
                         <!-- Вкладка "Фотогалерея" -->
                         <?php if ($config['gallery']['enabled']): ?>
                         <div class="edit_tab_content" id="tab_gallery">
+
+                            <!-- Заголовок и описание фотогалереи -->
+                            <?php if ($config['gallery']['gallery_name']['enabled'] ?? false): ?>
+                                <?= Form::input(
+                                    $config['gallery']['gallery_name']['title'] ?? 'Заголовок фотогалереи', 
+                                    'gallery_name', 
+                                    $obj->gallery_name ?? '', 
+                                    0, 
+                                    '', 
+                                    '', 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
+                            <?php if ($config['gallery']['gallery_text']['enabled'] ?? false): ?>
+                                <?= Form::textarea(
+                                    $config['gallery']['gallery_text']['title'] ?? 'Описание фотогалереи', 
+                                    'gallery_text', 
+                                    $obj->gallery_text ?? '', 
+                                    80, 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+
                             <?= Form::gallery($config['gallery']['title'] ?? 'Фотогалерея', 'gallery', Gallery::findGallery('articles',$obj->id)) ?>
                         </div>
                         <?php endif; ?>
@@ -251,6 +275,30 @@ if (!file_exists(ROOT.$configPath)):
                         <!-- Вкладка "Файлы" -->
                         <?php if ($config['files']['enabled']): ?>
                         <div class="edit_tab_content" id="tab_files">
+
+                            <!-- Заголовок и описание файлов -->
+                            <?php if ($config['files']['files_name']['enabled'] ?? false): ?>
+                                <?= Form::input(
+                                    $config['files']['files_name']['title'] ?? 'Заголовок файлов', 
+                                    'files_name', 
+                                    $obj->files_name ?? '', 
+                                    0, 
+                                    '', 
+                                    '', 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
+                            <?php if ($config['files']['files_text']['enabled'] ?? false): ?>
+                                <?= Form::textarea(
+                                    $config['files']['files_text']['title'] ?? 'Описание файлов', 
+                                    'files_text', 
+                                    $obj->files_text ?? '', 
+                                    80, 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+
                             <?= Form::files($config['files']['title'] ?? 'Файлы', 'files', Files::findFiles('articles',$obj->id)) ?>
                         </div>
                         <?php endif; ?>
@@ -302,6 +350,7 @@ if (!file_exists(ROOT.$configPath)):
         // Инициализируем объект $obj в зависимости от ситуации
         if (isset($_POST['edit']) && $id > 0) {
             // Редактирование существующей записи
+            FileUpload::deleteImageFile();
             $obj = Articles::findById($id);
             if (!$obj) {
                 header("Location: {$_SERVER['REDIRECT_URL']}");
@@ -358,6 +407,23 @@ if (!file_exists(ROOT.$configPath)):
         $obj->show = ($config['fields']['show']['enabled'] ?? false) ? (int)($_POST['show'] ?? 0) : 1;
         $obj->section_id = ($config['fields']['section_id']['enabled'] ?? false) ? (int)($_POST['section_id'] ?? 0) : 0;
         $obj->rate = ($config['fields']['rate']['enabled'] ?? false) ? (int)($_POST['rate'] ?? 0) : 0;
+
+        // Поля галереи и файлов
+        if ($config['gallery']['enabled']) {
+            $gallery_name = $_POST['gallery_name'] ?? '';
+            $gallery_text = $_POST['gallery_text'] ?? '';
+            
+            $obj->gallery_name = ($config['gallery']['gallery_name']['enabled'] ?? false) ? (is_array($gallery_name) ? '' : trim($gallery_name)) : '';
+            $obj->gallery_text = ($config['gallery']['gallery_text']['enabled'] ?? false) ? (is_array($gallery_text) ? '' : trim($gallery_text)) : '';
+        }
+        
+        if ($config['files']['enabled']) {
+            $files_name = $_POST['files_name'] ?? '';
+            $files_text = $_POST['files_text'] ?? '';
+            
+            $obj->files_name = ($config['files']['files_name']['enabled'] ?? false) ? (is_array($files_name) ? '' : trim($files_name)) : '';
+            $obj->files_text = ($config['files']['files_text']['enabled'] ?? false) ? (is_array($files_text) ? '' : trim($files_text)) : '';
+        }
         
         // SEO поля
         if ($config['seo']['enabled']) {
@@ -646,8 +712,8 @@ if (!file_exists(ROOT.$configPath)):
         exit;
 
     else :
-        $title = 'Статьи';
-        $add = 'статью';
+        // Заголовок модуля из конфига
+        $title = $config['module']['title'] ?? '';
 
         $filter = false;
 

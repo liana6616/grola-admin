@@ -197,8 +197,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'Партнёры';
-    $add = 'партнёра';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = false;
 

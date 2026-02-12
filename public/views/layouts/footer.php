@@ -2,15 +2,15 @@
     <div class="footer__top">
       <div class="footer__left-wrapper">
         <div class="footer__wrapper-logo">
-            <img src="/public/images/icons/logo-light.svg" width="160" height="51" alt="Иконка лого">
+            <img src="/public/src/images/icons/logo-light.svg" width="160" height="51" alt="Иконка лого">
             <span class="footer__text footer__text-desktop">© grola.ru 2025</span>
         </div>
         <ul class="footer__list">
-          <li><a class="filter" href="/about.php">О нас</a></li>
+          <li><a class="filter" href="/about">О нас</a></li>
           <li><a class="filter" href="/#galery">Галерея</a></li>
-          <li><a class="filter" href="/catalog.php">Каталог</a></li>
+          <li><a class="filter" href="/catalog">Каталог</a></li>
           <li><a class="filter" href="/#why">Почему мы</a></li>
-          <li><a class="filter" href="/contacts.php">Контакты</a></li>
+          <li><a class="filter" href="/contacts">Контакты</a></li>
         </ul>
       </div>
       

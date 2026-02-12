@@ -198,9 +198,23 @@ if (!file_exists(ROOT.$configPath)):
                         <?php if ($config['seo']['enabled']): ?>
                             <button type="button" class="edit_tab_nav" data-tab="seo"><?= $config['seo']['tab_name'] ?? 'SEO' ?></button>
                         <?php endif; ?>
+
+                        <?php if (!empty($config['personal_page'][$id])): ?>
+                            <button type="button" class="edit_tab_nav" data-tab="personal">Индивидуальный контент</button>
+                        <?php endif; ?>
+
                     </div>
                     
                     <div class="edit_tabs_content">
+
+                        <?php if (!empty($config['personal_page'][$id])): ?>
+
+                            <div class="edit_tab_content" id="tab_personal">
+                                <?php include ROOT.'/private/modules/pages/'.$config['personal_page'][$id].'.php'; ?>
+                            </div>
+
+                        <?php endif; ?>
+
                         <!-- Вкладка "Контент" -->
                         <?php if ($config['fields']['enabled']): ?>
                         <div class="edit_tab_content active" id="tab_content">
@@ -281,6 +295,16 @@ if (!file_exists(ROOT.$configPath)):
                                 ) ?>
                             <?php endif; ?>
 
+                            <?php if ($config['fields']['image_text']['enabled'] ?? false): ?>
+                                <?= Form::textarea(
+                                    $config['fields']['image_text']['title'] ?? 'Текст на баннере', 
+                                    'image_text', 
+                                    $obj->image_text ?? '', 
+                                    80,  
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+
                             <?php if ($config['fields']['image2']['enabled'] ?? false): ?>
                                 <?= Form::image(
                                     $config['fields']['image2']['title'] . ' (' . 
@@ -307,6 +331,30 @@ if (!file_exists(ROOT.$configPath)):
                         <!-- Вкладка "Фотогалерея" -->
                         <?php if ($config['gallery']['enabled']): ?>
                         <div class="edit_tab_content" id="tab_gallery">
+                            
+                            <!-- Заголовок и описание фотогалереи -->
+                            <?php if ($config['gallery']['gallery_name']['enabled'] ?? false): ?>
+                                <?= Form::input(
+                                    $config['gallery']['gallery_name']['title'] ?? 'Заголовок фотогалереи', 
+                                    'gallery_name', 
+                                    $obj->gallery_name ?? '', 
+                                    0, 
+                                    '', 
+                                    '', 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
+                            <?php if ($config['gallery']['gallery_text']['enabled'] ?? false): ?>
+                                <?= Form::textarea(
+                                    $config['gallery']['gallery_text']['title'] ?? 'Описание фотогалереи', 
+                                    'gallery_text', 
+                                    $obj->gallery_text ?? '', 
+                                    80, 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
                             <?= Form::gallery($config['gallery']['title'] ?? 'Фотогалерея', 'gallery', Gallery::findGallery('pages',$obj->id)) ?>
                         </div>
                         <?php endif; ?>
@@ -314,6 +362,30 @@ if (!file_exists(ROOT.$configPath)):
                         <!-- Вкладка "Файлы" -->
                         <?php if ($config['files']['enabled']): ?>
                         <div class="edit_tab_content" id="tab_files">
+                            
+                            <!-- Заголовок и описание файлов -->
+                            <?php if ($config['files']['files_name']['enabled'] ?? false): ?>
+                                <?= Form::input(
+                                    $config['files']['files_name']['title'] ?? 'Заголовок файлов', 
+                                    'files_name', 
+                                    $obj->files_name ?? '', 
+                                    0, 
+                                    '', 
+                                    '', 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
+                            <?php if ($config['files']['files_text']['enabled'] ?? false): ?>
+                                <?= Form::textarea(
+                                    $config['files']['files_text']['title'] ?? 'Описание файлов', 
+                                    'files_text', 
+                                    $obj->files_text ?? '', 
+                                    80, 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
                             <?= Form::files($config['files']['title'] ?? 'Файлы', 'files', Files::findFiles('pages',$obj->id)) ?>
                         </div>
                         <?php endif; ?>
@@ -365,6 +437,7 @@ if (!file_exists(ROOT.$configPath)):
         
         // Инициализируем объект $obj в зависимости от ситуации
         if (isset($_POST['edit']) && $id > 0) {
+            FileUpload::deleteImageFile();
             // Редактирование существующей записи
             $obj = Pages::findById($id);
             if (!$obj) {
@@ -433,6 +506,7 @@ if (!file_exists(ROOT.$configPath)):
         // Заполняем данные из формы В ЧЕРНОВИК
         $obj->url = ($config['fields']['url']['enabled'] ?? false) ? $url : '';
         $obj->name = ($config['fields']['name']['enabled'] ?? false) ? trim($_POST['name'] ?? '') : '';
+        $obj->image_text = ($config['fields']['image_text']['enabled'] ?? false) ? trim($_POST['image_text'] ?? '') : '';
         
         // Для name_menu: если поле включено и есть значение - берем его, иначе берем name
         if ($config['fields']['name_menu']['enabled'] ?? false) {
@@ -448,6 +522,23 @@ if (!file_exists(ROOT.$configPath)):
         $obj->menu = ($config['fields']['menu']['enabled'] ?? false) ? (int)($_POST['menu'] ?? 0) : 0;
         $obj->menu_footer = ($config['fields']['menu_footer']['enabled'] ?? false) ? (int)($_POST['menu_footer'] ?? 0) : 0;
         $obj->rate = ($config['fields']['rate']['enabled'] ?? false) ? (int)($_POST['rate'] ?? 0) : 0;
+        
+        // Поля галереи и файлов
+        if ($config['gallery']['enabled']) {
+            $gallery_name = $_POST['gallery_name'] ?? '';
+            $gallery_text = $_POST['gallery_text'] ?? '';
+            
+            $obj->gallery_name = ($config['gallery']['gallery_name']['enabled'] ?? false) ? (is_array($gallery_name) ? '' : trim($gallery_name)) : '';
+            $obj->gallery_text = ($config['gallery']['gallery_text']['enabled'] ?? false) ? (is_array($gallery_text) ? '' : trim($gallery_text)) : '';
+        }
+        
+        if ($config['files']['enabled']) {
+            $files_name = $_POST['files_name'] ?? '';
+            $files_text = $_POST['files_text'] ?? '';
+            
+            $obj->files_name = ($config['files']['files_name']['enabled'] ?? false) ? (is_array($files_name) ? '' : trim($files_name)) : '';
+            $obj->files_text = ($config['files']['files_text']['enabled'] ?? false) ? (is_array($files_text) ? '' : trim($files_text)) : '';
+        }
         
         // SEO поля
         if ($config['seo']['enabled']) {
@@ -697,6 +788,10 @@ if (!file_exists(ROOT.$configPath)):
             $obj->save();
         }
 
+        if (!empty($config['personal_page'][$obj->id])) {
+            include ROOT.'/private/modules/pages/'.$config['personal_page'][$obj->id].'.php';
+        }
+
         header("Location: {$_SERVER['REQUEST_URI']}?parent=" . $display_parent . "&edit=$obj->id");
         exit;
         
@@ -791,8 +886,8 @@ if (!file_exists(ROOT.$configPath)):
         exit;
 
     else :
-        $title = 'Страницы';
-        $add = 'страницу';
+        // Заголовок модуля из конфига
+        $title = $config['module']['title'] ?? '';
 
         $filter = false;
 
@@ -901,6 +996,7 @@ if (!file_exists(ROOT.$configPath)):
                         if (!empty($obj->original_id)) {
                             $original = Pages::findById($obj->original_id);
                             $publishedId = $original->id;
+                            $pageUrl = Pages::getUrl($original->id);
                         }
                     } else {
                         $original = $obj;

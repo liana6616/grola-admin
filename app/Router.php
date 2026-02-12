@@ -39,7 +39,6 @@ class Router
                 // Извлекаем имя контроллера
                 $controllerSegment = array_shift($segments);
                 if (!$controllerSegment) {
-                    // Можно добавить контроллер по умолчанию
                     throw new \Exception('Controller name is empty');
                 }
                 
@@ -54,8 +53,6 @@ class Router
                 $controllerObject = new $controllerName();
                 
                 // Вызываем метод контроллера с параметрами
-                // Предполагается, что у контроллера есть метод, который можно вызвать
-                // Например, __invoke() или другой
                 if (method_exists($controllerObject, '__invoke')) {
                     $result = call_user_func_array([$controllerObject, '__invoke'], $segments);
                 } else {

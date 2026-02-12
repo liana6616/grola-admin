@@ -197,8 +197,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'Почему выбирают нас';
-    $add = 'причину';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = false;
 

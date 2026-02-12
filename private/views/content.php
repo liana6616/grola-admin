@@ -10,7 +10,7 @@
                 <div class="logo logo_lindera"></div>
                 <div class="header_actions">
 
-                    <? if(isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy']) || in_array($_SERVER['REQUEST_URI'],['/'.ADMIN_LINK.'/settings'])): ?>
+                    <? if(isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy']) || in_array(str_replace('/'.ADMIN_LINK.'/','',$_SERVER['REQUEST_URI']),['settings','director_quotes'])): ?>
 
                         <?php if (app\Models\Admins::canPublish()): ?>
                             <button type="button" name="publish" class="btn btn_green btn_publish dop none">

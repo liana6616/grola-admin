@@ -151,8 +151,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'Разрешённые IP адреса для входа';
-    $add = 'IP адрес';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = false;
 

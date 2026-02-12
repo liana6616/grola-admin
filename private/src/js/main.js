@@ -8388,10 +8388,12 @@ $('body').on('click', '.action.icon_delete', function () {
   return false;
 });
 $('body').on('click', '.image_delete', function () {
+  var i = $(this).data('field');
   var item = $(this).closest('.image_card');
   if (!item.length) item = $(this).closest('.file_card');
   modalConfirm('Подтвердить удаление?', function () {
-    item.remove();
+    item.hide();
+    $('.image_del', item).val(i);
   }, function () {});
   return false;
 });

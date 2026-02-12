@@ -22,7 +22,6 @@ use app\Form;
 
 $configPath = '/config/modules/catalog.php';
 
-// Проверяем существование конфигурационного файла
 if (!file_exists(ROOT.$configPath)):
     ?>
     <div class="alert alert-danger">
@@ -32,7 +31,6 @@ if (!file_exists(ROOT.$configPath)):
 
     $config = require_once ROOT.$configPath;
 
-    // Проверяем, поддерживает ли таблица черновики
     $supportsDrafts = Catalog::supportsDrafts();
     $useDrafts = $supportsDrafts && ($config['drafts']['enabled'] ?? false);
 
@@ -41,7 +39,6 @@ if (!file_exists(ROOT.$configPath)):
         $obj = new Catalog();
         $original = null;
         
-        // Устанавливаем значения по умолчанию
         $obj->show = 1;
         $obj->rate = 0;
         $obj->price = 0;
@@ -51,7 +48,6 @@ if (!file_exists(ROOT.$configPath)):
         $obj->new = 0;
         $obj->popular = 0;
         $obj->edit_date = date('Y-m-d H:i:s', time());
-        
         
         $title = 'Добавление товара';
         $id = false;
@@ -75,7 +71,6 @@ if (!file_exists(ROOT.$configPath)):
                 exit;
             }
             elseif($obj->is_draft == 0 && $useDrafts) {
-                // Ищем черновик, связанный с этой опубликованной записью
                 $draft = Catalog::where('WHERE original_id = ?', [$obj->id], true);
                 if ($draft) {
                     header("Location: {$_SERVER['REDIRECT_URL']}?".$action."=".$draft->id);
@@ -97,17 +92,14 @@ if (!file_exists(ROOT.$configPath)):
 
         if(!empty($obj->url)) $obj->url = str_replace('draft-','',$obj->url);
 
-        // Убедимся, что boolean поля имеют правильный тип
         $obj->show = (bool)($obj->show ?? 1);
         $obj->action = (bool)($obj->action ?? 0);
         $obj->new = (bool)($obj->new ?? 0);
         $obj->popular = (bool)($obj->popular ?? 0);
 
-        // Проверяем наличие изменений для кнопки "Опубликовать"
         $has_changes = false;
 
         if (isset($_GET['edit'])) {
-            // Для редактирования сравниваем с оригиналом
             if(empty($original)) {
                 $has_changes = true;
             }
@@ -115,13 +107,11 @@ if (!file_exists(ROOT.$configPath)):
                 $has_changes = true;
             }
         } else {
-            // Для добавления или копирования всегда есть изменения
             $has_changes = true;
         }
 
         if(!isset($_GET['edit'])) $has_changes = true;
 
-        // Получаем хлебные крошки если есть категория
         $breadcrumbs = '';
         if (!empty($obj->category_id)) {
             $bread = Catalog::adminBreadCrumbs($obj->category_id);
@@ -168,50 +158,46 @@ if (!file_exists(ROOT.$configPath)):
                     <input type="hidden" name="original_id" value="<?= $obj->original_id ?>">
                 <?php endif; ?>
 
-                <!-- Поле для публикации -->
                 <input type="hidden" name="publish" id="publish" value="0">
 
-                <!-- Блок хлебных крошек -->
                 <?php if (!empty($breadcrumbs)): ?>
                 <div class="breadcrumbs_block">
                     <?= $breadcrumbs ?>
                 </div>
                 <?php endif; ?>
                 
-                <!-- Вкладки -->
                 <div class="edit_tabs">
                     <div class="edit_tabs_nav">
                         <?php if ($config['fields']['enabled']): ?>
-                            <button type="button" class="edit_tab_nav active" data-tab="content"><?= $config['tabs']['content'] ?? 'Основная информация' ?></button>
+                            <button type="button" class="edit_tab_nav active" data-tab="content"><?= $config['fields']['tab_name'] ?? 'Основная информация' ?></button>
                         <?php endif; ?>
                         
                         <?php if ($config['prices']['enabled']): ?>
-                            <button type="button" class="edit_tab_nav" data-tab="prices"><?= $config['tabs']['prices'] ?? 'Стоимость по весу' ?></button>
+                            <button type="button" class="edit_tab_nav" data-tab="prices"><?= $config['prices']['tab_name'] ?? 'Стоимость по весу' ?></button>
                         <?php endif; ?>
 
                         <?php if ($config['params']['enabled']): ?>
-                            <button type="button" class="edit_tab_nav" data-tab="params"><?= $config['tabs']['params'] ?? 'Характеристики' ?></button>
+                            <button type="button" class="edit_tab_nav" data-tab="params"><?= $config['params']['tab_name'] ?? 'Характеристики' ?></button>
                         <?php endif; ?>
 
                         <?php if ($config['finished_products']['enabled']): ?>
-                            <button type="button" class="edit_tab_nav" data-tab="finished_products"><?= $config['tabs']['finished_products'] ?? 'Готовая продукция' ?></button>
+                            <button type="button" class="edit_tab_nav" data-tab="finished_products"><?= $config['finished_products']['tab_name'] ?? 'Готовая продукция' ?></button>
                         <?php endif; ?>
                         
                         <?php if ($config['gallery']['enabled']): ?>
-                            <button type="button" class="edit_tab_nav" data-tab="gallery"><?= $config['tabs']['gallery'] ?? 'Фотогалерея' ?></button>
+                            <button type="button" class="edit_tab_nav" data-tab="gallery"><?= $config['gallery']['tab_name'] ?? 'Фотогалерея' ?></button>
                         <?php endif; ?>
 
                         <?php if ($config['files']['enabled']): ?>
-                            <button type="button" class="edit_tab_nav" data-tab="files"><?= $config['tabs']['files'] ?? 'Файлы' ?></button>
+                            <button type="button" class="edit_tab_nav" data-tab="files"><?= $config['files']['tab_name'] ?? 'Файлы' ?></button>
                         <?php endif; ?>
 
                         <?php if ($config['seo']['enabled']): ?>
-                            <button type="button" class="edit_tab_nav" data-tab="seo"><?= $config['tabs']['seo'] ?? 'SEO' ?></button>
+                            <button type="button" class="edit_tab_nav" data-tab="seo"><?= $config['seo']['tab_name'] ?? 'SEO' ?></button>
                         <?php endif; ?>
                     </div>
                     
                     <div class="edit_tabs_content">
-                        <!-- Вкладка "Основная информация" -->
                         <?php if ($config['fields']['enabled']): ?>
                         <div class="edit_tab_content active" id="tab_content">
                             <div class="flex3">
@@ -240,7 +226,6 @@ if (!file_exists(ROOT.$configPath)):
                             
                             <?php if ($config['fields']['category_id']['enabled'] ?? false): ?>
                                 <?php
-                                // Получаем все категории для выбора
                                 $allCategories = Categories::getHierarchical();
                                 ?>
                                 <?= Form::select(
@@ -276,7 +261,6 @@ if (!file_exists(ROOT.$configPath)):
                                     '' 
                                 ) ?>
                             <?php endif; ?>
-
 
                             <?php if ($config['fields']['name']['enabled'] ?? false): ?>
                                 <?= Form::input($config['fields']['name']['title'] ?? 'Название товара (H1)', 'name', $obj->name, 1, '', '', '') ?>
@@ -335,7 +319,6 @@ if (!file_exists(ROOT.$configPath)):
                             
                             <div id="prices-container">
                                 <?php
-                                // Получаем существующие цены
                                 $prices = Catalog::getPrices($id ?: 0);
                                 $priceIndex = 0;
                                 
@@ -364,28 +347,22 @@ if (!file_exists(ROOT.$configPath)):
                             
                             <div class="input_block" id="params-container">
                                 <?php
-                                
-                                // Получаем параметры из шаблона категории
                                 if (!empty($obj->category_id)) {
                                     $category = Categories::findById($obj->category_id);
                                     
-                                    
                                     if ($category && $category->template_id) {
-                                        // Получаем группы параметров
                                         $groups = ParamsGroups::findWhere("WHERE template_id = " . $category->template_id . " AND `show` = 1 ORDER BY rate ASC");
                                         
                                         foreach ($groups as $group) {
                                             echo '<fieldset class="input_block">';
                                             echo '<legend>' . htmlspecialchars($group->name) . '</legend>';
                                             
-                                            // Получаем параметры группы
                                             $groupItems = ParamsGroupsItems::findWhere("WHERE group_id = " . $group->id . " AND `show` = 1 ORDER BY rate ASC");
                                             
                                             foreach ($groupItems as $item) {
                                                 $param = Params::findById($item->param_id);
                                                 
                                                 if ($param) {
-                                                    // Получаем текущее значение параметра
                                                     $currentValue = '';
                                                     if ($id) {
                                                         $paramValue = CatalogParams::findWhere("WHERE catalog_id = " . $id . " AND param_id = " . $item->param_id);
@@ -394,9 +371,7 @@ if (!file_exists(ROOT.$configPath)):
                                                         }
                                                     }
                                                     
-                                                    // Определяем тип поля для ввода
                                                     if ($item->type == 1 && $item->directory_id) {
-                                                        // Справочник - выпадающий список
                                                         $directoryValues = DirectoriesValues::findWhere("WHERE directory_id = " . $item->directory_id . " AND `show` = 1 ORDER BY rate ASC");
                                                         $options = [];
                                                         foreach ($directoryValues as $value) {
@@ -417,7 +392,6 @@ if (!file_exists(ROOT.$configPath)):
                                                             ''
                                                         );
                                                     } else {
-                                                        // Текстовое поле
                                                         echo Form::input(
                                                             $param->name,
                                                             'params[' . $item->param_id . ']',
@@ -436,7 +410,6 @@ if (!file_exists(ROOT.$configPath)):
                                     } else {
                                         echo '<p class="params_description error">Для выбранной категории не настроен шаблон параметров.</p>';
                                     }
-                                    
 
                                 } else {
                                     echo '<p class="params_description error">Сначала выберите категорию товара и сохраните изменения.</p>';
@@ -455,7 +428,6 @@ if (!file_exists(ROOT.$configPath)):
                             <?php endif; ?>
                             
                             <?php
-                            // Получаем текущую привязку
                             $currentProducts = [];
                             if ($id) {
                                 $links = FinishedProductsCatalog::findWhere("WHERE catalog_id = " . $id);
@@ -465,7 +437,6 @@ if (!file_exists(ROOT.$configPath)):
                             }
                             $currentValue = implode('|', $currentProducts);
                             
-                            // Получаем всю готовую продукцию
                             $allProducts = FinishedProducts::getHierarchical();
                             
                             echo Form::multiple(
@@ -482,6 +453,30 @@ if (!file_exists(ROOT.$configPath)):
                         <!-- Вкладка "Фотогалерея" -->
                         <?php if ($config['gallery']['enabled']): ?>
                         <div class="edit_tab_content" id="tab_gallery">
+                            
+                            <!-- Заголовок и описание фотогалереи -->
+                            <?php if ($config['gallery']['gallery_name']['enabled'] ?? false): ?>
+                                <?= Form::input(
+                                    $config['gallery']['gallery_name']['title'] ?? 'Заголовок фотогалереи', 
+                                    'gallery_name', 
+                                    $obj->gallery_name ?? '', 
+                                    0, 
+                                    '', 
+                                    '', 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
+                            <?php if ($config['gallery']['gallery_text']['enabled'] ?? false): ?>
+                                <?= Form::textarea(
+                                    $config['gallery']['gallery_text']['title'] ?? 'Описание фотогалереи', 
+                                    'gallery_text', 
+                                    $obj->gallery_text ?? '', 
+                                    80, 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
                             <?= Form::gallery($config['gallery']['title'] ?? 'Фотогалерея товара', 'gallery', Gallery::findGallery('catalog',$obj->id)) ?>
                         </div>
                         <?php endif; ?>
@@ -489,6 +484,30 @@ if (!file_exists(ROOT.$configPath)):
                         <!-- Вкладка "Файлы" -->
                         <?php if ($config['files']['enabled']): ?>
                         <div class="edit_tab_content" id="tab_files">
+                            
+                            <!-- Заголовок и описание файлов -->
+                            <?php if ($config['files']['files_name']['enabled'] ?? false): ?>
+                                <?= Form::input(
+                                    $config['files']['files_name']['title'] ?? 'Заголовок файлов', 
+                                    'files_name', 
+                                    $obj->files_name ?? '', 
+                                    0, 
+                                    '', 
+                                    '', 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
+                            <?php if ($config['files']['files_text']['enabled'] ?? false): ?>
+                                <?= Form::textarea(
+                                    $config['files']['files_text']['title'] ?? 'Описание файлов', 
+                                    'files_text', 
+                                    $obj->files_text ?? '', 
+                                    80, 
+                                    ''
+                                ) ?>
+                            <?php endif; ?>
+                            
                             <?= Form::files($config['files']['title'] ?? 'Файлы', 'files', Files::findFiles('catalog',$obj->id)) ?>
                         </div>
                         <?php endif; ?>
@@ -516,7 +535,6 @@ if (!file_exists(ROOT.$configPath)):
                 </div>
 
                 <div class="button_block">
-                    <!-- Кнопка Сохранить -->
                     <?= Form::submit($id, $obj->id, 'Сохранить', '') ?>
 
                     <?php if ($useDrafts && Admins::canPublish()): ?>
@@ -534,8 +552,8 @@ if (!file_exists(ROOT.$configPath)):
         $publish = $_POST['publish'] ?? 0;
         $id = $_POST['edit'] ?? 0;
         
-        // Инициализируем объект $obj в зависимости от ситуации
         if (isset($_POST['edit']) && $id > 0) {
+            FileUpload::deleteImageFile();
             $obj = Catalog::findById($id);
             if (!$obj) {
                 header("Location: {$_SERVER['REDIRECT_URL']}");
@@ -570,13 +588,11 @@ if (!file_exists(ROOT.$configPath)):
         $url = str_replace('draft-','',$url);
         $url = 'draft-'.$url;
 
-        // Сохраняем старые данные для сравнения
         $oldData = null;
         if ($useDrafts && isset($_POST['edit']) && $id > 0) {
             $oldData = Catalog::findById($id)->toArray();
         }
 
-        // Заполняем данные из формы В ЧЕРНОВИК
         $obj->url = ($config['fields']['url']['enabled'] ?? false) ? $url : '';
         $obj->name = ($config['fields']['name']['enabled'] ?? false) ? trim($_POST['name'] ?? '') : '';
         $obj->category_id = ($config['fields']['category_id']['enabled'] ?? false) ? (int)($_POST['category_id'] ?? 0) : 0;
@@ -593,35 +609,45 @@ if (!file_exists(ROOT.$configPath)):
         $obj->popular = ($config['fields']['popular']['enabled'] ?? false) ? (int)($_POST['popular'] ?? 0) : 0;
         $obj->rate = ($config['fields']['rate']['enabled'] ?? false) ? (int)($_POST['rate'] ?? 0) : 0;
         
-        // SEO поля
+        // Поля галереи и файлов
+        if ($config['gallery']['enabled']) {
+            $gallery_name = $_POST['gallery_name'] ?? '';
+            $gallery_text = $_POST['gallery_text'] ?? '';
+            
+            $obj->gallery_name = ($config['gallery']['gallery_name']['enabled'] ?? false) ? (is_array($gallery_name) ? '' : trim($gallery_name)) : '';
+            $obj->gallery_text = ($config['gallery']['gallery_text']['enabled'] ?? false) ? (is_array($gallery_text) ? '' : trim($gallery_text)) : '';
+        }
+        
+        if ($config['files']['enabled']) {
+            $files_name = $_POST['files_name'] ?? '';
+            $files_text = $_POST['files_text'] ?? '';
+            
+            $obj->files_name = ($config['files']['files_name']['enabled'] ?? false) ? (is_array($files_name) ? '' : trim($files_name)) : '';
+            $obj->files_text = ($config['files']['files_text']['enabled'] ?? false) ? (is_array($files_text) ? '' : trim($files_text)) : '';
+        }
+        
         if ($config['seo']['enabled']) {
             $obj->title = ($config['seo']['title']['enabled'] ?? false) ? trim($_POST['title'] ?? '') : '';
             $obj->keywords = ($config['seo']['keywords']['enabled'] ?? false) ? trim($_POST['keywords'] ?? '') : '';
             $obj->description = ($config['seo']['description']['enabled'] ?? false) ? trim($_POST['description'] ?? '') : '';
         }
         
-        // Системные поля
         $obj->edit_date = date("Y-m-d H:i:s");
         $obj->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
-        $obj->is_draft = 1; // Признак черновика
+        $obj->is_draft = 1;
 
-        // Сохраняем запись
         $obj->save();
 
-        // Сохраняем параметры товара
         if ($config['params']['enabled'] && isset($_POST['params'])) {
             Catalog::saveParams($obj->id, $_POST['params']);
         }
 
-        // Сохраняем цены по весу
         if ($config['prices']['enabled'] && isset($_POST['prices'])) {
-            // Удаляем старые цены
             $oldPrices = CatalogPrices::where("WHERE catalog_id = ?", [$obj->id]);
             foreach ($oldPrices as $price) {
                 $price->delete();
             }
             
-            // Сохраняем новые цены
             foreach ($_POST['prices'] as $priceData) {
                 if (!empty($priceData['weight']) || !empty($priceData['price'])) {
                     $price = new CatalogPrices();
@@ -637,12 +663,10 @@ if (!file_exists(ROOT.$configPath)):
             }
         }
 
-        // Сохраняем привязку к готовой продукции
         if ($config['finished_products']['enabled'] && isset($_POST['finished_products'])) {
             Catalog::saveFinishedProducts($obj->id, $_POST['finished_products']);
         }
 
-        // Загрузка изображения превью
         if (($config['fields']['image_preview']['enabled'] ?? false)) {
             $width = $config['fields']['image_preview']['width'] ?? 300;
             $height = $config['fields']['image_preview']['height'] ?? 300;
@@ -659,7 +683,6 @@ if (!file_exists(ROOT.$configPath)):
             );
         }
 
-        // --- Фотогалерея --- //
         FileUpload::updateGallery();
         FileUpload::uploadGallery('gallery', 'catalog', $obj->id,  
             $config['gallery']['image_width'] ?? 800,  
@@ -668,25 +691,19 @@ if (!file_exists(ROOT.$configPath)):
             $config['gallery']['thumbnail_width'] ?? 400,  
             $config['gallery']['thumbnail_height'] ?? 300,  
             1);
-        // --- // --- //
 
-        // --- Файлы --- //
         FileUpload::updateFiles();
         FileUpload::uploadFiles('files', 'catalog', $obj->id, '/public/src/files/catalog/');
-        // --- // --- //
 
         if ($publish || !$useDrafts) {
-            // Получаем свежий объект черновика
             $draftObj = Catalog::findById($obj->id);
             
-            // Определяем, существует ли уже опубликованная версия
             if($draftObj->original_id) {
                 $published = Catalog::findById($draftObj->original_id);
             } else {
                 $published = new Catalog();
             }
             
-            // Копируем данные из черновика в опубликованную версию
             $published = Catalog::copyData($draftObj, $published, ['id', 'is_draft', 'original_id','image_preview']);
             
             $published->url = str_replace('draft-','',$published->url);
@@ -695,13 +712,11 @@ if (!file_exists(ROOT.$configPath)):
             $published->edit_date = date("Y-m-d H:i:s");
             $published->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
             
-            // Удаляем опубликованное изображение, если оно существует
             if(!empty($published->image_preview) && file_exists(ROOT . $published->image_preview)) {
                 unlink(ROOT . $published->image_preview);
                 $published->image_preview = '';
             }
             
-            // Копируем новое изображение
             if(!empty($draftObj->image_preview) && file_exists(ROOT . $draftObj->image_preview)) {
                 $extension = pathinfo(ROOT . $draftObj->image_preview, PATHINFO_EXTENSION);
                 $image_preview = '/public/src/images/catalog/'.uniqid().'.'.$extension;
@@ -711,20 +726,16 @@ if (!file_exists(ROOT.$configPath)):
             
             $published->save();
             
-            // Теперь обновляем черновик, устанавливая связь
             $draftObj->original_id = $published->id;
             $draftObj->save();
 
-            // Копируем параметры
             $draftParams = CatalogParams::where("WHERE catalog_id = ?", [$obj->id]);
             $publishedParams = CatalogParams::where("WHERE catalog_id = ?", [$published->id]);
 
-            // Удаляем старые параметры опубликованной версии
             foreach ($publishedParams as $item) {
                 $item->delete();
             }
 
-            // Копируем параметры из черновика
             foreach ($draftParams as $item) {
                 $newParam = new CatalogParams();
                 $newParam->catalog_id = $published->id;
@@ -735,16 +746,13 @@ if (!file_exists(ROOT.$configPath)):
                 $newParam->save();
             }
 
-            // Копируем цены по весу
             $draftPrices = CatalogPrices::where("WHERE catalog_id = ?", [$obj->id]);
             $publishedPrices = CatalogPrices::where("WHERE catalog_id = ?", [$published->id]);
 
-            // Удаляем старые цены опубликованной версии
             foreach ($publishedPrices as $item) {
                 $item->delete();
             }
 
-            // Копируем цены из черновика
             foreach ($draftPrices as $item) {
                 $newPrice = new CatalogPrices();
                 $newPrice->catalog_id = $published->id;
@@ -757,16 +765,13 @@ if (!file_exists(ROOT.$configPath)):
                 $newPrice->save();
             }
 
-            // Копируем привязки к готовой продукции
             $draftLinks = FinishedProductsCatalog::where("WHERE catalog_id = ?", [$obj->id]);
             $publishedLinks = FinishedProductsCatalog::where("WHERE catalog_id = ?", [$published->id]);
 
-            // Удаляем старые связи опубликованной версии
             foreach ($publishedLinks as $item) {
                 $item->delete();
             }
 
-            // Копируем связи из черновика
             foreach ($draftLinks as $item) {
                 $newLink = new FinishedProductsCatalog();
                 $newLink->catalog_id = $published->id;
@@ -776,11 +781,9 @@ if (!file_exists(ROOT.$configPath)):
                 $newLink->save();
             }
 
-            // Копируем галерею
             $draftGallery = Gallery::where("WHERE type = 'catalog' AND ids = ?", [$obj->id]);
             $publishedGallery = Gallery::where("WHERE type = 'catalog' AND ids = ?", [$published->id]);
 
-            // Удаляем старую галерею опубликованной версии
             foreach ($publishedGallery as $item) {
                 if (!empty($item->image) && file_exists(ROOT . $item->image)) {
                     unlink(ROOT . $item->image);
@@ -794,7 +797,6 @@ if (!file_exists(ROOT.$configPath)):
                 $item->delete();
             }
 
-            // Копируем галерею из черновика в опубликованную версию
             foreach ($draftGallery as $item) {
                 $newGallery = new Gallery();
                 $newGallery->type = 'catalog';
@@ -805,7 +807,6 @@ if (!file_exists(ROOT.$configPath)):
                 $newGallery->edit_date = date("Y-m-d H:i:s");
                 $newGallery->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
                 
-                // Копируем файлы
                 if (!empty($item->image) && file_exists(ROOT . $item->image)) {
                     $extension = pathinfo(ROOT . $item->image, PATHINFO_EXTENSION);
                     $newImage = '/public/src/images/catalog/gallery_' . uniqid() . '.' . $extension;
@@ -830,11 +831,9 @@ if (!file_exists(ROOT.$configPath)):
                 $newGallery->save();
             }
 
-            // Копируем файлы
             $draftFiles = Files::where("WHERE type = 'catalog' AND ids = ?", [$obj->id]);
             $publishedFiles = Files::where("WHERE type = 'catalog' AND ids = ?", [$published->id]);
 
-            // Удаляем старые файлы опубликованной версии
             foreach ($publishedFiles as $item) {
                 if (!empty($item->file) && file_exists(ROOT . $item->file)) {
                     unlink(ROOT . $item->file);
@@ -842,7 +841,6 @@ if (!file_exists(ROOT.$configPath)):
                 $item->delete();
             }
 
-            // Копируем файлы из черновика в опубликованную версию
             foreach ($draftFiles as $item) {
                 $newFile = new Files();
                 $newFile->type = 'catalog';
@@ -854,7 +852,6 @@ if (!file_exists(ROOT.$configPath)):
                 $newFile->edit_date = date("Y-m-d H:i:s");
                 $newFile->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
                 
-                // Копируем файл
                 if (!empty($item->file) && file_exists(ROOT . $item->file)) {
                     $extension = pathinfo(ROOT . $item->file, PATHINFO_EXTENSION);
                     $newFilePath = '/public/src/files/catalog/' . uniqid() . '.' . $extension;
@@ -884,69 +881,54 @@ if (!file_exists(ROOT.$configPath)):
             $published = Catalog::findById($obj->original_id);
         }
         
-        // Удаление изображения, если оно есть
         if (($config['fields']['image_preview']['enabled'] ?? false) && !empty($obj->image_preview) && file_exists(ROOT . $obj->image_preview)) {
             unlink(ROOT . $obj->image_preview);
         }
 
-        // Удаляем параметры
         $params = CatalogParams::where("WHERE catalog_id = ?", [$obj->id]);
         foreach ($params as $param) {
             $param->delete();
         }
         
-        // Удаляем цены по весу
         $prices = CatalogPrices::where("WHERE catalog_id = ?", [$obj->id]);
         foreach ($prices as $price) {
             $price->delete();
         }
         
-        // Удаляем связи с готовой продукцией
         $links = FinishedProductsCatalog::where("WHERE catalog_id = ?", [$obj->id]);
         foreach ($links as $link) {
             $link->delete();
         }
         
-        // Удаляем галерею
         Gallery::delAll('catalog', $obj->id);
-
-        // Удаляем файлы
         Files::delAll('catalog', $obj->id);
         
         $obj->delete();
 
-        // Если есть опубликованная версия и черновик был последним, удаляем и её
         if ($published && $useDrafts) {
             $otherDrafts = Catalog::where("WHERE original_id = ? AND id != ?", [$published->id, $obj->id]);
             
             if (empty($otherDrafts)) {
-                // Удаление изображения опубликованной версии
                 if (($config['fields']['image_preview']['enabled'] ?? false) && !empty($published->image_preview) && file_exists(ROOT . $published->image_preview)) {
                     unlink(ROOT . $published->image_preview);
                 }
 
-                // Удаляем параметры опубликованной версии
                 $publishedParams = CatalogParams::where("WHERE catalog_id = ?", [$published->id]);
                 foreach ($publishedParams as $param) {
                     $param->delete();
                 }
                 
-                // Удаляем цены по весу опубликованной версии
                 $publishedPrices = CatalogPrices::where("WHERE catalog_id = ?", [$published->id]);
                 foreach ($publishedPrices as $price) {
                     $price->delete();
                 }
                 
-                // Удаляем связи с готовой продукцией опубликованной версии
                 $publishedLinks = FinishedProductsCatalog::where("WHERE catalog_id = ?", [$published->id]);
                 foreach ($publishedLinks as $link) {
                     $link->delete();
                 }
                 
-                // Удаляем галерею опубликованной версии
                 Gallery::delAll('catalog', $published->id);
-
-                // Удаляем файлы опубликованной версии
                 Files::delAll('catalog', $published->id);
                 
                 $published->delete();
@@ -959,10 +941,8 @@ if (!file_exists(ROOT.$configPath)):
         exit;
 
     else :
-        $title = 'Каталог товаров';
-        $add = 'товар';
+        $title = $config['module']['title'] ?? '';
 
-        // Формируем условия WHERE
         $whereConditions = [];
         $params = [];
         
@@ -971,10 +951,8 @@ if (!file_exists(ROOT.$configPath)):
             $whereConditions[] = "(`name` like '%{$search}%' OR `text` like '%{$search}%' OR `textshort` like '%{$search}%' OR `text2` like '%{$search}%')";
         }
         
-        // Фильтр по статусу черновика
         $whereConditions[] = "is_draft = 1";
         
-        // Формируем полное WHERE условие
         $where = '';
         if (!empty($whereConditions)) {
             $where = 'WHERE ' . implode(' AND ', $whereConditions);
@@ -983,10 +961,8 @@ if (!file_exists(ROOT.$configPath)):
         $perPage = $_SESSION['catalog']['per_page'] ?? $config['pagination']['default_per_page'];
         $order_by = $config['pagination']['order_by'] ?? 'ORDER BY rate DESC, id DESC';
 
-        // Сохраняем дополнительные параметры для пагинации
         $additionalParams = [];
 
-        // Вызов пагинации
         $result = Pagination::create(
             modelClass: Catalog::class,
             where: $where,
@@ -1032,7 +1008,6 @@ if (!file_exists(ROOT.$configPath)):
                 </div>
                 <div class="table_body<?= ($totalCount <= $perPage && empty($_GET['search']) && $config['list']['handler']) ? ' sortbox-items' : '' ?>">
                 <?php foreach ($objs as $obj):
-                    // Получаем связанные данные
                     if(!empty($obj->category_id) && ($config['fields']['category_id']['enabled'] ?? false)) {
                         $obj->category = Categories::findById($obj->category_id);
                     }
@@ -1042,7 +1017,6 @@ if (!file_exists(ROOT.$configPath)):
                         $pageUrl = Catalog::getUrl($obj->original_id);
                     }
                     
-                    // Проверяем наличие изменений в черновике
                     $has_changes = false;
                     if ($useDrafts && !empty($original) && $obj->edit_date != $original->edit_date || empty($original)) {
                         $has_changes = true;

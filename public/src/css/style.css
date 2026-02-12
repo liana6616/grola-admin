@@ -16,8 +16,8 @@
   font-family: "Aeonik Pro";
   font-weight: 400;
   font-style: normal;
-  src: url("/public/fonts/Aeonik-Pro-Regular.woff2") format("woff2"), 
-        url("/public/fonts/Aeonik-Pro-Regular.woff") format("woff");
+  src: url("/public/src/fonts/Aeonik-Pro-Regular.woff2") format("woff2"), 
+        url("/public/src/fonts/Aeonik-Pro-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -25,8 +25,8 @@
   font-family: "Aeonik Pro";
   font-weight: 500;
   font-style: normal;
-  src: url("/public/fonts/Aeonik-Pro-Medium.woff2") format("woff2"), 
-        url("/public/fonts/Aeonik-Pro-Medium.woff") format("woff");
+  src: url("/public/src/fonts/Aeonik-Pro-Medium.woff2") format("woff2"), 
+        url("/public/src/fonts/Aeonik-Pro-Medium.woff") format("woff");
   font-display: swap;
 }
 
@@ -34,8 +34,8 @@
   font-family: "Aeonik Pro";
   font-weight: 700;
   font-style: normal;
-  src: url("/public/fonts/Aeonik-Pro-Bold.woff2") format("woff2"), 
-        url("/public/fonts/Aeonik-Pro-Bold.woff") format("woff");
+  src: url("/public/src/fonts/Aeonik-Pro-Bold.woff2") format("woff2"), 
+        url("/public/src/fonts/Aeonik-Pro-Bold.woff") format("woff");
   font-display: swap;
 }
 
@@ -43,8 +43,8 @@
   font-family: "Gordita";
   font-weight: 400;
   font-style: normal;
-  src: url("/public/fonts/Gordita-Regular.woff2") format("woff2"), 
-        url("/public/fonts/Gordita-Regular.woff") format("woff");
+  src: url("/public/src/fonts/Gordita-Regular.woff2") format("woff2"), 
+        url("/public/src/fonts/Gordita-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -52,8 +52,8 @@
   font-family: "Gordita";
   font-weight: 500;
   font-style: normal;
-  src: url("/public/fonts/Gordita-Medium.woff2") format("woff2"), 
-        url("/public/fonts/Gordita-Medium.woff") format("woff");
+  src: url("/public/src/fonts/Gordita-Medium.woff2") format("woff2"), 
+        url("/public/src/fonts/Gordita-Medium.woff") format("woff");
   font-display: swap;
 }
 
@@ -90,6 +90,7 @@ main {
   font-weight: 700;
   font-size: 22px;
   line-height: 118%;
+    max-width: 50%;
 }
 
 .header {
@@ -151,7 +152,7 @@ main {
   right: 0;
   width: 21px;
   height: 19px;
-  background:url(/public/images/icons/decor.svg) no-repeat right bottom;
+  background:url(/public/src/images/icons/decor.svg) no-repeat right bottom;
   background-size: 21px 19px;
 }
 
@@ -239,7 +240,7 @@ main {
   left: 13px;
   width: 19px;
   height: 19px;
-  background: url(/public/images/icons/catalog.svg) no-repeat right bottom;
+  background: url(/public/src/images/icons/catalog.svg) no-repeat right bottom;
   transform: translate(0, -50%);
   background-size: 19px 19px;
   filter: brightness(0) invert(1);
@@ -338,7 +339,7 @@ main {
   left: -15px;
   width: 21px;
   height: 19px;
-  background: url(/public/images/icons/decor.svg) no-repeat right bottom;
+  background: url(/public/src/images/icons/decor.svg) no-repeat right bottom;
   background-size: 21px 19px;
   transform: scaleY(-1) rotate(-180deg);
 }
@@ -396,7 +397,7 @@ main {
   left: 35px;
   width: 18px;
   height: 18px;
-  background:url(/public/images/icons/decor-light.svg) no-repeat right bottom;
+  background:url(/public/src/images/icons/decor-light.svg) no-repeat right bottom;
   background-size: 18px 18px;
 }
 
@@ -491,40 +492,6 @@ main {
   height: 50px;
   margin-bottom: 17px;
 }
-
-/* .categories__item:nth-child(1)::after {
-  width: 50px;
-  height: 50px;
-  background:url(/public/images/icons/production.svg) no-repeat center;
-}
-
-.categories__item:nth-child(2)::after {
-  top: 22px;
-  width: 48px;
-  height: 48px;
-  background:url(/public/images/icons/time.svg) no-repeat center;
-}
-
-.categories__item:nth-child(3)::after {
-  top: 22px;
-  width: 48px;
-  height: 48px;
-  background:url(/public/images/icons/firmly.svg) no-repeat center;
-}
-
-.categories__item:nth-child(4)::after {
-  top: 22px;
-  width: 48px;
-  height: 48px;
-  background:url(/public/images/icons/individual.svg) no-repeat center;
-}
-
-.categories__item:nth-child(5)::after {
-  top: 22px;
-  width: 48px;
-  height: 48px;
-  background:url(/public/images/icons/innovations.svg) no-repeat center;
-} */
 
 .categories__title.title-small {
   margin-bottom: 15px;
@@ -833,7 +800,7 @@ main {
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background:url(/public/images/icons/arrow.svg) no-repeat right bottom;
+  background:url(/public/src/images/icons/arrow.svg) no-repeat right bottom;
   background-size: 20px 20px;
 }
 
@@ -849,7 +816,7 @@ main {
   top: 50%;
   transform: translate(-50%, -50%) rotate(180deg);  width: 20px;
   height: 20px;
-  background:url(/public/images/icons/arrow.svg) no-repeat right bottom;
+  background:url(/public/src/images/icons/arrow.svg) no-repeat right bottom;
   background-size: 20px 20px;
 }
 
@@ -936,7 +903,7 @@ main {
   top: 0;
   width: 66px;
   height: 80px;
-  background:url(/public/images/icons/form.svg) no-repeat center;
+  background:url(/public/src/images/icons/form.svg) no-repeat center;
 }
 
 .form__title {
@@ -1042,6 +1009,7 @@ main {
   width: 100%;
   height: auto;
   display: block;
+  min-height: 505px;
   transition: filter 0.3s ease;
 }
 
@@ -1116,7 +1084,7 @@ main {
   right: 0;
   width: 22px;
   height: 22px;
-  background:url(/public/images/icons/arrow-alt.svg) no-repeat center;
+  background:url(/public/src/images/icons/arrow-alt.svg) no-repeat center;
   background-size: 22px 22px;
 }
 
@@ -1242,7 +1210,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background:url(/public/images/why.jpg) no-repeat center;
+  background:url(/public/src/images/why_choose_us/why.jpg) no-repeat center;
   background-size: 100% 100%;
   z-index: -1;
 }
@@ -1254,7 +1222,7 @@ main {
   left: 53px;
   width: 117px;
   height: 117px;
-  background:url(/public/images/icons/why.svg) no-repeat right bottom;
+  background:url(/public/src/images/icons/why.svg) no-repeat right bottom;
   background-size: 117px 117px;
   z-index: 10;
 }
@@ -1274,7 +1242,7 @@ main {
 
 .choose__item {
   background: #ffffff;
-  padding: 50px 0 50px 50px;
+  padding: 50px;
 }
 
 .choose__item .scheme__text {
@@ -1615,7 +1583,7 @@ main {
   opacity: 0.6;
 }
 
-.hero-about::after {
+/* .hero-about::after {
   position: absolute;
   content: "";
   top: 0;
@@ -1625,6 +1593,21 @@ main {
   background:url(/public/images/about/hero.jpg) no-repeat center;
   background-size: 100% 100%;
   z-index: -1;
+} */
+
+.hero-about__img {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.hero-about__img-mob {
+  display: none;
 }
 
 .hero-about__wrapper-block {
@@ -1805,7 +1788,7 @@ main {
   right: 0;
   width: 18px;
   height: 18px;
-  background:url(/public/images/icons/arrow-black.svg) no-repeat center;
+  background:url(/public/src/images/icons/arrow-black.svg) no-repeat center;
   background-size: 18px 18px;
   transform: rotate(180deg);
 }
@@ -1839,7 +1822,7 @@ main {
   left: 0;
   width: 18px;
   height: 18px;
-  background:url(/public/images/icons/arrow-black.svg) no-repeat center;
+  background:url(/public/src/images/icons/arrow-black.svg) no-repeat center;
   background-size: 18px 18px;
 }
 
@@ -2180,7 +2163,7 @@ main {
   left: 0;
   width: 18px;
   height: 18px;
-  background: url(/public/images/icons/arrow-black.svg) no-repeat center;
+  background: url(/public/src/images/icons/arrow-black.svg) no-repeat center;
   background-size: 18px 18px;
 }
 
@@ -2419,7 +2402,7 @@ main {
   right: 0;
   width: 29px;
   height: 20px;
-  background:url(/public/images/icons/button-arrow.svg) no-repeat right bottom;
+  background:url(/public/src/images/icons/button-arrow.svg) no-repeat right bottom;
   background-size: 29px 20px;
 }
 
@@ -2428,7 +2411,7 @@ main {
 }
 
 .catalog__button-filter.active::after {
-  background:url(/public/images/icons/button-rotate.svg) no-repeat right bottom;
+  background:url(/public/src/images/icons/button-rotate.svg) no-repeat right bottom;
 }
 
 /* catalog list отсюда .catalog-card__list-alt */
@@ -2454,7 +2437,7 @@ main {
   right: 63px;
   width: 15px;
   height: 15px;
-  background: url(/public/images/icons/arrow-rigth-top.svg) no-repeat right bottom;
+  background: url(/public/src/images/icons/arrow-rigth-top.svg) no-repeat right bottom;
   background-size: 15px 15px;
 }
 
@@ -2586,7 +2569,7 @@ main {
   left: 0;
   width: 40px;
   height: 40px;
-  background: url(/public/images/icons/pdf.svg) no-repeat center;
+  background: url(/public/src/images/icons/pdf.svg) no-repeat center;
   background-size: 40px 40px;
 }
 

@@ -1,5 +1,10 @@
 <?php
 return [
+    // Настройки модуля
+    'module' => [
+        'title' => 'Новости',            // Заголовок модуля
+    ],
+
     // Действия
     'actions' => [
         'show' => true,                      // Показывать иконку "Показывать на сайте"
@@ -79,7 +84,16 @@ return [
         'image_width' => 800,
         'image_height' => 600,
         'thumbnail_width' => 400,
-        'thumbnail_height' => 300
+        'thumbnail_height' => 300,
+
+        'gallery_name' => [
+            'enabled' => true,
+            'title' => 'Заголовок фотогалереи'
+        ],
+        'gallery_text' => [
+            'enabled' => true,
+            'title' => 'Описание фотогалереи'
+        ]
     ],
     
     // Файлы
@@ -87,6 +101,15 @@ return [
         'enabled' => true,
         'title' => 'Файлы',
         'tab_name' => 'Файлы',
+
+        'files_name' => [
+            'enabled' => true,
+            'title' => 'Заголовок файлов'
+        ],
+        'files_text' => [
+            'enabled' => true,
+            'title' => 'Описание файлов'
+        ]
     ],
     
     // SEO настройки

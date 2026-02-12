@@ -136,8 +136,8 @@ elseif (isset($_GET['delete'])) :
     exit;
 
 else :
-    $title = 'FAQ (Вопрос-ответ)';
-    $add = 'вопрос';
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
 
     $filter = true;
 

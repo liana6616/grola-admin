@@ -114,9 +114,14 @@ if (isset($_POST['edit'])) :
 
     header("Location: {$_SERVER['REQUEST_URI']}");
     exit;
-else: ?>
+else: 
+    
+    // Заголовок модуля из конфига
+    $title = $config['module']['title'] ?? '';
+?>
+
     <div class="editHead">
-        <h1>Настройки</h1>
+        <h1><?= $title ?></h1>
     </div>
     
     <div class="edit_block">

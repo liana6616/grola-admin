@@ -6,7 +6,7 @@
  * @var string|null $value Значение поля
  * @var bool $required Обязательное поле
  * @var string $type Тип поля (text, number, password и т.д.)
- * @var string $dis Атрибут disabled (опционально)
+ * @var bool $disabled Отключить поле (было string $dis)
  * @var string $class CSS классы (опционально)
  */
 ?>
@@ -19,7 +19,7 @@
            name='<?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?>' 
            value='<?= htmlspecialchars($value ?? '', ENT_QUOTES, 'UTF-8') ?>'
            <?= $required ? 'required' : '' ?>
-           <?= !empty($dis) ? 'disabled' : '' ?>
+           <?= $disabled ? 'disabled' : '' ?>
            <?= !empty($class) ? 'class="' . htmlspecialchars($class, ENT_QUOTES, 'UTF-8') . '"' : '' ?>
            autocomplete='<?= $name === 'password' ? 'new-password' : 'off' ?>' 
            maxlength='255'
