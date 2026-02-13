@@ -16,9 +16,9 @@
       
       <div class="footer__column">
         <div class="footer__column-contacts">
-          <a class="footer__phone filter" href="tel:+78129509077">+7 (812) 950-90-77</a>
-          <a class="footer__mail filter" href="mailto:grola@mail.ru">grola@mail.ru</a>
-          <address class="footer__address filter">Санкт-Петербург, Складской проезд, д.4</address>
+          <a class="footer__phone filter" href="tel:<?= preg_replace('/[^0-9+]/', '', $this->settings->phone) ?>"><?= $this->settings->phone ?></a>
+          <a class="footer__mail filter" href="<?= $this->settings->email ?>"><?= $this->settings->email ?></a>
+          <address class="footer__address filter"><?= $this->settings->city ?> <?= $this->settings->address ?></address>
         </div>
 
         <div class="footer__column-social">
@@ -66,7 +66,7 @@
         </svg>
       </button>
       
-      <img class="modal__img" src="/public/images/modal.jpg">
+      <img class="modal__img" src="/public/src/images/modal.jpg">
 
       <form class="form__wrapper form__wrapper-modal" id="feedbackForm">
           <h2 class="form__mod-title title">Оставить заявку</h2>
@@ -129,14 +129,19 @@
     </div>
   </div>
 
-	<script src="/public/src/js/lib/jquery.min.js"></script>
-	<script src="/public/src/js/lib/jquery.form.plugin.js"></script>
-	<script src="/public/src/js/lib/swiper-bundle.min.js"></script>
-	<script src="/public/src/js/lib/maskedinput.min.js"></script>
-	<script src="/public/src/js/lib/jquery.ui.touch-punch.min.js"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0ac7ca37-a7d0-424c-a7d3-130ebbc4b580"></script>
-	<script src="/public/src/js/app.js?v=<?= rand() ?>"></script>
-	<script type="module" src="/public/src/js/index.js"></script>
+  <script src="/public/src/js/lib/jquery.min.js"></script>
+
+  <!-- jQuery UI - добавляем -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  <script src="/public/src/js/lib/jquery.form.plugin.js"></script>
+  <script src="/public/src/js/lib/swiper-bundle.min.js"></script>
+  <script src="/public/src/js/lib/maskedinput.min.js"></script>
+  <script src="/public/src/js/lib/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0ac7ca37-a7d0-424c-a7d3-130ebbc4b580"></script>
+  <script src="/public/src/js/app.js?v=<?= rand() ?>"></script>
+  <script type="module" src="/public/src/js/index.js"></script>
 
 	<? include_once VIEWS.'/schema/organization.php' ?>
 

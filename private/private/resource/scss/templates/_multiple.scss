@@ -1,0 +1,29 @@
+@use '../common/variables' as *;
+@use '../common/fonts' as *;
+
+.multiple {
+	border: 1px solid $border;
+	border-radius: 5px;
+	max-height: 300px;
+	overflow: auto;
+	& .checkbox_block {
+		& input[type='checkbox'] {
+			& + label {
+				margin: 0px;
+				width: fit-content;
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+	}
+	.checkbox_child {
+		margin: 10px 0px 0px 25px;
+	}
+	.checkbox_child2 {
+		margin: 10px 0px 0px 50px;
+	}
+}

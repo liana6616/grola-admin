@@ -136,20 +136,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 // Установка временной зоны
 date_default_timezone_set('Europe/Moscow'); // Настроить под ваш регион
 
-// Обработка входящих данных
-function cleanInput($data) {
-    if (is_array($data)) {
-        return array_map('cleanInput', $data);
-    }
-    return htmlspecialchars(strip_tags(trim($data)), ENT_QUOTES, 'UTF-8');
-}
-
-// Очистка GET, POST, REQUEST массивов (опционально, может замедлить работу)
-if ($debugMode) {
-    $_GET = cleanInput($_GET);
-    $_POST = cleanInput($_POST);
-    $_REQUEST = cleanInput($_REQUEST);
-}
 
 // Функция для безопасного показа ошибки 500
 // Функция для безопасного показа ошибки 500

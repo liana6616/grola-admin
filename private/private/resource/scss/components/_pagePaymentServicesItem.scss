@@ -1,0 +1,52 @@
+@use 'common/variables' as *;
+@use 'common/fonts' as *;
+
+.pagePaymentServicesItem {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	border: 1px solid $border;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 15px 0px 0px;
+	& .flex2 {
+		width: calc(100% - 50px);
+		align-items: flex-start;
+		& > .textarea_block, 
+		& > .select_block, 
+		& > .input_block {
+		    width: calc(50% - 8px);
+		    margin-top: 0px;
+		}
+		& fieldset {
+			margin-top: 15px !important;
+			& legend {
+				position: relative;
+				top: -14px;
+				left: -24px;
+				color: $gray2;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 1;
+				background: none;
+			}
+		}
+	}
+	& .btn {
+		background-size: 60%;
+		&.icon_show {
+			opacity: 0.3;
+			&.active {
+				opacity: 1;
+			}
+		}
+	}
+	&:hover {
+		background: $gray5;
+	}
+}
+
+.pagePaymentServiceAdd {
+	margin-top: 10px;
+}

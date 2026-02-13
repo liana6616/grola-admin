@@ -603,7 +603,7 @@
     padding-left: 71px;
   }
 
-  .form__text {
+  .form__text p {
     margin-top: 25px;
 
     br {
@@ -1280,8 +1280,8 @@
     margin-bottom: 18px;
   }
 
-  .about__text,
-  .about__text-alt {
+  .about__text p,
+  .about__text p strong {
     font-size: 16px;
     line-height: 138%;
   }

@@ -1,0 +1,22 @@
+@use '../common/variables' as *;
+@use '../common/fonts' as *;
+
+.breadcrumbs {
+  margin: 0px 0px 25px 0px;
+  & .path {
+    font-size: 0.875rem;
+    line-height: 1;
+    color: $blue;
+  }
+  & a.path {
+    color: $red;
+    border-bottom: 1px dashed;
+  }
+  & .path_arr {
+    font-size: 0.875rem;
+    line-height: 1;
+    color: $blue;
+    margin: 0px 7px;
+    opacity: 0.7;
+  }
+}

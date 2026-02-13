@@ -192,15 +192,15 @@ else :
         <div class="table_container">
             <div class="table_header">
                 <?php if (($config['list']['url']['enabled'] ?? false) && ($config['fields']['url']['enabled'] ?? false)): ?>
-                    <div class="info"><?= $config['list']['url']['title'] ?? 'Страница' ?></div>
+                    <div class="pole info"><?= $config['list']['url']['title'] ?? 'Страница' ?></div>
                 <?php endif; ?>
                 
                 <?php if (($config['list']['title']['enabled'] ?? false) && ($config['fields']['title']['enabled'] ?? false)): ?>
-                    <div class="category"><?= $config['list']['title']['title'] ?? 'Title' ?></div>
+                    <div class="pole category"><?= $config['list']['title']['title'] ?? 'Title' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                    <div class="modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
+                    <div class="pole modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                 <?php endif; ?>
                 
                 <div class="actions"></div>
@@ -209,7 +209,7 @@ else :
             <?php foreach ($objs as $obj): ?>
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if (($config['list']['url']['enabled'] ?? false) && ($config['fields']['url']['enabled'] ?? false)): ?>
-                        <div class="info">
+                        <div class="pole info">
                             <div class="name"><?= $obj->url ?></div>
                             <?php if (($config['list']['title']['enabled'] ?? false) && ($config['fields']['title']['enabled'] ?? false) && !empty($obj->title)): ?>
                                 <div class="comment"><?= mb_substr($obj->title, 0, 100) . (mb_strlen($obj->title) > 100 ? '...' : '') ?></div>
@@ -218,13 +218,13 @@ else :
                     <?php endif; ?>
                     
                     <?php if (($config['list']['title']['enabled'] ?? false) && ($config['fields']['title']['enabled'] ?? false)): ?>
-                        <div class="category">
+                        <div class="pole category">
                             <?= !empty($obj->title) ? mb_substr($obj->title, 0, 50) . (mb_strlen($obj->title) > 50 ? '...' : '') : '' ?>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                        <div class="modified_date">
+                        <div class="pole modified_date">
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

@@ -207,19 +207,19 @@ else :
         <div class="table_container">
             <div class="table_header">
                 <?php if (($config['list']['email']['enabled'] ?? false) && ($config['fields']['email']['enabled'] ?? false)): ?>
-                    <div class="info"><?= $config['list']['email']['title'] ?? 'Email' ?></div>
+                    <div class="pole info"><?= $config['list']['email']['title'] ?? 'Email' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['date']['enabled'] ?? false): ?>
-                    <div class="modified_date"><?= $config['list']['date']['title'] ?? 'Дата подписки' ?></div>
+                    <div class="pole modified_date"><?= $config['list']['date']['title'] ?? 'Дата подписки' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['active']['enabled'] ?? false): ?>
-                    <div class="category"><?= $config['list']['active']['title'] ?? 'Статус' ?></div>
+                    <div class="pole category"><?= $config['list']['active']['title'] ?? 'Статус' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                    <div class="modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
+                    <div class="pole modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                 <?php endif; ?>
                 
                 <div class="actions"></div>
@@ -228,7 +228,7 @@ else :
             <?php foreach ($objs as $obj): ?>
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if (($config['list']['email']['enabled'] ?? false) && ($config['fields']['email']['enabled'] ?? false)): ?>
-                        <div class="info">
+                        <div class="pole info">
                             <div class="name"><?= htmlspecialchars($obj->email ?? '—', ENT_QUOTES, 'UTF-8') ?></div>
                             <?php if (($config['fields']['ip']['enabled'] ?? false) && !empty($obj->ip)): ?>
                                 <div class="comment">
@@ -239,13 +239,13 @@ else :
                     <?php endif; ?>
                     
                     <?php if ($config['list']['date']['enabled'] ?? false): ?>
-                        <div class="modified_date">
+                        <div class="pole modified_date">
                             <?= !empty($obj->date) ? date('d.m.Y H:i', strtotime($obj->date)) : '—' ?>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['active']['enabled'] ?? false): ?>
-                        <div class="category">
+                        <div class="pole category">
                             <?php if ($obj->active == 1): ?>
                                 <span class="status_active">Активен</span>
                             <?php else: ?>
@@ -255,7 +255,7 @@ else :
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                        <div class="modified_date">
+                        <div class="pole modified_date">
                             <?= !empty($obj->edit_date) ? date('d.m.Y H:i', strtotime($obj->edit_date)) : '—' ?>
                         </div>
                     <?php endif; ?>

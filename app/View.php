@@ -28,6 +28,9 @@ class View
             // Очистка телефонов
             $this->phones = Helpers::clearPhone($settings->phone);
             $this->phones2 = Helpers::clearPhone($settings->phone2);
+
+            if(!empty($this->settings->requisites)) $this->settings->requisites = nl2br($this->settings->requisites);
+            if(!empty($this->settings->time_job)) $this->settings->time_job = nl2br($this->settings->time_job);
             
             // SEO данные из таблицы seo по текущему URI
             $seo = Seo::findByUrl(URI);

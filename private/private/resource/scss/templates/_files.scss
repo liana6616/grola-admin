@@ -1,0 +1,112 @@
+@use '../common/variables' as *;
+@use '../common/fonts' as *;
+
+.files_block {
+	display: flex;
+	flex-flow: column wrap;
+	gap: 15px;
+	margin: 15px 0px 0px;
+	position: relative;
+	& .file_card {
+		width: 100%;
+		min-width: 50px;
+		margin: 0px 0px 0px;
+		overflow: hidden;
+		text-align: center;
+		border: 1px solid $border !important;
+		border-radius: 5px;
+		box-shadow: 0 0 26px $border;
+		height: 58px;
+		background: $white;
+		display: flex;
+		flex-flow: row wrap !important;
+		align-items: center;
+		gap: 8px;
+		padding: 8px;
+		& .file_name {
+			font-size: 14px;
+			line-height: 1;
+			padding: 0px 0px 0px 12px;
+			color: $blue;
+
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			gap: 0px;
+			margin-top: 0px;
+			width: calc(100% - 200px);
+			height: 40px;
+			padding: 10px 20px;
+			background: $back;
+			font-size: 14px;
+			line-height: 1;
+			box-shadow: 0 1px 1px 0 $border inset;
+		}
+		& .button {
+			width: 42px;
+			height: 42px;
+			padding: 0;
+			border: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: none;
+			cursor: move;
+			cursor: grab;
+			user-select: none;
+			transition: opacity 0.2s ease, background-color 0.2s ease;
+			color: $default;
+			&:after {
+				content: '';
+				display: block;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			&.handler {
+				&:after {
+					
+					width: 17px;
+					height: 15px;
+					background-image: url("data:image/svg+xml,%3Csvg width='17' height='15' viewBox='0 0 17 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.7'%3E%3Cpath d='M0.75 13.3312H15.75' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M0.75 7.04059H15.75' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M0.75 0.75H15.75' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+				}
+			}
+			&.show {
+				&:after {
+					content: '';
+					display: block;
+					width: 20px;
+					height: 18px;
+					opacity: 0.3;
+					background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.7'%3E%3Cpath d='M11.9236 9.18372C11.9236 10.699 10.6991 11.9235 9.18378 11.9235C7.66847 11.9235 6.44397 10.699 6.44397 9.18372C6.44397 7.66841 7.66847 6.44391 9.18378 6.44391C10.6991 6.44391 11.9236 7.66841 11.9236 9.18372Z' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.18376 15.5129C11.8853 15.5129 14.4032 13.921 16.1557 11.1659C16.8445 10.0868 16.8445 8.27301 16.1557 7.19392C14.4032 4.4388 11.8853 2.84695 9.18376 2.84695C6.48221 2.84695 3.96434 4.4388 2.21178 7.19392C1.523 8.27301 1.523 10.0868 2.21178 11.1659C3.96434 13.921 6.48221 15.5129 9.18376 15.5129Z' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+				}
+				&.active {
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+			&.open {
+				&:after {
+					content: '';
+					display: block;
+					width: 14px;
+					height: 14px;
+					background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.7'%3E%3Cpath d='M8.6665 7.33385L14.1332 1.86719' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.6668 4.53398V1.33398H11.4668' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.3335 1.33398H6.00016C2.66683 1.33398 1.3335 2.66732 1.3335 6.00065V10.0007C1.3335 13.334 2.66683 14.6673 6.00016 14.6673H10.0002C13.3335 14.6673 14.6668 13.334 14.6668 10.0007V8.66732' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+				}
+			}
+			&.delete {
+				&:after {
+					content: '';
+					display: block;
+					width: 20px;
+					height: 20px;
+					background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.29495 5.29504L15.8849 15.885' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.29504 15.885L15.885 5.29504' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+				}
+			}
+			&:hover {
+				background-color: $back;
+			}
+		}
+	}
+}

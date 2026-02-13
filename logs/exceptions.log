@@ -1,2 +1,16 @@
 [2026-02-10 19:48:27] Exception: Class "app\Controllers\Advantages" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 110
 
+[2026-02-12 13:47:48] Exception: Class "app\Controllers\Messengers" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 28
+
+[2026-02-12 13:47:48] Exception: Class "app\Controllers\Messengers" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 28
+
+[2026-02-12 13:47:48] Exception: Class "app\Controllers\Messengers" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 28
+
+[2026-02-12 13:47:49] Exception: Class "app\Controllers\Messengers" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 28
+
+[2026-02-12 15:40:52] Exception: syntax error, unexpected token "if" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 40
+
+[2026-02-12 15:40:52] Exception: syntax error, unexpected token "if" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 40
+
+[2026-02-12 15:40:52] Exception: syntax error, unexpected token "if" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 40
+

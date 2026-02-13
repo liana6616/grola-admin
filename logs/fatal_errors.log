@@ -2,3 +2,65 @@
 
 [2026-02-12 10:12:22] Fatal Error: Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 7
 
+[2026-02-12 11:35:14] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:14] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:15] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:15] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:15] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:27] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:35:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:36:09] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:36:10] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:28] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:29] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:31] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:31] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:31] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:31] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:39] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:39] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:39] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+
+[2026-02-12 11:37:39] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
+

@@ -166,6 +166,9 @@ return [
     // Индивидульный контент страниц
     // ID страницы => название файла в папке /private/modules/pages/
     'personal_page' => [
-        
+        '1' => 'main',
+        '5' => 'about',
+        '19' => 'wholesale',
+        '21' => 'payment',
     ]
 ];

@@ -16,7 +16,7 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
     $obj->show = 1;
     $obj->rate = 0;
     
-    $$title = 'Добавление';
+    $title = 'Добавление';
     $id = false;
     
     if(!empty($_GET['edit'])) {
@@ -50,7 +50,7 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
 
     ?>
     <div class="editHead">
-        <h1><?= $$title ?></h1>
+        <h1><?= $title ?></h1>
         <div class="button_block">
             <a href='<?= $_SERVER['REDIRECT_URL'] ?>' class='btn btn_white btn_back'>Вернуться назад</a>
         </div>
@@ -303,22 +303,22 @@ else :
         <div class="table_container">
             <div class="table_header">
                 <?php if ($config['list']['handler']): ?>
-                    <div class="handler_block"></div>
+                    <div class="pole handler_block"></div>
                 <?php endif; ?>
                 
                 <?php if (($config['list']['image']['enabled'] ?? false) && ($config['fields']['image']['enabled'] ?? false)): ?>
-                    <div class="image_preview"><?= $config['list']['image']['title'] ?? 'Иконка' ?></div>
+                    <div class="pole image_preview"><?= $config['list']['image']['title'] ?? 'Иконка' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['name']['enabled'] ?? false): ?>
-                    <div class="info"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
+                    <div class="pole info"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                    <div class="modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
+                    <div class="pole modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                 <?php endif; ?>
                 
-                <div class="actions"></div>
+                <div class="pole actions"></div>
             </div>
             <div class="table_body<?= ($totalCount <= $perPage && empty($_GET['search']) && $config['list']['handler']) ? ' sortbox-items' : '' ?>">
             <?php foreach ($objs as $obj): 
@@ -328,11 +328,11 @@ else :
 
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if ($config['list']['handler']): ?>
-                        <div class="handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
+                        <div class="pole handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['image']['enabled'] ?? false) && ($config['fields']['image']['enabled'] ?? false)): ?>
-                        <div class="image_preview">
+                        <div class="pole image_preview">
                             <?php if (!empty($obj->image)): ?>
                                 <img src="<?= $obj->image ?>" alt="<?= htmlspecialchars($obj->name, ENT_QUOTES, 'UTF-8') ?>">
                             <?php else: ?>
@@ -342,7 +342,7 @@ else :
                     <?php endif; ?>
                     
                     <?php if ($config['list']['name']['enabled'] ?? false): ?>
-                        <div class="info">
+                        <div class="pole info">
                             <div class="name"><?= $obj->name ?></div>
                             <?php if ($config['fields']['link']['enabled'] ?? false && !empty($obj->link)): ?>
                                 <a href="<?= $obj->link ?>" target="_blank" rel="noopener noreferrer" class="link">
@@ -353,7 +353,7 @@ else :
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                        <div class="modified_date">
+                        <div class="pole modified_date">
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

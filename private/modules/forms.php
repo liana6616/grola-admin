@@ -304,22 +304,22 @@ else :
         <div class="table_container">
             <div class="table_header">
                 <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
-                    <div class="info"><?= $config['list']['name']['title'] ?? 'Заявка' ?></div>
+                    <div class="pole info"><?= $config['list']['name']['title'] ?? 'Заявка' ?></div>
                 <?php endif; ?>
                 
                 <?php if (($config['list']['type']['enabled'] ?? false) && ($config['fields']['type_id']['enabled'] ?? false)): ?>
-                    <div class="category"><?= $config['list']['type']['title'] ?? 'Тип' ?></div>
+                    <div class="pole category"><?= $config['list']['type']['title'] ?? 'Тип' ?></div>
                 <?php endif; ?>
                                 
                 <?php if ($config['list']['date']['enabled'] ?? false): ?>
-                    <div class="modified_date"><?= $config['list']['date']['title'] ?? 'Дата' ?></div>
+                    <div class="pole modified_date"><?= $config['list']['date']['title'] ?? 'Дата' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['status']['enabled'] ?? false): ?>
-                    <div class="category"><?= $config['list']['status']['title'] ?? 'Статус' ?></div>
+                    <div class="pole category"><?= $config['list']['status']['title'] ?? 'Статус' ?></div>
                 <?php endif; ?>
                 
-                <div class="actions"></div>
+                <div class="pole actions"></div>
             </div>
             <div class="table_body">
             <?php foreach ($objs as $obj): 
@@ -333,7 +333,7 @@ else :
             ?>
                 <div class="table_row<?= $is_unread ? ' unread' : '' ?>" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
-                        <div class="info">
+                        <div class="pole info">
                             <div class="name"><?= htmlspecialchars($obj->name ?? '—', ENT_QUOTES, 'UTF-8') ?></div>
                             <div class="comment">
                                 <?php if (($config['fields']['phone']['enabled'] ?? false) && !empty($obj->phone)): ?>
@@ -352,7 +352,7 @@ else :
                     <?php endif; ?>
                     
                     <?php if (($config['list']['type']['enabled'] ?? false) && ($config['fields']['type_id']['enabled'] ?? false)): ?>
-                        <div class="category">
+                        <div class="pole category">
                             <?= $form_type->name ?? '—' ?>
                         </div>
                     <?php endif; ?>
@@ -360,13 +360,13 @@ else :
                             
                     
                     <?php if ($config['list']['date']['enabled'] ?? false): ?>
-                        <div class="modified_date">
+                        <div class="pole modified_date">
                             <?= !empty($obj->date) ? date('d.m.Y H:i', $obj->date) : '—' ?>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['status']['enabled'] ?? false): ?>
-                        <div class="category">
+                        <div class="pole category">
                             <span style="color: <?= $status_color ?>;"><?= $status_title ?></span>
                         </div>
                     <?php endif; ?>

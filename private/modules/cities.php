@@ -204,48 +204,48 @@ else :
         <div class="table_container">
             <div class="table_header">
                 <?php if ($config['list']['handler']): ?>
-                    <div class="handler_block"></div>
+                    <div class="pole handler_block"></div>
                 <?php endif; ?>
                 
                 <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
-                    <div class="info"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
+                    <div class="pole info"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
                 <?php endif; ?>
                 
                 <?php if (($config['list']['code']['enabled'] ?? false) && ($config['fields']['code']['enabled'] ?? false)): ?>
-                    <div class="category"><?= $config['list']['code']['title'] ?? 'Код' ?></div>
+                    <div class="pole category"><?= $config['list']['code']['title'] ?? 'Код' ?></div>
                 <?php endif; ?>
                 
                 <?php if (($config['list']['default']['enabled'] ?? false) && ($config['fields']['default']['enabled'] ?? false)): ?>
-                    <div class="category"><?= $config['list']['default']['title'] ?? 'По умолчанию' ?></div>
+                    <div class="pole category"><?= $config['list']['default']['title'] ?? 'По умолчанию' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                    <div class="modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
+                    <div class="pole modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                 <?php endif; ?>
                 
-                <div class="actions"></div>
+                <div class="pole actions"></div>
             </div>
             <div class="table_body<?= ($totalCount <= $perPage && empty($_GET['search']) && $config['list']['handler']) ? ' sortbox-items' : '' ?>">
             <?php foreach ($objs as $obj): ?>
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if ($config['list']['handler']): ?>
-                        <div class="handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
+                        <div class="pole handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
-                        <div class="info">
+                        <div class="pole info">
                             <div class="name"><?= $obj->name ?></div>
                         </div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['code']['enabled'] ?? false) && ($config['fields']['code']['enabled'] ?? false)): ?>
-                        <div class="category">
+                        <div class="pole category">
                             <code><?= $obj->code ?></code>
                         </div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['default']['enabled'] ?? false) && ($config['fields']['default']['enabled'] ?? false)): ?>
-                        <div class="category">
+                        <div class="pole category">
                             <?php if ($obj->default): ?>
                                 <span class="default_city">✓</span>
                             <?php else: ?>
@@ -255,7 +255,7 @@ else :
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                        <div class="modified_date">
+                        <div class="pole modified_date">
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

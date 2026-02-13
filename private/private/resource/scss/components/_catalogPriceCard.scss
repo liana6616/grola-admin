@@ -1,0 +1,28 @@
+@use 'common/variables' as *;
+@use 'common/fonts' as *;
+
+.catalogPriceCard {
+	display: flex;
+	align-items: flex-end;
+	gap: 10px;
+	border: 1px solid $border;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 15px 0px 0px;
+	& .flex4 {
+		width: calc(100% - 50px);
+		align-items: flex-end;
+		& > .textarea_block, 
+		& > .select_block, 
+		& > .input_block {
+		    width: calc(25% - 8px);
+		    margin-top: 0px;
+		}
+	}
+	& .btn {
+		background-size: 60%;
+	}
+	&:hover {
+		background: $gray5;
+	}
+}

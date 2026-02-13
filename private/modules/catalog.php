@@ -981,30 +981,30 @@ if (!file_exists(ROOT.$configPath)):
             <div class="table_container">
                 <div class="table_header">
                     <?php if ($config['list']['handler']): ?>
-                        <div class="handler_block"></div>
+                        <div class="pole handler_block"></div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['image_preview']['enabled'] ?? false) && ($config['fields']['image_preview']['enabled'] ?? false)): ?>
-                        <div class="image_preview"><?= $config['list']['image_preview']['title'] ?? 'Превью' ?></div>
+                        <div class="pole image_preview"><?= $config['list']['image_preview']['title'] ?? 'Превью' ?></div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['info']['enabled'] ?? false)): ?>
-                        <div class="info"><?= $config['list']['info']['title'] ?? 'Товар' ?></div>
+                        <div class="pole info"><?= $config['list']['info']['title'] ?? 'Товар' ?></div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['category']['enabled'] ?? false) && ($config['fields']['category_id']['enabled'] ?? false)): ?>
-                        <div class="category"><?= $config['list']['category']['title'] ?? 'Категория' ?></div>
+                        <div class="pole category"><?= $config['list']['category']['title'] ?? 'Категория' ?></div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                        <div class="modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
+                        <div class="pole modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                     <?php endif; ?>
                     
                     <?php if ($useDrafts && ($config['list']['published_date']['enabled'] ?? false)): ?>
-                        <div class="modified_date"><?= $config['list']['published_date']['title'] ?? 'Публикация' ?></div>
+                        <div class="pole modified_date"><?= $config['list']['published_date']['title'] ?? 'Публикация' ?></div>
                     <?php endif; ?>
                                         
-                    <div class="actions"></div>
+                    <div class="pole actions"></div>
                 </div>
                 <div class="table_body<?= ($totalCount <= $perPage && empty($_GET['search']) && $config['list']['handler']) ? ' sortbox-items' : '' ?>">
                 <?php foreach ($objs as $obj):
@@ -1025,11 +1025,11 @@ if (!file_exists(ROOT.$configPath)):
 
                     <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                         <?php if ($config['list']['handler']): ?>
-                            <div class="handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
+                            <div class="pole handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
                         <?php endif; ?>
                         
                         <?php if (($config['list']['image_preview']['enabled'] ?? false) && ($config['fields']['image_preview']['enabled'] ?? false)): ?>
-                            <div class="image_preview">
+                            <div class="pole image_preview">
                                 <?php if (!empty($obj->image_preview)): ?>
                                     <img src="<?= $obj->image_preview ?>" alt="<?= htmlspecialchars($obj->name, ENT_QUOTES, 'UTF-8') ?>" width="50" height="50">
                                 <?php else: ?>
@@ -1039,7 +1039,7 @@ if (!file_exists(ROOT.$configPath)):
                         <?php endif; ?>
                         
                         <?php if (($config['list']['info']['enabled'] ?? false)): ?>
-                            <div class="info">
+                            <div class="pole info">
                                 <div class="name">
                                     <?= $obj->name ?>
                                 </div>
@@ -1056,7 +1056,7 @@ if (!file_exists(ROOT.$configPath)):
                         <?php endif; ?>
                         
                         <?php if (($config['list']['category']['enabled'] ?? false) && ($config['fields']['category_id']['enabled'] ?? false)): ?>
-                            <div class="category">
+                            <div class="pole category">
                                 <?php if(!empty($obj->category)): ?>
                                     <?= $obj->category->name_menu ?? $obj->category->name ?>
                                 <?php endif; ?>
@@ -1064,13 +1064,13 @@ if (!file_exists(ROOT.$configPath)):
                         <?php endif; ?>
                         
                         <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                            <div class="modified_date">
+                            <div class="pole modified_date">
                                 <?= $obj->edit_date ?>
                             </div>
                         <?php endif; ?>
                         
                         <?php if ($useDrafts && ($config['list']['published_date']['enabled'] ?? false)): ?>
-                            <div class="modified_date">
+                            <div class="pole modified_date">
                                 <?= $original->edit_date ?? '-' ?>
                             </div>
                         <?php endif; ?>

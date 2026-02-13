@@ -202,37 +202,37 @@ else :
         <div class="table_container">
             <div class="table_header">
                 <?php if ($config['list']['info']['enabled'] ?? false): ?>
-                    <div class="info"><?= $config['list']['info']['title'] ?? 'IP адрес' ?></div>
+                    <div class="pole info"><?= $config['list']['info']['title'] ?? 'IP адрес' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['description']['enabled'] ?? false): ?>
-                    <div class="description"><?= $config['list']['description']['title'] ?? 'Комментарий' ?></div>
+                    <div class="pole description"><?= $config['list']['description']['title'] ?? 'Комментарий' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                    <div class="modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
+                    <div class="pole modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                 <?php endif; ?>
                 
-                <div class="actions"></div>
+                <div class="pole actions"></div>
             </div>
             <div class="table_body">
             <?php foreach ($objs as $obj): ?>
 
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if ($config['list']['info']['enabled'] ?? false): ?>
-                        <div class="info">
+                        <div class="pole info">
                             <div class="name"><?= $obj->name ?></div>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['description']['enabled'] ?? false): ?>
-                        <div class="description">
+                        <div class="pole description">
                             <?= $obj->text ?>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                        <div class="modified_date">
+                        <div class="pole modified_date">
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

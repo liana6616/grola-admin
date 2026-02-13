@@ -1,0 +1,78 @@
+@use 'common/variables' as *;
+@use 'common/fonts' as *;
+
+.login_page {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: url('/private/src/images/login_bg.jpg') center no-repeat;
+	background-size: cover;
+	padding: 60px 80px;
+	display: flex;
+	& .login_modal {
+		max-width: 620px;
+		width: 100%;
+		border-radius: 15px;
+		background: $block;
+		padding: 20px 20px;
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+		& .visualteam {
+			margin-bottom: 100px;
+			& svg {
+				width: 160px;
+				height: 21px;
+			}
+		}
+		& h1 {
+			font-family: "Aeonik Pro",sans-serif;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 1;
+			letter-spacing: -0.48px;
+		}
+		& form {
+			margin-top: 30px;
+			& input {
+				height: 40px;
+				width: 310px;
+				max-width: 100%;
+				border-radius: 5px;
+				border: 0;
+				background: $back;
+				box-shadow: 0 1px 1px 0 $border inset;
+				display: flex;
+				align-items: center;
+				padding: 0px 15px;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 1;
+				margin-bottom: 25px;
+				&:placeholder {
+					color: $gray2;
+				}
+			}
+			& button {
+				height: 40px;
+				width: 310px;
+				max-width: 100%;
+				border-radius: 5px;
+				background: $red;
+				box-shadow: 0 0.5px 0 0 $border;
+				color: $white;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 1;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+}

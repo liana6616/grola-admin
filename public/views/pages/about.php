@@ -55,7 +55,10 @@
             <h2 class="about__title">О компании и миссия</h2>
 
             <div class="about__wrapper-text">
-                <p class="about__text"><?= nl2br($obj->text) ?>
+                <div class="about__text">   
+                    <?= $this->page->text ?>
+                </div>
+                <!-- <p class="about__text"><?= nl2br($obj->text) ?>
                     Компания «Версия-Центр» была создана в 1993 году. За это время мы выполнили множество проектов различной сложности и приобрели огромный опыт по изготовлению и реализации металлических изделий бытового и промышленного назначения.
                     <br>
                     <br>
@@ -68,10 +71,10 @@
                         <br>
                         Мы готовы воплотить в жизнь любые ваши идеи и предложить оптимальные решения для вашего бизнеса. Свяжитесь с нами, и наши специалисты помогут разработать проект, который будет максимально соответствовать вашим требованиям.
                     </span>
-                </p>
+                </p> -->
             </div>
 
-            <img class="about__img" src="/public/images/about/about.jpg" width="473" height="474" >
+            <img class="about__img" src="/public/src/images/about/about.jpg" width="473" height="474" >
 
         </section>
 
@@ -219,7 +222,7 @@
 
                 <button class="form__button button-dark" type="submit" class="submit-btn">Отправить</button>
             </form>
-            <img class="form__contacts-img" src="/public/images/contacts/contacts-form.jpg" width="420" height="456" alt="Картинка рабочего.">
+            <img class="form__contacts-img" src="/public/src/images/contacts-form.jpg" width="420" height="456" alt="Картинка рабочего.">
         </section>
 
         <section class="partners" id="partners">

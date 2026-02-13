@@ -1,0 +1,3975 @@
+[10-Feb-2026 11:00:18 Europe/Moscow] Ошибка в PageController::main: Главная страница не найдена в базе данных
+[10-Feb-2026 11:00:18 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/new-site.potok8.ru/public_html/public/views/errors/main_unavailable.php not found
+[10-Feb-2026 11:00:56 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 11:01:05 Europe/Moscow] uploadGallery called: inputName=gallery, id=17
+[10-Feb-2026 11:01:05 Europe/Moscow] FILES array exists: yes
+[10-Feb-2026 11:01:05 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[10-Feb-2026 11:01:08 Europe/Moscow] uploadGallery called: inputName=gallery, id=17
+[10-Feb-2026 11:01:08 Europe/Moscow] FILES array exists: yes
+[10-Feb-2026 11:01:08 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[10-Feb-2026 11:01:35 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[10-Feb-2026 11:01:35 Europe/Moscow] FILES array exists: yes
+[10-Feb-2026 11:01:35 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[10-Feb-2026 11:01:38 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[10-Feb-2026 11:01:38 Europe/Moscow] FILES array exists: yes
+[10-Feb-2026 11:01:38 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[10-Feb-2026 13:32:43 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:32:45 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:15 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:15 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:16 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:17 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:18 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:33:54 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:34:18 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:34:19 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:34:19 Europe/Moscow] Неудачная попытка входа: admin, IP: 91.234.152.117
+[10-Feb-2026 13:34:28 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:34:28 Europe/Moscow] Неудачная попытка входа: test, IP: 91.234.152.117
+[10-Feb-2026 13:34:31 Europe/Moscow] Неудачная попытка входа: test, IP: 91.234.152.117
+[10-Feb-2026 13:34:31 Europe/Moscow] Неудачная попытка входа: test, IP: 91.234.152.117
+[10-Feb-2026 13:34:31 Europe/Moscow] Неудачная попытка входа: test, IP: 91.234.152.117
+[10-Feb-2026 13:35:12 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:35:37 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:36:45 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:37:35 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 31.134.187.28
+[10-Feb-2026 13:38:15 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:39:49 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:39:53 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:39:59 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:40:22 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:41:32 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:42:11 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:42:15 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:42:26 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:58:52 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:58:55 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:58:58 Europe/Moscow] Неудачная попытка входа: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 13:59:03 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 17:02:06 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:02:07 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:05:40 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(56): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:05:41 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(56): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:06:53 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:06:53 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:07:28 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:07:28 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:08:16 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:08:16 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:15:18 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:15:18 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:17:56 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:17:56 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:18:02 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:18:03 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:18:04 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:18:04 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:19:34 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:19:34 Europe/Moscow] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/autoload_real.php(25): require()
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/autoload.php(22): ComposerAutoloaderInitfd263bdd31106ebadba310f621a09445::getLoader()
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(57): require('/home/a0644240/...')
+#3 {main}
+  thrown in /home/a0644240/domains/grola-admin.potok4.ru/public_html/vendor/composer/platform_check.php on line 22
+[10-Feb-2026 17:25:47 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 91.234.152.117
+[10-Feb-2026 17:28:11 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[10-Feb-2026 17:28:11 Europe/Moscow] FILES array exists: yes
+[10-Feb-2026 17:28:11 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[10-Feb-2026 19:48:27 Europe/Moscow] Class file not found: /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/Advantages.php
+
+
+[11-Feb-2026 10:36:58 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 31.134.187.28
+[11-Feb-2026 12:54:52 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 12:54:52 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 12:54:52 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:03:32 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:03:32 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:03:32 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:03:40 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:03:40 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:03:40 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:05:26 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:05:26 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:05:26 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:05:53 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:05:53 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:05:53 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:06:19 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:06:19 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:06:19 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:06:28 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:06:28 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:06:28 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:06:55 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:06:55 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:06:55 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:12:42 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:12:42 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:12:42 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:13:01 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:13:01 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:13:01 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:13:08 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:13:08 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:13:08 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:36:24 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 13:36:24 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:36:24 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 13:55:17 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 31.134.187.28
+[11-Feb-2026 13:59:47 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 13:59:47 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 13:59:47 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 14:12:59 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 14:12:59 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 14:12:59 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 14:15:11 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 14:15:11 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 14:15:11 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 14:15:23 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[11-Feb-2026 14:15:53 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 14:15:53 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 14:15:53 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 14:15:58 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 14:15:58 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 14:15:58 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 14:28:45 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[11-Feb-2026 14:28:45 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 14:28:45 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 14:42:47 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[11-Feb-2026 14:49:14 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[11-Feb-2026 14:49:16 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[11-Feb-2026 14:50:04 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[11-Feb-2026 14:50:40 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[11-Feb-2026 14:50:41 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[11-Feb-2026 14:50:42 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[11-Feb-2026 14:56:24 Europe/Moscow] Успешный вход в админ-панель: support, IP: 91.234.152.117
+[11-Feb-2026 14:56:47 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 14:56:47 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 14:56:47 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:15:35 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:15:35 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:15:35 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:15:53 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:15:53 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:15:53 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:16:34 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:16:34 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:16:34 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:36:27 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:36:27 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:36:27 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:36:42 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:36:42 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:36:42 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:37:22 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:37:22 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:37:22 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:37:33 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:37:33 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:37:33 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:37:42 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:37:42 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:37:42 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:41:25 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:41:25 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:41:25 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:43:07 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:43:07 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:43:07 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:44:09 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:44:09 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:44:09 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:44:20 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:44:20 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:44:20 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:45:14 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:45:14 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:45:14 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:45:19 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:45:19 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:45:19 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:45:27 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:45:27 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:45:27 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:46:05 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:46:05 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:46:05 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:47:46 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:47:46 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:47:46 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:47:51 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:47:51 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:47:51 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:48:00 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:48:00 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:48:00 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:48:04 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:48:04 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:48:04 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:48:09 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:48:09 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:48:09 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:49:37 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:49:37 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:49:37 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:49:48 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:49:48 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:49:48 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:56:20 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:56:20 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:56:20 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:56:42 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:56:42 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:56:42 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:57:31 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:57:31 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:57:31 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:57:38 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:57:38 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:57:38 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:58:02 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:58:02 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:58:02 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:58:06 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 15:58:06 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:58:06 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:58:21 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:58:21 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:58:21 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 15:58:25 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 15:58:25 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 15:58:25 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 16:22:16 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 16:22:16 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 16:22:16 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 16:24:03 Europe/Moscow] uploadGallery called: inputName=gallery, id=3
+[11-Feb-2026 16:24:03 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 16:24:03 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:18:19 Europe/Moscow] uploadGallery called: inputName=gallery, id=5
+[11-Feb-2026 17:18:19 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:18:19 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:18:55 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[11-Feb-2026 17:18:57 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[11-Feb-2026 17:19:11 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:19:11 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:19:11 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:19:44 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:19:44 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:19:44 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:20:33 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:20:33 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:20:33 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:20:40 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:20:40 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:20:40 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:20:45 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:20:45 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:20:45 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:22:03 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:22:03 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:22:03 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:22:08 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:22:08 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:22:08 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:22:16 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:22:16 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:22:16 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:45:02 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:45:02 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:45:02 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:45:05 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:45:05 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:45:05 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:45:23 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:45:23 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:45:23 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 17:45:29 Europe/Moscow] uploadGallery called: inputName=gallery, id=7
+[11-Feb-2026 17:45:29 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 17:45:29 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 18:22:02 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 18:22:02 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 18:22:02 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 18:22:16 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 18:22:16 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 18:22:16 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 18:22:32 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 18:22:32 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 18:22:32 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 18:32:35 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[11-Feb-2026 18:32:35 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 18:32:35 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 18:55:26 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 18:55:26 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 18:55:26 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 18:55:30 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 18:55:30 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 18:55:30 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 18:55:31 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[11-Feb-2026 18:55:31 Europe/Moscow] FILES array exists: yes
+[11-Feb-2026 18:55:31 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[11-Feb-2026 21:18:47 Europe/Moscow] Успешный вход в админ-панель: support, IP: 93.100.136.73
+[12-Feb-2026 09:43:06 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:43:06 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:43:06 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[12-Feb-2026 09:43:06 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:43:06 Europe/Moscow] CityDetector: ошибка проверки города 'public': SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:43:06 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:43:06 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 09:43:07 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:43:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:43:07 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[12-Feb-2026 09:43:07 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:43:07 Europe/Moscow] CityDetector: ошибка проверки города 'public': SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:43:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:43:07 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 09:43:11 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:43:11 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:43:11 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0
+[12-Feb-2026 09:43:12 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:43:12 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:43:12 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0
+[12-Feb-2026 09:43:39 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:43:39 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:43:39 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0
+[12-Feb-2026 09:55:08 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:08 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:55:08 Europe/Moscow] Request URI after city detection: /visualteam/categories?parent=0&edit=37
+[12-Feb-2026 09:55:14 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:14 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:55:14 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:55:38 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка проверки города 'public': SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:55:38 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1898988335
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка проверки города 'public': SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:55:38 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка проверки города 'public': SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:55:38 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка проверки города 'public': SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:55:38 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка проверки города 'public': SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:55:38 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка проверки города 'public': SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:55:38 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка получения города по умолчанию: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] CityDetector: ошибка проверки города 'public': SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0644240_grola.cities' doesn't exist
+[12-Feb-2026 09:55:38 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 09:55:38 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 10:00:18 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:00:18 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:00:24 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:00:24 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:01:33 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:01:33 Europe/Moscow] Request URI after city detection: /visualteam
+[12-Feb-2026 10:01:33 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:01:33 Europe/Moscow] Request URI after city detection: /visualteam/settings
+[12-Feb-2026 10:01:35 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:01:35 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:01:36 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:01:36 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:01:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:01:37 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[12-Feb-2026 10:01:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:01:37 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:01:41 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:01:41 Europe/Moscow] Request URI after city detection: /visualteam/settings
+[12-Feb-2026 10:03:18 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:03:18 Europe/Moscow] Request URI after city detection: /visualteam/pages?add
+[12-Feb-2026 10:05:42 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:05:42 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:05:44 Europe/Moscow] uploadGallery called: inputName=gallery, id=9
+[12-Feb-2026 10:05:44 Europe/Moscow] FILES array exists: yes
+[12-Feb-2026 10:05:44 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[12-Feb-2026 10:05:44 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:05:44 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0&edit=9
+[12-Feb-2026 10:05:53 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:05:53 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:05:53 Europe/Moscow] uploadGallery called: inputName=gallery, id=9
+[12-Feb-2026 10:05:53 Europe/Moscow] FILES array exists: yes
+[12-Feb-2026 10:05:53 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[12-Feb-2026 10:05:54 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:05:54 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0&edit=9
+[12-Feb-2026 10:05:56 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:05:56 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0
+[12-Feb-2026 10:06:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:02 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 10:06:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:02 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=804018785
+[12-Feb-2026 10:06:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:02 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 10:06:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:02 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 10:06:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:02 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 10:06:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:02 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 10:06:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:02 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:06:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:02 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 10:06:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:02 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:06:04 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:04 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:06:04 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:06:04 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:04 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1025525470
+[12-Feb-2026 10:06:04 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:04 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:06:04 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:04 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:06:05 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:05 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:06:05 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:06:05 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:05 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:06:05 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:05 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=285150830
+[12-Feb-2026 10:06:05 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:05 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:06:06 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:06 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:06:06 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:06:06 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:06 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:06:06 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:06 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=2095082542
+[12-Feb-2026 10:06:06 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:06 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:06:11 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:11 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:06:11 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:06:11 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:11 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:06:11 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:11 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1194176162
+[12-Feb-2026 10:06:11 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:11 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:06:13 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:13 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:06:13 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:06:13 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:13 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:06:13 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:13 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=2143947504
+[12-Feb-2026 10:06:13 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:06:13 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:07:10 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:10 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0
+[12-Feb-2026 10:07:33 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:33 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:07:33 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:07:33 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:33 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:07:33 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:33 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1583977065
+[12-Feb-2026 10:07:33 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:33 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:07:35 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:35 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:07:35 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:07:35 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:35 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:07:35 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:35 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1308518282
+[12-Feb-2026 10:07:35 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:35 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:07:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:37 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:07:37 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:07:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:37 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:07:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:37 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1843943122
+[12-Feb-2026 10:07:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:37 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:07:38 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:38 Europe/Moscow] Request URI after city detection: /contacts
+[12-Feb-2026 10:07:39 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:39 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:07:39 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:39 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=867225137
+[12-Feb-2026 10:07:39 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:39 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:07:39 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:39 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:07:39 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:07:39 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:39 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:07:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:40 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=597199559
+[12-Feb-2026 10:07:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:07:40 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:08:52 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:08:52 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:08:52 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:08:53 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:08:53 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=486921556
+[12-Feb-2026 10:08:53 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:08:53 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:08:53 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:08:53 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:08:56 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:08:56 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:08:56 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:08:56 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:08:56 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:08:56 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:08:56 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1070664975
+[12-Feb-2026 10:08:56 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:08:56 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:09:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:07 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 10:09:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:07 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:09:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:07 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1319618539
+[12-Feb-2026 10:09:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:07 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 10:09:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:07 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 10:09:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:07 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 10:09:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:07 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 10:09:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:07 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 10:09:08 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:08 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:09:08 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:08 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:09:20 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:20 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:09:20 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:09:20 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:20 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:09:20 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:20 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1768073411
+[12-Feb-2026 10:09:20 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:09:20 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:11:32 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:11:32 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:11:32 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:11:32 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:11:32 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:11:32 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:11:32 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1243096723
+[12-Feb-2026 10:12:22 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:12:22 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:12:22 Europe/Moscow] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 7
+Stack trace:
+#0 [internal function]: {closure:/home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php:62}('app\\Controllers...')
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Router.php(48): class_exists('app\\Controllers...')
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(281): app\Router->run()
+#3 {main}
+[12-Feb-2026 10:12:22 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:12:22 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:12:22 Europe/Moscow] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 7
+Stack trace:
+#0 [internal function]: {closure:/home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php:62}('app\\Controllers...')
+#1 /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Router.php(48): class_exists('app\\Controllers...')
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(281): app\Router->run()
+#3 {main}
+[12-Feb-2026 10:13:36 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:36 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0
+[12-Feb-2026 10:13:38 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:38 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:13:38 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:13:39 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:39 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:13:39 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:39 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=773231562
+[12-Feb-2026 10:13:45 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:45 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:13:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:58 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 10:13:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:59 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=410083254
+[12-Feb-2026 10:13:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:59 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:13:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:59 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 10:13:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:59 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 10:13:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:59 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 10:13:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:59 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 10:13:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:59 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:13:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:59 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 10:13:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:13:59 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:14:16 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:14:16 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:14:16 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:14:16 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:14:16 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:14:16 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:14:16 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=365038492
+[12-Feb-2026 10:14:16 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:14:16 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:16:00 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:16:00 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:16:00 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:16:00 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:16:00 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:16:00 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:16:00 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=845842460
+[12-Feb-2026 10:16:00 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:16:00 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:16:36 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:16:36 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:16:36 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:16:36 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:16:36 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:16:36 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:16:36 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1803637608
+[12-Feb-2026 10:16:36 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:16:36 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:18:09 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:18:09 Europe/Moscow] Request URI after city detection: /favicon.ico
+[12-Feb-2026 10:18:20 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:18:20 Europe/Moscow] Request URI after city detection: /about.php
+[12-Feb-2026 10:18:20 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:18:20 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:18:20 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:18:20 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1830219925
+[12-Feb-2026 10:18:20 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:18:20 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:29:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:46 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 10:29:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:46 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:29:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:46 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1673780468
+[12-Feb-2026 10:29:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:46 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 10:29:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:46 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 10:29:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:46 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 10:29:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:46 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 10:29:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:46 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:29:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:46 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 10:29:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:46 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:29:48 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:48 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:29:48 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:29:48 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:48 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:29:48 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:48 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=2060500668
+[12-Feb-2026 10:29:48 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:29:48 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:30:43 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:30:43 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[12-Feb-2026 10:30:43 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:30:43 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:30:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:30:58 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:30:58 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[12-Feb-2026 10:30:58 Europe/Moscow] FILES array exists: yes
+[12-Feb-2026 10:30:58 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[12-Feb-2026 10:30:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:30:58 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0&edit=1
+[12-Feb-2026 10:30:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:30:58 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:31:11 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:31:11 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:31:15 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:31:15 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[12-Feb-2026 10:31:15 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:31:15 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:31:19 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:31:19 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:31:19 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[12-Feb-2026 10:31:19 Europe/Moscow] FILES array exists: yes
+[12-Feb-2026 10:31:19 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[12-Feb-2026 10:31:19 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:31:19 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0&edit=1
+[12-Feb-2026 10:31:19 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:31:19 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:31:54 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:31:54 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:31:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:31:57 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=9
+[12-Feb-2026 10:31:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:31:57 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698d7bc861461.jpg
+[12-Feb-2026 10:38:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:38:46 Europe/Moscow] Request URI after city detection: /public_html/app/Controllers/PageController.php
+[12-Feb-2026 10:38:46 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:38:46 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1390685847
+[12-Feb-2026 10:38:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:38:47 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1390685847
+[12-Feb-2026 10:41:52 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:41:52 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:41:52 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:41:52 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:41:52 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:41:52 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:41:52 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1440423146
+[12-Feb-2026 10:41:52 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:41:52 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:41:54 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:41:54 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:41:54 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:41:54 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:41:54 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:41:54 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:41:54 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1185160640
+[12-Feb-2026 10:41:54 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:41:54 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:42:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:42:37 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:42:37 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:42:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:42:37 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:42:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:42:37 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=42744794
+[12-Feb-2026 10:42:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:42:37 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:43:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:40 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 10:43:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:40 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:43:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:40 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=680022361
+[12-Feb-2026 10:43:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:40 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:43:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:40 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 10:43:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:40 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 10:43:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:40 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 10:43:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:40 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 10:43:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:40 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 10:43:41 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:41 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:43:41 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:43:41 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:41 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:43:41 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:43:41 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1413602176
+[12-Feb-2026 10:44:22 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:22 Europe/Moscow] Request URI after city detection: /test.php
+[12-Feb-2026 10:44:22 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:22 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:44:22 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:22 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=744535322
+[12-Feb-2026 10:44:22 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:22 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:44:25 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:25 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:44:25 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:44:25 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:25 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:44:25 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:25 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1832296179
+[12-Feb-2026 10:44:25 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:25 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:44:26 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:26 Europe/Moscow] Request URI after city detection: /contacts
+[12-Feb-2026 10:44:26 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:26 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:44:26 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:26 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1958766297
+[12-Feb-2026 10:44:26 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:26 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:44:27 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:27 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:44:27 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:44:27 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:27 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:44:27 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:27 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=639823316
+[12-Feb-2026 10:44:27 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:27 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:44:28 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:28 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 10:44:29 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:29 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:44:29 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:29 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=539433554
+[12-Feb-2026 10:44:29 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:29 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 10:44:29 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:29 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 10:44:29 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:29 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 10:44:29 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:29 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 10:44:29 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:29 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:44:29 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:29 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 10:44:29 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:29 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 10:44:39 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:39 Europe/Moscow] Request URI after city detection: /visualteam/messengers
+[12-Feb-2026 10:44:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:40 Europe/Moscow] Request URI after city detection: /visualteam/messengers?add
+[12-Feb-2026 10:44:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:44:47 Europe/Moscow] Request URI after city detection: /visualteam/messengers?add
+[12-Feb-2026 10:45:17 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:45:17 Europe/Moscow] Request URI after city detection: /public_html/private/modules/messengers.php
+[12-Feb-2026 10:45:18 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:45:18 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1561410029
+[12-Feb-2026 10:45:19 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:45:19 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1561410029
+[12-Feb-2026 10:49:18 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:49:18 Europe/Moscow] Request URI after city detection: /visualteam/messengers?add
+[12-Feb-2026 10:49:25 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:49:25 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:49:25 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:49:25 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:49:25 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:49:25 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:49:25 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=815148378
+[12-Feb-2026 10:49:27 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:49:27 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:49:27 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:49:27 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:49:27 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:49:27 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:49:27 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=85557967
+[12-Feb-2026 10:49:34 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:49:34 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:49:34 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:49:34 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:49:34 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:49:34 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:49:34 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1675284894
+[12-Feb-2026 10:50:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:07 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:50:07 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:50:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:07 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:50:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:07 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=628970622
+[12-Feb-2026 10:50:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:07 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:50:07 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:50:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:07 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:50:07 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:07 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1850623880
+[12-Feb-2026 10:50:09 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:09 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:50:09 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:50:09 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:09 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:50:09 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:09 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1587574119
+[12-Feb-2026 10:50:24 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:24 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:50:24 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:50:24 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:24 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:50:24 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:50:24 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1261680677
+[12-Feb-2026 10:54:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:54:59 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:54:59 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:54:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:54:59 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:54:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:54:59 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=345192495
+[12-Feb-2026 10:55:00 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:00 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:55:00 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:55:01 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:01 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:55:01 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:01 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=712354313
+[12-Feb-2026 10:55:03 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:03 Europe/Moscow] Request URI after city detection: /visualteam/messengers?add
+[12-Feb-2026 10:55:04 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:04 Europe/Moscow] Request URI after city detection: /visualteam/public/src/fonts/Aeonik-Pro-Bold.woff2
+[12-Feb-2026 10:55:04 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:04 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:55:04 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:04 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1451571568
+[12-Feb-2026 10:55:08 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:08 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:55:08 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:55:08 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:08 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:55:08 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:08 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=297063348
+[12-Feb-2026 10:55:09 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:09 Europe/Moscow] Request URI after city detection: /catalog
+[12-Feb-2026 10:55:09 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:09 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:55:09 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:09 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=763690574
+[12-Feb-2026 10:55:10 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:10 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 10:55:10 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:10 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:55:10 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:10 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1442311593
+[12-Feb-2026 10:55:10 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:10 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 10:55:10 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:10 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 10:55:10 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:10 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 10:55:10 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:10 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 10:55:10 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:10 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:55:10 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:10 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 10:55:11 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:11 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:55:11 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:55:11 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:11 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:55:11 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:11 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1352753119
+[12-Feb-2026 10:55:14 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:14 Europe/Moscow] Request URI after city detection: /contacts
+[12-Feb-2026 10:55:14 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:14 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1076305083
+[12-Feb-2026 10:55:14 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:14 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:55:17 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:17 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 10:55:17 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:17 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:55:17 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:17 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=701706246
+[12-Feb-2026 10:55:18 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:18 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 10:55:18 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:18 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 10:55:18 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:18 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 10:55:18 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:18 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 10:55:18 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:18 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:55:18 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:18 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 10:55:21 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:21 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 10:55:21 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:21 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 10:55:21 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:21 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=271091966
+[12-Feb-2026 10:55:21 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:21 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 10:55:21 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:21 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 10:55:21 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:21 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 10:55:21 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:21 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:55:21 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:21 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 10:55:21 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:21 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 10:55:26 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:26 Europe/Moscow] Request URI after city detection: /visualteam
+[12-Feb-2026 10:55:28 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:28 Europe/Moscow] Request URI after city detection: /visualteam/ajax
+[12-Feb-2026 10:55:28 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 31.134.187.28
+[12-Feb-2026 10:55:28 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:28 Europe/Moscow] Request URI after city detection: /visualteam
+[12-Feb-2026 10:55:28 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:28 Europe/Moscow] Request URI after city detection: /visualteam/settings
+[12-Feb-2026 10:55:33 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:33 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 10:55:37 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:37 Europe/Moscow] Request URI after city detection: /visualteam/messengers
+[12-Feb-2026 10:55:40 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:40 Europe/Moscow] Request URI after city detection: /visualteam/messengers?add
+[12-Feb-2026 10:55:52 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:52 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 10:55:52 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 10:55:52 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:52 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 10:55:52 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:55:52 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=550532337
+[12-Feb-2026 10:59:53 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:59:53 Europe/Moscow] Request URI after city detection: /visualteam
+[12-Feb-2026 10:59:53 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:59:53 Europe/Moscow] Request URI after city detection: /visualteam/settings
+[12-Feb-2026 10:59:55 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:59:55 Europe/Moscow] Request URI after city detection: /visualteam/messengers
+[12-Feb-2026 10:59:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:59:57 Europe/Moscow] Request URI after city detection: /visualteam/messengers?add
+[12-Feb-2026 10:59:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 10:59:58 Europe/Moscow] Request URI after city detection: /visualteam/messengers?add
+[12-Feb-2026 11:00:52 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:00:52 Europe/Moscow] Request URI after city detection: /visualteam/messengers?add
+[12-Feb-2026 11:01:01 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:01 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 11:01:01 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 11:01:01 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:01 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:01 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:01 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=183978043
+[12-Feb-2026 11:01:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:02 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 11:01:02 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 11:01:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:02 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:02 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:02 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=165289478
+[12-Feb-2026 11:01:03 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:03 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 11:01:03 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:03 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 11:01:03 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:03 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=577064488
+[12-Feb-2026 11:01:03 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:03 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 11:01:03 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:03 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 11:01:03 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:03 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 11:01:03 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:03 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 11:01:03 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:03 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:03 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:03 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 11:01:04 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:04 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 11:01:05 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 11:01:05 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:05 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:05 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:05 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1939893019
+[12-Feb-2026 11:01:14 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:14 Europe/Moscow] Request URI after city detection: /visualteam/messengers?add
+[12-Feb-2026 11:01:15 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:15 Europe/Moscow] Request URI after city detection: /visualteam/messengers?add
+[12-Feb-2026 11:01:39 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:39 Europe/Moscow] Request URI after city detection: /visualteam/banners
+[12-Feb-2026 11:01:41 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:41 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[12-Feb-2026 11:01:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:47 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 11:01:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:47 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 11:01:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:47 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=940665286
+[12-Feb-2026 11:01:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:47 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 11:01:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:47 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 11:01:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:47 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 11:01:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:47 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 11:01:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:47 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:47 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 11:01:47 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:47 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 11:01:49 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:49 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 11:01:49 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:49 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 11:01:49 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:49 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 11:01:49 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:49 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 11:01:49 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:49 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 11:01:49 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:49 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 11:01:49 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:49 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 11:01:49 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:49 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:49 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:49 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=597688932
+[12-Feb-2026 11:01:50 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:50 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 11:01:53 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:53 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 11:01:54 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:54 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 11:01:54 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 11:01:54 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:54 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:54 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:54 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=848256096
+[12-Feb-2026 11:01:54 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:54 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 11:01:55 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:55 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 11:01:55 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 11:01:55 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:55 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:55 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:55 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=685219002
+[12-Feb-2026 11:01:55 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:55 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 11:01:56 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:56 Europe/Moscow] Request URI after city detection: /
+[12-Feb-2026 11:01:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:57 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[12-Feb-2026 11:01:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:57 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1440922819
+[12-Feb-2026 11:01:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:57 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[12-Feb-2026 11:01:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:57 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[12-Feb-2026 11:01:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:57 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[12-Feb-2026 11:01:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:57 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[12-Feb-2026 11:01:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:57 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[12-Feb-2026 11:01:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:57 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:57 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:57 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 11:01:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:58 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 11:01:58 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 11:01:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:58 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:58 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1302255851
+[12-Feb-2026 11:01:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:58 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 11:01:58 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 11:01:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:58 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:58 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1434556969
+[12-Feb-2026 11:01:58 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:58 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 11:01:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:59 Europe/Moscow] Request URI after city detection: /contacts
+[12-Feb-2026 11:01:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:59 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:01:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:59 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=732936923
+[12-Feb-2026 11:01:59 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:01:59 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[12-Feb-2026 11:02:00 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:02:00 Europe/Moscow] Request URI after city detection: /about
+[12-Feb-2026 11:02:00 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/page.php not found
+[12-Feb-2026 11:02:00 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:02:00 Europe/Moscow] Request URI after city detection: /public/images/modal.jpg
+[12-Feb-2026 11:02:00 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:02:00 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1464553578
+[12-Feb-2026 11:02:00 Europe/Moscow] Current city after detection: default
+[12-Feb-2026 11:02:00 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map

@@ -301,37 +301,37 @@ else :
         <div class="table_container">
             <div class="table_header">
                 <?php if ($config['list']['handler']): ?>
-                    <div class="handler_block"></div>
+                    <div class="pole handler_block"></div>
                 <?php endif; ?>
                 
                 <?php if (($config['list']['image']['enabled'] ?? false) && ($config['fields']['image']['enabled'] ?? false)): ?>
-                    <div class="image_preview"><?= $config['list']['image']['title'] ?? 'Фото' ?></div>
+                    <div class="pole image_preview"><?= $config['list']['image']['title'] ?? 'Фото' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['info']['enabled'] ?? false): ?>
-                    <div class="info"><?= $config['list']['info']['title'] ?? 'Отзыв' ?></div>
+                    <div class="pole info"><?= $config['list']['info']['title'] ?? 'Отзыв' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['stars']['enabled'] ?? false): ?>
-                    <div class="category"><?= $config['list']['stars']['title'] ?? 'Оценка' ?></div>
+                    <div class="pole category"><?= $config['list']['stars']['title'] ?? 'Оценка' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                    <div class="modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
+                    <div class="pole modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                 <?php endif; ?>
                 
-                <div class="actions"></div>
+                <div class="pole actions"></div>
             </div>
             <div class="table_body<?= ($totalCount <= $perPage && empty($_GET['search']) && $config['list']['handler']) ? ' sortbox-items' : '' ?>">
             <?php foreach ($objs as $obj): ?>
 
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if ($config['list']['handler']): ?>
-                        <div class="handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
+                        <div class="pole handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['image']['enabled'] ?? false) && ($config['fields']['image']['enabled'] ?? false)): ?>
-                        <div class="image_preview">
+                        <div class="pole image_preview">
                             <?php if (!empty($obj->image)): ?>
                                 <img src="<?= $obj->image ?>" alt="<?= htmlspecialchars($obj->name, ENT_QUOTES, 'UTF-8') ?>" width="50" height="50">
                             <?php else: ?>
@@ -341,7 +341,7 @@ else :
                     <?php endif; ?>
                     
                     <?php if ($config['list']['info']['enabled'] ?? false): ?>
-                        <div class="info">
+                        <div class="pole info">
                             <? if(!empty($obj->date)): ?>
                                 <div class="date"><?= date('Y-m-d', strtotime($obj->date)) ?></div>
                             <? endif; ?>
@@ -353,13 +353,13 @@ else :
                     <?php endif; ?>
                     
                     <?php if ($config['list']['stars']['enabled'] ?? false): ?>
-                        <div class="category">
+                        <div class="pole category">
                             <?= str_repeat('★', $obj->stars) . str_repeat('☆', 5 - $obj->stars) ?>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                        <div class="modified_date">
+                        <div class="pole modified_date">
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

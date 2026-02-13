@@ -205,19 +205,19 @@ else :
         <div class="table_container">
             <div class="table_header">
                 <?php if ($config['list']['handler']): ?>
-                    <div class="handler_block"></div>
+                    <div class="pole handler_block"></div>
                 <?php endif; ?>
                 
                 <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
-                    <div class="info"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
+                    <div class="pole info"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
                 <?php endif; ?>
                 
                 <?php if (($config['list']['text']['enabled'] ?? false) && ($config['fields']['text']['enabled'] ?? false)): ?>
-                    <div class="description"><?= $config['list']['text']['title'] ?? 'Описание' ?></div>
+                    <div class="pole description"><?= $config['list']['text']['title'] ?? 'Описание' ?></div>
                 <?php endif; ?>
                 
                 <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                    <div class="modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
+                    <div class="pole modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                 <?php endif; ?>
                 
                 <div class="actions"></div>
@@ -227,23 +227,23 @@ else :
 
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if ($config['list']['handler']): ?>
-                        <div class="handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
+                        <div class="pole handler tooltip-trigger" data-tooltip="<?= ($totalCount > $perPage || !empty($_GET['search'])) ? 'Перетаскивание для сортировки включается когда все записи выведены на одной странице и не применены фильтры и поиск' : 'Перетащите для сортировки' ?>"></div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
-                        <div class="info">
+                        <div class="pole info">
                             <div class="name"><?= $obj->name ?></div>
                         </div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['text']['enabled'] ?? false) && ($config['fields']['text']['enabled'] ?? false)): ?>
-                        <div class="description">
+                        <div class="pole description">
                             <div class="text"><?= $obj->text ?></div>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                        <div class="modified_date"><?= $obj->edit_date ?></div>
+                        <div class="pole modified_date"><?= $obj->edit_date ?></div>
                     <?php endif; ?>
 
                     <? include ROOT.'/private/views/components/actions.php' ?>
