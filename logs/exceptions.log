@@ -14,3 +14,17 @@
 
 [2026-02-12 15:40:52] Exception: syntax error, unexpected token "if" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 40
 
+[2026-02-13 13:16:30] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-13 13:16:32] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-13 13:16:33] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-13 13:16:33] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-13 13:17:05] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-13 13:18:35] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-13 13:18:45] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+

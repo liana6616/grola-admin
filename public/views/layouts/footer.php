@@ -129,18 +129,24 @@
     </div>
   </div>
 
+    <!-- jQuery ДОЛЖЕН БЫТЬ ПЕРВЫМ -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- jQuery Cookie (работает после jQuery) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
   <script src="/public/src/js/lib/jquery.min.js"></script>
 
   <!-- jQuery UI - добавляем -->
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
   <script src="/public/src/js/lib/jquery.form.plugin.js"></script>
   <script src="/public/src/js/lib/swiper-bundle.min.js"></script>
   <script src="/public/src/js/lib/maskedinput.min.js"></script>
   <script src="/public/src/js/lib/jquery.ui.touch-punch.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0ac7ca37-a7d0-424c-a7d3-130ebbc4b580"></script>
-  <script src="/public/src/js/app.js?v=<?= rand() ?>"></script>
+  <!-- <script src="/public/src/js/app.js?v=<?= rand() ?>"></script> -->
   <script type="module" src="/public/src/js/index.js"></script>
 
 	<? include_once VIEWS.'/schema/organization.php' ?>

@@ -10644,3 +10644,261 @@ Stack trace:
 [13-Feb-2026 09:56:46 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=13
 [13-Feb-2026 09:56:49 Europe/Moscow] Current city after detection: default
 [13-Feb-2026 09:56:49 Europe/Moscow] Request URI after city detection: /visualteam/pages?parent=0
+[13-Feb-2026 12:50:14 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:50:14 Europe/Moscow] Request URI after city detection: /catalog
+[13-Feb-2026 12:50:14 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:50:14 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1400955778
+[13-Feb-2026 12:55:20 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:55:20 Europe/Moscow] Request URI after city detection: /catalog
+[13-Feb-2026 12:55:20 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:55:20 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=166791693
+[13-Feb-2026 12:57:02 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:57:02 Europe/Moscow] Request URI after city detection: /catalog
+[13-Feb-2026 12:57:02 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:57:02 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=2141670109
+[13-Feb-2026 12:57:16 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:57:16 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[13-Feb-2026 12:57:59 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:57:59 Europe/Moscow] Request URI after city detection: /catalog
+[13-Feb-2026 12:57:59 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:57:59 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1464355286
+[13-Feb-2026 12:58:00 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:58:00 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[13-Feb-2026 12:58:11 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:58:11 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1464355286
+[13-Feb-2026 12:58:11 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:58:11 Europe/Moscow] Request URI after city detection: /public/src/js/public/src/fonts/Aeonik-Pro-Bold.woff2
+[13-Feb-2026 12:58:11 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:58:11 Europe/Moscow] Request URI after city detection: /public/src/js/app.js?v=1458463596
+[13-Feb-2026 12:58:47 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:58:47 Europe/Moscow] Request URI after city detection: /catalog
+[13-Feb-2026 12:58:48 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:58:48 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[13-Feb-2026 12:58:55 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:58:55 Europe/Moscow] Request URI after city detection: /catalog
+[13-Feb-2026 12:58:56 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 12:58:56 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[13-Feb-2026 13:00:31 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:00:31 Europe/Moscow] Request URI after city detection: /catalog
+[13-Feb-2026 13:00:31 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:00:31 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[13-Feb-2026 13:00:41 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:00:41 Europe/Moscow] Request URI after city detection: /catalog
+[13-Feb-2026 13:01:27 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:01:27 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[13-Feb-2026 13:01:35 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:01:35 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[13-Feb-2026 13:15:01 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:15:01 Europe/Moscow] Request URI after city detection: /visualteam/forms_type
+[13-Feb-2026 13:15:05 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:15:05 Europe/Moscow] Request URI after city detection: /visualteam/forms_type?edit=1
+[13-Feb-2026 13:15:28 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:15:28 Europe/Moscow] Request URI after city detection: /
+[13-Feb-2026 13:15:28 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:15:28 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[13-Feb-2026 13:15:28 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:15:28 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[13-Feb-2026 13:15:28 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:15:28 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[13-Feb-2026 13:15:28 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:15:28 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[13-Feb-2026 13:15:28 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:15:28 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[13-Feb-2026 13:15:28 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:15:28 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[13-Feb-2026 13:15:29 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:15:29 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[13-Feb-2026 13:16:02 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:02 Europe/Moscow] Request URI after city detection: /
+[13-Feb-2026 13:16:02 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:02 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[13-Feb-2026 13:16:02 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:02 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[13-Feb-2026 13:16:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:03 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[13-Feb-2026 13:16:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:03 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[13-Feb-2026 13:16:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:03 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[13-Feb-2026 13:16:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:03 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[13-Feb-2026 13:16:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:03 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[13-Feb-2026 13:16:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:03 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[13-Feb-2026 13:16:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:03 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[13-Feb-2026 13:16:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:03 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[13-Feb-2026 13:16:28 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:28 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[13-Feb-2026 13:16:30 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:30 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[13-Feb-2026 13:16:30 Europe/Moscow] Class file not found: /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/PageMain.php
+
+
+[13-Feb-2026 13:16:30 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:30 Europe/Moscow] Request URI after city detection: /visualteam/public/src/fonts/Aeonik-Pro-Bold.woff2
+[13-Feb-2026 13:16:30 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:30 Europe/Moscow] Request URI after city detection: /favicon.ico
+[13-Feb-2026 13:16:32 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:32 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[13-Feb-2026 13:16:32 Europe/Moscow] Class file not found: /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/PageMain.php
+
+
+[13-Feb-2026 13:16:32 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:32 Europe/Moscow] Request URI after city detection: /visualteam/public/src/fonts/Aeonik-Pro-Bold.woff2
+[13-Feb-2026 13:16:33 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:33 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[13-Feb-2026 13:16:33 Europe/Moscow] Class file not found: /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/PageMain.php
+
+
+[13-Feb-2026 13:16:33 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:33 Europe/Moscow] Request URI after city detection: /visualteam/public/src/fonts/Aeonik-Pro-Bold.woff2
+[13-Feb-2026 13:16:33 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:33 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[13-Feb-2026 13:16:33 Europe/Moscow] Class file not found: /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/PageMain.php
+
+
+[13-Feb-2026 13:16:33 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:33 Europe/Moscow] Request URI after city detection: /visualteam/public/src/fonts/Aeonik-Pro-Bold.woff2
+[13-Feb-2026 13:16:48 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:48 Europe/Moscow] Request URI after city detection: /
+[13-Feb-2026 13:16:48 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:48 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[13-Feb-2026 13:16:48 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:48 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[13-Feb-2026 13:16:48 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:48 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[13-Feb-2026 13:16:48 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:48 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[13-Feb-2026 13:16:48 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:48 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[13-Feb-2026 13:16:48 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:48 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[13-Feb-2026 13:16:59 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:59 Europe/Moscow] Request URI after city detection: /visualteam
+[13-Feb-2026 13:16:59 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:16:59 Europe/Moscow] Request URI after city detection: /visualteam/settings
+[13-Feb-2026 13:17:02 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:17:02 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[13-Feb-2026 13:17:05 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:17:05 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[13-Feb-2026 13:17:05 Europe/Moscow] Class file not found: /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/PageMain.php
+
+
+[13-Feb-2026 13:17:05 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:17:05 Europe/Moscow] Request URI after city detection: /visualteam/public/src/fonts/Aeonik-Pro-Bold.woff2
+[13-Feb-2026 13:18:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:03 Europe/Moscow] Request URI after city detection: /
+[13-Feb-2026 13:18:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:03 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[13-Feb-2026 13:18:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:03 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[13-Feb-2026 13:18:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:03 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[13-Feb-2026 13:18:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:03 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[13-Feb-2026 13:18:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:03 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[13-Feb-2026 13:18:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:03 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[13-Feb-2026 13:18:03 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:03 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[13-Feb-2026 13:18:05 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:05 Europe/Moscow] Request URI after city detection: /
+[13-Feb-2026 13:18:05 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:05 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[13-Feb-2026 13:18:05 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:05 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[13-Feb-2026 13:18:05 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:05 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[13-Feb-2026 13:18:05 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:05 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[13-Feb-2026 13:18:05 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:05 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[13-Feb-2026 13:18:05 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:05 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[13-Feb-2026 13:18:08 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:08 Europe/Moscow] Request URI after city detection: /visualteam
+[13-Feb-2026 13:18:08 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:08 Europe/Moscow] Request URI after city detection: /visualteam/settings
+[13-Feb-2026 13:18:10 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:10 Europe/Moscow] Request URI after city detection: /
+[13-Feb-2026 13:18:10 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:10 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[13-Feb-2026 13:18:10 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:10 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[13-Feb-2026 13:18:10 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:10 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[13-Feb-2026 13:18:10 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:10 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[13-Feb-2026 13:18:10 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:10 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[13-Feb-2026 13:18:10 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:10 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[13-Feb-2026 13:18:13 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:13 Europe/Moscow] Request URI after city detection: /visualteam
+[13-Feb-2026 13:18:13 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:13 Europe/Moscow] Request URI after city detection: /visualteam/settings
+[13-Feb-2026 13:18:15 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:15 Europe/Moscow] Request URI after city detection: /visualteam
+[13-Feb-2026 13:18:15 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:15 Europe/Moscow] Request URI after city detection: /visualteam/settings
+[13-Feb-2026 13:18:18 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:18 Europe/Moscow] Request URI after city detection: /visualteam/ajax
+[13-Feb-2026 13:18:18 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:18 Europe/Moscow] Request URI after city detection: /visualteam
+[13-Feb-2026 13:18:21 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:21 Europe/Moscow] Request URI after city detection: /visualteam
+[13-Feb-2026 13:18:26 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:26 Europe/Moscow] Request URI after city detection: /visualteam
+[13-Feb-2026 13:18:29 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:29 Europe/Moscow] Request URI after city detection: /visualteam/ajax
+[13-Feb-2026 13:18:29 Europe/Moscow] Успешный вход в админ-панель: test@test.ru, IP: 31.134.187.28
+[13-Feb-2026 13:18:29 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:29 Europe/Moscow] Request URI after city detection: /visualteam
+[13-Feb-2026 13:18:29 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:29 Europe/Moscow] Request URI after city detection: /visualteam/settings
+[13-Feb-2026 13:18:33 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:33 Europe/Moscow] Request URI after city detection: /visualteam/pages
+[13-Feb-2026 13:18:35 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:35 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[13-Feb-2026 13:18:35 Europe/Moscow] Class file not found: /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/PageMain.php
+
+
+[13-Feb-2026 13:18:35 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:35 Europe/Moscow] Request URI after city detection: /visualteam/public/src/fonts/Aeonik-Pro-Bold.woff2
+[13-Feb-2026 13:18:35 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:35 Europe/Moscow] Request URI after city detection: /favicon.ico
+[13-Feb-2026 13:18:40 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:40 Europe/Moscow] Request URI after city detection: /about
+[13-Feb-2026 13:18:40 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:40 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698d7bc861461.jpg
+[13-Feb-2026 13:18:42 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:42 Europe/Moscow] Request URI after city detection: /
+[13-Feb-2026 13:18:42 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:42 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698ca66e94e16.jpg
+[13-Feb-2026 13:18:42 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:42 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[13-Feb-2026 13:18:42 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:42 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[13-Feb-2026 13:18:42 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:42 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[13-Feb-2026 13:18:42 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:42 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[13-Feb-2026 13:18:42 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:42 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[13-Feb-2026 13:18:44 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:44 Europe/Moscow] Request URI after city detection: /about
+[13-Feb-2026 13:18:44 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:44 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698d7bc861461.jpg
+[13-Feb-2026 13:18:45 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:45 Europe/Moscow] Request URI after city detection: /visualteam/pages?edit=1
+[13-Feb-2026 13:18:45 Europe/Moscow] Class file not found: /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/PageMain.php
+
+
+[13-Feb-2026 13:18:45 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:45 Europe/Moscow] Request URI after city detection: /visualteam/public/src/fonts/Aeonik-Pro-Bold.woff2
+[13-Feb-2026 13:18:47 Europe/Moscow] Current city after detection: default
+[13-Feb-2026 13:18:47 Europe/Moscow] Request URI after city detection: /visualteam/pages

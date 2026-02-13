@@ -3366,3 +3366,15 @@
 
 [2026-02-12 19:49:35] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
 
+[2026-02-13 13:18:40] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-13 13:18:40] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-13 13:18:40] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-13 13:18:44] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-13 13:18:44] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-13 13:18:44] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
