@@ -9,6 +9,7 @@ use app\Models\News;
 use app\Models\Faq;
 use app\Models\Categories;
 use app\Models\Catalog;
+use app\Models\CatalogParams;
 use app\Models\Advantages;
 use app\Models\SchemeWork;
 use app\Models\WhyChooseUs;
@@ -51,7 +52,10 @@ class PageController extends Controller {
                 switch ($page->id) {
                     case 10: return self::about($view); break; // about
                     case 12: return self::contacts($view); break; 
-                    case 14: return self::catalog($view); break; 
+                    case 14: return self::catalog($view); break;
+                    case 16: return self::policy($view); break; 
+                    case 18: return self::catalogParams($view); break; 
+
                     // case 9: return self::faq($view); break; // FAQ
                     default: return $view->show('page.php'); break; // Обычные страницы
                 }
@@ -222,11 +226,110 @@ class PageController extends Controller {
             return $view->show('pages/catalog.php');
 
         } catch (\Exception $e) {
-            error_log('Ошибка в PageController::contacts: ' . $e->getMessage());
+            error_log('Ошибка в PageController::catalog: ' . $e->getMessage());
 
             // Показываем страницу FAQ с сообщением об ошибке
             $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
             return $view->show('pages/catalog.php');
+        }
+    }
+
+    protected static function catalogParams($view){
+        try {
+            $page = Pages::findById(18);
+            if (!$page) {
+                throw new \Exception('Страница catalogParams не найдена');
+            }
+
+            $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
+            $view->breadCrumbs = Pages::breadCrumbs($page->id);
+
+
+            // Устанавливаем SEO для страницы catalogCategory
+            self::setSeo($view, $page);
+
+            return $view->show('pages/catalogCategory.php');
+
+        } catch (\Exception $e) {
+            error_log('Ошибка в PageController::catalogParams: ' . $e->getMessage());
+
+            // Показываем страницу FAQ с сообщением об ошибке
+            $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
+            return $view->show('pages/catalogCategory.php');
+        }
+    }
+
+    protected static function catalogCard($view){
+        try {
+            $page = Pages::findById(14);
+            if (!$page) {
+                throw new \Exception('Страница catalogCard не найдена');
+            }
+
+            $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
+            $view->breadCrumbs = Pages::breadCrumbs($page->id);
+
+            // Устанавливаем SEO для страницы catalogCard
+            self::setSeo($view, $page);
+
+            return $view->show('pages/catalogCard.php');
+
+        } catch (\Exception $e) {
+            error_log('Ошибка в PageController::catalogCard: ' . $e->getMessage());
+
+            // Показываем страницу FAQ с сообщением об ошибке
+            $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
+            return $view->show('pages/catalogCard.php');
+        }
+    }
+
+    // protected static function catalogCategory($view){
+    //     try {
+    //         $page = Pages::findById(18);
+    //         if (!$page) {
+    //             throw new \Exception('Страница catalogCategory не найдена');
+    //         }
+
+    //         $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
+    //         $view->breadCrumbs = Pages::breadCrumbs($page->id);
+
+    //         // Устанавливаем SEO для страницы catalogCategory
+    //         self::setSeo($view, $page);
+
+    //         return $view->show('pages/catalogCategory.php');
+
+    //     } catch (\Exception $e) {
+    //         error_log('Ошибка в PageController::catalogCategory: ' . $e->getMessage());
+
+    //         // Показываем страницу FAQ с сообщением об ошибке
+    //         $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
+    //         return $view->show('pages/catalogCategory.php');
+    //     }
+    // }
+
+    protected static function policy($view){
+        try {
+            $page = Pages::findById(14);
+            if (!$page) {
+                throw new \Exception('Страница policy не найдена');
+            }
+
+            $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
+            $view->breadCrumbs = Pages::breadCrumbs($page->id);
+
+
+
+            // Устанавливаем SEO для страницы policy
+            self::setSeo($view, $page);
+
+            return $view->show('pages/policy.php');
+
+        } catch (\Exception $e) {
+            error_log('Ошибка в PageController::policy: ' . $e->getMessage());
+
+            // Показываем страницу FAQ с сообщением об ошибке
+            $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
+            return $view->show('pages/policy.php');
         }
     }
 

@@ -11,8 +11,10 @@ return [
     
     'helpers/([-a-zA-Z0-9._/]+)' => 'HelpersController/$1',
 
-    'user/ajax' => 'userAjax',
 
+    'user/ajax' => 'userAjax',
+    'catalog' => 'CatalogController',
+    'catalog/([a-zA-Z0-9-/]+)' => 'CatalogController/$1',
     '/' => 'PageController',
     '^([-a-zA-Z0-9._/]+)$' => 'PageController/$1',
     

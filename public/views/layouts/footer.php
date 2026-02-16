@@ -46,10 +46,10 @@
     <div class="footer__bottom">
       <div class="footer__bottom-left">
         <span class="footer__text footer__text-mob">© grola.ru 2025</span>
-        <a class="footer__polity filter" href="/policy.php">Политика конфиденциальности</a>
+        <a class="footer__polity filter" href="/policy">Политика конфиденциальности</a>
         <div class="footer__bottom__wrapper">
           <a class="filter" href="#">Публичная оферта</a>
-          <a class="filter" href="/policy.php">Согласие на обработку персональных данных</a>
+          <a class="filter" href="/policy">Согласие на обработку персональных данных</a>
         </div>
       </div>
       <a class="footer__development filter" href="https://visualteam.ru/">Разработка: Visualteam</a>

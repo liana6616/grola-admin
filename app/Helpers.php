@@ -183,6 +183,7 @@ class Helpers
         return $titles[$index] ?? $titles[0] ?? '';
     }
 
+
     /**
      * Отправка JWT запроса
      */

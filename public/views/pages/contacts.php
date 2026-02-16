@@ -7,9 +7,9 @@
       <li class="breadcrumps">
           <a href="index.php">Главная</a>
       </li>
-      <li class="breadcrumps">
-          <a href="">Контакты</a>
-      </li>
+        <li class="breadcrumps">
+            <span><?= $this->page->name ?></span>
+        </li>
     </ul>
     <h1 class="contacts__big-title">Контакты</h1>
     <div class="contacts__block">

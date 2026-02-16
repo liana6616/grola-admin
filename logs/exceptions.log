@@ -28,3 +28,25 @@
 
 [2026-02-13 13:18:45] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
 
+[2026-02-13 13:39:37] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-13 13:41:06] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-13 13:41:12] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-13 13:43:56] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-13 13:43:58] Exception: Class "app\Models\PageMain" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/pages/main.php on line 14
+
+[2026-02-16 13:50:55] Exception: Class "app\Controllers\Category" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/CatalogController.php on line 44
+
+[2026-02-16 13:51:03] Exception: Class "app\Controllers\Category" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/CatalogController.php on line 44
+
+[2026-02-16 13:56:51] Exception: Class "app\Controllers\Category" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/CatalogController.php on line 44
+
+[2026-02-16 13:57:00] Exception: Class "app\Controllers\Category" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/CatalogController.php on line 44
+
+[2026-02-16 13:57:04] Exception: Class "app\Controllers\Category" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/CatalogController.php on line 44
+
+[2026-02-16 13:57:16] Exception: Class "app\Controllers\Category" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/CatalogController.php on line 44
+

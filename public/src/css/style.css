@@ -328,6 +328,10 @@ main {
   bottom: -27px;
 }
 
+.hero-about .hero__big-title {
+  margin-top: 20px;
+}
+
 .hero__big-title {
   position: relative;
   font-weight: 500;
@@ -1511,16 +1515,9 @@ main {
   margin-bottom: 10px;
 }
 
-.breadcrumps a {
-  font-family: 'Gordita', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #2b2e3a;
-  opacity: 0.6;
-}
-
-.breadcrumps  {
-  position: relative;
+.breadcrumps a,
+.breadcrumps,
+.breadcrumps span {
   font-family: 'Gordita', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -1555,20 +1552,19 @@ main {
   margin-bottom: 35px;
 }
 
-.policy__title {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 138%;
-  color: #2b2e3a;
-  margin-bottom: 25px;
-}
-
-.policy__text {
+.policy__text p {
   font-weight: 400;
   font-size: 16px;
   line-height: 138%;
-  color: #2b2e3a;
-  opacity: 0.8;
+  color: rgba(43, 46, 58, 0.8);
+}
+
+.policy__text p strong {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 138%;
+  color: rgba(43, 46, 58, 1);
+  margin-bottom: 25px;
 }
 
 .policy__item {
@@ -1593,6 +1589,11 @@ main {
 
 .hero-about .breadcrumps a,
 .breadcrumps {
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.hero-about .breadcrumps span {
   color: #ffffff;
   opacity: 0.6;
 }
@@ -2526,11 +2527,6 @@ main {
   color: #2b2e3a;
   border: 1px solid #C7C7C7;
   padding: 6px 26px 8px 27px;
-}
-
-.catalog__button-category:active {
-  background: #2b2e3a;
-  color: #fff;
 }
 
 .catalog__button-category.active {

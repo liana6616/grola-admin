@@ -1,46 +1,38 @@
 <?= $this->include('layouts/header'); ?>
-<?php use app\Helpers; ?> 
+
 <main>
   <div class="catalog">
     <ul class="breadcrumps__wrapper">
-        <li class="breadcrumps">
-            <a href="index.php">Главная</a>
-        </li>
-        <li class="breadcrumps">
-            <span><?= $this->page->name ?></span>
-        </li>
+      <li class="breadcrumps">
+          <a href="index.php">Главная</a>
+      </li>
+      <li class="breadcrumps">
+          <a href="/catalog.php">Каталог</a>
+      </li>
+      <li class="breadcrumps">
+          <a href="">Для склада</a>
+      </li>
     </ul>
 
-    <h2 class="catalog__title title">Каталог продукции</h2>
+    <h2 class="catalog__title title">Для склада</h2>
 
-    <? if(!empty($this->childs) && $this->is_mainCategories): ?>
-        <ul class="catalog__list">
-            <? foreach($this->childs AS $item): ?>
-                    <li class="catalog__item">
-                        <a href="catalog/<?= $item->url ?>">
-                            <h3><?= $item->name ?></h3>
-                            <span class="catalog__text">
-                                <?= number_format((int)($item->products_count ?? 0), 0, '', ' ') ?> 
-                                <?= \app\Helpers::declOfNum((int)($item->products_count ?? 0), ['товар', 'товара', 'товаров']) ?>
-                            </span>          
-                        </a>
-                    </li>
-            <? endforeach; ?>
-        </ul>
-    <? endif; ?>
-
-
-<? if(!empty($this->childs) && !$this->is_mainCategories): ?>
-    <div class="catalog__wrapper-category">
-        <a href="?subcat=0" class="catalog__button-category filter <?= ($this->selectedSubcat == 0) ? 'active' : '' ?>">Все категории</a>
-        
-        <? foreach($this->childs AS $item): ?>
-            <a href="?subcat=<?= $item->id ?>" class="catalog__button-category filter <?= ($this->selectedSubcat == $item->id) ? 'active' : '' ?>">
-                <?= $item->name ?>
-            </a>
-        <? endforeach; ?>
+    <div class="catalog__category-container">
+        <input type="checkbox" id="categoryToggle" class="catalog__dropdown-checkbox">
+        <label for="categoryToggle" class="catalog__dropdown-toggle">
+        <span class="catalog__dropdown-text">Все категории</span>
+        </label>
+        <div class="catalog__wrapper-category">
+            <button class="catalog__button-category filter active" type="button">Все категории</button>
+            <button class="catalog__button-category filter" type="button">Промышленные стеллажи</button>
+            <button class="catalog__button-category filter" type="button">Тележки производственные</button>
+            <button class="catalog__button-category filter" type="button">Газобаллонное оборудование</button>
+            <button class="catalog__button-category filter" type="button">Поддоны и подставки для бочек металлические</button>
+            <button class="catalog__button-category filter" type="button">Подтоварники металлические</button>
+            <button class="catalog__button-category filter" type="button">Ограждения для поддонов</button>
+            <button class="catalog__button-category filter" type="button">Поддоны и паллеты металлические</button>
+        </div>
     </div>
-<? endif; ?>
+
 
     <div class="catalog__wrapper-filter">
         <button class="catalog__button-filter-names" onclick="this.classList.toggle('active'); this.parentElement.classList.toggle('active')">Фильтры</button>
@@ -103,8 +95,8 @@
             <ul class="catalog-card__list">
                 <? foreach($this->catalog AS $item): ?>
                     <? if($item->parent == 0): ?>
-                        <li class="catalog-card__item"  data-category-id="<?= $item->category_id ?>">
-                            <a href="/catalog-card">
+                        <li class="catalog-card__item">
+                            <a href="/catalog-card.php">
                                 <div class="catalog-card__wrapper-img">
                                     <img class="catalog-card__img" src="<?= $item->image_preview ?>">
                                 </div>

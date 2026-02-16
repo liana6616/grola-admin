@@ -2,7 +2,7 @@
 return [
     // Настройки модуля
     'module' => [
-        'title' => 'Страницы',            // Заголовок модуля
+        'title' => 'Новости',            // Заголовок модуля
     ],
 
     // Действия
@@ -24,67 +24,63 @@ return [
 
         'name' => [
             'enabled' => true,
-            'title' => 'Название страницы (H1)'
-        ],
-        'name_menu' => [
-            'enabled' => true,
-            'title' => 'Название для меню'
+            'title' => 'Название новости'
         ],
         'url' => [
             'enabled' => true,
             'title' => 'Ссылка (URL)'
         ],
-        'parent' => [
-            'enabled' => true,
-            'title' => 'Родительская страница'
-        ],
         'text' => [
             'enabled' => true,
             'title' => 'Основной текст'
+        ],
+        'text2' => [
+            'enabled' => true,
+            'title' => 'Дополнительный текст'
         ],
         'show' => [
             'enabled' => true,
             'title' => 'Показывать на сайте'
         ],
-        'menu' => [
-            'enabled' => true,
-            'title' => 'Показывать в меню'
-        ],
-        'menu_footer' => [
-            'enabled' => true,
-            'title' => 'Показывать в подвале'
-        ],
         'rate' => [
-            'enabled' => true,
+            'enabled' => false,
             'title' => 'Рейтинг для сортировки'
+        ],
+        'date' => [
+            'enabled' => true,
+            'title' => 'Дата'
+        ],
+        'section_id' => [
+            'enabled' => true,
+            'title' => 'Категория'
+        ],
+        'preview' => [
+            'enabled' => true,
+            'block_name' => 'Превью',
+            'image_preview' => [
+                'enabled' => true,
+                'title' => 'Изображение превью',
+                'width' => 300,
+                'height' => 300
+            ],
+            'textshort' => [
+                'enabled' => true,
+                'title' => 'Краткое описание'
+            ],
         ],
         'image' => [
             'enabled' => true,
             'title' => 'Изображение',
-            'width' => 2760,
-            'height' => 830
-        ],
-        'image_text' => [
-            'enabled' => true,
-            'title' => 'Текст на баннере'
-        ],
-        'image2' => [
-            'enabled' => true,
-            'title' => 'Дополнительное изображение',
-            'width' => 500,
-            'height' => 500
-        ],
-        'video' => [
-            'enabled' => true,
-            'title' => 'Видео файл'
+            'width' => 1200,
+            'height' => 800
         ],
     ],
 
     // Фотогалерея
     'gallery' => [
         'enabled' => true,
-        'tab_name' => 'Фотогалерея',
         'title' => 'Фотогалерея',
+        'tab_name' => 'Фотогалерея',
         'image_width' => 800,
         'image_height' => 600,
         'thumbnail_width' => 400,
@@ -103,9 +99,9 @@ return [
     // Файлы
     'files' => [
         'enabled' => true,
-        'tab_name' => 'Файлы',
         'title' => 'Файлы',
-        
+        'tab_name' => 'Файлы',
+
         'files_name' => [
             'enabled' => true,
             'title' => 'Заголовок файлов'
@@ -137,9 +133,18 @@ return [
         
     // Настройки списка
     'list' => [
-        'info' => [
+        'image_preview' => [
             'enabled' => true,
-            'title' => 'Страница'
+            'title' => 'Превью'
+        ],
+        'name' => [
+            'enabled' => true,
+            'title' => 'Название'
+        ],
+        'textshort' => true,
+        'section' => [
+            'enabled' => true,
+            'title' => 'Раздел'
         ],
         'edit_date' => [
             'enabled' => true,
@@ -149,21 +154,17 @@ return [
             'enabled' => true,
             'title' => 'Публикация'
         ],
-        'handler' => true,
+        'handler' => false,
     ],
     
     // Пагинация
     'pagination' => [
         'default_per_page' => 20,
-        'order_by' => 'ORDER BY rate DESC, id DESC'
+        'order_by' => 'ORDER BY date DESC, id DESC'
     ],
     
     // Фильтры и поиск
     'filters' => [
         'search' => true,
-    ],
-
-    // Индивидульный контент страниц
-    // ID страницы => название файла в папке /private/modules/pages/
-    'personal_page' => []
+    ]
 ];

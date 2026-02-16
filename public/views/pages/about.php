@@ -8,7 +8,7 @@
                         <a href="index.php">Главная</a>
                     </li>
                     <li class="breadcrumps">
-                        <a href="">О нас</a>
+                        <span><?= $this->page->name ?></span>
                     </li>
                 </ul>
 
@@ -252,7 +252,3 @@
 
 
 <?= $this->include('layouts/footer'); ?>
-
-
-
-

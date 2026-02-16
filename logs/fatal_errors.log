@@ -64,3 +64,11 @@
 
 [2026-02-12 11:37:39] Fatal Error: Declaration of app\Controllers\PageController::showErrorPage($code, $message) must be compatible with app\Controller::showErrorPage($code = 404, $message = null, $title = null) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 144
 
+[2026-02-16 11:22:19] Fatal Error: Cannot redeclare app\Controllers\PageController::catalogCategory() in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 285
+
+[2026-02-16 11:22:24] Fatal Error: Cannot redeclare app\Controllers\PageController::catalogCategory() in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 285
+
+[2026-02-16 11:23:19] Fatal Error: Cannot redeclare app\Controllers\PageController::catalogCategory() in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 285
+
+[2026-02-16 11:23:21] Fatal Error: Cannot redeclare app\Controllers\PageController::catalogCategory() in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 285
+
