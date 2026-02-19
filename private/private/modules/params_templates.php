@@ -640,7 +640,6 @@ else :
                         
                         <?php if ($config['items_list']['info']['enabled'] ?? false): ?>
                             <div class="pole info">
-                                <div class="title"><?= $config['items_list']['info']['title'] ?? 'Параметр' ?></div>
                                 <div class="name"><?= $paramName ?></div>
                                 <div class="comment">
                                     <small>
@@ -656,7 +655,6 @@ else :
                         
                         <?php if ($config['items_list']['edit_date']['enabled'] ?? false): ?>
                             <div class="pole modified_date">
-                                <div class="title"><?= $config['items_list']['edit_date']['title'] ?? 'Изменение' ?></div>
                                 <?= $obj->edit_date ?>
                             </div>
                         <?php endif; ?>
@@ -745,7 +743,6 @@ else :
                         
                         <?php if ($config['groups_list']['info']['enabled'] ?? false): ?>
                             <div class="pole info">
-                                <div class="title"><?= $config['groups_list']['info']['title'] ?? 'Название группы' ?></div>
                                 <div class="name">
                                     <a href='?ids=<?= $ids ?>&group_id=<?= $obj->id ?>'>
                                         <?= $obj->name ?>
@@ -757,7 +754,6 @@ else :
                         
                         <?php if ($config['groups_list']['edit_date']['enabled'] ?? false): ?>
                             <div class="pole modified_date">
-                                <div class="title"><?= $config['groups_list']['edit_date']['title'] ?? 'Изменение' ?></div>
                                 <?= $obj->edit_date ?>
                             </div>
                         <?php endif; ?>
@@ -829,7 +825,6 @@ else :
                     <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                         <?php if ($config['list']['info']['enabled'] ?? false): ?>
                             <div class="pole info">
-                                <div class="title"><?= $config['list']['info']['title'] ?? 'Название шаблона' ?></div>
                                 <div class="name">
                                     <a href='?ids=<?= $obj->id ?>'>
                                         <?= $obj->name ?>
@@ -841,7 +836,6 @@ else :
                         
                         <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                             <div class="pole modified_date">
-                                <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                                 <?= $obj->edit_date ?>
                             </div>
                         <?php endif; ?>

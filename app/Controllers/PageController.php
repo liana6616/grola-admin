@@ -9,7 +9,6 @@ use app\Models\News;
 use app\Models\Faq;
 use app\Models\Categories;
 use app\Models\Catalog;
-use app\Models\CatalogParams;
 use app\Models\Advantages;
 use app\Models\SchemeWork;
 use app\Models\WhyChooseUs;
@@ -34,7 +33,7 @@ class PageController extends Controller {
             // exit;
 
             $view->messengers = Messengers::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
-
+            $view->popular_catalog = Catalog::where('WHERE `is_draft`=0 AND `popular`=1 ORDER BY rate DESC, id ASC') ?: [];
 
             // Главная
             if (empty($url)) return self::main($view);
@@ -53,8 +52,7 @@ class PageController extends Controller {
                     case 10: return self::about($view); break; // about
                     case 12: return self::contacts($view); break; 
                     case 14: return self::catalog($view); break;
-                    case 16: return self::policy($view); break; 
-                    case 18: return self::catalogParams($view); break; 
+                    case 16: return self::policy($view); break;  
 
                     // case 9: return self::faq($view); break; // FAQ
                     default: return $view->show('page.php'); break; // Обычные страницы
@@ -216,9 +214,23 @@ class PageController extends Controller {
             $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
             $view->breadCrumbs = Pages::breadCrumbs($page->id);
 
-            $view->categories = Categories::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
-            $view->catalog = Catalog::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
-
+            // ПОЛУЧАЕМ КАТЕГОРИИ
+            $childs = Categories::getChilds(0);
+            
+            // ПОДСЧИТЫВАЕМ ТОВАРЫ ДЛЯ КАЖДОЙ КАТЕГОРИИ
+            foreach ($childs as $cat) {
+                $result = Catalog::query(
+                    "SELECT COUNT(*) as count 
+                    FROM catalog 
+                    WHERE `show` = 1 AND `is_draft` = 0 AND category_id = {$cat->id}"
+                );
+                
+                $cat->products_count = !empty($result) ? (int)$result[0]->count : 0;
+            }
+            
+            $view->childs = $childs;
+            $view->is_mainCategories = 1;
+            $view->catalog = Catalog::where('WHERE `show`=1 AND `is_draft`=0 ORDER BY rate DESC, id ASC') ?: [];
 
             // Устанавливаем SEO для страницы catalog
             self::setSeo($view, $page);
@@ -227,85 +239,10 @@ class PageController extends Controller {
 
         } catch (\Exception $e) {
             error_log('Ошибка в PageController::catalog: ' . $e->getMessage());
-
-            // Показываем страницу FAQ с сообщением об ошибке
             $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
             return $view->show('pages/catalog.php');
         }
     }
-
-    protected static function catalogParams($view){
-        try {
-            $page = Pages::findById(18);
-            if (!$page) {
-                throw new \Exception('Страница catalogParams не найдена');
-            }
-
-            $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
-            $view->breadCrumbs = Pages::breadCrumbs($page->id);
-
-
-            // Устанавливаем SEO для страницы catalogCategory
-            self::setSeo($view, $page);
-
-            return $view->show('pages/catalogCategory.php');
-
-        } catch (\Exception $e) {
-            error_log('Ошибка в PageController::catalogParams: ' . $e->getMessage());
-
-            // Показываем страницу FAQ с сообщением об ошибке
-            $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
-            return $view->show('pages/catalogCategory.php');
-        }
-    }
-
-    protected static function catalogCard($view){
-        try {
-            $page = Pages::findById(14);
-            if (!$page) {
-                throw new \Exception('Страница catalogCard не найдена');
-            }
-
-            $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
-            $view->breadCrumbs = Pages::breadCrumbs($page->id);
-
-            // Устанавливаем SEO для страницы catalogCard
-            self::setSeo($view, $page);
-
-            return $view->show('pages/catalogCard.php');
-
-        } catch (\Exception $e) {
-            error_log('Ошибка в PageController::catalogCard: ' . $e->getMessage());
-
-            // Показываем страницу FAQ с сообщением об ошибке
-            $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
-            return $view->show('pages/catalogCard.php');
-        }
-    }
-
-    // protected static function catalogCategory($view){
-    //     try {
-    //         $page = Pages::findById(18);
-    //         if (!$page) {
-    //             throw new \Exception('Страница catalogCategory не найдена');
-    //         }
-
-    //         $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
-    //         $view->breadCrumbs = Pages::breadCrumbs($page->id);
-
-    //         // Устанавливаем SEO для страницы catalogCategory
-    //         self::setSeo($view, $page);
-
-    //         return $view->show('pages/catalogCategory.php');
-
-    //     } catch (\Exception $e) {
-    //         error_log('Ошибка в PageController::catalogCategory: ' . $e->getMessage());
-
-    //         // Показываем страницу FAQ с сообщением об ошибке
-    //         $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
-    //         return $view->show('pages/catalogCategory.php');
-    //     }
-    // }
 
     protected static function policy($view){
         try {
@@ -332,102 +269,4 @@ class PageController extends Controller {
             return $view->show('pages/policy.php');
         }
     }
-
-    // protected static function faq($view){
-    //     try {
-    //         $page = Pages::findById(9);
-    //         if (!$page) {
-    //             throw new \Exception('Страница FAQ не найдена');
-    //         }
-            
-    //         $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
-    //         $view->breadCrumbs = Pages::breadCrumbs($page->id);
-            
-    //         // Устанавливаем SEO для страницы FAQ
-    //         self::setSeo($view, $page);
-
-    //         $view->sections = FaqSections::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
-    //         $view->faq = Faq::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
-
-    //         return $view->show('pages/faq.php');
-            
-    //     } catch (\Exception $e) {
-    //         error_log('Ошибка в PageController::faq: ' . $e->getMessage());
-            
-    //         // Показываем страницу FAQ с сообщением об ошибке
-    //         $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
-    //         $view->sections = [];
-    //         $view->faq = [];
-    //         return $view->show('pages/faq.php');
-    //     }
-    // }
-
-    // protected static function news($view){
-    //     try {
-    //         // Общая страница новостей
-    //         if(empty($view->params[1]) || ($view->params[1] == 'p' && !empty($view->params[2]))) {
-    //             $page = Pages::findById(8);
-    //             if (!$page) {
-    //                 throw new \Exception('Страница новостей не найдена');
-    //             }
-                
-    //             $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
-    //             $view->breadCrumbs = Pages::breadCrumbs($page->id);
-                
-    //             // Устанавливаем SEO для страницы новостей
-    //             self::setSeo($view, $page);
-
-    //             $itemsPerPage = 10;
-    //             $currentPage = 1;
-
-    //             if(!empty($view->params[2])) {
-    //                 $currentPage = (int)$view->params[2];
-    //                 if ($currentPage < 1) $currentPage = 1;
-    //             }
-
-    //             $newsCount = count(News::findWhere('WHERE `show`=1'));
-    //             $totalPages = ceil($newsCount / $itemsPerPage);
-
-    //             if ($currentPage > $totalPages && $totalPages > 0) {
-    //                 $this->redirect('/' . $page->url);
-    //                 return;
-    //             }
-
-    //             $offset = ($currentPage - 1) * $itemsPerPage;
-    //             $limit = " LIMIT {$offset}, {$itemsPerPage}";
-    //             $view->news = News::where('WHERE `show`=1 ORDER BY date DESC, id DESC ' . $limit) ?: [];
-
-    //             if ($newsCount > $itemsPerPage) {
-    //                 $view->pagination = [
-    //                     'current_page' => $currentPage,
-    //                     'total_pages' => $totalPages,
-    //                     'total_items' => $newsCount,
-    //                     'items_per_page' => $itemsPerPage,
-    //                     'has_prev' => $currentPage > 1,
-    //                     'has_next' => $currentPage < $totalPages,
-    //                     'prev_page' => $currentPage > 1 ? $currentPage - 1 : null,
-    //                     'next_page' => $currentPage < $totalPages ? $currentPage + 1 : null
-    //                 ];
-    //             } 
-
-    //             return $view->show('pages/news.php');
-    //         }
-            
-    //         // Детальная страница новости
-    //         if (!empty($view->params[1]) && is_numeric($view->params[1])) {
-    //             return self::newsDetail($view);
-    //         }
-            
-    //         // Если URL не распознан - ВЫЗЫВАЕМ МЕТОД РОДИТЕЛЯ
-    //         return parent::showErrorPage(404, 'Страница новостей не найдена');
-            
-    //     } catch (\Exception $e) {
-    //         error_log('Ошибка в PageController::news: ' . $e->getMessage());
-            
-    //         // Показываем страницу новостей с сообщением об ошибке
-    //         $view->error_message = 'Новости временно недоступны. Приносим извинения за неудобства.';
-    //         $view->news = [];
-    //         return $view->show('pages/news.php');
-    //     }
-    // }
 }

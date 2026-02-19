@@ -298,7 +298,7 @@ if (!file_exists(ROOT.$configPath)):
                             <?php endif; ?>
 
                             <?php if ($config['fields']['textshort']['enabled'] ?? false): ?>
-                                <?= Form::textarea($config['fields']['textshort']['title'] ?? 'Краткое описание', 'textshort', $obj->textshort, 150, '') ?>
+                                <?= Form::textbox($config['fields']['textshort']['title'] ?? 'Краткое описание', 'textshort', $obj->textshort) ?>
                             <?php endif; ?>
 
                             <?php if ($config['fields']['text']['enabled'] ?? false): ?>
@@ -1030,6 +1030,7 @@ if (!file_exists(ROOT.$configPath)):
                         
                         <?php if (($config['list']['image_preview']['enabled'] ?? false) && ($config['fields']['image_preview']['enabled'] ?? false)): ?>
                             <div class="pole image_preview">
+                                <div class="title"><?= $config['list']['image_preview']['title'] ?? 'Превью' ?></div>
                                 <?php if (!empty($obj->image_preview)): ?>
                                     <img src="<?= $obj->image_preview ?>" alt="<?= htmlspecialchars($obj->name, ENT_QUOTES, 'UTF-8') ?>" width="50" height="50">
                                 <?php else: ?>
@@ -1040,6 +1041,7 @@ if (!file_exists(ROOT.$configPath)):
                         
                         <?php if (($config['list']['info']['enabled'] ?? false)): ?>
                             <div class="pole info">
+                                <div class="title"><?= $config['list']['info']['title'] ?? 'Товар' ?></div>
                                 <div class="name">
                                     <?= $obj->name ?>
                                 </div>
@@ -1057,6 +1059,7 @@ if (!file_exists(ROOT.$configPath)):
                         
                         <?php if (($config['list']['category']['enabled'] ?? false) && ($config['fields']['category_id']['enabled'] ?? false)): ?>
                             <div class="pole category">
+                                <div class="title"><?= $config['list']['category']['title'] ?? 'Категория' ?></div>
                                 <?php if(!empty($obj->category)): ?>
                                     <?= $obj->category->name_menu ?? $obj->category->name ?>
                                 <?php endif; ?>
@@ -1065,12 +1068,14 @@ if (!file_exists(ROOT.$configPath)):
                         
                         <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                             <div class="pole modified_date">
+                                <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                                 <?= $obj->edit_date ?>
                             </div>
                         <?php endif; ?>
                         
                         <?php if ($useDrafts && ($config['list']['published_date']['enabled'] ?? false)): ?>
                             <div class="pole modified_date">
+                                <div class="title"><?= $config['list']['published_date']['title'] ?? 'Публикация' ?></div>
                                 <?= $original->edit_date ?? '-' ?>
                             </div>
                         <?php endif; ?>

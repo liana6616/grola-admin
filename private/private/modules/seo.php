@@ -210,7 +210,6 @@ else :
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if (($config['list']['url']['enabled'] ?? false) && ($config['fields']['url']['enabled'] ?? false)): ?>
                         <div class="pole info">
-                            <div class="title"><?= $config['list']['url']['title'] ?? 'Страница' ?></div>
                             <div class="name"><?= $obj->url ?></div>
                             <?php if (($config['list']['title']['enabled'] ?? false) && ($config['fields']['title']['enabled'] ?? false) && !empty($obj->title)): ?>
                                 <div class="comment"><?= mb_substr($obj->title, 0, 100) . (mb_strlen($obj->title) > 100 ? '...' : '') ?></div>
@@ -220,14 +219,12 @@ else :
                     
                     <?php if (($config['list']['title']['enabled'] ?? false) && ($config['fields']['title']['enabled'] ?? false)): ?>
                         <div class="pole category">
-                            <div class="title"><?= $config['list']['title']['title'] ?? 'Title' ?></div>
                             <?= !empty($obj->title) ? mb_substr($obj->title, 0, 50) . (mb_strlen($obj->title) > 50 ? '...' : '') : '' ?>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
-                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

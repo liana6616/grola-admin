@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // swiper-catalog-card
   const swiperCatalogCard = new Swiper('#swiper-catalog-card', {
-      loop: true,
+      loop: false,
       slidesPerView: 2,
       spaceBetween: 10,
       pagination: {
@@ -241,8 +241,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-
 // меню переключение 
 document.addEventListener('DOMContentLoaded', function() {
     const currentPath = window.location.pathname;
@@ -394,41 +392,44 @@ function init() {
         });
     }
     
-    // Обработка отправки формы
-    function setupForm() {
-        const form = document.getElementById('feedbackForm');
-        if (!form) return;
+    // // Обработка отправки формы
+    // function setupForm() {
+    //     const form = document.getElementById('feedbackForm');
+    //     if (!form) return;
         
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
+    //     form.addEventListener('submit', function(e) {
+    //         e.preventDefault();
             
-            // Простая валидация телефона
-            const phone = document.getElementById('modal-phone')?.value;
-            const phoneRegex = /^[\+]?[78][-\s]?\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$/;
+    //         // Простая валидация телефона
+    //         const phone = document.getElementById('modal-phone')?.value;
+    //         const phoneRegex = /^[\+]?[78][-\s]?\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$/;
             
-            if (phone && !phoneRegex.test(phone)) {
-                alert('Пожалуйста, введите корректный номер телефона');
-                return;
-            }
+    //         if (phone && !phoneRegex.test(phone)) {
+    //             alert('Пожалуйста, введите корректный номер телефона');
+    //             return;
+    //         }
             
-            // Проверка чекбоксов
-            const agreement1 = document.getElementById('modal-agreement');
-            const agreement2 = document.getElementById('modal-agreement-polity');
+    //         // Проверка чекбоксов
+    //         const agreement1 = document.getElementById('modal-agreement');
+    //         const agreement2 = document.getElementById('modal-agreement-polity');
+                
+    //         // Если чекбоксы есть на странице, проверяем их
+    //         if (agreement1 && agreement2) {
+    //             if (!agreement1.checked || !agreement2.checked) {
+    //                 alert('Пожалуйста, примите условия соглашений');
+    //                 return;
+    //             }
+    //         }
             
-            if (!agreement1.checked || !agreement2.checked) {
-                alert('Пожалуйста, примите условия соглашений');
-                return;
-            }
-            
-            // Здесь будет отправка на сервер
-            // Покажем сообщение об успехе
-            setTimeout(() => {
-                alert('Ваша заявка отправлена! Мы свяжемся с вами в ближайшее время.');
-                form.reset();
-                closeModal();
-            }, 500);
-        });
-    }
+    //         // Здесь будет отправка на сервер
+    //         // Покажем сообщение об успехе
+    //         setTimeout(() => {
+    //             alert('Ваша заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+    //             form.reset();
+    //             closeModal();
+    //         }, 500);
+    //     });
+    // }
     
     // Инициализация при загрузке страницы
     document.addEventListener('DOMContentLoaded', function() {
@@ -460,8 +461,8 @@ function init() {
             // 3. Настраиваем маску телефона
             setupPhoneMask();
             
-            // 4. Настраиваем форму
-            setupForm();
+            // // 4. Настраиваем форму
+            // setupForm();
         }
         
         // 5. Закрытие по клавише ESC
@@ -812,6 +813,7 @@ buttons.forEach(btn => btn.onclick = () => {
   if(window.innerWidth <= 768 && categoryToggle) categoryToggle.checked = false;
 });
 
+
 // tab-card
 window.showTab = function(tabId, btn) {
   // Находим контейнер табов
@@ -854,7 +856,7 @@ var swiper = new Swiper(".mySwiperCard", {
       clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next-cards",
+    nextEl: ".swiper-button-next-card",
     prevEl: ".swiper-button-prev-card",
   }
 });

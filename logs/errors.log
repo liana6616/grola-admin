@@ -3578,3 +3578,9 @@
 
 [2026-02-16 13:56:56] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
 
+[2026-02-18 13:12:02] Warning: unlink(/home/a0644240/domains/grola-admin.potok4.ru/public_html): Is a directory in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/Files.php on line 46
+
+[2026-02-18 13:12:02] Warning: unlink(/home/a0644240/domains/grola-admin.potok4.ru/public_html): Is a directory in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/Files.php on line 47
+
+[2026-02-18 13:12:02] Warning: unlink(/home/a0644240/domains/grola-admin.potok4.ru/public_html): Is a directory in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/Files.php on line 48
+

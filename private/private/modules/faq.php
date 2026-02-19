@@ -219,21 +219,18 @@ else :
                     
                     <?php if (($config['list']['quest']['enabled'] ?? false) && ($config['fields']['quest']['enabled'] ?? false)): ?>
                         <div class="pole info">
-                            <div class="title"><?= $config['list']['quest']['title'] ?? 'Вопрос' ?></div>
                             <div class="name"><?= $obj->quest ?></div>
                         </div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['section']['enabled'] ?? false) && ($config['fields']['section_id']['enabled'] ?? false)): ?>
                         <div class="pole category">
-                            <div class="title"><?= $config['list']['section']['title'] ?? 'Категория' ?></div>
                             <?= $section ? $section->name : '' ?>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
-                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

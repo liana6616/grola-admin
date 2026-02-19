@@ -437,7 +437,6 @@ if (!file_exists(ROOT.$configPath)):
                         
                         <?php if (($config['list']['info']['enabled'] ?? false)): ?>
                             <div class="pole info">
-                                <div class="title"><?= $config['list']['info']['title'] ?? 'Категория' ?></div>
                                 <div class="name">
                                     <?php if(empty($_GET['search']) && empty($filter)): ?>
                                         <a href="?parent=<?= $obj->id ?>" class="categoryLink"><?= $obj->name_menu ?></a>
@@ -470,7 +469,6 @@ if (!file_exists(ROOT.$configPath)):
                         
                         <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                             <div class="pole modified_date">
-                                <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                                 <?= $obj->edit_date ?>
                             </div>
                         <?php endif; ?>

@@ -7,34 +7,21 @@
           <h1 class="hero__big-title hero__big-title--alt"><?= $this->page->name ?></h1>
           <span class="hero__text">Любой сложности</span>
         </div>
+        
         <? if(!empty($this->categories)): ?>
             <ul class="hero__list">
                 <? foreach($this->categories AS $item): ?>
                     <? if($item->parent == 0): ?>
                         <li class="hero__item">
-                            <a class="hero__link" href="<?= $item->url ?>"><?= $item->name ?></a>
+                            <a class="hero__link" href="catalog/<?= $item->url ?>"><?= $item->name ?></a>
                         </li>
                     <? endif; ?>
                 <? endforeach; ?>
             </ul>
         <? endif; ?>
-        <!-- <ul class="hero__list">
-          <li class="hero__item">
-            <a class="hero__link" href="#">Двери</a>
-          </li>
-          <li class="hero__item">
-            <a class="hero__link" href="#">Шкафы металлические</a>
-          </li>
-          <li class="hero__item">
-            <a class="hero__link" href="/catalog-category.php">Для склада</a>
-          </li>
-          <li class="hero__item">
-            <a class="hero__link" href="#">Для производства</a>
-          </li>
-          <li class="hero__item">
-            <a class="hero__link" href="#">Индивидуальные проекты из металла</a>
-          </li>
-        </ul> -->
+
+
+
       </div>
       <img class="hero__img" src="<?= $this->page->image ?>">
       <img class="hero__img-mob" src="<?= $this->page->image2 ?>">
@@ -63,7 +50,35 @@
     <section class="catalog-card">
       <h2 class="catalog-card__title title">Популярные товары</h2>
       <div class="catalog-card__swiper swiper" id="swiper-catalog-card">
-        <ul class="catalog-card__list swiper-wrapper">
+          <? if(!empty($this->popular_catalog)): ?>
+            <ul class="catalog-card__list swiper-wrapper">
+                <? foreach($this->popular_catalog AS $item): ?>
+                    <? if($item->parent == 0): ?>
+                        <li class="catalog-card__item swiper-slide swiper-slide-catalog-card"  data-category-id="<?= $item->category_id ?>">
+                            <a href="/catalog/<?= $this->childs[0]->url ?? '' ?>/<?= $item->url ?>">                           
+                                <div class="catalog-card__wrapper-img">
+                                    <img class="catalog-card__img" src="<?= $item->image_preview ?>">
+                                </div>
+
+                                <h3 class="catalog-card__title title-small"><?= $item->name ?></h3>
+
+                                <div class="catalog-card__wrapper-parameters">
+                                    <span class="catalog-card__name">Габаритные размеры:</span>
+                                    <span class="catalog-card__parameters">500х600х400 мм.</span>
+                                </div>
+                                <div class="catalog-card__wrapper-parameters">
+                                    <span class="catalog-card__name">Грузоподъемность:</span>
+                                    <span class="catalog-card__parameters">400 кг.</span>
+                                </div>
+
+                                <span class="catalog-card__sum">от <?= $item->price ?> ₽</span>
+                            </a>
+                        </li>
+                    <? endif; ?>
+                <? endforeach; ?>
+            </ul>
+        <? endif; ?>
+        <!-- <ul class="catalog-card__list swiper-wrapper">
             <li class="catalog-card__item swiper-slide swiper-slide-catalog-card">
               <a href="/catalog-card.php">
                 <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
@@ -209,7 +224,7 @@
               </div>
               <span class="catalog-card__sum">от 56 438 ₽</span>
             </li>
-        </ul>
+        </ul> -->
         
         <div class="swiper-pagination swiper-pagination-alt swiper-pagination-catalog-card"></div>
 
@@ -231,6 +246,7 @@
       </div>
       <form class="form__wrapper" id="feedbackForm">
           <h2 class="visually-hidden">Обратная связь</h2>
+          <input type="hidden" name="type" value="1">
           <div class="form__group">
               <label for="name"></label>
               <input class="form__group-text" type="text" id="name" name="name"  placeholder="Ваше имя">
@@ -241,7 +257,7 @@
           </div>
           <div class="form__group">
                 <label for="mail"></label>
-                <input class="form__group-text" type="mail" id="mail" name="mail" required placeholder="E-mail*">
+                <input class="form__group-text" type="email" id="mail" name="mail" required placeholder="E-mail*">
             </div>
           <div class="form__group form__group-question">
               <label for="question"></label>
@@ -262,7 +278,7 @@
               </label>
           </div>
 
-          <button class="form__button button-dark" type="submit" class="submit-btn">Отправить</button>
+          <button class="form__button button-dark" type="submit">Отправить</button>
       </form>
 
     </section>

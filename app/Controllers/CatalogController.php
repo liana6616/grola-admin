@@ -18,7 +18,7 @@ class CatalogController extends Controller {
             $url  = $params[0] ?? null;
             $url1 = $params[1] ?? null;
             $url2 = $params[2] ?? null;
-            
+
             if (!empty($params[3])) return $view->show('errors/404.php');
             if (!empty($url1)) $url = $url1;
             if (!empty($url2)) $url = $url2;
@@ -76,25 +76,25 @@ class CatalogController extends Controller {
                 $childs = Categories::getChilds(0);
                 
                 foreach ($childs as $cat) {
-                    // Получаем все подкатегории для этой категории
-                    $subcategories = Categories::getChilds($cat->id);
-                    
-                    // Собираем все ID (родитель + подкатегории)
-                    $allIds = [$cat->id];
-                    foreach ($subcategories as $sub) {
-                        $allIds[] = $sub->id;
-                    }
-                    $idsStr = implode(',', $allIds);
-                    
-                    // Считаем товары во всех этих категориях
-                    $result = Catalog::query(
-                        "SELECT COUNT(*) as count 
-                        FROM catalog 
-                        WHERE `show` = 1 AND `is_draft` = 0 AND category_id IN ({$idsStr})"
-                    );
-                    
-                    $cat->products_count = !empty($result) ? (int)$result[0]->count : 0;
-                }
+    // Получаем все подкатегории для этой категории
+    $subcategories = Categories::getChilds($cat->id);
+    
+    // Собираем все ID (родитель + подкатегории)
+    $allIds = [$cat->id];
+    foreach ($subcategories as $sub) {
+        $allIds[] = $sub->id;
+    }
+    $idsStr = implode(',', $allIds);
+    
+    // Считаем товары во всех этих категориях
+    $result = Catalog::query(
+        "SELECT COUNT(*) as count 
+        FROM catalog 
+        WHERE `show` = 1 AND `is_draft` = 0 AND category_id IN ({$idsStr})"
+    );
+    
+    $cat->products_count = !empty($result) ? (int)$result[0]->count : 0;
+}
                 
                 $view->childs = $childs;
             }
@@ -109,7 +109,7 @@ class CatalogController extends Controller {
             $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
             $view->breadCrumbs = Pages::breadCrumbs($page->id);
 
-            self::setSeo($view, $page);
+            // self::setSeo($view, $page);
 
             return $view->show('pages/catalog.php');
 

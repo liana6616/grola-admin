@@ -278,7 +278,6 @@ else :
                     
                     <?php if (($config['list']['image']['enabled'] ?? false) && ($config['fields']['image']['enabled'] ?? false)): ?>
                         <div class="pole image_preview">
-                            <div class="title"><?= $config['list']['image']['title'] ?? 'Логотип' ?></div>
                             <?php if (!empty($obj->image)): ?>
                                 <img src="<?= $obj->image ?>" alt="<?= htmlspecialchars($obj->name, ENT_QUOTES, 'UTF-8') ?>">
                             <?php else: ?>
@@ -289,7 +288,6 @@ else :
                     
                     <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
                         <div class="pole info">
-                            <div class="title"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
                             <div class="name"><?= $obj->name ?></div>
                             <?php if ($config['fields']['link']['enabled'] ?? false && !empty($obj->link)): ?>
                                 <a href="<?= $obj->link ?>" target="_blank" rel="noopener noreferrer" class="link">
@@ -301,7 +299,6 @@ else :
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
-                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

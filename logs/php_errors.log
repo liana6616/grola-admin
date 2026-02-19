@@ -13236,3 +13236,548 @@ Stack trace:
 [16-Feb-2026 14:28:48 Europe/Moscow] Request URI after city detection: /visualteam/catalog
 [16-Feb-2026 14:28:53 Europe/Moscow] Current city after detection: default
 [16-Feb-2026 14:28:53 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 12:53:05 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 12:53:05 Europe/Moscow] Request URI after city detection: /
+[18-Feb-2026 12:53:05 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 12:53:05 Europe/Moscow] Request URI after city detection: /public/src/images/pages/698f045f5f4f3.jpg
+[18-Feb-2026 12:53:05 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 12:53:05 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[18-Feb-2026 12:53:05 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 12:53:05 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[18-Feb-2026 12:53:05 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 12:53:05 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[18-Feb-2026 12:53:05 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 12:53:05 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[18-Feb-2026 12:53:06 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 12:53:06 Europe/Moscow] Request URI after city detection: /public/images/order.png
+[18-Feb-2026 12:58:36 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 12:58:36 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 12:58:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 12:58:38 Europe/Moscow] Request URI after city detection: /vendor/tinymce/tinymce/skins/lightgray/skin.min.css.map
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /catalog/door/konteyner-proizvodstva-kg-11
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-1.png
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-2.png
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-3.png
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-7.png
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-10.png
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-9.png
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[18-Feb-2026 13:00:35 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:00:35 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[18-Feb-2026 13:01:54 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:54 Europe/Moscow] Request URI after city detection: /catalog/door/konteyner-proizvodstva-kg-11
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-1.png
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-2.png
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-3.png
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-7.png
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-10.png
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-9.png
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[18-Feb-2026 13:01:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:01:55 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[18-Feb-2026 13:04:45 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:45 Europe/Moscow] Request URI after city detection: /catalog/door/konteyner-proizvodstva-kg-11
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-1.png
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-2.png
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-3.png
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-7.png
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-10.png
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-9.png
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[18-Feb-2026 13:04:46 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:04:46 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[18-Feb-2026 13:06:11 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:11 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[18-Feb-2026 13:06:11 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[18-Feb-2026 13:06:11 Europe/Moscow] FILES array exists: yes
+[18-Feb-2026 13:06:11 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[18-Feb-2026 13:06:11 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:11 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 13:06:19 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:19 Europe/Moscow] Request URI after city detection: /vendor/tinymce/tinymce/skins/lightgray/skin.min.css.map
+[18-Feb-2026 13:06:25 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:25 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[18-Feb-2026 13:06:25 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[18-Feb-2026 13:06:25 Europe/Moscow] FILES array exists: yes
+[18-Feb-2026 13:06:25 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[18-Feb-2026 13:06:25 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:25 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 13:06:30 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:30 Europe/Moscow] Request URI after city detection: /vendor/tinymce/tinymce/skins/lightgray/skin.min.css.map
+[18-Feb-2026 13:06:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:55 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[18-Feb-2026 13:06:55 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[18-Feb-2026 13:06:55 Europe/Moscow] FILES array exists: yes
+[18-Feb-2026 13:06:55 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[18-Feb-2026 13:06:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:55 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 13:06:56 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:56 Europe/Moscow] Request URI after city detection: /vendor/tinymce/tinymce/skins/lightgray/skin.min.css.map
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /catalog/door/konteyner-proizvodstva-kg-11
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-1.png
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-2.png
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-3.png
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-7.png
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-10.png
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-9.png
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[18-Feb-2026 13:06:57 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:06:57 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /catalog/door/konteyner-proizvodstva-kg-11
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-1.png
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-2.png
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-3.png
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-7.png
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-10.png
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-9.png
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[18-Feb-2026 13:07:08 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:08 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[18-Feb-2026 13:07:09 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:07:09 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /catalog/door/konteyner-proizvodstva-kg-11
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-1.png
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-2.png
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-3.png
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-7.png
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-10.png
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/images/catalog/card-9.png
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/images/hit-2.png
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/images/hit-3.png
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/images/hit-4.png
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/images/hit-1.png
+[18-Feb-2026 13:08:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:08:38 Europe/Moscow] Request URI after city detection: /public/src/js/lib/swiper-bundle.min.js.map
+[18-Feb-2026 13:09:17 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:09:17 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[18-Feb-2026 13:09:17 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[18-Feb-2026 13:09:17 Europe/Moscow] FILES array exists: yes
+[18-Feb-2026 13:09:17 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[18-Feb-2026 13:09:17 Europe/Moscow] FileUpload Error: Можно загружать только изображения. Context: {"input":"files","index":0,"id":8}
+[18-Feb-2026 13:09:17 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:09:17 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 13:09:18 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:09:18 Europe/Moscow] Request URI after city detection: /vendor/tinymce/tinymce/skins/lightgray/skin.min.css.map
+[18-Feb-2026 13:09:41 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:09:41 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[18-Feb-2026 13:09:41 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[18-Feb-2026 13:09:41 Europe/Moscow] FILES array exists: yes
+[18-Feb-2026 13:09:41 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[18-Feb-2026 13:09:41 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:09:41 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 13:09:41 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:09:41 Europe/Moscow] Request URI after city detection: /vendor/tinymce/tinymce/skins/lightgray/skin.min.css.map
+[18-Feb-2026 13:09:54 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:09:54 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[18-Feb-2026 13:09:54 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[18-Feb-2026 13:09:54 Europe/Moscow] FILES array exists: yes
+[18-Feb-2026 13:09:54 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[18-Feb-2026 13:09:54 Europe/Moscow] FileUpload Error: Можно загружать только изображения. Context: {"input":"files","index":0,"id":8}
+[18-Feb-2026 13:09:54 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:09:54 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 13:09:55 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:09:55 Europe/Moscow] Request URI after city detection: /vendor/tinymce/tinymce/skins/lightgray/skin.min.css.map
+[18-Feb-2026 13:10:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:10:38 Europe/Moscow] Request URI after city detection: /visualteam
+[18-Feb-2026 13:10:38 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:10:38 Europe/Moscow] Request URI after city detection: /visualteam/settings
+[18-Feb-2026 13:10:44 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:10:44 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[18-Feb-2026 13:10:45 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:10:45 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 13:11:00 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:11:00 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[18-Feb-2026 13:11:00 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[18-Feb-2026 13:11:00 Europe/Moscow] FILES array exists: yes
+[18-Feb-2026 13:11:00 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[18-Feb-2026 13:11:00 Europe/Moscow] FileUpload Error: Можно загружать только изображения. Context: {"input":"files","index":0,"id":8}
+[18-Feb-2026 13:11:00 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:11:00 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 13:11:56 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:11:56 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[18-Feb-2026 13:11:56 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[18-Feb-2026 13:11:56 Europe/Moscow] FILES array exists: yes
+[18-Feb-2026 13:11:56 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[18-Feb-2026 13:11:56 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:11:56 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8
+[18-Feb-2026 13:12:02 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:12:02 Europe/Moscow] Request URI after city detection: /visualteam/catalog
+[18-Feb-2026 13:12:02 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[18-Feb-2026 13:12:02 Europe/Moscow] FILES array exists: yes
+[18-Feb-2026 13:12:02 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[18-Feb-2026 13:12:02 Europe/Moscow] Current city after detection: default
+[18-Feb-2026 13:12:02 Europe/Moscow] Request URI after city detection: /visualteam/catalog?edit=8

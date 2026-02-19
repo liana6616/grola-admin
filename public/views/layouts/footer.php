@@ -148,6 +148,7 @@
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0ac7ca37-a7d0-424c-a7d3-130ebbc4b580"></script>
   <!-- <script src="/public/src/js/app.js?v=<?= rand() ?>"></script> -->
   <script type="module" src="/public/src/js/index.js"></script>
+  <script type="module" src="/public/src/js/form.js"></script>
 
 	<? include_once VIEWS.'/schema/organization.php' ?>
 

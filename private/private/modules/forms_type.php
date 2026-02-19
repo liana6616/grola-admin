@@ -352,16 +352,12 @@ else :
                                         
                     <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
                         <div class="pole info">
-                            <div class="title"><?= $config['list']['name']['title'] ?? 'Название формы' ?></div>
                             <div class="name"><?= $obj->name ?></div>
                         </div>
                     <?php endif; ?>
                                  
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                        <div class="pole modified_date">
-                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
-                            <?= $obj->edit_date ?>
-                        </div>
+                        <div class="pole modified_date"><?= $obj->edit_date ?></div>
                     <?php endif; ?>
 
                     <?php include ROOT.'/private/views/components/actions.php' ?>

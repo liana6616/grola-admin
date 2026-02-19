@@ -97,96 +97,81 @@ class UserAjax extends Controller
         }
     }
 
-    /*
+    /**
+     * Обработчик отправки формы - УПРОЩЕННАЯ ВЕРСИЯ
+     */
+
     public function formsAdd() {
+        // Очищаем буферы
+        while (ob_get_level()) ob_end_clean();
+        
+        // Заголовок JSON
+        header('Content-Type: application/json; charset=utf-8');
+        
         try {
+            // Получаем данные из формы
             $type = (int)($_POST['type'] ?? 0);
             $name = trim($_POST['name'] ?? '');
             $phone = trim($_POST['phone'] ?? '');
-            $email = trim($_POST['email'] ?? '');
-            $text = trim($_POST['text'] ?? '');
+            $email = trim($_POST['mail'] ?? '');
+            $text = trim($_POST['question'] ?? '');
             $url = 'https://' . $_SERVER['SERVER_NAME'] . trim($_POST['url'] ?? '/');
-
-            if (empty($type)) {
-                return self::response('Тип формы не указан');
+            
+            // Проверяем email
+            if (empty($email)) {
+                echo json_encode(['success' => false, 'message' => 'Введите email']);
+                exit;
             }
             
-            // Проверяем существование типа формы
-            $forms_type = Forms_type::findById($type);
-            if (!$forms_type) {
-                return self::response('Неверный тип формы');
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                echo json_encode(['success' => false, 'message' => 'Введите корректный email']);
+                exit;
             }
             
-            // Валидация по типу формы
-            switch ($type) {
-                case 1:
-                    if (empty($phone) && empty($email)) {
-                        return self::response('Укажите телефон или email');
-                    }
-                    break;
-            }
-
-            if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                return self::response('Введите корректный email');
-            }
+            // Получаем email получателя из настроек
+            $settings = Settings::findById(1);
+            $to = $settings->email ?? 'verbovskaya_liana@mail.ru'; // Обратите внимание: email_sends (с s на конце!)
+            echo json_encode(['success' => true, 'message' => 'Письмо на: ' . $to]);
+exit;
             
-            // Валидация телефона (базовая проверка)
-            if (!empty($phone) && !preg_match('/^[\d\s\-\+\(\)]{7,20}$/', $phone)) {
-                return self::response('Введите корректный номер телефона');
-            }
-
-            // Сохранение формы
-            $obj = new Forms();
-            $obj->type = $type;
-            $obj->name = $name;
-            $obj->phone = $phone;
-            $obj->email = $email;
-            $obj->text = $text;
-            $obj->date = time();
-            $obj->url = $url;
-            $obj->ip = Helpers::get_user_ip();
-            $obj->user_agent = $_SERVER['HTTP_USER_AGENT'] ?? '';
-            
-            $save = $obj->save();
-
-            if (!$save) {
-                throw new \Exception('Не удалось сохранить форму в базу данных');
-            }
-
-            $forms_type_name = $forms_type->name;
-
-            // Подготовка email
-            $subject = "Новая заявка «{$forms_type_name}»";
+            // Формируем тему и сообщение для письма
+            $subject = "Новая заявка с сайта";
             $message = "
-                <strong>Новая заявка «{$forms_type_name}»</strong> от посетителя " . $_SERVER['SERVER_NAME'] . "<br><br>
-                <strong>Со страницы:</strong> " . htmlspecialchars($url) . "<br />
-                <strong>Дата:</strong> " . date('d.m.Y H:i:s') . "<br />
+                <strong>Новая заявка с сайта</strong><br><br>
                 <strong>Имя:</strong> " . htmlspecialchars($name) . "<br />
                 <strong>Телефон:</strong> " . htmlspecialchars($phone) . "<br />
                 <strong>E-mail:</strong> " . htmlspecialchars($email) . "<br />
-                <strong>Комментарий:</strong> " . nl2br(htmlspecialchars($text)) . "<br />
-                <strong>IP-адрес:</strong> " . $obj->ip . "<br />
+                <strong>Сообщение:</strong> " . nl2br(htmlspecialchars($text)) . "<br />
+                <strong>IP:</strong> " . Helpers::get_user_ip() . "<br />
             ";
-
-            // Отправка email
-            $settings = Settings::findById(1);
-            $to = $settings->email_send ?? 'admin@example.com';
-
+            
+            // Отправляем письмо через Helpers::mail()
             $emailSent = Helpers::mail($to, $subject, $message);
-
-            if (!$emailSent) {
-                error_log('Не удалось отправить email уведомление о новой заявке');
+            
+            if ($emailSent) {
+                echo json_encode(['success' => true, 'message' => 'Отправлено!']);
+            } else {
+                echo json_encode(['success' => false, 'message' => 'Ошибка отправки']);
             }
-
-            // Логирование успешной отправки
-            error_log('Отправлена форма: ' . $forms_type_name . ', IP: ' . $obj->ip);
-
-            return self::response('1');
+            exit;
             
         } catch (\Exception $e) {
             error_log('Ошибка в formsAdd: ' . $e->getMessage());
-            return self::response('Произошла ошибка при отправке формы. Попробуйте позже еще раз');
+            echo json_encode(['success' => false, 'message' => 'Ошибка сервера']);
+            exit;
         }
     }
-    */
+    
+    /**
+     * Тестовый метод для проверки работы
+     */
+    public function test() {
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode([
+            'success' => true,
+            'message' => 'Тестовый метод работает!',
+            'post_data' => $_POST
+        ], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
 }

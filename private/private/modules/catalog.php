@@ -298,7 +298,7 @@ if (!file_exists(ROOT.$configPath)):
                             <?php endif; ?>
 
                             <?php if ($config['fields']['textshort']['enabled'] ?? false): ?>
-                                <?= Form::textarea($config['fields']['textshort']['title'] ?? 'Краткое описание', 'textshort', $obj->textshort, 150, '') ?>
+                                <?= Form::textbox($config['fields']['textshort']['title'] ?? 'Краткое описание', 'textshort', $obj->textshort) ?>
                             <?php endif; ?>
 
                             <?php if ($config['fields']['text']['enabled'] ?? false): ?>

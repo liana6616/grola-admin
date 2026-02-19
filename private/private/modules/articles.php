@@ -806,7 +806,6 @@ if (!file_exists(ROOT.$configPath)):
                         
                         <?php if (($config['list']['image_preview']['enabled'] ?? false) && ($config['fields']['preview']['image_preview']['enabled'] ?? false)): ?>
                             <div class="pole image_preview">
-                                <div class="title"><?= $config['list']['image_preview']['title'] ?? 'Превью' ?></div>
                                 <?php if (!empty($obj->image_preview)): ?>
                                     <img src="<?= $obj->image_preview ?>" alt="<?= htmlspecialchars($obj->name, ENT_QUOTES, 'UTF-8') ?>" width="50" height="50">
                                 <?php else: ?>
@@ -817,7 +816,6 @@ if (!file_exists(ROOT.$configPath)):
                         
                         <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
                             <div class="pole info">
-                                <div class="title"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
                                 <div class="name">
                                     <?= $obj->name ?>
                                 </div>
@@ -835,7 +833,6 @@ if (!file_exists(ROOT.$configPath)):
                         
                         <?php if (($config['list']['section']['enabled'] ?? false) && ($config['fields']['section_id']['enabled'] ?? false)): ?>
                             <div class="pole category">
-                                <div class="title"><?= $config['list']['section']['title'] ?? 'Раздел' ?></div>
                                 <?php if(!empty($obj->section)): ?>
                                     <?= $obj->section->name ?>
                                 <?php endif; ?>
@@ -844,14 +841,12 @@ if (!file_exists(ROOT.$configPath)):
                         
                         <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                             <div class="pole modified_date">
-                                <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                                 <?= $obj->edit_date ?>
                             </div>
                         <?php endif; ?>
                         
                         <?php if ($useDrafts && ($config['list']['published_date']['enabled'] ?? false)): ?>
                             <div class="pole modified_date">
-                                <div class="title"><?= $config['list']['published_date']['title'] ?? 'Публикация' ?></div>
                                 <?= $original->edit_date ?? '-' ?>
                             </div>
                         <?php endif; ?>

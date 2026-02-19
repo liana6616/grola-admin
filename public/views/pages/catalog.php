@@ -16,31 +16,31 @@
     <? if(!empty($this->childs) && $this->is_mainCategories): ?>
         <ul class="catalog__list">
             <? foreach($this->childs AS $item): ?>
-                    <li class="catalog__item">
-                        <a href="catalog/<?= $item->url ?>">
-                            <h3><?= $item->name ?></h3>
-                            <span class="catalog__text">
-                                <?= number_format((int)($item->products_count ?? 0), 0, '', ' ') ?> 
-                                <?= \app\Helpers::declOfNum((int)($item->products_count ?? 0), ['товар', 'товара', 'товаров']) ?>
-                            </span>          
-                        </a>
-                    </li>
+                <li class="catalog__item">
+                    <a href="catalog/<?= $item->url ?>">
+                        <h3><?= $item->name ?></h3>
+                        <span class="catalog__text">
+                            <?= number_format((int)($item->products_count ?? 0), 0, '', ' ') ?> 
+                            <?= \app\Helpers::declOfNum((int)($item->products_count ?? 0), ['товар', 'товара', 'товаров']) ?>
+                        </span>          
+                    </a>
+                </li>
             <? endforeach; ?>
         </ul>
     <? endif; ?>
 
 
-<? if(!empty($this->childs) && !$this->is_mainCategories): ?>
-    <div class="catalog__wrapper-category">
-        <a href="?subcat=0" class="catalog__button-category filter <?= ($this->selectedSubcat == 0) ? 'active' : '' ?>">Все категории</a>
-        
-        <? foreach($this->childs AS $item): ?>
-            <a href="?subcat=<?= $item->id ?>" class="catalog__button-category filter <?= ($this->selectedSubcat == $item->id) ? 'active' : '' ?>">
-                <?= $item->name ?>
-            </a>
-        <? endforeach; ?>
-    </div>
-<? endif; ?>
+    <? if(!empty($this->childs) && !$this->is_mainCategories): ?>
+        <div class="catalog__wrapper-category">
+            <a href="?subcat=0" class="catalog__button-category filter <?= ($this->selectedSubcat == 0) ? 'active' : '' ?>">Все категории</a>
+            
+            <? foreach($this->childs AS $item): ?>
+                <a href="?subcat=<?= $item->id ?>" class="catalog__button-category filter <?= ($this->selectedSubcat == $item->id) ? 'active' : '' ?>">
+                    <?= $item->name ?>
+                </a>
+            <? endforeach; ?>
+        </div>
+    <? endif; ?>
 
     <div class="catalog__wrapper-filter">
         <button class="catalog__button-filter-names" onclick="this.classList.toggle('active'); this.parentElement.classList.toggle('active')">Фильтры</button>
@@ -104,7 +104,7 @@
                 <? foreach($this->catalog AS $item): ?>
                     <? if($item->parent == 0): ?>
                         <li class="catalog-card__item"  data-category-id="<?= $item->category_id ?>">
-                            <a href="/catalog-card">
+                            <a href="/catalog/<?= $this->childs[0]->url ?? '' ?>/<?= $item->url ?>">                           
                                 <div class="catalog-card__wrapper-img">
                                     <img class="catalog-card__img" src="<?= $item->image_preview ?>">
                                 </div>

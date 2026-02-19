@@ -6,7 +6,7 @@
 
     <?php if(!empty($back)): ?>
         <div class="button_block">
-            <a href='<?= $_SERVER['REDIRECT_URL'] ?><?= $queryString ?? '' ?>' class='btn btn_white btn_back'>Вернуться</a>
+            <a href='<?= $_SERVER['REDIRECT_URL'] ?><?= $queryString ?? '' ?>' class='btn btn_white btn_back'>Вернуться к списку</a>
         </div>
     <?php endif; ?>
     
@@ -57,27 +57,19 @@
         $urlParams = '';
         
         if (!empty($ids)) {
-
-            if(in_array(str_replace(ADMIN_LINK.'/','',URI),['params_templates'])) {
-                // Проверяем, находимся ли мы на уровне групп или параметров
-                if (!empty($_GET['group_id'])) {
-                    // Уровень 3: Добавление параметра в группе
-                    $addParam = 'addItem';
-                    $urlParams = '&ids=' . $ids . '&group_id=' . $_GET['group_id'];
-                } else {
-                    // Уровень 2: Добавление группы в шаблоне
-                    $addParam = 'addGroup';
-                    $urlParams = '&ids=' . $ids;
-                }
-            }
-            else {
+            // Проверяем, находимся ли мы на уровне групп или параметров
+            if (!empty($_GET['group_id'])) {
+                // Уровень 3: Добавление параметра в группе
                 $addParam = 'addItem';
+                $urlParams = '&ids=' . $ids . '&group_id=' . $_GET['group_id'];
+            } else {
+                // Уровень 2: Добавление группы в шаблоне
+                $addParam = 'addGroup';
                 $urlParams = '&ids=' . $ids;
             }
-
         } elseif (!empty($parent)) {
             // Старая логика для обычных вложенных объектов
-            $addParam = 'add';
+            $addParam = 'addItem';
             $urlParams = '&parent=' . $parent;
         }
 

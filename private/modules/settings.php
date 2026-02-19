@@ -238,6 +238,17 @@ else:
                             ) ?>
                         <?php endif; ?>
 
+                        <!-- Реквизиты -->
+                        <?php if ($config['fields']['contacts']['requisites2']['enabled'] ?? false): ?>
+                            <?= Form::textarea(
+                                $config['fields']['contacts']['requisites2']['title'] ?? 'Реквизиты. Дополнительное поле', 
+                                'requisites2', 
+                                $obj->requisites2, 
+                                200, 
+                                ''
+                            ) ?>
+                        <?php endif; ?>
+
                         <!-- Файл с реквизитами -->
                         <?php if ($config['fields']['contacts']['file']['enabled'] ?? false): ?>
                             <?= Form::file(

@@ -221,21 +221,18 @@ else :
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if ($config['list']['info']['enabled'] ?? false): ?>
                         <div class="pole info">
-                            <div class="title"><?= $config['list']['info']['title'] ?? 'IP адрес' ?></div>
                             <div class="name"><?= $obj->name ?></div>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['description']['enabled'] ?? false): ?>
                         <div class="pole description">
-                            <div class="title"><?= $config['list']['description']['title'] ?? 'Комментарий' ?></div>
                             <?= $obj->text ?>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
-                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

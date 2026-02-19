@@ -21,11 +21,11 @@
 	<meta property="og:description" content= "<?= $this->description ?>">
 	<meta property="og:image" content = "https://<?= $_SERVER['SERVER_NAME'] ?>/public/src/images/logo.svg">
 
-    <link rel="preload" href="./public/src/fonts/Aeonik-Pro-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/public/src/fonts/Aeonik-Pro-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/public/src/fonts/Aeonik-Pro-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/public/src/fonts/Gordita-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/public/src/fonts/Gordita-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/public/src/fonts/Aeonik-Pro-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/public/src/fonts/Aeonik-Pro-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/public/src/fonts/Aeonik-Pro-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/public/src/fonts/Gordita-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/public/src/fonts/Gordita-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 	<!-- jQuery UI CSS -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">

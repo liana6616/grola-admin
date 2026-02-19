@@ -23,26 +23,36 @@
       <div class="card__name-wrapper">
         <div class="swiper-wrapper-card-btn">
           <div class="swiper mySwiperCardMini">
-              <div class="card__mini-swiper-wrapper swiper-wrapper">
-                  <div class="card__mini-swiper-slide swiper-slide">
-                    <img class="catalog-card__img" src="/public/images/catalog/card-1.png">
-                  </div>
-                  <div class="card__mini-swiper-slide swiper-slide">
-                    <img class="catalog-card__img" src="/public/images/catalog/card-2.png">
-                  </div>
-                  <div class="card__mini-swiper-slide swiper-slide">
-                    <img class="catalog-card__img" src="/public/images/catalog/card-3.png">
-                  </div>
-                  <div class="card__mini-swiper-slide swiper-slide">
-                    <img class="catalog-card__img" src="/public/images/catalog/card-7.png">
-                  </div>
-                  <div class="card__mini-swiper-slide swiper-slide">
-                    <img class="catalog-card__img" src="/public/images/catalog/card-10.png">
-                  </div>
-                  <div class="card__mini-swiper-slide swiper-slide">
-                    <img class="catalog-card__img" src="/public/images/catalog/card-9.png">
-                  </div>
-              </div>
+            <!-- <? if(!empty($this->gallery)): ?>
+                <div class="card__mini-swiper-wrapper swiper-wrapper">
+                    <? foreach($this->gallery AS $item): ?>
+                        <div class="card__mini-swiper-slide swiper-slide">
+                            <img class="catalog-card__img" src="<?= htmlspecialchars($item->image) ?>">
+                        </div>
+                    <? endforeach; ?>
+                </div>
+            <? endif; ?> -->
+
+            <div class="card__mini-swiper-wrapper swiper-wrapper">
+                <div class="card__mini-swiper-slide swiper-slide">
+                  <img class="catalog-card__img" src="/public/images/catalog/card-1.png">
+                </div>
+                <div class="card__mini-swiper-slide swiper-slide">
+                  <img class="catalog-card__img" src="/public/images/catalog/card-2.png">
+                </div>
+                <div class="card__mini-swiper-slide swiper-slide">
+                  <img class="catalog-card__img" src="/public/images/catalog/card-3.png">
+                </div>
+                <div class="card__mini-swiper-slide swiper-slide">
+                  <img class="catalog-card__img" src="/public/images/catalog/card-7.png">
+                </div>
+                <div class="card__mini-swiper-slide swiper-slide">
+                  <img class="catalog-card__img" src="/public/images/catalog/card-10.png">
+                </div>
+                <div class="card__mini-swiper-slide swiper-slide">
+                  <img class="catalog-card__img" src="/public/images/catalog/card-9.png">
+                </div>
+            </div>
 
 
           </div>
@@ -85,16 +95,11 @@
 
         <div class="card__name-text">
             <span class="card__text-art">Артикул: 422790A</span>
-            <h1 class="card__title">Контейнер КГ-04</h1>
-            <span class="card__text-sum">от 12 900 ₽</span>
+            <h1 class="card__title"><?= htmlspecialchars($this->product->name ?? '') ?></h1>
+            <span class="card__text-sum">от <?= htmlspecialchars($this->product->price ?? '') ?> ₽</span>
 
             <ul class="card__list">
-              <li><span>—</span>   Габариты (ВШГ): 500х600х400 мм.</li>
-              <li><span>—</span>    4 ячейки без дверей размером 500х600х400 мм каждая.</li>
-              <li><span>—</span>    Металлический шкаф для противогазов на 4 ячейки</li>
-              <li><span>—</span>    Аналог шкафа с дверьми: артикул <span class="card__art-text">036091</span>.</li>
-              <li><span>—</span>    Шкаф для противогазов окрашен порошковой краской. </li>
-              <li><span>—</span>    Металлический шкаф для противогазов.</li>
+              <li><?= $this->product->textshort ?? '' ?></li>
             </ul>
 
             <button class="card__button-submit button-dark" type="button" onclick="openModalWithArticle()">
@@ -110,24 +115,45 @@
           <button class="tabs__btn" type="button" onclick="showTab('specs', this)">Характеристики</button>
           <button class="tabs__btn" type="button" onclick="showTab('docs', this)">Документация</button>
       </div>
-      <div class="tabs__content">
+      <!-- <div class="tabs__content">
           <div id="about" class="tabs__pane active">
-              <p class="tabs__text">Приобретая Контейнер КГ-04 c артикулом 422790A, вы получаете не только прочное и надежное решение для Ваших задач, но и гарантию долговечности и качества. Наш каждый товар в категории "Тара производственная и контейнеры" проходит тщательный технический контроль перед отгрузкой.
-                  <br><br>
-                  <span>Мы сертифицируем нашу продукцию и обеспечиваем каждое изделие паспортом. Мы готовы учесть ваши предпочтения и изменить габаритные размеры по вашему желанию.</span>
-              </p>
+              <div class="tabs__text"><?= nl2br($this->product->text ?? '') ?></div>
           </div>
           <div id="specs" class="tabs__pane">
-              <p class="tabs__text">Приобретая Контейнер КГ-04 c артикулом 422790A, вы получаете не только прочное и надежное решение для Ваших задач, но и гарантию долговечности и качества. Наш каждый товар в категории "Тара производственная и контейнеры" проходит тщательный технический контроль перед отгрузкой.
-                  <br><br><br>
-                  <span>Мы сертифицируем нашу продукцию и обеспечиваем каждое изделие паспортом. Мы готовы учесть ваши предпочтения и изменить габаритные размеры по вашему желанию.</span>
-              </p>
+              <div class="tabs__text"><?= nl2br($this->product->text2 ?? '') ?></div>
           </div>
+          
           <div id="docs" class="tabs__pane">
-            <a class="tabs__pane-pdf" href="#">Макет (pdf)</a>
-            <a class="tabs__pane-pdf" href="#">Паспорт (pdf)</a>
+            <a class="tabs__pane-pdf" href="#"><?= $this->file->filename ?? '' ?></a>
           </div>
-      </div>
+      </div> -->
+      <div class="tabs__content">
+        <div id="about" class="tabs__pane active">
+            <div class="tabs__text"><?= nl2br($this->product->text ?? '') ?></div>
+        </div>
+        <div id="specs" class="tabs__pane">
+            <div class="tabs__text"><?= nl2br($this->product->text2 ?? '') ?></div>
+        </div>
+        <? if(!empty($this->file)): ?>
+            <div id="docs" class="tabs__pane">
+                <? foreach($this->file AS $item): ?>
+                    <? 
+                    // Пропускаем, если это не объект
+                    if(!is_object($item)) continue;
+                    
+                    // Проверяем все условия
+                    if(isset($item->parent) && $item->parent == 0 
+                      && isset($item->ids) && $item->ids == $this->product->id): 
+                    ?>
+                        <a class="tabs__pane-pdf" href="<?= htmlspecialchars($item->file ?? '') ?>" target="_blank">
+                            📄 <?= htmlspecialchars($item->filename ?? 'Документ PDF') ?>
+                        </a>
+                        <br>
+                    <? endif; ?>
+                <? endforeach; ?>
+            </div>
+        <? endif; ?>
+    </div>
   </div>
 
     <div class="catalog-card">
