@@ -55,7 +55,13 @@
                 <? foreach($this->popular_catalog AS $item): ?>
                     <? if($item->parent == 0): ?>
                         <li class="catalog-card__item swiper-slide swiper-slide-catalog-card"  data-category-id="<?= $item->category_id ?>">
-                            <a href="/catalog/<?= $this->childs[0]->url ?? '' ?>/<?= $item->url ?>">                           
+                            <a href="/catalog/<?= $this->childs[0]->url ?? '' ?>/<?= $item->url ?>">  
+                                <?php 
+                                if($item->action == 1): ?>
+                                    <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
+                                <?php elseif($item->popular == 1): ?>
+                                    <span class="catalog-card__cta catalog-card__cta-hit">Хит</span>
+                                <?php endif; ?>                           
                                 <div class="catalog-card__wrapper-img">
                                     <img class="catalog-card__img" src="<?= $item->image_preview ?>">
                                 </div>

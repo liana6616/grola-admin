@@ -45,7 +45,7 @@ class CatalogController extends Controller {
                 }
                 
                 // Формируем массив для отображения
-                $view->childs = array_merge([$category], $subcategories);
+                $view->childs = $subcategories;
                 $view->selectedSubcat = $selectedSubcat;
                 
                 // Собираем все ID категорий для фильтрации товаров
