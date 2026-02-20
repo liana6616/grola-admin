@@ -15,6 +15,8 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
     // Устанавливаем значения по умолчанию
     $obj->show = 1;
     $obj->rate = 0;
+    $obj->header = 0;
+    $obj->footer = 0;
     
     $title = 'Добавление';
     $id = false;
@@ -65,9 +67,17 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
             <?php endif; ?>
 
             <div class="flex2">
-                <?php if ($config['fields']['show']['enabled'] ?? false): ?>
-                    <?= Form::checkbox('show', (bool)$obj->show, $config['fields']['show']['title'] ?? 'Показывать на сайте', 1, null) ?>
-                <?php endif; ?>
+                <div class="input_block">
+                    <?php if ($config['fields']['show']['enabled'] ?? false): ?>
+                        <?= Form::checkbox('show', (bool)$obj->show, $config['fields']['show']['title'] ?? 'Показывать на сайте', 1, null) ?>
+                    <?php endif; ?>
+                    <?php if ($config['fields']['header']['enabled'] ?? false): ?>
+                        <?= Form::checkbox('header', (bool)$obj->header, $config['fields']['header']['title'] ?? 'Показывать в верхнем меню', 1, null) ?>
+                    <?php endif; ?>
+                    <?php if ($config['fields']['footer']['enabled'] ?? false): ?>
+                        <?= Form::checkbox('footer', (bool)$obj->footer, $config['fields']['footer']['title'] ?? 'Показывать в нижнем меню', 1, null) ?>
+                    <?php endif; ?>
+                </div>
                 
                 <?php if ($config['fields']['rate']['enabled'] ?? false): ?>
                     <?= Form::input($config['fields']['rate']['title'] ?? 'Рейтинг для сортировки', 'rate', $obj->rate, 0, 'number', '', '') ?>
@@ -192,6 +202,14 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
     
     if ($config['fields']['show']['enabled'] ?? false) {
         $obj->show = (int)($_POST['show'] ?? 0);
+    }
+
+    if ($config['fields']['header']['enabled'] ?? false) {
+        $obj->header = (int)($_POST['header'] ?? 0);
+    }
+
+    if ($config['fields']['footer']['enabled'] ?? false) {
+        $obj->footer = (int)($_POST['footer'] ?? 0);
     }
     
     // Системные поля
@@ -333,6 +351,7 @@ else :
                     
                     <?php if (($config['list']['image']['enabled'] ?? false) && ($config['fields']['image']['enabled'] ?? false)): ?>
                         <div class="pole image_preview">
+                            <div class="title"><?= $config['list']['image']['title'] ?? 'Иконка' ?></div>
                             <?php if (!empty($obj->image)): ?>
                                 <img src="<?= $obj->image ?>" alt="<?= htmlspecialchars($obj->name, ENT_QUOTES, 'UTF-8') ?>">
                             <?php else: ?>
@@ -343,6 +362,7 @@ else :
                     
                     <?php if ($config['list']['name']['enabled'] ?? false): ?>
                         <div class="pole info">
+                            <div class="title"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
                             <div class="name"><?= $obj->name ?></div>
                             <?php if ($config['fields']['link']['enabled'] ?? false && !empty($obj->link)): ?>
                                 <a href="<?= $obj->link ?>" target="_blank" rel="noopener noreferrer" class="link">
@@ -354,6 +374,7 @@ else :
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
+                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

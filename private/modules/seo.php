@@ -62,15 +62,15 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
                 <legend>SEO настройки</legend>
                 
                 <?php if ($config['fields']['title']['enabled'] ?? false): ?>
-                    <?= Form::input($config['fields']['title']['title'] ?? 'Title (заголовок страницы)', 'title', $obj->title, 0, '', '', 'placeholder="До 70 символов" maxlength="70"') ?>
+                    <?= Form::input($config['fields']['title']['title'] ?? 'Title (заголовок страницы)', 'title', $obj->title, 0, '', '', '') ?>
                 <?php endif; ?>
                 
                 <?php if ($config['fields']['keywords']['enabled'] ?? false): ?>
-                    <?= Form::textarea($config['fields']['keywords']['title'] ?? 'Keywords (ключевые слова)', 'keywords', $obj->keywords, 140, 'placeholder="Через запятую, до 1024 символов" maxlength="1024"') ?>
+                    <?= Form::textarea($config['fields']['keywords']['title'] ?? 'Keywords (ключевые слова)', 'keywords', $obj->keywords, 140, '') ?>
                 <?php endif; ?>
                 
                 <?php if ($config['fields']['description']['enabled'] ?? false): ?>
-                    <?= Form::textarea($config['fields']['description']['title'] ?? 'Description (описание)', 'description', $obj->description, 140, 'placeholder="Краткое описание страницы, до 160 символов" maxlength="160"') ?>
+                    <?= Form::textarea($config['fields']['description']['title'] ?? 'Description (описание)', 'description', $obj->description, 140, '') ?>
                 <?php endif; ?>
                 
                 <div class="input_block">
@@ -195,36 +195,28 @@ else :
                     <div class="pole info"><?= $config['list']['url']['title'] ?? 'Страница' ?></div>
                 <?php endif; ?>
                 
-                <?php if (($config['list']['title']['enabled'] ?? false) && ($config['fields']['title']['enabled'] ?? false)): ?>
-                    <div class="pole category"><?= $config['list']['title']['title'] ?? 'Title' ?></div>
-                <?php endif; ?>
-                
                 <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                     <div class="pole modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                 <?php endif; ?>
                 
-                <div class="actions"></div>
+                <div class="pole actions"></div>
             </div>
             <div class="table_body<?= ($totalCount <= $perPage && empty($_GET['search']) && $config['list']['handler']) ? ' sortbox-items' : '' ?>">
             <?php foreach ($objs as $obj): ?>
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if (($config['list']['url']['enabled'] ?? false) && ($config['fields']['url']['enabled'] ?? false)): ?>
                         <div class="pole info">
+                            <div class="title"><?= $config['list']['url']['title'] ?? 'Страница' ?></div>
                             <div class="name"><?= $obj->url ?></div>
-                            <?php if (($config['list']['title']['enabled'] ?? false) && ($config['fields']['title']['enabled'] ?? false) && !empty($obj->title)): ?>
+                            <?php if (($config['fields']['title']['enabled'] ?? false) && !empty($obj->title)): ?>
                                 <div class="comment"><?= mb_substr($obj->title, 0, 100) . (mb_strlen($obj->title) > 100 ? '...' : '') ?></div>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
-                    
-                    <?php if (($config['list']['title']['enabled'] ?? false) && ($config['fields']['title']['enabled'] ?? false)): ?>
-                        <div class="pole category">
-                            <?= !empty($obj->title) ? mb_substr($obj->title, 0, 50) . (mb_strlen($obj->title) > 50 ? '...' : '') : '' ?>
-                        </div>
-                    <?php endif; ?>
-                    
+                                        
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
+                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

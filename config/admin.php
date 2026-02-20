@@ -24,6 +24,7 @@ return [
             'class' => [1, 2]  // Администраторы и модераторы
         ],
         
+        /*
         'news_block' => [
             'title' => 'Новости',
             'icon' => 'news',
@@ -40,6 +41,13 @@ return [
                     'class' => [1,2]  // Только администраторы
                 ]
             ]
+        ]
+        */
+
+        'news' => [
+            'title' => 'Новости',
+            'icon' => 'news',
+            'class' => [1, 2]
         ],
         
         'reviews' => [
@@ -77,16 +85,33 @@ return [
                     'title' => 'Ключевые показатели',
                     'icon' => 'file',
                     'class' => [1,2]
-                ]
+                ],
+                'director_quotes' => [
+                    'title' => 'Цитата директора',
+                    'icon' => 'file',
+                    'class' => [1,2]
+                ],
+                'partners' => [
+                    'title' => 'Партнёры',
+                    'icon' => 'file',
+                    'class' => [1, 2]
+                ],
+                'pickup_points' => [
+                    'title' => 'Пункты самовывоза',
+                    'icon' => 'file',
+                    'class' => [1, 2]
+                ],
             ]
         ],
-        
 
-        'partners' => [
-            'title' => 'Партнёры',
+        'cities' => [
+            'title' => 'Города',
             'icon' => 'file',
             'class' => [1, 2]
         ],
+        
+
+            
         
         'admins_block' => [
             'title' => 'Администраторы',

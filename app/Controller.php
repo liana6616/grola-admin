@@ -43,19 +43,9 @@ abstract class Controller
             // Создаем экземпляр контроллера ошибок
             $errorController = new \app\Controllers\Errors();
             
-            // Устанавливаем заголовок по умолчанию
-            if ($title === null) {
-                $statusTexts = [
-                    400 => 'Некорректный запрос',
-                    401 => 'Требуется авторизация',
-                    403 => 'Доступ запрещен',
-                    404 => 'Страница не найдена',
-                    405 => 'Метод не разрешен',
-                    500 => 'Внутренняя ошибка сервера',
-                    503 => 'Сервис временно недоступен',
-                ];
-                
-                $title = $statusTexts[$code] ?? 'Ошибка';
+            // Передаем техническую информацию, если есть
+            if (isset($this->error_details)) {
+                $errorController->error_details = $this->error_details;
             }
             
             // Используем метод showError из контроллера Errors
@@ -64,7 +54,44 @@ abstract class Controller
         } catch (\Exception $e) {
             // Если не удалось показать страницу ошибки, показываем простой текст
             http_response_code($code);
-            die("Ошибка {$code}: " . ($message ?: $title ?: 'Произошла ошибка'));
+            
+            // Устанавливаем заголовки по умолчанию
+            $statusTexts = [
+                400 => 'Некорректный запрос',
+                401 => 'Требуется авторизация',
+                403 => 'Доступ запрещен',
+                404 => 'Страница не найдена',
+                405 => 'Метод не разрешен',
+                500 => 'Внутренняя ошибка сервера',
+                503 => 'Сервис временно недоступен',
+            ];
+            
+            $title = $title ?? ($statusTexts[$code] ?? 'Ошибка');
+            $message = $message ?? 'Произошла непредвиденная ошибка.';
+            
+            // Показываем простую страницу ошибки
+            echo "<!DOCTYPE html>
+            <html>
+            <head>
+                <title>{$code} - {$title}</title>
+                <style>
+                    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+                    .error-container { max-width: 600px; margin: 50px auto; text-align: center; }
+                    .error-code { font-size: 72px; color: #dc3545; margin-bottom: 20px; }
+                    .error-title { font-size: 24px; margin-bottom: 20px; }
+                    .error-message { color: #666; margin-bottom: 30px; }
+                    .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; }
+                </style>
+            </head>
+            <body>
+                <div class='error-container'>
+                    <div class='error-code'>{$code}</div>
+                    <h1 class='error-title'>" . htmlspecialchars($title) . "</h1>
+                    <p class='error-message'>" . htmlspecialchars($message) . "</p>
+                    <a href='/' class='btn'>На главную</a>
+                </div>
+            </body>
+            </html>";
         }
         
         // Прерываем выполнение текущего контроллера

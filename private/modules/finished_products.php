@@ -82,21 +82,19 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
                 <?php endif; ?>
             </div>
 
-            <div class="flex2">
-                <?php if ($config['fields']['parent']['enabled'] ?? false): ?>
-                    <?php
-                    // Получаем список родительских категорий
-                    // Исключаем текущую категорию и её дочерние
-                    $excludeId = $id ?: 0;
-                    
-                    $parentCategories = FinishedProducts::where("WHERE id != ? ORDER BY name ASC", 
-                                                               [$excludeId]);
-                    
-                    $currentParentId = $obj->parent;
-                    ?>
-                    <?= Form::select($config['fields']['parent']['title'] ?? 'Родительская категория', 'parent', $parentCategories, $currentParentId, true, 'Корневой уровень', 'name', 0, '', 0, '') ?>
-                <?php endif; ?>
-            </div>
+            <?php if ($config['fields']['parent']['enabled'] ?? false): ?>
+                <?php
+                // Получаем список родительских категорий
+                // Исключаем текущую категорию и её дочерние
+                $excludeId = $id ?: 0;
+                
+                $parentCategories = FinishedProducts::where("WHERE id != ? ORDER BY name ASC", 
+                                                           [$excludeId]);
+                
+                $currentParentId = $obj->parent;
+                ?>
+                <?= Form::select($config['fields']['parent']['title'] ?? 'Родительская категория', 'parent', $parentCategories, $currentParentId, true, 'Корневой уровень', 'name', 0, '', 0, '') ?>
+            <?php endif; ?>
 
             <?php if ($config['fields']['name']['enabled'] ?? false): ?>
                 <?= Form::input($config['fields']['name']['title'] ?? 'Название', 'name', $obj->name, 1, '', '', '') ?>
@@ -235,6 +233,8 @@ else :
             $breadcrumbs = FinishedProducts::adminBread($bread, 0);
             
             $title = 'Категория: ' . $category->name;
+
+            if(!empty($category->parent)) $queryString = '?parent='.$category->parent;
         }
         $back = true;
     }
@@ -273,6 +273,7 @@ else :
                     
                     <?php if (($config['list']['name']['enabled'] ?? false)): ?>
                         <div class="pole info">
+                            <div class="title"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
                             <div class="name">
                                 <?php if(empty($_GET['search']) && empty($filter) && !empty($childLinkId)): ?>
                                     <a href="?parent=<?= $childLinkId ?>" class="pageLink"><?= $obj->name ?></a>
@@ -305,6 +306,7 @@ else :
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
+                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

@@ -6,6 +6,9 @@ use app\Models\Settings;
 use app\Models\Pages;
 use app\Models\Seo;
 use app\Models\Admins;
+use app\Models\Messengers;
+use app\Models\Categories;
+use app\Models\FinishedProducts;
 use app\Helpers;
 
 class View
@@ -18,19 +21,31 @@ class View
     protected static $cachedMenus = null;
     protected static $cachedStaticPages = [];
     protected static $cachedPagesArray = null;
+    protected static $cachedMessengers = null;
+    protected static $cachedMessengers2 = null;
+    protected static $cachedCategories = null; // Добавлено для категорий
+    protected static $cachedFinishedProducts = null; // Добавлено для готовой продукции
+    protected static $cachedCategoriesTree = null; // Добавлено для дерева категорий
+    protected static $cachedFinishedProductsTree = null;
 
     public function __construct()
     {
         if (!AJAX) {
             $settings = $this->getCachedSettings();
             $this->settings = $settings;
+
+            $address = array_filter([
+                $settings->postcode ?? null,
+                $settings->city ?? null,
+                $settings->address ?? null
+            ]);
+
+            $this->address = !empty($address) ? join(', <br>', $address) : 'Адрес не указан';
             
             // Очистка телефонов
             $this->phones = Helpers::clearPhone($settings->phone);
             $this->phones2 = Helpers::clearPhone($settings->phone2);
-
-            if(!empty($this->settings->requisites)) $this->settings->requisites = nl2br($this->settings->requisites);
-            if(!empty($this->settings->time_job)) $this->settings->time_job = nl2br($this->settings->time_job);
+            $this->phones3 = Helpers::clearPhone($settings->phone3);
             
             // SEO данные из таблицы seo по текущему URI
             $seo = Seo::findByUrl(URI);
@@ -41,12 +56,20 @@ class View
             
             // Меню - используем кэширование
             $this->menus = $this->getCachedMenus();
-            
-            // Каталог
-            $this->catalog = Pages::findById(2);
-            
+
+            $this->messengers = $this->getCachedMessengers();
+            $this->messengers2 = $this->getCachedMessengers2();
+                        
             // Статические страницы
             $this->initStaticPages();
+            
+            // Категории товаров - добавляем кэшированные данные
+            $this->categories = $this->getCachedCategories();
+            $this->categoriesTree = $this->getCachedCategoriesTree();
+            
+            // Готовая продукция - добавляем кэшированные данные
+            $this->finishedProducts = $this->getCachedFinishedProducts();
+            $this->finishedProductsTree = $this->getCachedFinishedProductsTree();
         }
     }
 
@@ -62,12 +85,31 @@ class View
     }
 
     /**
+     * Получить мессенджеры с кэшированием
+     */
+    protected function getCachedMessengers()
+    {
+        if (self::$cachedMessengers === null) {
+            self::$cachedMessengers = Messengers::where('WHERE `show`=1 AND `header`=1 AND image<>"" ORDER BY rate DESC, id ASC');
+        }
+        return self::$cachedMessengers;
+    }
+    
+    protected function getCachedMessengers2()
+    {
+        if (self::$cachedMessengers2 === null) {
+            self::$cachedMessengers2 = Messengers::where('WHERE `show`=1 AND `footer`=1 AND image<>"" ORDER BY rate DESC, id ASC');
+        }
+        return self::$cachedMessengers2;
+    }
+
+    /**
      * Получить меню с кэшированием
      */
     protected function getCachedMenus()
     {
         if (self::$cachedMenus === null) {
-            self::$cachedMenus = Pages::where('WHERE `show`=1 AND `menu`=1 ORDER BY rate DESC, id ASC');
+            self::$cachedMenus = Pages::where('WHERE `show`=1 AND `is_draft`=0 AND `menu`=1 ORDER BY rate DESC, id ASC');
         }
         return self::$cachedMenus;
     }
@@ -84,15 +126,168 @@ class View
     }
 
     /**
+     * Получить категории с кэшированием
+     */
+    protected function getCachedCategories()
+    {
+        if (self::$cachedCategories === null) {
+            self::$cachedCategories = Categories::where('WHERE `show`=1 ORDER BY rate DESC, id ASC');
+        }
+        return self::$cachedCategories;
+    }
+
+    /**
+     * Получить дерево категорий с кэшированием
+     */
+    protected function getCachedCategoriesTree()
+    {
+        if (self::$cachedCategoriesTree === null) {
+            self::$cachedCategoriesTree = $this->buildCategoriesTree();
+        }
+        return self::$cachedCategoriesTree;
+    }
+
+    /**
+     * Получить готовую продукцию с кэшированием
+     */
+    protected function getCachedFinishedProducts()
+    {
+        if (self::$cachedFinishedProducts === null) {
+            self::$cachedFinishedProducts = FinishedProducts::where('WHERE `show`=1 ORDER BY rate DESC, id ASC');
+        }
+        return self::$cachedFinishedProducts;
+    }
+
+    /**
+     * Построить дерево категорий
+     */
+    protected function buildCategoriesTree($parentId = null)
+    {
+        $categories = $this->getCachedCategories();
+        $tree = [];
+        
+        // Группируем категории по parent
+        $grouped = [];
+        foreach ($categories as $category) {
+            $parent = $category->parent ?? 0;
+            if (!isset($grouped[$parent])) {
+                $grouped[$parent] = [];
+            }
+            $grouped[$parent][] = $category;
+        }
+        
+        // Рекурсивно строим дерево
+        $this->buildTreeRecursive($grouped, $parentId, $tree);
+        
+        return $tree;
+    }
+
+    /**
+     * Рекурсивное построение дерева категорий
+     */
+    protected function buildTreeRecursive(&$grouped, $parentId, &$tree)
+    {
+        $parentKey = $parentId ?? 0;
+        
+        if (isset($grouped[$parentKey])) {
+            foreach ($grouped[$parentKey] as $category) {
+                $node = [
+                    'id' => $category->id,
+                    'name' => $category->name,
+                    'name_menu' => $category->name_menu ?: $category->name,
+                    'url' => Categories::getUrl($category->id),
+                    'children' => []
+                ];
+                
+                // Рекурсивно добавляем дочерние категории
+                $this->buildTreeRecursive($grouped, $category->id, $node['children']);
+                
+                $tree[] = $node;
+            }
+        }
+    }
+
+    /**
+     * Получить плоский список категорий с отступами для select
+     */
+    public function getCategoriesFlat($parentId = null, $level = 0)
+    {
+        $categories = $this->getCachedCategories();
+        $result = [];
+        $prefix = str_repeat('— ', $level);
+        
+        foreach ($categories as $category) {
+            if (($parentId === null && $category->parent === null) || $category->parent == $parentId) {
+                $category->display_name = $prefix . $category->name;
+                $result[] = $category;
+                
+                // Рекурсивно добавляем дочерние
+                $children = $this->getCategoriesFlat($category->id, $level + 1);
+                $result = array_merge($result, $children);
+            }
+        }
+        
+        return $result;
+    }
+
+    protected function getCachedFinishedProductsTree()
+    {
+        if (self::$cachedFinishedProductsTree === null) {
+            self::$cachedFinishedProductsTree = $this->buildFinishedProductsTree();
+        }
+        return self::$cachedFinishedProductsTree;
+    }
+
+    protected function buildFinishedProductsTree($parentId = null)
+    {
+        $products = $this->getCachedFinishedProducts();
+        $tree = [];
+        
+        // Группируем по parent
+        $grouped = [];
+        foreach ($products as $product) {
+            $parent = $product->parent ?? 0;
+            if (!isset($grouped[$parent])) {
+                $grouped[$parent] = [];
+            }
+            $grouped[$parent][] = $product;
+        }
+        
+        // Рекурсивно строим дерево
+        $this->buildFinishedTreeRecursive($grouped, $parentId, $tree);
+        
+        return $tree;
+    }
+
+    protected function buildFinishedTreeRecursive(&$grouped, $parentId, &$tree)
+    {
+        $parentKey = $parentId ?? 0;
+        
+        if (isset($grouped[$parentKey])) {
+            foreach ($grouped[$parentKey] as $product) {
+                $node = [
+                    'id' => $product->id,
+                    'name' => $product->name,
+                    'children' => []
+                ];
+                
+                $this->buildFinishedTreeRecursive($grouped, $product->id, $node['children']);
+                
+                $tree[] = $node;
+            }
+        }
+    }
+
+    /**
      * Инициализация статических страниц с кэшированием
      */
     protected function initStaticPages()
     {
         $staticPages = [
-            'oferta' => 10,
-            'politika' => 11,
-            'pers' => 12,
-            'cookie' => 13
+            'oferta' => 24,
+            'politika' => 26,
+            'pers' => 30,
+            'cookie' => 28
         ];
         
         foreach ($staticPages as $property => $id) {
@@ -219,11 +414,22 @@ class View
             case 'menus':
                 self::$cachedMenus = null;
                 break;
+            case 'messengers':
+                self::$cachedMessengers = null;
+                self::$cachedMessengers2 = null;
+                break;
             case 'pages':
                 self::$cachedPagesArray = null;
                 break;
             case 'static':
                 self::$cachedStaticPages = [];
+                break;
+            case 'categories':
+                self::$cachedCategories = null;
+                self::$cachedCategoriesTree = null;
+                break;
+            case 'finished':
+                self::$cachedFinishedProducts = null;
                 break;
             case 'all':
             default:
@@ -231,20 +437,12 @@ class View
                 self::$cachedMenus = null;
                 self::$cachedPagesArray = null;
                 self::$cachedStaticPages = [];
+                self::$cachedMessengers = null;
+                self::$cachedMessengers2 = null;
+                self::$cachedCategories = null;
+                self::$cachedCategoriesTree = null;
+                self::$cachedFinishedProducts = null;
                 break;
         }
-    }
-    
-    /**
-     * Получить кэшированные данные (для отладки)
-     */
-    public static function getCacheInfo()
-    {
-        return [
-            'settings' => self::$cachedSettings !== null ? 'cached' : 'not cached',
-            'menus' => self::$cachedMenus !== null ? 'cached' : 'not cached',
-            'pages_array' => self::$cachedPagesArray !== null ? 'cached' : 'not cached',
-            'static_pages_count' => count(self::$cachedStaticPages),
-        ];
     }
 }

@@ -23,7 +23,8 @@
       <div class="card__name-wrapper">
         <div class="swiper-wrapper-card-btn">
           <div class="swiper mySwiperCardMini">
-            <!-- <? if(!empty($this->gallery)): ?>
+            
+            <? if(!empty($this->gallery)): ?>
                 <div class="card__mini-swiper-wrapper swiper-wrapper">
                     <? foreach($this->gallery AS $item): ?>
                         <div class="card__mini-swiper-slide swiper-slide">
@@ -31,29 +32,7 @@
                         </div>
                     <? endforeach; ?>
                 </div>
-            <? endif; ?> -->
-
-            <div class="card__mini-swiper-wrapper swiper-wrapper">
-                <div class="card__mini-swiper-slide swiper-slide">
-                  <img class="catalog-card__img" src="/public/images/catalog/card-1.png">
-                </div>
-                <div class="card__mini-swiper-slide swiper-slide">
-                  <img class="catalog-card__img" src="/public/images/catalog/card-2.png">
-                </div>
-                <div class="card__mini-swiper-slide swiper-slide">
-                  <img class="catalog-card__img" src="/public/images/catalog/card-3.png">
-                </div>
-                <div class="card__mini-swiper-slide swiper-slide">
-                  <img class="catalog-card__img" src="/public/images/catalog/card-7.png">
-                </div>
-                <div class="card__mini-swiper-slide swiper-slide">
-                  <img class="catalog-card__img" src="/public/images/catalog/card-10.png">
-                </div>
-                <div class="card__mini-swiper-slide swiper-slide">
-                  <img class="catalog-card__img" src="/public/images/catalog/card-9.png">
-                </div>
-            </div>
-
+            <? endif; ?>
 
           </div>
           <div class="swiper-button-wrapper-card">
@@ -65,26 +44,17 @@
         <div class="swiper mySwiperCard">
           <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
 
-          <div class="card-swiper swiper-wrapper">
-              <div class="swiper-slide">
-                <img class="catalog-card__img" src="/public/images/catalog/card-1.png">
+
+          <? if(!empty($this->gallery)): ?>
+              <div class="card-swiper swiper-wrapper">
+                  <? foreach($this->gallery AS $item): ?>
+                      <div class="swiper-slide">
+                          <img class="catalog-card__img" src="<?= htmlspecialchars($item->image) ?>">
+                      </div>
+                  <? endforeach; ?>
               </div>
-              <div class="swiper-slide">
-                <img class="catalog-card__img" src="/public/images/catalog/card-2.png">
-              </div>
-              <div class="swiper-slide">
-                <img class="catalog-card__img" src="/public/images/catalog/card-3.png">
-              </div>
-              <div class="swiper-slide">
-                <img class="catalog-card__img" src="/public/images/catalog/card-7.png">
-              </div>
-              <div class="swiper-slide">
-                <img class="catalog-card__img" src="/public/images/catalog/card-10.png">
-              </div>
-              <div class="swiper-slide">
-                <img class="catalog-card__img" src="/public/images/catalog/card-9.png">
-              </div>
-          </div>
+          <? endif; ?>
+
           <div class="swiper-button-wrapper-card swiper-button-wrapper-card-mob">
                 <div class="swiper-button-next-card swiper-button-next-product swiper-button-next"></div>
                 <div class="swiper-button-prev-card swiper-button-prev-product swiper-button-prev"></div>

@@ -7,6 +7,7 @@
         <main class="main_content">
 
             <div class="header">
+                <div class="mobile-menu-toggle"></div>
                 <div class="logo logo_lindera"></div>
                 <div class="header_actions">
 

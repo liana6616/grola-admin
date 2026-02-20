@@ -1,9 +1,20 @@
+@use 'common/variables' as *;
+@use 'common/fonts' as *;
+
+.error {
+    max-height: 100vh;
+    overflow: auto;
+    padding: 50px 0px;
+}
+
 .error-page {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    min-height: 70vh;
     text-align: center;
+    margin: auto;
+    max-width: 1100px;
 }
 
 .error-left {
@@ -12,11 +23,12 @@
     line-height: 1;
     color: #e9ecef;
     margin-right: 2rem;
+    max-width: 500px;
 }
 
 .error-right {
     text-align: left;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .error-title {
@@ -40,12 +52,12 @@
 }
 
 .error-solution a {
-    color: #007bff;
+    color: $red;
     text-decoration: underline;
 }
 
 .error-solution a:hover {
-    color: #0056b3;
+    opacity: 0.7;
 }
 
 .error-actions {
@@ -63,57 +75,44 @@
 }
 
 .error-actions .btn-primary {
-    background-color: #007bff;
-    color: white;
-    border: 1px solid #007bff;
+    background-color: $red;
+    color: $white;
+    border: 1px solid $red;
 }
 
 .error-actions .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: $white;
+    color: $red;
 }
 
 .error-actions .btn-outline {
-    background-color: transparent;
-    color: #6c757d;
-    border: 1px solid #6c757d;
+    color: $default;
+    border: 2px solid $border;
+    box-shadow: 0 0.5px 0 0 $border;
+    padding: 0px 15px;
 }
 
 .error-actions .btn-outline:hover {
-    background-color: #6c757d;
-    color: white;
+    color: $red;
 }
 
 .error-actions .btn-link {
-    background-color: transparent;
-    color: #007bff;
-    border: none;
-    text-decoration: underline;
+    background-color: $back;
+    color: $default;
 }
 
 .error-actions .btn-link:hover {
-    color: #0056b3;
+    color: $red;
 }
 
-.error-admin-info,
-.error-tech-info,
 .error-details {
+    width: 100%;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid $border;
+    text-align: left;
 }
 
-.error-admin-info small,
-.error-tech-info small {
-    font-size: 0.875rem;
-}
-
-.error-tech-info details,
-.error-details details {
-    margin-top: 1rem;
-}
-
-.error-tech-info summary,
 .error-details summary {
     cursor: pointer;
     color: #6c757d;
@@ -121,15 +120,14 @@
     margin-bottom: 0.5rem;
 }
 
-.error-tech-info pre,
 .error-details pre {
-    background-color: #f8f9fa;
+    background-color: #f8d7da;
     padding: 1rem;
     border-radius: 0.375rem;
     font-size: 0.8rem;
     white-space: pre-wrap;
     word-break: break-all;
-    color: #495057;
+    color: #721c24;
 }
 
 /* Адаптивность */

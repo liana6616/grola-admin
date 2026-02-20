@@ -3584,3 +3584,159 @@
 
 [2026-02-18 13:12:02] Warning: unlink(/home/a0644240/domains/grola-admin.potok4.ru/public_html): Is a directory in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Models/Files.php on line 48
 
+[2026-02-19 15:58:57] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 15:58:57] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 15:58:57] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 16:23:16] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 16:23:16] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 16:23:16] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 16:23:23] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 16:23:23] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 16:23:23] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 16:54:26] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 16:54:26] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 16:54:26] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:30:55] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:30:55] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:30:55] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:31:49] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:31:49] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:31:49] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:32:15] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:32:15] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:32:15] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:32:27] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:32:27] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:32:27] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:34:02] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:34:02] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:34:02] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:36:58] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:36:58] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:36:58] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:37:00] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:37:00] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:37:00] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:37:02] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:37:02] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:37:02] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:37:03] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:37:03] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 17:37:03] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-19 18:38:19] Warning: Undefined array key "sort" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 98
+
+[2026-02-19 18:39:32] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:39:34] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:39:36] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:39:42] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:39:45] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:39:46] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:39:47] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:39:48] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:39:49] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:40:30] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:40:32] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:40:33] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:40:33] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:40:35] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:40:37] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:40:38] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:41:32] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:41:33] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:41:33] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:41:34] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:41:34] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:41:35] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:41:35] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:41:36] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:41:51] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:41:55] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:42:00] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 12
+
+[2026-02-19 18:43:27] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 10
+
+[2026-02-19 18:43:30] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 10
+
+[2026-02-19 18:43:33] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 10
+
+[2026-02-19 18:43:33] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 10
+
+[2026-02-19 18:43:34] Notice: Indirect modification of overloaded property app\View::$catalog has no effect in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/catalog.php on line 10
+
+[2026-02-20 11:24:16] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-20 11:24:17] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-20 11:24:17] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-20 11:25:56] Warning: Undefined variable $obj in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-20 11:25:56] Warning: Attempt to read property "text" on null in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+
+[2026-02-20 11:25:56] Unknown Error: nl2br(): Passing null to parameter #1 ($string) of type string is deprecated in /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/about.php on line 61
+

@@ -1,6 +1,4 @@
 <?php
-// /private/modules/pages/main.php
-
 use app\Models\PageMain;
 use app\Form;
 use app\FileUpload;
@@ -36,45 +34,31 @@ if (isset($_GET['edit'])):
     <input type="hidden" name="main_published_id" value="<?= $main->original_id ?? 0 ?>">
 
     <fieldset class="input_block">
-        <legend>Блок "Цитата директора"</legend>
-        
-        <?= Form::textarea('Цитата', 'about_text', $main->about_text ?? '', 140, '') ?>
-        
-        <div class="flex2">
-            <?= Form::image('Фото (450x490)', 'about_image', $main, false, false, 'about_image') ?>
-            <div class="input_block">
-                <?= Form::input('Имя', 'about_name', $main->about_name ?? '', 0, 'text', '', '') ?>
-                <?= Form::input('Должность', 'about_position', $main->about_position ?? '', 0, 'text', '', '') ?>
-                <?= Form::input('Текст кнопки', 'about_btn', $main->about_btn ?? '', 0, 'text', '', '') ?>
-                <?= Form::input('Ссылка с кнопки', 'about_btn_link', $main->about_btn_link ?? '', 0, 'text', '', '') ?>
-            </div>
-        </div>
-    </fieldset>
-
-    <fieldset class="input_block">
         <legend>Баннер</legend>
         
-        <?= Form::input('Текст', 'info_text', $main->info_text ?? '', 0, 'text', '', '') ?>
+        <?= Form::textarea('Текст', 'info_text', $main->info_text ?? '', '60') ?>
         <?= Form::image('Изображение (1380x260)', 'info_image', $main, false, false, 'info_image') ?>
     </fieldset>
 
     <fieldset class="input_block">
         <legend>Баннер рядом с новостями</legend>
         <div class="flex2">
-        <?= Form::image('Изображение (730x590)', 'opt_image', $main, false, false, 'opt_image') ?>
-        <div class="input_block">
-            <?= Form::input('Заголовок', 'opt_name', $main->opt_name ?? '', 0, 'text', '', '') ?>
-            <?= Form::input('Текст', 'opt_text', $main->opt_text ?? '', 0, 'text', '', '') ?>
-            <?= Form::input('Текст кнопки', 'opt_btn', $main->opt_btn ?? '', 0, 'text', '', '') ?>
-            <?= Form::input('Ссылка с кнопки', 'opt_btn_link', $main->opt_btn_link ?? '', 0, 'text', '', '') ?>
+            <?= Form::image('Изображение (730x590)', 'opt_image', $main, false, false, 'opt_image') ?>
+            <div class="input_block">
+                <?= Form::input('Заголовок', 'opt_name', $main->opt_name ?? '', 0, 'text', '', '') ?>
+                <?= Form::input('Текст', 'opt_text', $main->opt_text ?? '', 0, 'text', '', '') ?>
+                <?= Form::input('Текст кнопки', 'opt_btn', $main->opt_btn ?? '', 0, 'text', '', '') ?>
+                <?= Form::input('Ссылка с кнопки', 'opt_btn_link', $main->opt_btn_link ?? '', 0, 'text', '', '') ?>
+            </div>
+        </div>
     </fieldset>
 
 <?php
-elseif (isset($_POST['add']) || isset($_POST['edit'])):
+elseif (isset($_POST['edit'])):
 
     $main_id = $_POST['main_id'] ?? 1;
     $main_published_id = $_POST['main_published_id'] ?? 2;
-    
+
     // Получаем или создаем объект
     $main = PageMain::findById($main_id);
     if (!$main) {
@@ -83,11 +67,6 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])):
     }
     
     // Заполняем данные из формы
-    $main->about_text = trim($_POST['about_text'] ?? '');
-    $main->about_name = trim($_POST['about_name'] ?? '');
-    $main->about_position = trim($_POST['about_position'] ?? '');
-    $main->about_btn = trim($_POST['about_btn'] ?? '');
-    $main->about_btn_link = trim($_POST['about_btn_link'] ?? '');
     $main->info_text = trim($_POST['info_text'] ?? '');
     $main->opt_name = trim($_POST['opt_name'] ?? '');
     $main->opt_text = trim($_POST['opt_text'] ?? '');
@@ -105,13 +84,14 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])):
     
     // Сохраняем запись
     $main->save();
+
+
     
     // Путь для загрузки изображений
     $uploadPath = '/public/src/images/pages/page_main/';
     
     // Загружаем изображения
     $imageFields = [
-        'about_image' => [450,490],
         'info_image' => [1380,260],
         'opt_image' => [730,590]
     ];
@@ -146,7 +126,7 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])):
         }
         
         // Копируем данные из черновика в чистовик
-        $excludeFields = ['id', 'is_draft', 'original_id', 'about_image', 'info_image', 'opt_image'];
+        $excludeFields = ['id', 'is_draft', 'original_id', 'info_image', 'opt_image'];
         $main_published = PageMain::copyData($main, $main_published, $excludeFields);
         
         $main_published->is_draft = 0;
@@ -155,7 +135,7 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])):
         $main_published->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
         
         // Копируем изображения
-        $imageFields = ['about_image', 'info_image', 'opt_image'];
+        $imageFields = ['info_image', 'opt_image'];
         foreach ($imageFields as $field) {
             // Удаляем старые изображения чистовика
             if (!empty($main_published->$field) && file_exists(ROOT . $main_published->$field)) {

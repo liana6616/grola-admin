@@ -33,7 +33,7 @@ if (isset($_GET['addItem']) || isset($_GET['editItem']) || isset($_GET['copyItem
         $title = 'Редактирование параметра';
     }
     
-    if(isset($_GET['copyItem']) && is_numeric($_GET['copyItem']) && $config['items_actions']['copy']) {
+    if(isset($_GET['copyItem']) && is_numeric($_GET['copyItem']) && ($config['items_actions']['copy'] ?? false)) {
         $id = (int)$_GET['copyItem'];
         $title = 'Копирование параметра';
     }
@@ -46,7 +46,7 @@ if (isset($_GET['addItem']) || isset($_GET['editItem']) || isset($_GET['copyItem
         }
     }
 
-    if(isset($_GET['copyItem']) && $config['items_actions']['copy']) {
+    if(isset($_GET['copyItem']) && ($config['items_actions']['copy'] ?? false)) {
         $id = false;
         $obj->id = null;
     }
@@ -57,13 +57,25 @@ if (isset($_GET['addItem']) || isset($_GET['editItem']) || isset($_GET['copyItem
         exit;
     }
     
+    // Получаем шаблон для хлебных крошек
+    $template = ParamsTemplates::findById($ids);
+    
     // Получаем все доступные параметры
     $allParams = Params::where("ORDER BY name ASC");
     
     // Получаем все справочники
     $directories = Directories::where("ORDER BY name ASC");
+
+    // Хлебные крошки для уровня 3
+    $b = [];
+    $b[] = array('name' => Helpers::escape($template->name), 'id' => 1, 'url' => $_SERVER['REDIRECT_URL'] . '?ids=' . $ids);
+    $b[] = array('name' => Helpers::escape($group->name), 'id' => 1, 'url' => $_SERVER['REDIRECT_URL'] . '?ids=' . $ids.'&group_id='.$group_id);
+    $breadcrumbs = ParamsTemplates::adminBread($b, 0);
     
     ?>
+
+    <?= $breadcrumbs ?>
+
     <div class="editHead">
         <h1><?= $title ?></h1>
         <div class="button_block">
@@ -71,13 +83,14 @@ if (isset($_GET['addItem']) || isset($_GET['editItem']) || isset($_GET['copyItem
                class='btn btn_white btn_back'>Вернуться назад</a>
         </div>
     </div>
+    
     <div class="edit_block">
         <form action='<?= $_SERVER['REDIRECT_URL'] ?>' method='post' class='edit_form paramsTemplatesItems'>
             <!-- Hidden поля для контекста -->
             <input type='hidden' name='ids' value='<?= $ids ?>'>
             <input type='hidden' name='group_id' value='<?= $group_id ?>'>
             
-            <?php if (isset($_GET['copyItem']) && $config['items_actions']['copy']): ?>
+            <?php if (isset($_GET['copyItem']) && ($config['items_actions']['copy'] ?? false)): ?>
                 <input type="hidden" name="copy_from" value="<?= (int)$_GET['copyItem'] ?>">
             <?php endif; ?>
 
@@ -193,7 +206,7 @@ elseif (isset($_POST['addItem']) || isset($_POST['editItem'])) :
     } else {
         $obj = new ParamsGroupsItems();
         
-        if (isset($_POST['copy_from']) && is_numeric($_POST['copy_from']) && $config['items_actions']['copy']) {
+        if (isset($_POST['copy_from']) && is_numeric($_POST['copy_from']) && ($config['items_actions']['copy'] ?? false)) {
             $_SESSION['notice'] = 'Скопировано';
         } else {
             $_SESSION['notice'] = 'Добавлено';
@@ -272,7 +285,7 @@ elseif (isset($_GET['editGroup']) || isset($_GET['addGroup']) || isset($_GET['co
         $title = 'Редактирование группы';
     }
     
-    if(isset($_GET['copyGroup']) && is_numeric($_GET['copyGroup']) && $config['groups_actions']['copy']) {
+    if(isset($_GET['copyGroup']) && is_numeric($_GET['copyGroup']) && ($config['groups_actions']['copy'] ?? false)) {
         $id = (int)$_GET['copyGroup'];
         $title = 'Копирование группы';
     }
@@ -285,7 +298,7 @@ elseif (isset($_GET['editGroup']) || isset($_GET['addGroup']) || isset($_GET['co
         }
     }
 
-    if(isset($_GET['copyGroup']) && $config['groups_actions']['copy']) {
+    if(isset($_GET['copyGroup']) && ($config['groups_actions']['copy'] ?? false)) {
         $id = false;
         $obj->id = null;
     }
@@ -295,20 +308,29 @@ elseif (isset($_GET['editGroup']) || isset($_GET['addGroup']) || isset($_GET['co
         header("Location: {$_SERVER['REDIRECT_URL']}");
         exit;
     }
+
+    // Хлебные крошки для уровня 3
+    $b = [];
+    $b[] = array('name' => Helpers::escape($template->name), 'id' => 1, 'url' => $_SERVER['REDIRECT_URL'] . '?ids=' . $ids);
+    $breadcrumbs = ParamsTemplates::adminBread($b, 0);
     
     ?>
+
+    <?= $breadcrumbs ?>
+
     <div class="editHead">
         <h1><?= $title ?></h1>
         <div class="button_block">
             <a href='<?= $_SERVER['REDIRECT_URL'] ?>?ids=<?= $ids ?>' class='btn btn_white btn_back'>Вернуться назад</a>
         </div>
     </div>
+    
     <div class="edit_block">
         <form action='<?= $_SERVER['REDIRECT_URL'] ?>' method='post' class='edit_form'>
             <!-- Hidden поле для контекста -->
             <input type='hidden' name='ids' value='<?= $ids ?>'>
             
-            <?php if (isset($_GET['copyGroup']) && $config['groups_actions']['copy']): ?>
+            <?php if (isset($_GET['copyGroup']) && ($config['groups_actions']['copy'] ?? false)): ?>
                 <input type="hidden" name="copy_from" value="<?= (int)$_GET['copyGroup'] ?>">
             <?php endif; ?>
 
@@ -357,7 +379,7 @@ elseif (isset($_POST['addGroup']) || isset($_POST['editGroup'])) :
     } else {
         $obj = new ParamsGroups();
         
-        if (isset($_POST['copy_from']) && is_numeric($_POST['copy_from']) && $config['groups_actions']['copy']) {
+        if (isset($_POST['copy_from']) && is_numeric($_POST['copy_from']) && ($config['groups_actions']['copy'] ?? false)) {
             $_SESSION['notice'] = 'Скопировано';
         } else {
             $_SESSION['notice'] = 'Добавлено';
@@ -425,7 +447,7 @@ elseif (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
         $title = 'Редактирование шаблона';
     }
     
-    if(isset($_GET['copy']) && is_numeric($_GET['copy']) && $config['actions']['copy']) {
+    if(isset($_GET['copy']) && is_numeric($_GET['copy']) && ($config['actions']['copy'] ?? false)) {
         $id = (int)$_GET['copy'];
         $title = 'Копирование шаблона';
     }
@@ -445,10 +467,11 @@ elseif (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
             <a href='<?= $_SERVER['REDIRECT_URL'] ?>' class='btn btn_white btn_back'>Вернуться к списку</a>
         </div>
     </div>
+    
     <div class="edit_block">
         <form action='<?= $_SERVER['REDIRECT_URL'] ?>' method='post' class='edit_form'>
             
-            <?php if (isset($_GET['copy']) && $config['actions']['copy']): ?>
+            <?php if (isset($_GET['copy']) && ($config['actions']['copy'] ?? false)): ?>
                 <input type="hidden" name="copy_from" value="<?= (int)$_GET['copy'] ?>">
             <?php endif; ?>
 
@@ -486,7 +509,7 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
     } else {
         $obj = new ParamsTemplates();
         
-        if (isset($_POST['copy_from']) && is_numeric($_POST['copy_from']) && $config['actions']['copy']) {
+        if (isset($_POST['copy_from']) && is_numeric($_POST['copy_from']) && ($config['actions']['copy'] ?? false)) {
             $_SESSION['notice'] = 'Скопировано';
         } else {
             $_SESSION['notice'] = 'Добавлено';
@@ -552,9 +575,15 @@ else :
             exit;
         }
         
-        $title = 'Шаблон: ' . $template->name . ' → Группа: ' . $group->name;
+        // Для head.php
         $back = true;
-        $add = 'параметр'; // Для head.php
+        $title = $group->name;
+        
+        // Хлебные крошки для уровня 3
+        $b = [];
+        $b[] = array('name' => Helpers::escape($template->name), 'id' => 1, 'url' => $_SERVER['REDIRECT_URL'] . '?ids=' . $ids);
+        $b[] = array('name' => Helpers::escape($group->name), 'id' => 0, 'url' => '');
+        $breadcrumbs = ParamsTemplates::adminBread($b, 0);
 
         // Пагинация для параметров
         $where = "WHERE group_id = " . $group->id;
@@ -581,6 +610,8 @@ else :
         $objs = $result['items'];
         $pagination = $result['pagination'];
         $totalCount = $result['totalCount'];
+
+        $queryString = '?ids='.$ids;
 
         include ROOT . '/private/views/components/head.php'; 
         
@@ -640,6 +671,7 @@ else :
                         
                         <?php if ($config['items_list']['info']['enabled'] ?? false): ?>
                             <div class="pole info">
+                                <div class="title"><?= $config['items_list']['info']['title'] ?? 'Параметр' ?></div>
                                 <div class="name"><?= $paramName ?></div>
                                 <div class="comment">
                                     <small>
@@ -655,6 +687,7 @@ else :
                         
                         <?php if ($config['items_list']['edit_date']['enabled'] ?? false): ?>
                             <div class="pole modified_date">
+                                <div class="title"><?= $config['items_list']['edit_date']['title'] ?? 'Изменение' ?></div>
                                 <?= $obj->edit_date ?>
                             </div>
                         <?php endif; ?>
@@ -682,9 +715,14 @@ else :
             exit;
         }
         
-        $title = 'Шаблон: ' . $template->name;
+        // Для head.php
         $back = true;
-        $add = 'группу'; // Для head.php
+        $title = $template->name;
+        
+        // Хлебные крошки для уровня 2
+        $b = [];
+        $b[] = array('name' => Helpers::escape($template->name), 'id' => 0, 'url' => '');
+        $breadcrumbs = ParamsTemplates::adminBread($b, 0);
 
         // Пагинация для групп
         $where = "WHERE template_id = " . $template->id;
@@ -743,6 +781,7 @@ else :
                         
                         <?php if ($config['groups_list']['info']['enabled'] ?? false): ?>
                             <div class="pole info">
+                                <div class="title"><?= $config['groups_list']['info']['title'] ?? 'Название группы' ?></div>
                                 <div class="name">
                                     <a href='?ids=<?= $ids ?>&group_id=<?= $obj->id ?>'>
                                         <?= $obj->name ?>
@@ -754,6 +793,7 @@ else :
                         
                         <?php if ($config['groups_list']['edit_date']['enabled'] ?? false): ?>
                             <div class="pole modified_date">
+                                <div class="title"><?= $config['groups_list']['edit_date']['title'] ?? 'Изменение' ?></div>
                                 <?= $obj->edit_date ?>
                             </div>
                         <?php endif; ?>
@@ -779,7 +819,7 @@ else :
         $whereConditions = [];
         
         $search = trim($_GET['search'] ?? '');
-        if (!empty($search) && $config['filters']['search']) {
+        if (!empty($search) && ($config['filters']['search'] ?? false)) {
             if ($config['fields']['name']['enabled'] ?? false) {
                 $whereConditions[] = "`name` like '%{$search}%'";
             }
@@ -790,7 +830,7 @@ else :
             $where = 'WHERE ' . implode(' AND ', $whereConditions);
         }
 
-        $perPage = $_SESSION['paramstemplates']['per_page'] ?? $config['pagination']['default_per_page'];
+        $perPage = $_SESSION['paramstemplates']['per_page'] ?? ($config['pagination']['default_per_page'] ?? 20);
         $order_by = $config['pagination']['order_by'] ?? 'ORDER BY name ASC, id ASC';
 
         $result = Pagination::create(
@@ -825,6 +865,7 @@ else :
                     <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                         <?php if ($config['list']['info']['enabled'] ?? false): ?>
                             <div class="pole info">
+                                <div class="title"><?= $config['list']['info']['title'] ?? 'Название шаблона' ?></div>
                                 <div class="name">
                                     <a href='?ids=<?= $obj->id ?>'>
                                         <?= $obj->name ?>
@@ -836,6 +877,7 @@ else :
                         
                         <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                             <div class="pole modified_date">
+                                <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                                 <?= $obj->edit_date ?>
                             </div>
                         <?php endif; ?>

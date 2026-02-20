@@ -41,8 +41,8 @@ return [
         'image_preview' => [
             'enabled' => true,
             'title' => 'Изображение для превью',
-            'width' => 300,
-            'height' => 300
+            'width' => 0,
+            'height' => 0
         ],
         'price' => [
             'enabled' => true,

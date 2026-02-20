@@ -9,12 +9,17 @@ class AdminController extends Controller
 {
     protected function handle(...$parameters)
     {
+        // Включаем буферизацию вывода с самого начала
+        ob_start();
+        
+        // checkLogged уже обновляет date_visit
         $admin = Admins::checkLogged(true);
         Admins::auth($admin);
         $this->view->admin = $admin;
 
         // Вход в админку только с определенных IP
         if (!Admins::isPermittedIP()) {
+            ob_end_clean();
             return $this->showErrorPage(403, 'Доступ запрещен: IP-адрес не разрешен');
         }
 
@@ -25,6 +30,7 @@ class AdminController extends Controller
         if (!empty($url)) {
             // Проверяем доступ к модулю перед загрузкой
             if (!Admins::canAccessModule($url)) {
+                ob_end_clean();
                 return $this->showErrorPage(403, 'Доступ к модулю запрещен');
             }
             
@@ -32,22 +38,19 @@ class AdminController extends Controller
 
             try {
                 if (is_file($module)) { 
-                    ob_start(); 
                     include $module; 
-                    $module = ob_get_contents(); 
-                    ob_clean(); 
                 } else {
-                    // Если файл модуля не найден, показываем 404
+                    ob_end_clean();
                     return $this->showErrorPage(404, 'Модуль не найден');
                 }
             } catch (\Exception $e) {
-                // Обработка ошибок при загрузке модуля
+                ob_end_clean();
                 error_log('Ошибка загрузки модуля: ' . $e->getMessage());
                 return $this->showErrorPage(500, 'Ошибка загрузки модуля', $e->getMessage());
             }
         }
 
-        $this->view->module = $module;
+        $this->view->module = ob_get_clean(); // Получаем и очищаем буфер
         $this->view->display(ROOT . '/private/views/content.php');
     }
     

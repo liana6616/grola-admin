@@ -3048,14 +3048,14 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
         role: this.options.role,
         tabIndex: 0
       }), this.options.disabled && this.element.addClass("ui-state-disabled").attr("aria-disabled", "true"), this._on({
-        "mousedown .ui-menu-item": function mousedown_UiMenuItem(e) {
+        "mousedown .ui-menu-item": function mousedownUiMenuItem(e) {
           e.preventDefault();
         },
-        "click .ui-menu-item": function click_UiMenuItem(t) {
+        "click .ui-menu-item": function clickUiMenuItem(t) {
           var i = e(t.target);
           !this.mouseHandled && i.not(".ui-state-disabled").length && (this.select(t), t.isPropagationStopped() || (this.mouseHandled = !0), i.has(".ui-menu").length ? this.expand(t) : !this.element.is(":focus") && e(this.document[0].activeElement).closest(".ui-menu").length && (this.element.trigger("focus", [!0]), this.active && 1 === this.active.parents(".ui-menu").length && clearTimeout(this.timer)));
         },
-        "mouseenter .ui-menu-item": function mouseenter_UiMenuItem(t) {
+        "mouseenter .ui-menu-item": function mouseenterUiMenuItem(t) {
           if (!this.previousFilter) {
             var i = e(t.currentTarget);
             i.siblings(".ui-state-active").removeClass("ui-state-active"), this.focus(t, i);
@@ -5463,7 +5463,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
           }, 100), e.preventDefault();
         }
       },
-      "mousedown .ui-spinner-button": function mousedown_UiSpinnerButton(t) {
+      "mousedown .ui-spinner-button": function mousedownUiSpinnerButton(t) {
         function i() {
           var e = this.element[0] === this.document[0].activeElement;
           e || (this.element.focus(), this.previous = s, this._delay(function () {
@@ -5476,7 +5476,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
         }), this._start(t) !== !1 && this._repeat(null, e(t.currentTarget).hasClass("ui-spinner-up") ? 1 : -1, t);
       },
       "mouseup .ui-spinner-button": "_stop",
-      "mouseenter .ui-spinner-button": function mouseenter_UiSpinnerButton(t) {
+      "mouseenter .ui-spinner-button": function mouseenterUiSpinnerButton(t) {
         return e(t.currentTarget).hasClass("ui-state-active") ? this._start(t) === !1 ? !1 : (this._repeat(null, e(t.currentTarget).hasClass("ui-spinner-up") ? 1 : -1, t), void 0) : void 0;
       },
       "mouseleave .ui-spinner-button": "_stop"
@@ -8041,6 +8041,7 @@ $('body').on('submit', '#login_form', function () {
       //$('#login_error').html('Ошибка соединения').show();
     }
   });
+
   return false;
 });
 $('body').on('click', '.logout', function () {
@@ -8376,7 +8377,10 @@ $('body').on('click', '.catalogPriceAdd', function () {
 // Удаление стоимости по весу в каталоге товаров
 $('body').on('click', '.catalogPriceRemove', function () {
   var block = $(this).closest('.catalogPriceCard');
-  block.remove();
+  modalConfirm('Подтвердить удаление?', function () {
+    block.remove();
+  }, function () {});
+  return false;
 });
 
 // Добавление службы доставки на странице "Оплата и доставка"
@@ -8472,18 +8476,6 @@ $('body').on('click', '.files_delete', function () {
   return false;
 });
 $(document).ready(function () {
-  // Создаем кнопку меню
-  var menuToggle = "\n    <div class=\"mobile-menu-toggle\">\n      <svg width=\"17\" height=\"15\" viewBox=\"0 0 17 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g opacity=\"0.7\">\n          <path d=\"M0.75 13.3311H15.75\" stroke=\"#202227\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n          <path d=\"M0.75 7.04053H15.75\" stroke=\"#202227\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n          <path d=\"M0.75 0.75H15.75\" stroke=\"#202227\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </g>\n      </svg>\n    </div>\n  ";
-
-  // Создаем оверлей для меню
-  var menuOverlay = "<div class=\"sidebar-overlay\"></div>";
-
-  // Добавляем элементы на страницу
-  if ($(window).width() < 768) {
-    $('body').append(menuOverlay);
-    $('.header').prepend(menuToggle);
-  }
-
   // Обработчик клика по кнопке меню
   $('.mobile-menu-toggle').on('click', function (e) {
     e.stopPropagation();
@@ -8498,7 +8490,7 @@ $(document).ready(function () {
     closeMobileMenu();
   });
   $(document).on('click', function (e) {
-    if ($(window).width() <= 767 && !$(e.target).closest('.sidebar').length && !$(e.target).closest('.mobile-menu-toggle').length && $('.sidebar').hasClass('active')) {
+    if ($(window).width() <= 960 && !$(e.target).closest('.sidebar').length && !$(e.target).closest('.mobile-menu-toggle').length && $('.sidebar').hasClass('active')) {
       closeMobileMenu();
     }
   });
@@ -8517,55 +8509,15 @@ $(document).ready(function () {
     $('body, .content').css('overflow', 'auto');
     $('.content').css('height', 'auto');
   }
-
-  // Закрытие меню при клике на пункт меню (для мобильных)
-  $('.sidebar .nav_item, .sidebar .nav_item2').on('click', function () {
-    if ($(window).width() <= 767) {
-      //closeMobileMenu();
-    }
-  });
-
-  // Адаптация таблиц для мобильных
-  function adaptTables() {
-    if ($(window).width() <= 767) {
-      $('.table_container').each(function () {
-        if (!$(this).hasClass('mobile-adapted')) {
-          $(this).addClass('mobile-adapted');
-          $(this).wrap('<div class="table-mobile-wrapper"></div>');
-        }
-      });
-    } else {
-      $('.table_container').removeClass('mobile-adapted');
-      $('.table-mobile-wrapper').contents().unwrap();
-    }
-  }
-
-  // Инициализация при загрузке и изменении размера окна
-  adaptTables();
-  $(window).on('resize', adaptTables);
-
-  // Улучшение UX для мобильных устройств
-  if ('ontouchstart' in window || navigator.maxTouchPoints) {
-    // Увеличиваем область клика для кнопок на мобильных
-    $('.btn, .nav_item, .nav_item2').css('min-height', '44px');
-    $('.btn, .nav_item, .nav_item2').css('min-width', '44px');
-
-    // Добавляем активные состояния для касаний
-    $('.btn, .nav_item, .nav_item2').on('touchstart', function () {
-      $(this).addClass('touch-active');
-    }).on('touchend touchcancel', function () {
-      $(this).removeClass('touch-active');
-    });
-  }
 });
 "use strict";
 
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 // Переключение табов
 $('.migrator .tab-btn').click(function () {
   var tabId = $(this).data('tab');
@@ -8835,6 +8787,7 @@ $body.on('click', '.close', function () {
   if (type === 'alert' || type === 'confirm') {
     return; // Не закрываем alert и confirm по крестику
   }
+
   closeModal(i);
 });
 
@@ -8848,6 +8801,7 @@ $body.on('click', '.no', function () {
   if (type === 'alert' || type === 'confirm') {
     return; // Не закрываем alert и confirm по обычной кнопке "нет"
   }
+
   closeModal(i);
 });
 
@@ -8912,10 +8866,11 @@ function win_auto(i) {
     });
     var _w = $mod.width();
     var _w2 = _w / 2 - _w;
-    $mod.css('margin-left', _w2);
+    //$mod.css('margin-left', w1);
+
     var _h = $mod.height();
     var _h2 = _h / 2 - _h;
-    $mod.css('margin-top', _h2);
+    //$mod.css('margin-top', h1);
   }
 }
 
@@ -9148,8 +9103,44 @@ $(document).ready(function () {
   var currentTooltipElement = null;
   var tooltip = $('#tooltip');
 
+  // Проверка, находится ли элемент внутри absolute-контейнера
+  function isInAbsoluteContainer(element) {
+    var $element = $(element);
+
+    // Проверяем сам элемент и его родителей на position: absolute
+    if ($element.css('position') === 'absolute') {
+      return true;
+    }
+
+    // Проверяем родителей до .table_container
+    return $element.parents().filter(function () {
+      return $(this).css('position') === 'absolute' && !$(this).hasClass('custom-tooltip'); // игнорируем сам тултип
+    }).length > 0;
+  }
+
+  // Проверка, нужно ли отключить тултип
+  function shouldDisableTooltip(element) {
+    // Отключаем на мобильном разрешении (< 1600px) для элементов в absolute контейнерах
+    if (window.innerWidth < 1600) {
+      if (isInAbsoluteContainer(element)) {
+        return true;
+      }
+
+      // Также отключаем для specific классов, которые позиционированы абсолютно
+      var $element = $(element);
+      if ($element.closest('.handler').length || $element.closest('.actions').length || $element.hasClass('handler') || $element.hasClass('actions')) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   // Позиционирование подсказки
   function positionTooltip(element, tooltipText) {
+    // Если тултип должен быть отключен — не позиционируем
+    if (shouldDisableTooltip(element)) {
+      return;
+    }
     var $element = $(element);
     var elementRect = $element[0].getBoundingClientRect();
     var tooltipWidth = tooltip.outerWidth();
@@ -9227,6 +9218,10 @@ $(document).ready(function () {
 
   // Показ подсказки
   function showTooltip(element) {
+    // Проверяем, нужно ли отключить тултип
+    if (shouldDisableTooltip(element)) {
+      return;
+    }
     var tooltipText = $(element).data('tooltip');
     if (!tooltipText) return;
     currentTooltipElement = element;
@@ -9263,7 +9258,7 @@ $(document).ready(function () {
   }).on('mouseleave', function () {
     hideTooltip();
   }).on('mousemove', function (e) {
-    if (isTooltipVisible) {
+    if (isTooltipVisible && !shouldDisableTooltip(this)) {
       positionTooltip(this, $(this).data('tooltip'));
     }
   });
@@ -9271,10 +9266,22 @@ $(document).ready(function () {
   // Обновляем позицию при изменении размера окна
   $(window).on('resize', function () {
     if (isTooltipVisible && currentTooltipElement) {
-      var tooltipText = $(currentTooltipElement).data('tooltip');
-      if (tooltipText) {
-        positionTooltip(currentTooltipElement, tooltipText);
+      // При ресайзе проверяем, не нужно ли отключить тултип
+      if (shouldDisableTooltip(currentTooltipElement)) {
+        hideTooltip();
+      } else {
+        var tooltipText = $(currentTooltipElement).data('tooltip');
+        if (tooltipText) {
+          positionTooltip(currentTooltipElement, tooltipText);
+        }
       }
+    }
+  });
+
+  // Дополнительно: отключаем тултипы при скролле на мобильном разрешении
+  $(window).on('scroll', function () {
+    if (window.innerWidth < 1600 && isTooltipVisible) {
+      hideTooltip();
     }
   });
 });

@@ -263,4 +263,13 @@ class Catalog extends Model
 	    
 	    return $html;
 	}
+
+	public static function getProductByUrl($url, $categoryId = null) {
+    $where = "url = '{$url}' AND `show` = 1 AND `is_draft` = 0";
+    if ($categoryId) {
+        $where .= " AND category_id = {$categoryId}";
+    }
+    $products = self::findWhere("WHERE {$where} LIMIT 1");
+    return !empty($products) ? $products[0] : null;
+}
 }

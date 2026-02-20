@@ -3,6 +3,9 @@
 
 .breadcrumbs {
   margin: 0px 0px 25px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 7px;
   & .path {
     font-size: 0.875rem;
     line-height: 1;
@@ -16,7 +19,7 @@
     font-size: 0.875rem;
     line-height: 1;
     color: $blue;
-    margin: 0px 7px;
+    margin: 0px;
     opacity: 0.7;
   }
 }

@@ -3,6 +3,7 @@
 
 .pagePaymentServicesItem {
 	display: flex;
+	flex-flow: row wrap;
 	align-items: flex-start;
 	gap: 10px;
 	border: 1px solid $border;
@@ -10,7 +11,7 @@
 	border-radius: 5px;
 	margin: 15px 0px 0px;
 	& .flex2 {
-		width: calc(100% - 50px);
+		width: calc(100% - 150px);
 		align-items: flex-start;
 		& > .textarea_block, 
 		& > .select_block, 
@@ -32,6 +33,14 @@
 				background: none;
 			}
 		}
+	}
+	& .actions {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
+		gap: 0px;
+		border: 1px solid $border;
+		border-radius: 5px;
 	}
 	& .btn {
 		background-size: 60%;

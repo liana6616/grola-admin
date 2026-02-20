@@ -4,8 +4,49 @@ $(document).ready(function() {
   let currentTooltipElement = null;
   const tooltip = $('#tooltip');
   
+  // Проверка, находится ли элемент внутри absolute-контейнера
+  function isInAbsoluteContainer(element) {
+    const $element = $(element);
+    
+    // Проверяем сам элемент и его родителей на position: absolute
+    if ($element.css('position') === 'absolute') {
+      return true;
+    }
+    
+    // Проверяем родителей до .table_container
+    return $element.parents().filter(function() {
+      return $(this).css('position') === 'absolute' && 
+             !$(this).hasClass('custom-tooltip'); // игнорируем сам тултип
+    }).length > 0;
+  }
+  
+  // Проверка, нужно ли отключить тултип
+  function shouldDisableTooltip(element) {
+    // Отключаем на мобильном разрешении (< 1600px) для элементов в absolute контейнерах
+    if (window.innerWidth < 1600) {
+      if (isInAbsoluteContainer(element)) {
+        return true;
+      }
+      
+      // Также отключаем для specific классов, которые позиционированы абсолютно
+        const $element = $(element);
+      if ($element.closest('.handler').length || 
+          $element.closest('.actions').length ||
+          $element.hasClass('handler') || 
+          $element.hasClass('actions')) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
   // Позиционирование подсказки
   function positionTooltip(element, tooltipText) {
+    // Если тултип должен быть отключен — не позиционируем
+    if (shouldDisableTooltip(element)) {
+      return;
+    }
+    
     const $element = $(element);
     const elementRect = $element[0].getBoundingClientRect();
     const tooltipWidth = tooltip.outerWidth();
@@ -98,6 +139,11 @@ $(document).ready(function() {
   
   // Показ подсказки
   function showTooltip(element) {
+    // Проверяем, нужно ли отключить тултип
+    if (shouldDisableTooltip(element)) {
+      return;
+    }
+    
     const tooltipText = $(element).data('tooltip');
     if (!tooltipText) return;
     
@@ -140,7 +186,7 @@ $(document).ready(function() {
       hideTooltip();
     })
     .on('mousemove', function(e) {
-      if (isTooltipVisible) {
+      if (isTooltipVisible && !shouldDisableTooltip(this)) {
         positionTooltip(this, $(this).data('tooltip'));
       }
     });
@@ -148,10 +194,22 @@ $(document).ready(function() {
   // Обновляем позицию при изменении размера окна
   $(window).on('resize', function() {
     if (isTooltipVisible && currentTooltipElement) {
-      const tooltipText = $(currentTooltipElement).data('tooltip');
-      if (tooltipText) {
-        positionTooltip(currentTooltipElement, tooltipText);
+      // При ресайзе проверяем, не нужно ли отключить тултип
+      if (shouldDisableTooltip(currentTooltipElement)) {
+        hideTooltip();
+      } else {
+        const tooltipText = $(currentTooltipElement).data('tooltip');
+        if (tooltipText) {
+          positionTooltip(currentTooltipElement, tooltipText);
+        }
       }
+    }
+  });
+  
+  // Дополнительно: отключаем тултипы при скролле на мобильном разрешении
+  $(window).on('scroll', function() {
+    if (window.innerWidth < 1600 && isTooltipVisible) {
+      hideTooltip();
     }
   });
 });

@@ -58,6 +58,9 @@
 				}
 				&.arrow {
 					background: $gray7;
+					& span {
+						display: none;
+					}
 					&.arrow_right {
 						&:before {
 							content: '';

@@ -6,6 +6,12 @@ use app\Controller;
 
 class Errors extends Controller
 {
+    /**
+     * Детали ошибки для технической информации (логи, отладка)
+     * @var string|null
+     */
+    public ?string $error_details = null; // <--- Добавьте это объявление
+
     protected function handle(...$parameters)
     {
         // Получаем код ошибки из параметров или из URL
@@ -24,72 +30,190 @@ class Errors extends Controller
         exit;
     }
 
+    /**
+     * Показать страницу ошибки
+     * 
+     * @param int $code Код ошибки
+     * @param string|null $message Сообщение об ошибке
+     * @param string|null $title Заголовок ошибки
+     */
     public function showError($code = 404, $message = null, $title = null)
     {
-        // Устанавливаем HTTP заголовок
-        $this->setHttpHeader($code);
-        
-        $this->view->error_code = $code;
-        $this->view->error_title = $title ?: $this->getStatusText($code);
-        $this->view->error_message = $message;
-        $this->view->display(ROOT . '/private/views/errors/general.php');
+        $this->showErrorPage($code, $message, $title);
     }
 
-    // Или для конкретных ошибок
-    public function show404()
-    {
-        $this->setHttpHeader(404);
-        $this->view->display(ROOT . '/private/views/errors/404.php');
-    }
-
-    public function show403($adminInfo = null)
-    {
-        $this->setHttpHeader(403);
-        $this->view->admin_info = $adminInfo;
-        $this->view->display(ROOT . '/private/views/errors/403.php');
-    }
-
-    public function show500($technicalInfo = null)
-    {
-        $this->setHttpHeader(500);
-        $this->view->technical_info = $technicalInfo;
-        $this->view->display(ROOT . '/private/views/errors/500.php');
-    }
-
-    public function show401()
-    {
-        $this->setHttpHeader(401);
-        $this->view->display(ROOT . '/private/views/errors/401.php');
-    }
-    
     /**
-     * Устанавливает HTTP заголовок для ошибки
+     * Показать страницу ошибки
+     * 
+     * @param int $code Код ошибки
+     * @param string|null $message Сообщение об ошибке
+     * @param string|null $title Заголовок ошибки
      */
-    private function setHttpHeader($code)
+    public function showErrorPage($code = 404, $message = null, $title = null)
     {
-        $statusTexts = [
-            401 => 'Unauthorized',
-            403 => 'Forbidden',
-            404 => 'Not Found',
-            500 => 'Internal Server Error',
-        ];
+        try {
+            // Устанавливаем заголовок по умолчанию
+            if ($title === null) {
+                $statusTexts = [
+                    400 => 'Некорректный запрос',
+                    401 => 'Требуется авторизация',
+                    403 => 'Доступ запрещен',
+                    404 => 'Страница не найдена',
+                    405 => 'Метод не разрешен',
+                    500 => 'Внутренняя ошибка сервера',
+                    503 => 'Сервис временно недоступен',
+                ];
+                
+                $title = $statusTexts[$code] ?? 'Ошибка';
+            }
+
+            // Устанавливаем сообщение по умолчанию
+            if ($message === null) {
+                $defaultMessages = [
+                    400 => 'Ваш запрос содержит синтаксическую ошибку.',
+                    401 => 'Для доступа к этой странице необходимо авторизоваться.',
+                    403 => 'У вас нет прав для доступа к этой странице.',
+                    404 => 'Запрошенная страница не существует или была удалена.',
+                    405 => 'Используемый метод запроса не поддерживается.',
+                    500 => 'На сервере произошла внутренняя ошибка.',
+                    503 => 'Сервис временно недоступен. Пожалуйста, попробуйте позже.',
+                ];
+                
+                $message = $defaultMessages[$code] ?? 'Произошла непредвиденная ошибка.';
+            }
+            
+            // Устанавливаем HTTP код ответа
+            http_response_code($code);
+            
+            // Если это AJAX запрос, отправляем JSON
+            if ($this->isAjax()) {
+                $this->sendJsonError($message ?: $title, $code);
+            }
+            
+            // Передаем переменные в шаблон (унифицированные названия)
+            $this->view->error_code = $code;
+            $this->view->error_title = $title;
+            $this->view->error_message = $message;
+            
+            // Добавляем решение для некоторых ошибок
+            $solutions = [
+                400 => 'Проверьте правильность введенных данных и попробуйте снова.',
+                401 => 'Войдите в систему или обратитесь к администратору.',
+                403 => 'Если вы считаете, что это ошибка, обратитесь к администратору.',
+                404 => 'Проверьте правильность URL или перейдите на главную страницу.',
+                500 => 'Попробуйте обновить страницу или зайдите позже.',
+            ];
+            
+            if (isset($solutions[$code])) {
+                $this->view->error_solution = $solutions[$code];
+            }
+            
+            // Если есть детали ошибки (только для админов)
+            if (isset($this->error_details)) {
+                $this->view->error_details = $this->error_details;
+            }
+            
+            // Отображаем общий шаблон ошибки
+            $templateFile = ROOT . '/private/views/errors.php';
+            if (!file_exists($templateFile)) {
+                throw new \Exception('Error template not found');
+            }
+            
+            $this->view->display($templateFile);
+            
+        } catch (\Exception $e) {
+            // Если не удалось показать страницу ошибки, показываем простой текст
+            http_response_code($code);
+            
+            // Логируем ошибку
+            error_log('Error in showErrorPage: ' . $e->getMessage());
+            
+            // Показываем простую страницу ошибки
+            echo "<!DOCTYPE html>
+            <html>
+            <head>
+                <title>{$code} - {$title}</title>
+                <style>
+                    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+                    .error-container { max-width: 600px; margin: 50px auto; text-align: center; }
+                    .error-code { font-size: 72px; color: #dc3545; margin-bottom: 20px; }
+                    .error-title { font-size: 24px; margin-bottom: 20px; }
+                    .error-message { color: #666; margin-bottom: 30px; }
+                    .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; }
+                </style>
+            </head>
+            <body>
+                <div class='error-container'>
+                    <div class='error-code'>{$code}</div>
+                    <h1 class='error-title'>" . htmlspecialchars($title) . "</h1>
+                    <p class='error-message'>" . htmlspecialchars($message) . "</p>
+                    <a href='/' class='btn'>На главную</a>
+                </div>
+            </body>
+            </html>";
+        }
         
-        $text = $statusTexts[$code] ?? 'Error';
-        header("HTTP/1.0 {$code} {$text}");
+        // Прерываем выполнение
+        exit;
     }
-    
+
     /**
-     * Возвращает текст статуса по коду
+     * Показать ошибку 404 (для обратной совместимости)
+     * 
+     * @param string|null $message Сообщение об ошибке
+     * @param string|null $title Заголовок ошибки
      */
-    private function getStatusText($code)
+    public function show404($message = null, $title = null)
     {
-        $statusTexts = [
-            401 => 'Требуется авторизация',
-            403 => 'Доступ запрещен',
-            404 => 'Страница не найдена',
-            500 => 'Внутренняя ошибка сервера',
-        ];
+        $this->showErrorPage(404, $message, $title);
+    }
+
+    /**
+     * Показать ошибку 403 (для обратной совместимости)
+     * 
+     * @param string|null $message Сообщение об ошибке
+     * @param string|null $title Заголовок ошибки
+     */
+    public function show403($message = null, $title = null)
+    {
+        $this->showErrorPage(403, $message, $title);
+    }
+
+    /**
+     * Показать ошибку 500 (для обратной совместимости)
+     * 
+     * @param string|null $message Сообщение об ошибке
+     * @param string|null $title Заголовок ошибки
+     */
+    public function show500($message = null, $title = null)
+    {
+        // Для 500 ошибки можно добавить техническую информацию
+        if ($message === null && isset($this->technical_info)) {
+            $message = $this->technical_info;
+        }
         
-        return $statusTexts[$code] ?? 'Ошибка';
+        $this->showErrorPage(500, $message, $title);
+    }
+
+    /**
+     * Показать ошибку 400 (для обратной совместимости)
+     * 
+     * @param string|null $message Сообщение об ошибке
+     * @param string|null $title Заголовок ошибки
+     */
+    public function show400($message = null, $title = null)
+    {
+        $this->showErrorPage(400, $message, $title);
+    }
+
+    /**
+     * Показать ошибку 401 (для обратной совместимости)
+     * 
+     * @param string|null $message Сообщение об ошибке
+     * @param string|null $title Заголовок ошибки
+     */
+    public function show401($message = null, $title = null)
+    {
+        $this->showErrorPage(401, $message, $title);
     }
 }

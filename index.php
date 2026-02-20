@@ -83,11 +83,11 @@ try {
     
     // Логируем для отладки
     if ($debugMode && defined('CURRENT_CITY')) {
-        error_log("Current city after detection: " . CURRENT_CITY);
-        error_log("Request URI after city detection: " . ($_SERVER['REQUEST_URI'] ?? '/'));
+        //error_log("Current city after detection: " . CURRENT_CITY);
+        //error_log("Request URI after city detection: " . ($_SERVER['REQUEST_URI'] ?? '/'));
     }
 } catch (\Exception $e) {
-    error_log("City detection error: " . $e->getMessage());
+    //error_log("City detection error: " . $e->getMessage());
     define('CURRENT_CITY', 'default');
 }
 // --- КОНЕЦ Middleware обработки ---
@@ -138,13 +138,31 @@ date_default_timezone_set('Europe/Moscow'); // Настроить под ваш 
 
 
 // Функция для безопасного показа ошибки 500
-// Функция для безопасного показа ошибки 500
 function show500Page($debugMode, $technicalInfo = null) {
     try {
-        // Пробуем использовать контроллер ошибок
-        $controller = new \app\Controllers\Errors();
-        $controller->show500($technicalInfo);
-        exit(1);
+        // Проверяем существование класса и метода
+        if (class_exists('\app\Controllers\Errors')) {
+            $controller = new \app\Controllers\Errors();
+            
+            // Передаем техническую информацию
+            if ($technicalInfo) {
+                $controller->error_details = $technicalInfo;
+            }
+            
+            // Проверяем, существует ли метод и является ли он public
+            if (method_exists($controller, 'show500') && is_callable([$controller, 'show500'])) {
+                if ($debugMode && $technicalInfo) {
+                    $controller->show500($technicalInfo, 'Внутренняя ошибка сервера');
+                } else {
+                    $controller->show500();
+                }
+                exit(1);
+            }
+        }
+        
+        // Если не удалось использовать контроллер, показываем стандартную страницу
+        throw new Exception('Error controller not available');
+        
     } catch (Exception $e) {
         // Если контроллер не работает, делаем редирект на главную
         if (!$debugMode) {
@@ -154,11 +172,44 @@ function show500Page($debugMode, $technicalInfo = null) {
         } else {
             // В debug режиме показываем информацию
             header("HTTP/1.0 500 Internal Server Error");
-            echo "<div style='background:#f8d7da;color:#721c24;padding:10px;margin:10px;border:1px solid #f5c6cb;border-radius:4px;'>
-                    <strong>500 Internal Server Error</strong><br>
-                    <small>Controller error: " . htmlspecialchars($e->getMessage()) . "</small><br>
-                    <small>Original error: " . ($technicalInfo ? htmlspecialchars(substr($technicalInfo, 0, 500)) : '') . "</small>
-                  </div>";
+            
+            // Пытаемся использовать шаблон ошибки напрямую
+            $templateFile = ROOT . '/private/views/errors/general.php';
+            if (file_exists($templateFile)) {
+                try {
+                    $view = new \app\View();
+                    $view->error_code = 500;
+                    $view->error_title = 'Внутренняя ошибка сервера';
+                    $view->error_message = $technicalInfo ?: 'Произошла внутренняя ошибка сервера';
+                    $view->error_details = $technicalInfo;
+                    $view->display($templateFile);
+                    exit;
+                } catch (Exception $viewException) {
+                    // Если шаблон не работает, показываем простой текст
+                }
+            }
+            
+            // Запасной вариант - простой текст
+            echo "<!DOCTYPE html>
+            <html>
+            <head>
+                <title>500 Internal Server Error</title>
+                <style>
+                    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+                    .error-container { max-width: 600px; margin: 50px auto; text-align: center; }
+                    .error-code { font-size: 72px; color: #dc3545; margin-bottom: 20px; }
+                    .error-message { color: #666; margin-bottom: 30px; }
+                    .trace { background: #f1f1f1; padding: 10px; margin-top: 10px; overflow: auto; text-align: left; }
+                </style>
+            </head>
+            <body>
+                <div class='error-container'>
+                    <div class='error-code'>500</div>
+                    <h1>Внутренняя ошибка сервера</h1>
+                    <p class='error-message'>" . ($technicalInfo ?: 'Произошла внутренняя ошибка сервера') . "</p>
+                </div>
+            </body>
+            </html>";
         }
         exit(1);
     }

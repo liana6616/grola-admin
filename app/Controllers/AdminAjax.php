@@ -5,6 +5,7 @@ namespace app\Controllers;
 use app\Controller;
 use app\Models\Admins;
 use app\Models\Catalog;
+use app\Models\PagePaymentServices;
 use app\Form;
 use app\Models\Pages;
 use app\View;
@@ -29,6 +30,15 @@ class AdminAjax extends Controller
             // ДОПОЛНИТЕЛЬНАЯ ПРОВЕРКА: разрешаем доступ к adminLogin без IP-ограничения
             if ($action !== 'adminLogin' && !Admins::isPermittedIP()) {
                 return $this->sendJsonError('Доступ запрещен: IP-адрес не разрешен', 403);
+            }
+
+            // Для действий, требующих авторизации, вызываем checkLogged
+            if ($action !== 'adminLogin') {
+                // checkLogged уже обновляет date_visit
+                $admin = Admins::checkLogged();
+                if (!$admin) {
+                    return $this->sendJsonError('Требуется авторизация', 401);
+                }
             }
 
             // Проверяем, существует ли метод для действия
@@ -339,6 +349,28 @@ class AdminAjax extends Controller
         } catch (\Exception $e) {
             error_log('Ошибка в catalogPriceAdd: ' . $e->getMessage());
             $this->sendJsonError('Ошибка при добавлении цены', 500);
+        }
+    }
+
+    // Добавление службы доставки на странице "Оплата и доставка"
+    protected function pagePaymentServiceAdd()
+    {
+        try {
+            $index = (int)($_POST['index'] ?? 0);
+            
+            // Получаем HTML через статический метод PagePaymentServices
+            $html = PagePaymentServices::itemCard(0, $index);
+            
+            // Отправляем HTML как JSON
+            $this->sendJson([
+                'success' => true,
+                'html' => $html,
+                'index' => $index
+            ]);
+            
+        } catch (\Exception $e) {
+            error_log('Ошибка в PagePaymentServices: ' . $e->getMessage());
+            $this->sendJsonError('Ошибка при добавлении службы доставки', 500);
         }
     }
 }

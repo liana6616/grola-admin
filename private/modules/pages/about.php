@@ -103,14 +103,24 @@ if (isset($_GET['edit'])):
     <fieldset class="input_block">
         <legend>Блок с изображением и текстом</legend>
         
-        <?= Form::image(
-            'Изображение с текстом (1380x305)',
-            'about_image3',
-            $about,
-            false,
-            false,
-            'image3'
-        ) ?>
+        <div class="flex2">
+            <?= Form::image(
+                'Изображение с текстом (1380x305)',
+                'about_image3',
+                $about,
+                false,
+                false,
+                'image3'
+            ) ?>
+            <?= Form::image(
+                'Изображение с текстом мобильная версия (700x450)',
+                'about_image4',
+                $about,
+                false,
+                false,
+                'image4'
+            ) ?>
+        </div>
 
         <?= Form::textarea(
             'Текст на изображении',
@@ -119,6 +129,13 @@ if (isset($_GET['edit'])):
             80,
             ''
         ) ?>
+    </fieldset>
+
+    <fieldset class="input_block">
+        <legend>Баннер</legend>
+        
+        <?= Form::textarea('Текст', 'info_text', $about->info_text ?? '', '60') ?>
+        <?= Form::image('Изображение (1380x260)', 'info_image', $about, false, false, 'info_image') ?>
     </fieldset>
 
 <?php
@@ -145,6 +162,7 @@ elseif (isset($_POST['edit'])):
     $about->item_text = trim($_POST['about_item_text'] ?? '');
     $about->item_text2 = trim($_POST['about_item_text2'] ?? '');
     $about->image3_text = trim($_POST['about_image3_text'] ?? '');
+    $about->info_text = trim($_POST['info_text'] ?? '');
     
     // Системные поля
     $about->edit_date = date("Y-m-d H:i:s");
@@ -204,6 +222,32 @@ elseif (isset($_POST['edit'])):
         );
     }
 
+    if (!empty($_FILES['about_image4']['name'][0])) {
+        FileUpload::uploadImage(
+            'about_image4',
+            get_class($about),
+            'image4',
+            $about->id,
+            700,
+            450,
+            $uploadPath,
+            0
+        );
+    }
+
+    if (!empty($_FILES['info_image']['name'][0])) {
+        FileUpload::uploadImage(
+            'info_image',
+            get_class($about),
+            'info_image',
+            $about->id,
+            1380,
+            260,
+            $uploadPath,
+            0
+        );
+    }
+
     // Если нажата кнопка "Опубликовать"
     if (!empty($_POST['publish']) && $useDrafts) {
         
@@ -219,7 +263,7 @@ elseif (isset($_POST['edit'])):
         }
         
         // Копируем данные из черновика в чистовик
-        $published = PageAbout::copyData($about, $published, ['id', 'is_draft', 'original_id','image3','image2','image']);
+        $published = PageAbout::copyData($about, $published, ['id', 'is_draft', 'original_id','image3','image2','image', 'image4','info_image']);
         
         $published->is_draft = 0;
         $published->original_id = 0;
@@ -227,7 +271,7 @@ elseif (isset($_POST['edit'])):
         $published->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
         
         // Копируем изображения
-        $imageFields = ['image', 'image2', 'image3'];
+        $imageFields = ['image', 'image2', 'image3', 'image4','info_image'];
         foreach ($imageFields as $field) {
             // Удаляем старые изображения чистовика
             if (!empty($published->$field) && file_exists(ROOT . $published->$field)) {

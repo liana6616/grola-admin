@@ -63,6 +63,8 @@ if (!file_exists(ROOT.$configPath)):
             $title = 'Копирование товара';
             $action = 'copy';
         }
+
+        $id0 = $id;
         
         if(!empty($id)) {
             $obj = Catalog::findById($id);
@@ -286,15 +288,17 @@ if (!file_exists(ROOT.$configPath)):
                             </div>
 
                             <?php if ($config['fields']['image_preview']['enabled'] ?? false): ?>
-                                <?= Form::image(
-                                    $config['fields']['image_preview']['title'] . ' (' .  
-                                    ($config['fields']['image_preview']['width'] ?? 300) . 'х' .  
-                                    ($config['fields']['image_preview']['height'] ?? 300) . ')',  
-                                    'image_preview',  
-                                    $obj,  
-                                    '',  
-                                    0 
-                                ) ?>
+                                <?php 
+                                $title = $config['fields']['image_preview']['title'];
+                                $width = $config['fields']['image_preview']['width'] ?? 300;
+                                $height = $config['fields']['image_preview']['height'] ?? 300;
+                                
+                                // Добавляем размеры только если ширина не равна 0
+                                if ($width != 0 && $height != 0) {
+                                    $title .= " ($width" . "х" . "$height)";
+                                }
+                                ?>
+                                <?= Form::image($title, 'image_preview', $obj, '', 0) ?>
                             <?php endif; ?>
 
                             <?php if ($config['fields']['textshort']['enabled'] ?? false): ?>
@@ -319,7 +323,7 @@ if (!file_exists(ROOT.$configPath)):
                             
                             <div id="prices-container">
                                 <?php
-                                $prices = Catalog::getPrices($id ?: 0);
+                                $prices = Catalog::getPrices($id0 ?: 0);
                                 $priceIndex = 0;
                                 
                                 if (!empty($prices)):  
@@ -477,7 +481,7 @@ if (!file_exists(ROOT.$configPath)):
                                 ) ?>
                             <?php endif; ?>
                             
-                            <?= Form::gallery($config['gallery']['title'] ?? 'Фотогалерея товара', 'gallery', Gallery::findGallery('catalog',$obj->id)) ?>
+                            <?= Form::gallery($config['gallery']['title'] ?? 'Фотогалерея товара', 'gallery', Gallery::findGallery('product',$obj->id)) ?>
                         </div>
                         <?php endif; ?>
 
@@ -642,6 +646,9 @@ if (!file_exists(ROOT.$configPath)):
             Catalog::saveParams($obj->id, $_POST['params']);
         }
 
+        // Стоимость для сортировки
+        $obj->price_sorts = $obj->price;
+
         if ($config['prices']['enabled'] && isset($_POST['prices'])) {
             $oldPrices = CatalogPrices::where("WHERE catalog_id = ?", [$obj->id]);
             foreach ($oldPrices as $price) {
@@ -659,9 +666,13 @@ if (!file_exists(ROOT.$configPath)):
                     $price->edit_date = date("Y-m-d H:i:s");
                     $price->edit_admin_id = $_SESSION['admin']['id'] ?? 0;
                     $price->save();
+
+                    if($obj->price_sorts == 0 || $obj->price_sorts > $price->price) $obj->price_sorts = $price->price;
                 }
             }
         }
+        $obj->save();
+
 
         if ($config['finished_products']['enabled'] && isset($_POST['finished_products'])) {
             Catalog::saveFinishedProducts($obj->id, $_POST['finished_products']);
@@ -684,7 +695,7 @@ if (!file_exists(ROOT.$configPath)):
         }
 
         FileUpload::updateGallery();
-        FileUpload::uploadGallery('gallery', 'catalog', $obj->id,  
+        FileUpload::uploadGallery('gallery', 'product', $obj->id,  
             $config['gallery']['image_width'] ?? 800,  
             $config['gallery']['image_height'] ?? 600,  
             '/public/src/images/catalog/',  
@@ -900,7 +911,7 @@ if (!file_exists(ROOT.$configPath)):
             $link->delete();
         }
         
-        Gallery::delAll('catalog', $obj->id);
+        Gallery::delAll('product', $obj->id);
         Files::delAll('catalog', $obj->id);
         
         $obj->delete();
@@ -928,7 +939,7 @@ if (!file_exists(ROOT.$configPath)):
                     $link->delete();
                 }
                 
-                Gallery::delAll('catalog', $published->id);
+                Gallery::delAll('product', $published->id);
                 Files::delAll('catalog', $published->id);
                 
                 $published->delete();
@@ -1045,9 +1056,6 @@ if (!file_exists(ROOT.$configPath)):
                                 <div class="name">
                                     <?= $obj->name ?>
                                 </div>
-                                <?php if (!empty($obj->textshort) && ($config['fields']['textshort']['enabled'] ?? false)): ?>
-                                    <div class="textshort"><?= mb_substr($obj->textshort, 0, 100) . (mb_strlen($obj->textshort) > 100 ? '...' : '') ?></div>
-                                <?php endif; ?>
 
                                 <?php if ($useDrafts && $has_changes): ?>
                                     <div class="comment alarm">Есть неопубликованные изменения</div>

@@ -71,6 +71,10 @@ return [
                 'enabled' => true,
                 'title' => 'Реквизиты'
             ],
+            'requisites2' => [
+                'enabled' => true,
+                'title' => 'Реквизиты. Дополнительное поле'
+            ],
             'file' => [
                 'enabled' => true,
                 'title' => 'Файл с реквизитами'

@@ -50,3 +50,15 @@
 
 [2026-02-16 13:57:16] Exception: Class "app\Controllers\Category" not found in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/CatalogController.php on line 44
 
+[2026-02-19 16:02:08] Exception: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/banners.php on line 329
+
+[2026-02-19 16:12:12] Exception: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/banners.php on line 329
+
+[2026-02-19 16:12:16] Exception: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/banners.php on line 329
+
+[2026-02-19 16:12:20] Exception: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/banners.php on line 329
+
+[2026-02-19 16:59:54] Exception: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/banners.php on line 329
+
+[2026-02-19 18:06:08] Exception: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/a0644240/domains/grola-admin.potok4.ru/public_html/private/modules/banners.php on line 329
+

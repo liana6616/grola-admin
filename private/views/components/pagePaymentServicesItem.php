@@ -29,6 +29,8 @@
         ) ?>
         
     </div>
-    <div class="btn icon_show pagePaymentServiceShow<?= $item->show?' active':'' ?> tooltip-trigger" data-tooltip="Показывать на сайте"></div>
-    <div class="btn icon_delete pagePaymentServiceRemove tooltip-trigger" data-tooltip="Удалить"></div>
+    <div class="actions">
+        <div class="btn icon_show pagePaymentServiceShow<?= $item->show?' active':'' ?> tooltip-trigger" data-tooltip="Показывать на сайте"></div>
+        <div class="btn icon_delete pagePaymentServiceRemove tooltip-trigger" data-tooltip="Удалить"></div>
+    </div>
 </div>

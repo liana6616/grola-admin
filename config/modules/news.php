@@ -51,7 +51,7 @@ return [
             'title' => 'Дата'
         ],
         'section_id' => [
-            'enabled' => true,
+            'enabled' => false,
             'title' => 'Категория'
         ],
         'preview' => [
@@ -143,7 +143,7 @@ return [
         ],
         'textshort' => true,
         'section' => [
-            'enabled' => true,
+            'enabled' => false,
             'title' => 'Раздел'
         ],
         'edit_date' => [

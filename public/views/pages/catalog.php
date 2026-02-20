@@ -1,5 +1,8 @@
 <?= $this->include('layouts/header'); ?>
+
 <?php use app\Helpers; ?> 
+<?php use app\Models\Categories; ?>
+
 <main>
   <div class="catalog">
     <ul class="breadcrumps__wrapper">
@@ -30,12 +33,22 @@
     <? endif; ?>
 
 
-    <? if(!empty($this->childs) && !$this->is_mainCategories): ?>
+    <? if(!empty($this->childs) && isset($this->currentCategory)): ?>
         <div class="catalog__wrapper-category">
-            <a href="?subcat=0" class="catalog__button-category filter <?= ($this->selectedSubcat == 0) ? 'active' : '' ?>">Все категории</a>
+            <!-- Ссылка "Все категории" ведет на родительскую категорию -->
+            <?php 
+            $parentUrl = Categories::getUrl($this->currentCategory->id);
+            ?>
+            <a href="/catalog<?= $parentUrl ?>" class="catalog__button-category filter <?= ($this->selectedSubcat == 0) ? 'active' : '' ?>">
+                Все категории
+            </a>
             
             <? foreach($this->childs AS $item): ?>
-                <a href="?subcat=<?= $item->id ?>" class="catalog__button-category filter <?= ($this->selectedSubcat == $item->id) ? 'active' : '' ?>">
+                <?php 
+                // Получаем полный URL подкатегории
+                $subcatFullUrl = Categories::getUrl($item->id);
+                ?>
+                <a href="/catalog<?= $subcatFullUrl ?>" class="catalog__button-category filter <?= ($this->selectedSubcat == $item->id) ? 'active' : '' ?>">
                     <?= $item->name ?>
                 </a>
             <? endforeach; ?>
@@ -103,8 +116,21 @@
             <ul class="catalog-card__list">
                 <? foreach($this->catalog AS $item): ?>
                     <? if($item->parent == 0): ?>
-                        <li class="catalog-card__item"  data-category-id="<?= $item->category_id ?>">
-                            <a href="/catalog/<?= $this->childs[0]->url ?? '' ?>/<?= $item->url ?>">   
+                        <?php 
+                        // Получаем категорию товара
+                        $productCategory = \app\Models\Categories::findById($item->category_id);
+                        if ($productCategory) {
+                            // Получаем полный путь к категории через существующий метод getUrl
+                            $categoryPath = \app\Models\Categories::getUrl($productCategory->id);
+                            // Формируем ссылку на товар
+                            $productUrl = '/catalog' . $categoryPath . '/' . $item->url;
+                        } else {
+                            // Если категория не найдена, используем старый формат (для обратной совместимости)
+                            $productUrl = '/catalog/' . ($this->childs[0]->url ?? '') . '/' . $item->url;
+                        }
+                        ?>
+                        <li class="catalog-card__item" data-category-id="<?= $item->category_id ?>">
+                            <a href="<?= $productUrl ?>">   
                                 <?php 
                                 if($item->action == 1): ?>
                                     <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
@@ -113,21 +139,21 @@
                                 <?php endif; ?>  
 
                                 <div class="catalog-card__wrapper-img">
-                                    <img class="catalog-card__img" src="<?= $item->image_preview ?>">
+                                    <img class="catalog-card__img" src="<?= $item->image_preview ?>" alt="<?= $item->name ?>">
                                 </div>
 
                                 <h3 class="catalog-card__title title-small"><?= $item->name ?></h3>
 
                                 <div class="catalog-card__wrapper-parameters">
                                     <span class="catalog-card__name">Габаритные размеры:</span>
-                                    <span class="catalog-card__parameters">500х600х400 мм.</span>
+                                    <span class="catalog-card__parameters"><?= $item->dimensions ?? '500х600х400 мм' ?></span>
                                 </div>
                                 <div class="catalog-card__wrapper-parameters">
                                     <span class="catalog-card__name">Грузоподъемность:</span>
-                                    <span class="catalog-card__parameters">400 кг.</span>
+                                    <span class="catalog-card__parameters"><?= $item->load_capacity ?? '400 кг' ?></span>
                                 </div>
 
-                                <span class="catalog-card__sum">от <?= $item->price ?> ₽</span>
+                                <span class="catalog-card__sum">от <?= number_format($item->price, 0, '', ' ') ?> ₽</span>
                             </a>
                         </li>
                     <? endif; ?>

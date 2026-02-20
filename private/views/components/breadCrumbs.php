@@ -12,8 +12,8 @@
 				<a href="<?= $bc['url'] ?>" class="path" itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
 					<span itemprop="item"><span itemprop="name"><?= strip_tags($bc['name']) ?></span></span></a>
 			<? else : ?>
-				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-					<span itemprop="item" class="path" data-href="<?= $bc['url'] ?>"><span itemprop="name"><?= strip_tags($bc['name']) ?></span></span></span>
+				<span class="path" itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+					<span itemprop="item" data-href="<?= $bc['url'] ?>"><span itemprop="name"><?= strip_tags($bc['name']) ?></span></span></span>
 			<? endif; ?>
 
 	<? endforeach; ?>

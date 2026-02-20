@@ -213,16 +213,20 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])):
 
     // Если нажата кнопка "Опубликовать"
     if (!empty($_POST['publish']) && isset($useDrafts) && $useDrafts) {
-        
+    
         // Находим или создаем чистовик
         if (!empty($wholesale->original_id)) {
             $wholesale_published = PageWholesale::findById($wholesale->original_id);
         } else {
             $wholesale_published = PageWholesale::findById(2);
-            if (!$wholesale_published) {
-                $wholesale_published = new PageWholesale();
-                $wholesale_published->id = 2;
-            }
+        }
+        
+        // ВАЖНО: Проверяем, существует ли опубликованная запись
+        if (!$wholesale_published) {
+            $wholesale_published = new PageWholesale();
+            $wholesale_published->id = 2;
+            $wholesale_published->is_draft = 0;
+            $wholesale_published->original_id = 0;
         }
         
         // Копируем данные из черновика в чистовик

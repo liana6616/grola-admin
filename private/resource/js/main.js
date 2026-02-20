@@ -478,7 +478,11 @@ $('body').on('click', '.catalogPriceAdd', function () {
 // Удаление стоимости по весу в каталоге товаров
 $('body').on('click', '.catalogPriceRemove', function () {
     let block = $(this).closest('.catalogPriceCard');
-    block.remove();
+    modalConfirm('Подтвердить удаление?',function(){
+        block.remove();
+    },function(){});
+
+    return false;
 });
 
 
@@ -610,27 +614,6 @@ $('body').on('click', '.files_delete', function () {
 
 
 $(document).ready(function() {
-  // Создаем кнопку меню
-  const menuToggle = `
-    <div class="mobile-menu-toggle">
-      <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g opacity="0.7">
-          <path d="M0.75 13.3311H15.75" stroke="#202227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M0.75 7.04053H15.75" stroke="#202227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M0.75 0.75H15.75" stroke="#202227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-      </svg>
-    </div>
-  `;
-  
-  // Создаем оверлей для меню
-  const menuOverlay = `<div class="sidebar-overlay"></div>`;
-  
-  // Добавляем элементы на страницу
-  if($(window).width() < 768) {
-      $('body').append(menuOverlay);
-      $('.header').prepend(menuToggle);
-  }
   
   // Обработчик клика по кнопке меню
   $('.mobile-menu-toggle').on('click', function(e) {
@@ -647,7 +630,7 @@ $(document).ready(function() {
   });
   
   $(document).on('click', function(e) {
-    if ($(window).width() <= 767 && !$(e.target).closest('.sidebar').length && 
+    if ($(window).width() <= 960 && !$(e.target).closest('.sidebar').length && 
         !$(e.target).closest('.mobile-menu-toggle').length && $('.sidebar').hasClass('active')) {
       closeMobileMenu();
     }
@@ -666,45 +649,5 @@ $(document).ready(function() {
     $('.sidebar-overlay').removeClass('active');
     $('body, .content').css('overflow', 'auto');
     $('.content').css('height', 'auto');
-  }
-  
-  // Закрытие меню при клике на пункт меню (для мобильных)
-  $('.sidebar .nav_item, .sidebar .nav_item2').on('click', function() {
-    if ($(window).width() <= 767) {
-      //closeMobileMenu();
-    }
-  });
-  
-  // Адаптация таблиц для мобильных
-  function adaptTables() {
-    if ($(window).width() <= 767) {
-      $('.table_container').each(function() {
-        if (!$(this).hasClass('mobile-adapted')) {
-          $(this).addClass('mobile-adapted');
-          $(this).wrap('<div class="table-mobile-wrapper"></div>');
-        }
-      });
-    } else {
-      $('.table_container').removeClass('mobile-adapted');
-      $('.table-mobile-wrapper').contents().unwrap();
-    }
-  }
-  
-  // Инициализация при загрузке и изменении размера окна
-  adaptTables();
-  $(window).on('resize', adaptTables);
-  
-  // Улучшение UX для мобильных устройств
-  if ('ontouchstart' in window || navigator.maxTouchPoints) {
-    // Увеличиваем область клика для кнопок на мобильных
-    $('.btn, .nav_item, .nav_item2').css('min-height', '44px');
-    $('.btn, .nav_item, .nav_item2').css('min-width', '44px');
-    
-    // Добавляем активные состояния для касаний
-    $('.btn, .nav_item, .nav_item2').on('touchstart', function() {
-      $(this).addClass('touch-active');
-    }).on('touchend touchcancel', function() {
-      $(this).removeClass('touch-active');
-    });
   }
 });

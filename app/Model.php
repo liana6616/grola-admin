@@ -136,7 +136,7 @@ abstract class Model
         $db = Db::getInstance();
         $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE `url` = :url';
         
-        if ($show) {
+        if ($show && empty($_SESSION['admin']['id'])) {
             $sql .= ' AND `show` = 1';
         }
         
@@ -225,7 +225,7 @@ abstract class Model
         $sql = 'SELECT * FROM `' . static::TABLE . '` ' . $where;
 
         $data = $db->query($sql, $params, static::class);
-        
+
         if ($single) {
             return $data ? $data[0] : null;
         }

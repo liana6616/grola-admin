@@ -220,7 +220,7 @@ else :
                     <div class="pole modified_date"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                 <?php endif; ?>
                 
-                <div class="actions"></div>
+                <div class="pole actions"></div>
             </div>
             <div class="table_body<?= ($totalCount <= $perPage && empty($_GET['search']) && $config['list']['handler']) ? ' sortbox-items' : '' ?>">
             <?php foreach ($objs as $obj): ?>
@@ -232,18 +232,23 @@ else :
                     
                     <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
                         <div class="pole info">
+                            <div class="title"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
                             <div class="name"><?= $obj->name ?></div>
                         </div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['text']['enabled'] ?? false) && ($config['fields']['text']['enabled'] ?? false)): ?>
                         <div class="pole description">
+                            <div class="title"><?= $config['list']['text']['title'] ?? 'Описание' ?></div>
                             <div class="text"><?= $obj->text ?></div>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
-                        <div class="pole modified_date"><?= $obj->edit_date ?></div>
+                        <div class="pole modified_date">
+                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
+                            <?= $obj->edit_date ?>
+                        </div>
                     <?php endif; ?>
 
                     <? include ROOT.'/private/views/components/actions.php' ?>

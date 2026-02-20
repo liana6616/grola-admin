@@ -332,6 +332,7 @@ else :
                     
                     <?php if (($config['list']['image']['enabled'] ?? false) && ($config['fields']['image']['enabled'] ?? false)): ?>
                         <div class="pole image_preview">
+                            <div class="title"><?= $config['list']['image']['title'] ?? 'Фото' ?></div>
                             <?php if (!empty($obj->image)): ?>
                                 <img src="<?= $obj->image ?>" alt="<?= htmlspecialchars($obj->name, ENT_QUOTES, 'UTF-8') ?>" width="50" height="50">
                             <?php else: ?>
@@ -342,6 +343,7 @@ else :
                     
                     <?php if ($config['list']['info']['enabled'] ?? false): ?>
                         <div class="pole info">
+                            <div class="title"><?= $config['list']['name']['title'] ?? 'Отзыв' ?></div>
                             <? if(!empty($obj->date)): ?>
                                 <div class="date"><?= date('Y-m-d', strtotime($obj->date)) ?></div>
                             <? endif; ?>
@@ -354,12 +356,14 @@ else :
                     
                     <?php if ($config['list']['stars']['enabled'] ?? false): ?>
                         <div class="pole category">
+                            <div class="title"><?= $config['list']['stars']['title'] ?? 'Оценка' ?></div>
                             <?= str_repeat('★', $obj->stars) . str_repeat('☆', 5 - $obj->stars) ?>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
+                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

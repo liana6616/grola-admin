@@ -150,11 +150,11 @@ function win_auto(i) {
         
         const w = $mod.width();
         const w1 = w / 2 - w;
-        $mod.css('margin-left', w1);
+        //$mod.css('margin-left', w1);
         
         const h = $mod.height();
         const h1 = h / 2 - h;
-        $mod.css('margin-top', h1);
+        //$mod.css('margin-top', h1);
     }
 }
 

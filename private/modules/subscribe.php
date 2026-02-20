@@ -229,6 +229,7 @@ else :
                 <div class="table_row" data-id="<?= $obj->id ?>" data-class="<?= get_class($obj) ?>">
                     <?php if (($config['list']['email']['enabled'] ?? false) && ($config['fields']['email']['enabled'] ?? false)): ?>
                         <div class="pole info">
+                            <div class="title"><?= $config['list']['email']['title'] ?? 'E-mail' ?></div>
                             <div class="name"><?= htmlspecialchars($obj->email ?? '—', ENT_QUOTES, 'UTF-8') ?></div>
                             <?php if (($config['fields']['ip']['enabled'] ?? false) && !empty($obj->ip)): ?>
                                 <div class="comment">
@@ -240,12 +241,14 @@ else :
                     
                     <?php if ($config['list']['date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
+                            <div class="title"><?= $config['list']['date']['title'] ?? 'Дата подписки' ?></div>
                             <?= !empty($obj->date) ? date('d.m.Y H:i', strtotime($obj->date)) : '—' ?>
                         </div>
                     <?php endif; ?>
                     
                     <?php if ($config['list']['active']['enabled'] ?? false): ?>
                         <div class="pole category">
+                            <div class="title"><?= $config['list']['active']['title'] ?? 'Статус' ?></div>
                             <?php if ($obj->active == 1): ?>
                                 <span class="status_active">Активен</span>
                             <?php else: ?>
@@ -256,6 +259,7 @@ else :
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
+                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                             <?= !empty($obj->edit_date) ? date('d.m.Y H:i', strtotime($obj->edit_date)) : '—' ?>
                         </div>
                     <?php endif; ?>

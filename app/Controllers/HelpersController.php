@@ -184,6 +184,4 @@ class HelpersController extends Controller
             throw new \Exception("Ошибка очистки логов: " . $e->getMessage());
         }
     }
-
-    
 }

@@ -38,7 +38,7 @@
                     <a class='button open tooltip-trigger' 
                        data-tooltip='Открыть' 
                        rel='external' 
-                       href='<?= htmlspecialchars($object->filename, ENT_QUOTES, 'UTF-8') ?>'>
+                       href='<?= htmlspecialchars($object->file, ENT_QUOTES, 'UTF-8') ?>'>
                     </a>
                     <button type='button' 
                             class='button show files_show tooltip-trigger<?= !empty($object->show)?' active':'' ?>' data-tooltip='Показывать на сайте'>

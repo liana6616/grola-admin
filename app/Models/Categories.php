@@ -67,14 +67,31 @@ class Categories extends Model
      * Получает количество товаров в категории
      */
     public static function getProductsCount($categoryId) {
-        $result = Catalog::query(
-            "SELECT COUNT(*) as count 
-             FROM catalog 
-             WHERE `show` = 1 AND `is_draft` = 0 AND category_id = {$categoryId}"
-        );
-        
-        return !empty($result) ? (int)$result[0]->count : 0;
+    // Получаем ID текущей категории
+    $ids = [$categoryId];
+    
+    // Получаем все подкатегории
+    $childs = self::getChilds($categoryId);
+    foreach ($childs as $child) {
+        $ids[] = $child->id;
+        // Если есть под-подкатегории, тоже добавляем
+        $subChilds = self::getChilds($child->id);
+        foreach ($subChilds as $subChild) {
+            $ids[] = $subChild->id;
+        }
     }
+    
+    $idsStr = implode(',', array_unique($ids));
+    
+    $result = Catalog::query(
+        "SELECT COUNT(*) as count 
+         FROM catalog 
+         WHERE `show` = 1 AND `is_draft` = 0 
+         AND category_id IN ({$idsStr})"
+    );
+    
+    return !empty($result) ? (int)$result[0]->count : 0;
+}
 
     public static function check($parameters)
     {

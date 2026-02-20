@@ -4,6 +4,7 @@ namespace app;
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 use DomDocument;
 use app\Models\Pages;
 use app\Models\Settings;
@@ -183,7 +184,6 @@ class Helpers
         return $titles[$index] ?? $titles[0] ?? '';
     }
 
-
     /**
      * Отправка JWT запроса
      */
@@ -267,7 +267,11 @@ class Helpers
     public static function mail(string $to, string $subject, string $message, array $files = []): bool
     {
         try {
+            // Проверка и формирование отправителя
             $from = 'robot@' . ($_SERVER['SERVER_NAME'] ?? 'localhost');
+            if (!self::validateEmail($from)) {
+                $from = 'robot@localhost';
+            }
             
             if (empty($message)) {
                 $message = "<html><body></body></html>";
@@ -278,29 +282,46 @@ class Helpers
             $mail->setFrom($from);
             $mail->isHTML(true);
             $mail->Subject = $subject;
-            
-            // Настройки SMTP из конфигурации
-            $settings = Settings::get();
-            if ($settings && $settings->smtp_enabled ?? false) {
-                $mail->isSMTP();
-                $mail->Host = $settings->smtp_host ?? '';
-                $mail->SMTPAuth = $settings->smtp_auth ?? true;
-                $mail->Username = $settings->smtp_user ?? '';
-                $mail->Password = $settings->smtp_password ?? '';
-                $mail->SMTPSecure = $settings->smtp_secure ?? PHPMailer::ENCRYPTION_STARTTLS;
-                $mail->Port = $settings->smtp_port ?? 587;
-            }
-            
-            // Добавление получателей
-            $recipients = explode(',', $to);
-            foreach ($recipients as $recipient) {
-                $email = trim($recipient);
-                if (self::validateEmail($email)) {
-                    $mail->addAddress($email);
+
+            // Загрузка конфигурации SMTP
+            $configPath = ROOT . '/config/smtp.php';
+            if (file_exists($configPath)) {
+                $smtp = require $configPath;
+                
+                // Настройки SMTP из конфигурации
+                if (is_array($smtp) && !empty($smtp['enabled'])) {
+                    $mail->isSMTP();
+                    $mail->Host = $smtp['host'] ?? '';
+                    $mail->SMTPAuth = true;
+                    $mail->Username = $smtp['user'] ?? '';
+                    $mail->Password = $smtp['password'] ?? '';
+                    $mail->Port = $smtp['port'] ?? 587;
+                    
+                    // Выбор шифрования на основе порта
+                    $mail->SMTPSecure = ($mail->Port == 465) 
+                        ? PHPMailer::ENCRYPTION_SMTPS 
+                        : PHPMailer::ENCRYPTION_STARTTLS;
+                    
+                    // Опционально: отладка SMTP
+                    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
                 }
             }
             
-            if (count($mail->getToAddresses()) === 0) {
+            // Добавление получателей
+            $recipients = array_filter(array_map('trim', explode(',', $to)));
+            if (empty($recipients)) {
+                throw new Exception('No recipients specified');
+            }
+            
+            $validRecipients = 0;
+            foreach ($recipients as $email) {
+                if (self::validateEmail($email)) {
+                    $mail->addAddress($email);
+                    $validRecipients++;
+                }
+            }
+            
+            if ($validRecipients === 0) {
                 throw new Exception('No valid email addresses provided');
             }
             
@@ -308,11 +329,19 @@ class Helpers
             
             // Добавление вложений
             foreach ($files as $file) {
-                if (isset($file->file, $file->filename, $file->ext)) {
+                $fullPath = null;
+                $filename = null;
+                
+                if (is_object($file) && isset($file->file, $file->filename, $file->ext)) {
                     $fullPath = ROOT . $file->file;
-                    if (file_exists($fullPath)) {
-                        $mail->addAttachment($fullPath, $file->filename . '.' . $file->ext);
-                    }
+                    $filename = $file->filename . '.' . $file->ext;
+                } elseif (is_array($file) && isset($file['file'], $file['filename'], $file['ext'])) {
+                    $fullPath = ROOT . $file['file'];
+                    $filename = $file['filename'] . '.' . $file['ext'];
+                }
+                
+                if ($fullPath && file_exists($fullPath)) {
+                    $mail->addAttachment($fullPath, $filename);
                 }
             }
             
@@ -320,7 +349,7 @@ class Helpers
             
         } catch (Exception $e) {
             error_log('Mail error: ' . $e->getMessage());
-            self::logError('MAIL', $e->getMessage());
+            self::logError('MAIL', $e->getMessage() . ' | To: ' . $to . ' | Subject: ' . $subject);
             return false;
         }
     }
@@ -718,5 +747,28 @@ class Helpers
         
         unset($_SESSION['csrf_tokens'][$token]);
         return true;
+    }
+
+    /**
+     * Экранирует HTML-спецсимволы для безопасного вывода
+     * 
+     * @param string|null $string Входная строка
+     * @param int $flags Флаги для htmlspecialchars (по умолчанию ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401)
+     * @param string|null $encoding Кодировка (по умолчанию UTF-8)
+     * @param bool $doubleEncode Двойное кодирование
+     * @return string Экранированная строка
+     */
+    public static function escape($string, $flags = ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, $encoding = 'UTF-8', $doubleEncode = true)
+    {
+        if ($string === null) {
+            return '';
+        }
+        
+        // Если это не строка, преобразуем в строку
+        if (!is_string($string)) {
+            $string = (string)$string;
+        }
+        
+        return htmlspecialchars($string, $flags, $encoding, $doubleEncode);
     }
 }

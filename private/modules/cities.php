@@ -234,18 +234,21 @@ else :
                     
                     <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
                         <div class="pole info">
+                            <div class="title"><?= $config['list']['name']['title'] ?? 'Название' ?></div>
                             <div class="name"><?= $obj->name ?></div>
                         </div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['code']['enabled'] ?? false) && ($config['fields']['code']['enabled'] ?? false)): ?>
                         <div class="pole category">
+                            <div class="title"><?= $config['list']['code']['title'] ?? 'Код' ?></div>
                             <code><?= $obj->code ?></code>
                         </div>
                     <?php endif; ?>
                     
                     <?php if (($config['list']['default']['enabled'] ?? false) && ($config['fields']['default']['enabled'] ?? false)): ?>
                         <div class="pole category">
+                            <div class="title"><?= $config['list']['default']['title'] ?? 'По умолчанию' ?></div>
                             <?php if ($obj->default): ?>
                                 <span class="default_city">✓</span>
                             <?php else: ?>
@@ -256,6 +259,7 @@ else :
                     
                     <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
                         <div class="pole modified_date">
+                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
                             <?= $obj->edit_date ?>
                         </div>
                     <?php endif; ?>

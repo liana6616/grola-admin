@@ -4,6 +4,7 @@ namespace app\Controllers;
 use app\Controller;
 use app\Models\Catalog;
 use app\Models\Categories;
+use app\Models\Gallery;
 
 class CatalogCardController extends Controller {
     protected function handle(...$params) {
@@ -27,6 +28,8 @@ class CatalogCardController extends Controller {
             $view->category = Categories::findById($view->product->category_id);
         }
         
+        $view->gallery = Gallery::where("WHERE `show`=1 AND `type`='product' ORDER BY rate DESC, id ASC") ?: [];
+
         return $view->show('pages/catalog-card.php');
     }
 }

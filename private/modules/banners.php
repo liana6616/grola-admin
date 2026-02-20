@@ -100,7 +100,7 @@ if (isset($_GET['add']) || isset($_GET['edit']) || isset($_GET['copy'])) :
             <?php endif; ?>
             
             <?php if ($config['fields']['text']['enabled'] ?? false): ?>
-                <?= Form::textarea($config['fields']['text']['title'] ?? 'Описание', 'text', $obj->text, 100, 'maxlength="255"') ?>
+                <?= Form::textarea($config['fields']['text']['title'] ?? 'Описание', 'text', $obj->text, 100, '') ?>
             <?php endif; ?>
             
             <?php if ($config['fields']['price']['enabled'] ?? false): ?>
@@ -326,4 +326,45 @@ else :
                     
                     <?php if (($config['list']['image']['enabled'] ?? false) && ($config['fields']['image']['enabled'] ?? false)): ?>
                         <div class="pole image_big">
-                            <div class="title"><?= $config['list']['image']['title'] ?? 'Баннер' ?>
+                            <div class="title"><?= $config['list']['image']['title'] ?? 'Баннер' ?></div>
+                            <?php if (!empty($obj->image)): ?>
+                                <img src="<?= $obj->image ?>" alt="<?= htmlspecialchars($obj->name, ENT_QUOTES, 'UTF-8') ?>">
+                            <?php else: ?>
+                                <div class="no-image">Нет фото</div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <?php if (($config['list']['name']['enabled'] ?? false) && ($config['fields']['name']['enabled'] ?? false)): ?>
+                        <div class="pole info">
+                            <div class="title"><?= $config['list']['info']['title'] ?? 'Заголовок' ?></div>
+                            <div class="name"><?= $obj->name ?></div>
+                            <?php if ($config['fields']['text']['enabled'] ?? false && !empty($obj->text)): ?>
+                                <div class="comment"><?= mb_substr($obj->text, 0, 100) . (mb_strlen($obj->text) > 100 ? '...' : '') ?></div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <?php if ($config['list']['edit_date']['enabled'] ?? false): ?>
+                        <div class="pole modified_date">
+                            <div class="title"><?= $config['list']['edit_date']['title'] ?? 'Изменение' ?></div>
+                            <?= $obj->edit_date ?>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <? include ROOT.'/private/views/components/actions.php' ?>
+                    
+                </div>
+
+            <? endforeach; ?>
+            </div>
+        </div>
+
+        <?= !empty($pagination) ? $pagination : '' ?>
+
+    <? else: ?>
+        <div class='not_found'>Ничего не найдено</div>
+    <?php
+    endif;
+
+endif;

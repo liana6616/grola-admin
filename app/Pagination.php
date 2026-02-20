@@ -11,10 +11,21 @@ class Pagination
     private int $countPages;
     private string $uri;
     private array $queryParams = [];
-    private int $nums = 3; // Кол-во страниц слева/справа
+    private int $nums; // Кол-во страниц слева/справа
+    private string $template = 'full'; // 'full' или 'simple'
+    
+    // Значения по умолчанию для разных шаблонов
+    private const DEFAULT_NUMS_FULL = 3;
+    private const DEFAULT_NUMS_SIMPLE = 2;
 
-    public function __construct(int $currentPage, int $limit, int $total, string $modelClass)
-    {
+    public function __construct(
+        int $currentPage, 
+        int $limit, 
+        int $total, 
+        string $modelClass, 
+        string $template = 'full',
+        ?int $nums = null // Новый параметр
+    ) {
         $this->modelClass = $modelClass;
         $this->limit = $limit;
         $this->total = $total;
@@ -22,6 +33,25 @@ class Pagination
         $this->currentPage = $this->normalizeCurrentPage($currentPage);
         $this->queryParams = $this->extractQueryParams();
         $this->uri = $this->getCleanUri();
+        $this->template = $template;
+        
+        // Устанавливаем количество страниц слева/справа
+        $this->setNums($nums);
+    }
+
+    /**
+     * Устанавливает количество страниц слева/справа
+     */
+    private function setNums(?int $nums): void
+    {
+        if ($nums !== null && $nums >= 0) {
+            $this->nums = $nums;
+        } else {
+            // Значение по умолчанию в зависимости от шаблона
+            $this->nums = $this->template === 'simple' 
+                ? self::DEFAULT_NUMS_SIMPLE 
+                : self::DEFAULT_NUMS_FULL;
+        }
     }
 
     /**
@@ -32,6 +62,8 @@ class Pagination
      * @param string $order Порядок сортировки
      * @param int $defaultItemsPerPage Количество элементов по умолчанию
      * @param array $additionalParams Дополнительные параметры для добавления в URL
+     * @param string $template Шаблон отображения ('full' или 'simple')
+     * @param int|null $nums Количество страниц слева/справа (null = авто)
      * @return array Массив с объектами и пагинацией
      */
     public static function create(
@@ -39,7 +71,9 @@ class Pagination
         string $where = '',
         string $order = 'ORDER BY id DESC',
         int $defaultItemsPerPage = 20,
-        array $additionalParams = []
+        array $additionalParams = [],
+        string $template = 'full',
+        ?int $nums = null // Новый параметр
     ): array {
         
         // Определяем количество элементов на странице
@@ -51,8 +85,8 @@ class Pagination
         // Определяем текущую страницу
         $page = max(1, (int)($_GET['p'] ?? 1));
         
-        // Создаем пагинацию, если нужно
-        $pagination = new self($page, $itemsPerPage, $totalCount, $modelClass);
+        // Создаем пагинацию с указанным шаблоном и количеством страниц
+        $pagination = new self($page, $itemsPerPage, $totalCount, $modelClass, $template, $nums);
         
         // Добавляем дополнительные параметры в queryParams
         if (!empty($additionalParams)) {
@@ -104,7 +138,7 @@ class Pagination
         if (isset($urlParts['query'])) {
             parse_str($urlParts['query'], $query);
             unset($query['p']);
-            if($query['parent'] == 0) unset($query['parent']);
+            if(isset($query['parent']) && $query['parent'] == 0) unset($query['parent']);
         }
         
         // Редирект на первую страницу с сохранением других параметров
@@ -119,7 +153,11 @@ class Pagination
 
     public function __toString(): string
     {
-        return $this->getHtml();
+        // Выбираем нужный шаблон в зависимости от настройки
+        if ($this->template === 'simple') {
+            return $this->getSimpleHtml();
+        }
+        return $this->getFullHtml();
     }
 
     public function getStart(): int
@@ -147,7 +185,10 @@ class Pagination
         return $this->total;
     }
 
-    private function getHtml(): string
+    /**
+     * Полный шаблон пагинации (с информацией и выбором количества)
+     */
+    private function getFullHtml(): string
     {
         $next = $this->getNextLink();
         $prev = $this->getPrevLink();
@@ -188,6 +229,25 @@ class Pagination
         return $html;
     }
 
+    /**
+     * Простой шаблон пагинации (только стрелки и цифры)
+     */
+    private function getSimpleHtml(): string
+    {
+        $next = $this->getSimpleNextLink();
+        $prev = $this->getSimplePrevLink();
+        $start = $this->getStartLink();
+        $end = $this->getEndLink();
+        $plist = $this->getPageList();
+        $total = $this->total;
+
+        if ($total > $this->limit) {
+            return '<div class="pagination">'.$prev.'<div class="page_numbers">'.$start.$plist.$end.'</div>'.$next.'</div>';
+        }
+
+        return '';
+    }
+
     private function getNextLink(): string
     {
         if ($this->currentPage >= $this->countPages) {
@@ -199,6 +259,18 @@ class Pagination
         return "<a class='page_number arrow arrow_right' href='$url'></a>";
     }
 
+    private function getSimpleNextLink(): string
+    {
+        $nextPage = $this->currentPage + 1;
+        
+        if ($this->currentPage >= $this->countPages) {
+            return "<span class='page_number arrow arrow_right disabled'><span>Следующая</span></span>";
+        }
+        
+        $url = $this->buildPageUrl($nextPage);
+        return "<a class='page_number arrow arrow_right' href='$url'><span>Следующая</span></a>";
+    }
+
     private function getPrevLink(): string
     {
         if ($this->currentPage <= 1) {
@@ -208,6 +280,18 @@ class Pagination
         $prevPage = $this->currentPage - 1;
         $url = $this->buildPageUrl($prevPage);
         return "<a class='page_number arrow arrow_left' href='$url'></a>";
+    }
+
+    private function getSimplePrevLink(): string
+    {
+        $prevPage = $this->currentPage - 1;
+        
+        if ($this->currentPage <= 1) {
+            return "<span class='page_number arrow arrow_left disabled'><span>Предыдущая</span></span>";
+        }
+
+        $url = $this->buildPageUrl($prevPage);
+        return "<a class='page_number arrow arrow_left' href='$url'><span>Предыдущая</span></a>";
     }
 
     private function getStartLink(): string
