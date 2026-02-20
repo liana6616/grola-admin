@@ -5,6 +5,7 @@ use app\Controller;
 use app\Models\Catalog;
 use app\Models\Categories;
 use app\Models\Gallery;
+use app\Models\Files;
 
 class CatalogCardController extends Controller {
     protected function handle(...$params) {
@@ -29,6 +30,7 @@ class CatalogCardController extends Controller {
         }
         
         $view->gallery = Gallery::where("WHERE `show`=1 AND `type`='product' ORDER BY rate DESC, id ASC") ?: [];
+        $view->file = Files::where("WHERE `show`=1 AND `type`='catalog' ORDER BY rate DESC, id ASC") ?: [];
 
         return $view->show('pages/catalog-card.php');
     }

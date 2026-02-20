@@ -85,18 +85,7 @@
           <button class="tabs__btn" type="button" onclick="showTab('specs', this)">Характеристики</button>
           <button class="tabs__btn" type="button" onclick="showTab('docs', this)">Документация</button>
       </div>
-      <!-- <div class="tabs__content">
-          <div id="about" class="tabs__pane active">
-              <div class="tabs__text"><?= nl2br($this->product->text ?? '') ?></div>
-          </div>
-          <div id="specs" class="tabs__pane">
-              <div class="tabs__text"><?= nl2br($this->product->text2 ?? '') ?></div>
-          </div>
-          
-          <div id="docs" class="tabs__pane">
-            <a class="tabs__pane-pdf" href="#"><?= $this->file->filename ?? '' ?></a>
-          </div>
-      </div> -->
+
       <div class="tabs__content">
         <div id="about" class="tabs__pane active">
             <div class="tabs__text"><?= nl2br($this->product->text ?? '') ?></div>
@@ -104,25 +93,23 @@
         <div id="specs" class="tabs__pane">
             <div class="tabs__text"><?= nl2br($this->product->text2 ?? '') ?></div>
         </div>
-        <? if(!empty($this->file)): ?>
-            <div id="docs" class="tabs__pane">
-                <? foreach($this->file AS $item): ?>
-                    <? 
-                    // Пропускаем, если это не объект
-                    if(!is_object($item)) continue;
-                    
-                    // Проверяем все условия
-                    if(isset($item->parent) && $item->parent == 0 
-                      && isset($item->ids) && $item->ids == $this->product->id): 
-                    ?>
-                        <a class="tabs__pane-pdf" href="<?= htmlspecialchars($item->file ?? '') ?>" target="_blank">
-                            📄 <?= htmlspecialchars($item->filename ?? 'Документ PDF') ?>
-                        </a>
-                        <br>
-                    <? endif; ?>
-                <? endforeach; ?>
-            </div>
-        <? endif; ?>
+
+
+      <? if(!empty($this->file)): ?>
+          <div id="docs" class="tabs__pane">
+              <? foreach($this->file AS $item): ?>
+                  <? 
+                  if(isset($item->ids) && $item->ids == $this->product->id 
+                    && isset($item->type) && $item->type == 'catalog'): 
+                  ?>
+                      <a class="tabs__pane-pdf" href="<?= htmlspecialchars($item->file) ?>" target="_blank">
+                          <?= htmlspecialchars($item->filename ?: 'Документ') ?>
+                      </a>
+                      <br>
+                  <? endif; ?>
+              <? endforeach; ?>
+          </div>
+      <? endif; ?>
     </div>
   </div>
 
