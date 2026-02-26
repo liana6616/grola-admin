@@ -629,7 +629,7 @@ if (!file_exists(ROOT.$configPath)):
             }
             
             // Копируем данные из черновика в опубликованную версию
-            $published = Pages::copyData($obj, $published, ['id', 'is_draft', 'original_id','image','video']);
+            $published = Pages::copyData($obj, $published, ['id', 'is_draft', 'original_id','image','image2','video']);
 
             // Определяем родителя для чистовика
             $publishedParentId = 0;

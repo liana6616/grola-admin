@@ -15798,3 +15798,3415 @@ Stack trace:
 
 )
 
+[20-Feb-2026 12:05:37 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 12:05:37 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:05:37 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 12:05:40 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 12:05:41 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:05:41 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 12:06:35 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 12:06:35 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:06:35 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 12:06:42 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 12:06:42 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:06:42 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 12:06:58 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 12:06:58 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:06:58 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 12:10:46 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 12:10:46 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:10:46 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 12:10:49 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 12:10:49 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:10:49 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 12:47:53 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 12:47:53 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:47:53 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 12:47:56 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 12:47:56 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:47:56 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 12:56:42 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 12:56:42 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:56:42 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 12:56:44 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 12:56:44 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 12:56:44 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 13:00:02 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 13:00:02 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 13:00:02 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 13:00:13 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 13:00:13 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 13:00:13 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 13:00:17 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 13:00:17 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 13:00:17 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 13:02:02 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 13:02:02 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 13:02:02 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 13:05:37 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 13:05:41 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 13:37:44 Europe/Moscow] Ошибка в CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'RECURSIVE category_tree AS (
+                    SELECT id FROM categories WHER' at line 5
+[20-Feb-2026 13:37:50 Europe/Moscow] Ошибка в CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'RECURSIVE category_tree AS (
+                    SELECT id FROM categories WHER' at line 5
+[20-Feb-2026 13:37:56 Europe/Moscow] Ошибка в CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'RECURSIVE category_tree AS (
+                    SELECT id FROM categories WHER' at line 5
+[20-Feb-2026 14:04:06 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 14:04:06 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 14:04:06 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 14:05:30 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 14:05:30 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 14:05:30 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 14:19:59 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 14:19:59 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 14:19:59 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 14:25:29 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 14:25:29 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 14:25:29 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 14:25:41 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 14:25:41 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 14:25:41 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 14:28:30 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 14:28:30 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 14:28:30 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 14:33:27 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 14:33:27 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 14:33:27 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 14:33:31 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 14:33:31 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 14:33:31 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 14:48:44 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 14:48:48 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 14:49:02 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 14:49:05 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 14:49:06 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 14:49:06 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 14:49:45 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 14:49:58 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 14:50:32 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 14:50:32 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 14:50:32 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-9.png
+            [1] => card-10.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-9.png
+            [1] => card-10.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+            [1] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpvqdla4qshq5bfAc635o
+            [1] => /tmp/php9u63865hj7gs6iYBWoW
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 70894
+            [1] => 140282
+        )
+
+)
+
+[20-Feb-2026 14:50:46 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 14:50:46 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 14:50:46 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-4.png
+            [1] => card-5.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-4.png
+            [1] => card-5.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+            [1] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/php9j47g50o5n99fFDePYs
+            [1] => /tmp/phpl0sthrmmp27deqAGE2Q
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 48092
+            [1] => 31162
+        )
+
+)
+
+[20-Feb-2026 16:11:17 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 16:11:17 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 16:11:17 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-9.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-9.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phppjqam6hln8r7fbVm0cM
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 70894
+        )
+
+)
+
+[20-Feb-2026 16:46:30 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 16:46:30 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 16:46:30 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-6.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-6.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpiropodeg3rrf7xD04Hf
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 113746
+        )
+
+)
+
+[20-Feb-2026 16:47:12 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 16:47:12 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 16:47:12 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-10.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-10.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phprv6e1uajmr3cfuypu2L
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 140282
+        )
+
+)
+
+[20-Feb-2026 16:47:14 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 16:47:14 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 16:47:14 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 16:48:36 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 16:48:36 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 16:48:36 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-10.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-10.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpfo1bteaneu5l0DxuJAk
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 140282
+        )
+
+)
+
+[20-Feb-2026 16:48:59 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 16:48:59 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 16:48:59 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-10.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-10.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpgojbfisdopmocY12gbn
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 140282
+        )
+
+)
+
+[20-Feb-2026 16:49:04 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 16:49:04 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 16:49:04 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 16:59:35 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 16:59:35 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 16:59:35 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-10.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-10.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpf3oeskhen1hb1ZuNLop
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 140282
+        )
+
+)
+
+[20-Feb-2026 16:59:39 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 16:59:39 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 16:59:39 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:00:13 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 17:00:13 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:00:13 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-4.png
+            [1] => card-5.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-4.png
+            [1] => card-5.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+            [1] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/php0t1fcnmppv8jboKIaNw
+            [1] => /tmp/php350925q52je853GWMUM
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 48092
+            [1] => 31162
+        )
+
+)
+
+[20-Feb-2026 17:00:28 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 17:00:28 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:00:28 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-10.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-10.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpg9ls2tma45k0bF5KwUB
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 140282
+        )
+
+)
+
+[20-Feb-2026 17:00:32 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 17:00:32 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:00:32 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:25:28 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 17:25:28 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:25:28 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:25:32 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 17:25:32 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:25:32 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:37:07 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 17:37:38 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 17:37:53 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 17:38:06 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 17:38:54 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 17:39:39 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 17:39:39 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:39:39 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:39:44 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 17:39:44 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:39:44 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:40:28 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 17:40:28 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:40:28 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:40:31 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 17:40:31 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:40:31 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:40:34 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 17:41:03 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 17:41:03 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:41:03 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:41:09 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 17:41:17 Europe/Moscow] Ошибка в CatalogController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/pages/product.php not found
+[20-Feb-2026 17:41:22 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 17:41:22 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:41:22 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:46:33 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 17:46:33 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:46:33 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-1.png
+            [1] => card-2.png
+            [2] => card-3.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-1.png
+            [1] => card-2.png
+            [2] => card-3.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+            [1] => image/png
+            [2] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpa8l8arm9r9el1Gjc1vp
+            [1] => /tmp/phpibdq7h5lb39tbbBUud6
+            [2] => /tmp/phps4t0dvnoht758myS0UM
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 103123
+            [1] => 123600
+            [2] => 133829
+        )
+
+)
+
+[20-Feb-2026 17:46:42 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 17:46:42 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:46:42 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => card-1.png
+            [1] => card-8.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => card-1.png
+            [1] => card-8.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/png
+            [1] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpvee40sfiq60p2L7Ju70
+            [1] => /tmp/phpmnllad7iapos5oiF1jf
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 103123
+            [1] => 93606
+        )
+
+)
+
+[20-Feb-2026 17:46:46 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 17:46:46 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:46:46 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:49:55 Europe/Moscow] uploadGallery called: inputName=gallery, id=12
+[20-Feb-2026 17:49:55 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:49:55 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 17:50:08 Europe/Moscow] uploadGallery called: inputName=gallery, id=12
+[20-Feb-2026 17:50:08 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:50:08 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => photo-2.jpg
+            [1] => photo-3.jpg
+            [2] => photo-4.jpg
+            [3] => why.jpg
+        )
+
+    [full_path] => Array
+        (
+            [0] => photo-2.jpg
+            [1] => photo-3.jpg
+            [2] => photo-4.jpg
+            [3] => why.jpg
+        )
+
+    [type] => Array
+        (
+            [0] => image/jpeg
+            [1] => image/jpeg
+            [2] => image/jpeg
+            [3] => image/jpeg
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phplb1t56626u2c37JiVR3
+            [1] => /tmp/php54l9aglat3tgchNTSfC
+            [2] => /tmp/phppoimi84vip1q5JjM1Da
+            [3] => /tmp/phpiuegrgk9v4e61bQxm2I
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 359658
+            [1] => 595662
+            [2] => 807920
+            [3] => 433658
+        )
+
+)
+
+[20-Feb-2026 17:50:09 Europe/Moscow] uploadGallery called: inputName=gallery, id=12
+[20-Feb-2026 17:50:09 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:50:09 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => photo-2.jpg
+            [1] => photo-3.jpg
+            [2] => photo-4.jpg
+            [3] => why.jpg
+        )
+
+    [full_path] => Array
+        (
+            [0] => photo-2.jpg
+            [1] => photo-3.jpg
+            [2] => photo-4.jpg
+            [3] => why.jpg
+        )
+
+    [type] => Array
+        (
+            [0] => image/jpeg
+            [1] => image/jpeg
+            [2] => image/jpeg
+            [3] => image/jpeg
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/php1m60ihf4jgeb02lIoEj
+            [1] => /tmp/php0lg7sk7dv0nu7BKtw3V
+            [2] => /tmp/phpfurm85rm8ccv9oYRPsy
+            [3] => /tmp/phphlfmvavth10s97TGlSa
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 359658
+            [1] => 595662
+            [2] => 807920
+            [3] => 433658
+        )
+
+)
+
+[20-Feb-2026 17:50:17 Europe/Moscow] uploadGallery called: inputName=gallery, id=12
+[20-Feb-2026 17:50:17 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 17:50:17 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 18:33:23 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 18:33:23 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 18:33:23 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 18:33:26 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[20-Feb-2026 18:33:26 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 18:33:26 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 18:54:13 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 18:54:13 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 18:54:13 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[20-Feb-2026 18:54:25 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[20-Feb-2026 18:54:25 Europe/Moscow] FILES array exists: yes
+[20-Feb-2026 18:54:25 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[24-Feb-2026 14:14:53 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[24-Feb-2026 14:14:53 Europe/Moscow] FILES array exists: yes
+[24-Feb-2026 14:14:53 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[24-Feb-2026 14:14:55 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[24-Feb-2026 14:14:55 Europe/Moscow] FILES array exists: yes
+[24-Feb-2026 14:14:55 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[24-Feb-2026 16:53:25 Europe/Moscow] Class file not found: /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/Messengers.php
+
+
+[24-Feb-2026 18:31:57 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[24-Feb-2026 18:31:57 Europe/Moscow] FILES array exists: yes
+[24-Feb-2026 18:31:57 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[24-Feb-2026 18:32:00 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[24-Feb-2026 18:32:00 Europe/Moscow] FILES array exists: yes
+[24-Feb-2026 18:32:00 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[24-Feb-2026 21:03:46 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' id ASC' at line 2
+[24-Feb-2026 21:31:02 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[24-Feb-2026 21:31:02 Europe/Moscow] FILES array exists: yes
+[24-Feb-2026 21:31:02 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[24-Feb-2026 21:31:05 Europe/Moscow] uploadGallery called: inputName=gallery, id=10
+[24-Feb-2026 21:31:05 Europe/Moscow] FILES array exists: yes
+[24-Feb-2026 21:31:05 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[24-Feb-2026 21:32:28 Europe/Moscow] uploadGallery called: inputName=gallery, id=8
+[24-Feb-2026 21:32:28 Europe/Moscow] FILES array exists: yes
+[24-Feb-2026 21:32:28 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 13:30:38 Europe/Moscow] uploadGallery called: inputName=gallery, id=14
+[25-Feb-2026 13:30:38 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 13:30:38 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 13:30:43 Europe/Moscow] uploadGallery called: inputName=gallery, id=14
+[25-Feb-2026 13:30:43 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 13:30:43 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 13:35:17 Europe/Moscow] uploadGallery called: inputName=gallery, id=14
+[25-Feb-2026 13:35:17 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 13:35:17 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 15:38:08 Europe/Moscow] uploadGallery called: inputName=gallery, id=12
+[25-Feb-2026 15:38:08 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 15:38:08 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 17:04:28 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 17:04:28 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 17:04:28 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 17:04:34 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 17:04:34 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 17:04:34 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:41:05 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:41:05 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:41:05 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:41:24 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:41:24 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:41:24 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:41:27 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:41:27 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:41:27 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:41:34 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:41:34 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:41:34 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:41:37 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:41:37 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:41:37 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:41:58 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:41:58 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:41:58 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:42:10 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:42:10 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:42:10 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:42:13 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:42:13 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:42:13 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:42:24 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:42:24 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:42:24 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:42:38 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:42:38 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:42:38 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:42:43 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:42:43 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:42:43 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:42:51 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:42:51 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:42:51 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:43:50 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:43:50 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:43:50 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[25-Feb-2026 21:43:54 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[25-Feb-2026 21:43:54 Europe/Moscow] FILES array exists: yes
+[25-Feb-2026 21:43:54 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 09:06:13 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 09:06:13 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 09:06:13 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 10:17:22 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 10:17:22 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 10:17:22 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 10:17:25 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 10:17:25 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 10:17:25 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 10:18:34 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 10:18:34 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 10:18:34 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 10:18:38 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 10:18:38 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 10:18:38 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 11:09:25 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 11:09:25 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 11:09:25 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 11:09:41 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 11:09:41 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 11:09:41 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 11:09:48 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 11:09:48 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 11:09:48 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 11:09:53 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 11:09:53 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 11:09:53 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+

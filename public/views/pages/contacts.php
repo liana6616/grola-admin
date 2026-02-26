@@ -107,19 +107,10 @@
   <section class="details">
     <h2 class="details__title title">Реквизиты</h2>
 
-    <div class="details__item">
-      <?= $this->settings->requisites ?>
-      <!-- <li class="details__item">ООО «Грола»</li>
-      <li class="details__item">Юридический адрес: 347913, Ростовская область, г. Таганрог, ул. Химическая, д. 9</li>
-      <li class="details__item">ИНН 6154062128 КПП 615401001 (основной номер)</li>
-      <li class="details__item">КПП 997550001 (для первичных документов)</li> -->
-    </div>
-    <!-- <ul class="details__list">
-      <li class="details__item">Р/с 40702810501850001753</li>
-      <li class="details__item">в АО "АЛЬФА-БАНК", Москва</li>
-      <li class="details__item">БИК 044525593</li>
-      <li class="details__item">к/с 30101810200000000593 в ГУ БАНКА РОССИИ ПО ЦФО</li>
-    </ul> -->
+    <ul class="details__list">
+      <li class="details__item"><?= nl2br($this->settings->requisites) ?></li>
+      <li class="details__item"><?= nl2br($this->settings->requisites2) ?></li>
+    </ul>
   </section>
 </main>
 

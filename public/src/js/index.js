@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
   // Функция для создания пагинации с 4 точками
   function createFourBulletsPagination(swiper, current, total) {
@@ -29,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
+          hiddenClass: 'swiper-button-hidden'
       },
       breakpoints: {
           360: {
@@ -269,7 +269,9 @@ function init() {
   let map = new ymaps.Map('map', {
       center: center,
       zoom: 16,
-      controls: []
+      controls: [],
+      // Просто: на мобильных - 2 пальца, на десктопе - 1 палец
+      behaviors: window.innerWidth <= 768 ? ['multiTouch'] : ['drag']
   });
 
   let placemark = new ymaps.Placemark(center, {
@@ -277,23 +279,21 @@ function init() {
       balloonContent: 'Санкт-Петербург, Складской проезд, д.4'
   }, {
       iconLayout: 'default#image',
-      iconImageHref: '/public/images/icons/map.svg',
+      iconImageHref: '/public/src/images/icons/map.svg',
       iconImageSize: [53, 69],
-      iconImageOffset: [-140, -130]
+      iconImageOffset: [-40, -75]
   });
 
-  // УДАЛЯЕМ ВСЕ элементы управления для уверенности
-  map.controls.remove('geolocationControl');      // геолокация ✓
-  map.controls.remove('searchControl');           // поиск ✓
-  map.controls.remove('trafficControl');          // пробки ✓
-  map.controls.remove('typeSelector');            // тип карты (схема/спутник) ✓
-  map.controls.remove('fullscreenControl');       // полноэкранный режим ✓
-  map.controls.remove('zoomControl');             // масштабирование ✓ (раскомментировано!)
-  map.controls.remove('rulerControl');            // линейка ✓
-  
-  // Также можно удалить другие возможные контроллеры
-  map.controls.remove('routeButtonControl');      // кнопка маршрута
-  map.controls.remove('routePanelControl');       // панель маршрутов
+  // Удаляем все элементы управления
+  map.controls.remove('geolocationControl');
+  map.controls.remove('searchControl');
+  map.controls.remove('trafficControl');
+  map.controls.remove('typeSelector');
+  map.controls.remove('fullscreenControl');
+  map.controls.remove('zoomControl');
+  map.controls.remove('rulerControl');
+  map.controls.remove('routeButtonControl');
+  map.controls.remove('routePanelControl');
   
   map.geoObjects.add(placemark);
 }
@@ -637,7 +637,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
     
-    // ДЕЛЕГИРОВАНИЕ СОБЫТИЙ - ОДИН РАЗ ПРИ ЗАГРУЗКЕ
     document.addEventListener('click', function(e) {
         if (e.target.classList.contains('pagination__sum')) {
             const pageNum = parseInt(e.target.getAttribute('data-page'));
@@ -648,57 +647,50 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Инициализация
     showPage(1);
 });
 
+
 $(function() {
-    var slider = $(".catalog__filter-weight").slider({
-        min: 0,
-        max: 5000,
-        values: [1000, 4000],
+    var sliderElement = $(".catalog__filter-weight");
+    
+    var minPrice = parseInt(sliderElement.data('min'));
+    var maxPrice = parseInt(sliderElement.data('max'));
+    var currentMin = parseInt(sliderElement.data('current-min'));
+    var currentMax = parseInt(sliderElement.data('current-max'));
+    
+    var slider = sliderElement.slider({
+        min: minPrice,
+        max: maxPrice,
+        values: [currentMin, currentMax],
         range: true,
-        // Добавляем поддержку touch-событий
-        touch: true, // если поддерживается плагином
+        touch: true,
         create: function() {
-            // Расчет позиций: левый от начала, правый от конца
-            var leftPos = (1000 / 5000 * 100) + '%'; // 20%
-            var rightPos = 100 - (4000 / 5000 * 100) + '%'; // 20% от конца = 80% от начала
+            var leftPos = ((currentMin - minPrice) / (maxPrice - minPrice) * 100) + '%';
+            var rightPos = 100 - ((currentMax - minPrice) / (maxPrice - minPrice) * 100) + '%';
             
             $('.catalog__filter-polzunok').append(
-                '<div class="tooltip left-tooltip" style="left: ' + leftPos + '">1000 ₽</div>' +
-                '<div class="tooltip right-tooltip" style="right: ' + rightPos + '">4000 ₽</div>'
+                '<div class="tooltip left-tooltip" style="left: ' + leftPos + '">' + currentMin + ' ₽</div>' +
+                '<div class="tooltip right-tooltip" style="right: ' + rightPos + '">' + currentMax + ' ₽</div>'
             );
             
-            // Добавляем touch-события вручную
             addTouchSupport();
         },
         slide: function(event, ui) {
             var tooltips = $('.catalog__filter-polzunok .tooltip');
             
-            // Левый ползунок: рассчитываем от начала
-            var leftPosPercent = (ui.values[0] / 5000 * 100);
-            tooltips.eq(0).text(ui.values[0] + ' ₽').css('left', leftPosPercent + '%');
+            var leftPos = ((ui.values[0] - minPrice) / (maxPrice - minPrice) * 100);
+            var rightPos = 100 - ((ui.values[1] - minPrice) / (maxPrice - minPrice) * 100);
             
-            // Правый ползунок: рассчитываем от конца
-            // Если хотим, чтобы 69% от правого края = 31% от левого края
-            var rightPosFromEnd = 69; // или другой процент, например 31%
-            var rightPosPercent = 100 - (ui.values[1] / 5000 * 100 * (100 / rightPosFromEnd));
-            
-            // Альтернативный расчет: фиксированный отступ 69% от правого края
-            var rightPosFromStart = 100 - (ui.values[1] / 5000 * 100 * 0.69);
-            
-            tooltips.eq(1).text(ui.values[1] + ' ₽').css({
-                'right': (100 - (ui.values[1] / 5000 * 100)) + '%', // от правого края
-                'left': 'auto' // сбрасываем left
-            });
-            
-            // ИЛИ если хотите использовать конкретное значение 69%:
-            // tooltips.eq(1).css('right', '31%'); // 100% - 69% = 31%
+            tooltips.eq(0).text(ui.values[0] + ' ₽').css('left', leftPos + '%');
+            tooltips.eq(1).text(ui.values[1] + ' ₽').css('right', rightPos + '%');
+        },
+        stop: function(event, ui) {
+            window.location.href = window.location.pathname + '?price_min=' + ui.values[0] + '&price_max=' + ui.values[1];
         }
     });
     
-    // Функция для добавления touch-поддержки
+    // Ваша функция addTouchSupport остается без изменений
     function addTouchSupport() {
         var sliderElement = $(".catalog__filter-weight");
         var handles = sliderElement.find('.ui-slider-handle');
@@ -706,7 +698,6 @@ $(function() {
         handles.each(function() {
             var handle = $(this);
             
-            // Добавляем touch-события
             handle.on('touchstart', function(e) {
                 e.preventDefault();
                 var touch = e.originalEvent.touches[0];
@@ -726,7 +717,6 @@ $(function() {
             });
         });
         
-        // Также добавляем touch-события для самого слайдера
         sliderElement.on('touchstart', function(e) {
             if (!$(e.target).hasClass('ui-slider-handle')) {
                 e.preventDefault();
@@ -746,7 +736,7 @@ $(function() {
         });
         element[0].dispatchEvent(mouseEvent);
     }
-  });
+});
 
 // список/плитка 
 document.addEventListener('DOMContentLoaded', function() {
@@ -756,7 +746,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!tileBtn || !listBtn || !catalogList) return;
     
-    // Получаем только ВИДИМЫЕ карточки
     function getVisibleCards() {
         return Array.from(document.querySelectorAll('.catalog-card__item')).filter(card => 
             card.style.display !== 'none' && window.getComputedStyle(card).display !== 'none'
@@ -766,16 +755,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function switchView(isListView) {
         const visibleCards = getVisibleCards();
         
-        // Сброс анимаций только для видимых карточек
         visibleCards.forEach(item => {
             item.style.animation = 'none';
             item.style.opacity = '0';
             item.style.transform = isListView ? 'translateX(-20px)' : 'scale(0.9)';
         });
         
-        // Небольшая задержка для браузера
         setTimeout(() => {
-            // Изменяем layout
             if (isListView) {
                 catalogList.classList.add('catalog-card__list-alt');
                 listBtn.classList.add('active');
@@ -786,10 +772,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 listBtn.classList.remove('active');
             }
             
-            // Принудительный reflow для анимации
             catalogList.offsetHeight;
             
-            // Запуск анимации только для видимых карточек
             visibleCards.forEach((item, index) => {
                 item.style.animation = `${isListView ? 'listAppear' : 'tileAppear'} 0.3s ease forwards`;
                 item.style.animationDelay = `${Math.min(index * 0.02, 0.2)}s`;
@@ -797,12 +781,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 30);
     }
     
-    // Используем .onclick для предотвращения дублирования обработчиков
     tileBtn.onclick = () => switchView(false);
     listBtn.onclick = () => switchView(true);
 });
 
-// подкатегория каталог
 const text = document.querySelector('.catalog__dropdown-text');
 const buttons = document.querySelectorAll('.catalog__button-category');
 
@@ -816,16 +798,13 @@ buttons.forEach(btn => btn.onclick = () => {
 
 // tab-card
 window.showTab = function(tabId, btn) {
-  // Находим контейнер табов
   const tabs = btn.closest('.tabs');
   if (!tabs) return;
   
-  // Убираем active у всех в этом контейнере
   tabs.querySelectorAll('.tabs__btn, .tabs__pane').forEach(el => {
       el.classList.remove('active');
   });
   
-  // Добавляем active
   btn.classList.add('active');
   document.getElementById(tabId)?.classList.add('active');
 };
@@ -833,12 +812,10 @@ window.showTab = function(tabId, btn) {
 // Вертикальный мини-свайпер
 var swiperThumbs = new Swiper(".mySwiperCardMini", {
   loop: true,
-  // spaceBetween: 10,
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
   direction: "vertical",
-  // slidesOffsetBefore: -75,
   navigation: {
       nextEl: ".swiper-button-next-card",
       prevEl: ".swiper-button-prev-card",
@@ -859,4 +836,64 @@ var swiper = new Swiper(".mySwiperCard", {
     nextEl: ".swiper-button-next-card",
     prevEl: ".swiper-button-prev-card",
   }
+});
+
+
+// Кнопки фильтров (Применить / Сбросить)
+$(function() {
+    var originalMin = $(".catalog__filter-weight").data('min');
+    var originalMax = $(".catalog__filter-weight").data('max');
+    
+    $('.catalog__button-filter-add').on('click', function() {
+        var sliderValues = $(".catalog__filter-weight").slider("values");
+        var minPrice = sliderValues[0];
+        var maxPrice = sliderValues[1];
+        
+        var url = new URL(window.location.href);
+        
+        url.searchParams.set('price_min', minPrice);
+        url.searchParams.set('price_max', maxPrice);
+        
+        var sort = new URLSearchParams(window.location.search).get('sort');
+        var order = new URLSearchParams(window.location.search).get('order');
+        var subcat = new URLSearchParams(window.location.search).get('subcat');
+        
+        if (sort) url.searchParams.set('sort', sort);
+        if (order) url.searchParams.set('order', order);
+        if (subcat) url.searchParams.set('subcat', subcat);
+        
+        window.location.href = url.toString();
+    });
+    
+    $('.catalog__button-filter-delete').on('click', function() {
+        var url = new URL(window.location.href);
+        
+        url.searchParams.delete('price_min');
+        url.searchParams.delete('price_max');
+        url.searchParams.delete('sort');
+        url.searchParams.delete('order');
+        url.searchParams.delete('subcat');
+        
+        window.location.href = url.toString();
+    });
+    
+    $('.catalog__button-filter-add, .catalog__button-filter-delete').on('click', function() {
+        $('.catalog__button-filter-names').removeClass('active');
+        $('.catalog__wrapper-filter').removeClass('active');
+    });
+    
+    $('.catalog__button-filter-delete-price').on('click', function() {
+        var url = new URL(window.location.href);
+        
+        url.searchParams.delete('price_min');
+        url.searchParams.delete('price_max');
+        
+        $(".catalog__filter-weight").slider("values", [originalMin, originalMax]);
+        
+        var tips = $('.catalog__filter-polzunok .tooltip');
+        tips.eq(0).text(originalMin + '₽').css('left', '0%');
+        tips.eq(1).text(originalMax + '₽').css('right', '0%');
+        
+        window.location.href = url.toString();
+    });
 });

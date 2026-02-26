@@ -24,15 +24,20 @@
         <div class="swiper-wrapper-card-btn">
           <div class="swiper mySwiperCardMini">
             
-            <? if(!empty($this->gallery)): ?>
-                <div class="card__mini-swiper-wrapper swiper-wrapper">
-                    <? foreach($this->gallery AS $item): ?>
-                        <div class="card__mini-swiper-slide swiper-slide">
-                            <img class="catalog-card__img" src="<?= htmlspecialchars($item->image) ?>">
-                        </div>
-                    <? endforeach; ?>
-                </div>
-            <? endif; ?>
+          <?
+          if(!empty($this->gallery)): ?>
+              <div class="card__mini-swiper-wrapper swiper-wrapper">
+                  <? foreach($this->gallery AS $item): ?>
+                      <? if(!empty($item->image)): ?>
+                          <div class="card__mini-swiper-slide swiper-slide">
+                              <img class="catalog-card__img" 
+                                  src="<?= htmlspecialchars($item->image) ?>" 
+                                  alt="<?= htmlspecialchars($item->alt ?? '') ?>">
+                          </div>
+                      <? endif; ?>
+                  <? endforeach; ?>
+              </div>
+          <? endif; ?>
 
           </div>
           <div class="swiper-button-wrapper-card">
@@ -49,7 +54,7 @@
               <div class="card-swiper swiper-wrapper">
                   <? foreach($this->gallery AS $item): ?>
                       <div class="swiper-slide">
-                          <img class="catalog-card__img" src="<?= htmlspecialchars($item->image) ?>">
+                          <img class="catalog-card__img"  src="<?= htmlspecialchars($item->image) ?>">
                       </div>
                   <? endforeach; ?>
               </div>
@@ -64,7 +69,19 @@
         </div>
 
         <div class="card__name-text">
-            <span class="card__text-art">Артикул: 422790A</span>
+          
+            <?php
+              $paramValue = \app\Models\CatalogParams::findWhere("WHERE catalog_id = " . $this->product->id);
+              $articleValue = '';
+              foreach($paramValue AS $catalogParam):
+                  $paramName = \app\Models\Params::findById($catalogParam->param_id);
+                  if($paramName->name == 'Артикул:'):
+                      $articleValue = $catalogParam->value;
+                      break;
+                  endif;
+              endforeach;
+            ?>
+            <span class="card__text-art">Артикул <?= $articleValue ?></span>
             <h1 class="card__title"><?= htmlspecialchars($this->product->name ?? '') ?></h1>
             <span class="card__text-sum">от <?= htmlspecialchars($this->product->price ?? '') ?> ₽</span>
 
@@ -113,168 +130,56 @@
     </div>
   </div>
 
-    <div class="catalog-card">
-      <h2 class="catalog-card__title title">Похожие товары</h2>
-      <div class="catalog-card__swiper swiper" id="swiper-catalog-card">
+<section class="catalog-card">
+    <h2 class="catalog-card__title title">Похожие товары</h2>
+    <div class="catalog-card__swiper swiper" id="swiper-catalog-card">
+        <?php if(!empty($this->similar_products)): ?>
           <ul class="catalog-card__list swiper-wrapper">
-              <li class="catalog-card__item swiper-slide swiper-slide-catalog-card">
-                <a href="/catalog-card.php">
-                  <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
-                  <div class="catalog-card__wrapper-img">
-                    <img class="catalog-card__img" src="/public/images/catalog/card-1.png">
-                  </div>
+              <?php foreach($this->similar_products AS $item): ?>
+                  <li class="catalog-card__item swiper-slide swiper-slide-catalog-card" data-category-id="<?= $item->category_id ?>">
+                      <a href="/catalog/<?= $this->childs[0]->url ?? '' ?>/<?= $item->url ?>">  
+                          <?php 
+                          if($item->action == 1): ?>
+                              <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
+                          <?php elseif($item->popular == 1): ?>
+                              <span class="catalog-card__cta catalog-card__cta-hit">Хит</span>
+                          <?php elseif($item->new == 1): ?>
+                              <span class="catalog-card__cta catalog-card__cta-new">Новинка</span>
+                          <?php endif; ?>                           
+                          <div class="catalog-card__wrapper-img">
+                              <img class="catalog-card__img" src="<?= $item->image_preview ?>" alt="<?= htmlspecialchars($item->name) ?>">
+                          </div>
 
-                  <h3 class="catalog-card__title title-small">Контейнер <br> производства КГ 11</h3>
-                  <div class="catalog-card__wrapper-parameters">
-                    <span class="catalog-card__name">Габаритные размеры:</span>
-                    <span class="catalog-card__parameters">500х600х400 мм.</span>
-                  </div>
-                  <div class="catalog-card__wrapper-parameters">
-                    <span class="catalog-card__name">Грузоподъемность:</span>
-                    <span class="catalog-card__parameters">400 кг.</span>
-                  </div>
-                  <span class="catalog-card__sum">от 26 438 ₽</span>
-                </a>
-              </li>
+                            <h3 class="catalog-card__title title-small"><?= $item->name ?></h3>
 
-              <li class="catalog-card__item swiper-slide swiper-slide-catalog-card">
-                <span class="catalog-card__cta catalog-card__cta-hit">Хит</span>
-                <div class="catalog-card__wrapper-img">
-                  <img class="catalog-card__img" src="/public/images/hit-2.png" >
-                </div>
+                            <div class="catalog-card__wrapper-parameters">
+                                <span class="catalog-card__name">Габаритные размеры:</span>
+                                <span class="catalog-card__parameters">500х600х400 мм.</span>
+                            </div>
+                            <div class="catalog-card__wrapper-parameters">
+                                <span class="catalog-card__name">Грузоподъемность:</span>
+                                <span class="catalog-card__parameters">400 кг.</span>
+                            </div>
 
-                <h3 class="catalog-card__title title-small">Ларь для белья <br> ЛДБ-1</h3>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Габаритные размеры:</span>
-                  <span class="catalog-card__parameters">800х580х650-800мм.</span>
-                </div>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Толщина материала:</span>
-                  <span class="catalog-card__parameters">0.7-1 мм.</span>
-                </div>
-                <span class="catalog-card__sum">от 8 900 ₽</span>
-              </li>
-
-              <li class="catalog-card__item swiper-slide swiper-slide-catalog-card">
-                <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
-                <div class="catalog-card__wrapper-img">
-                  <img class="catalog-card__img" src="/public/images/hit-3.png">
-                </div>
-
-                <h3 class="catalog-card__title title-small">Металлический <br> стеллаж М-18</h3>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Габаритные размеры:</span>
-                  <span class="catalog-card__parameters">600х400х1600 мм.</span>
-                </div>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Материал полок:</span>
-                  <span class="catalog-card__parameters">Нержавеющая сталь</span>
-                </div>
-                <span class="catalog-card__sum">от 2 438 ₽</span>
-              </li>
-
-              <li class="catalog-card__item swiper-slide swiper-slide-catalog-card">
-                <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
-                <div class="catalog-card__wrapper-img">
-                  <img class="catalog-card__img" src="/public/images/hit-4.png" >
-                </div>
-
-                <h3 class="catalog-card__title title-small">Металлические <br> двери 678-df12</h3>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Габаритные размеры:</span>
-                  <span class="catalog-card__parameters">1600х670х650-900мм.</span>
-                </div>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Толщина материала:</span>
-                  <span class="catalog-card__parameters">0.5-4 мм.</span>
-                </div>
-                <span class="catalog-card__sum">от 56 438 ₽</span>
-              </li>
-
-              <li class="catalog-card__item swiper-slide swiper-slide-catalog-card">
-                <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
-                <div class="catalog-card__wrapper-img">
-                  <img class="catalog-card__img" src="/public/images/hit-1.png" >
-                </div>
-
-                <h3 class="catalog-card__title title-small">Контейнер <br> производства КГ 11</h3>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Габаритные размеры:</span>
-                  <span class="catalog-card__parameters">500х600х400 мм.</span>
-                </div>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Грузоподъемность:</span>
-                  <span class="catalog-card__parameters">400 кг.</span>
-                </div>
-                <span class="catalog-card__sum">от 26 438 ₽</span>
-              </li>
-
-              <li class="catalog-card__item swiper-slide swiper-slide-catalog-card">
-                <span class="catalog-card__cta catalog-card__cta-hit">Хит</span>
-                <div class="catalog-card__wrapper-img">
-                  <img class="catalog-card__img" src="/public/images/hit-2.png" >
-                </div>
-
-                <h3 class="catalog-card__title title-small">Ларь для белья <br> ЛДБ-1</h3>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Габаритные размеры:</span>
-                  <span class="catalog-card__parameters">800х580х650-800мм.</span>
-                </div>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Толщина материала:</span>
-                  <span class="catalog-card__parameters">0.7-1 мм.</span>
-                </div>
-                <span class="catalog-card__sum">от 8 900 ₽</span>
-              </li>
-
-              <li class="catalog-card__item swiper-slide swiper-slide-catalog-card">
-                <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
-                <div class="catalog-card__wrapper-img">
-                  <img class="catalog-card__img" src="/public/images/hit-3.png">
-                </div>
-
-                <h3 class="catalog-card__title title-small">Металлический <br> стеллаж М-18</h3>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Габаритные размеры:</span>
-                  <span class="catalog-card__parameters">600х400х1600 мм.</span>
-                </div>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Материал полок:</span>
-                  <span class="catalog-card__parameters">Нержавеющая сталь</span>
-                </div>
-                <span class="catalog-card__sum">от 2 438 ₽</span>
-              </li>
-
-              <li class="catalog-card__item swiper-slide swiper-slide-catalog-card">
-                <span class="catalog-card__cta catalog-card__cta-action">Акция</span>
-                <div class="catalog-card__wrapper-img">
-                  <img class="catalog-card__img" src="/public/images/hit-4.png" >
-                </div>
-
-                <h3 class="catalog-card__title title-small">Металлические <br> двери 678-df12</h3>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Габаритные размеры:</span>
-                  <span class="catalog-card__parameters">1600х670х650-900мм.</span>
-                </div>
-                <div class="catalog-card__wrapper-parameters">
-                  <span class="catalog-card__name">Толщина материала:</span>
-                  <span class="catalog-card__parameters">0.5-4 мм.</span>
-                </div>
-                <span class="catalog-card__sum">от 56 438 ₽</span>
-              </li>
+                            <span class="catalog-card__sum">от <?= $item->price ?> ₽</span>
+                      </a>
+                  </li>
+              <?php endforeach; ?>
           </ul>
-          
-          <div class="swiper-pagination swiper-pagination-alt swiper-pagination-catalog-card"></div>
+        <?php else: ?>
+          <p class="no-products">Нет похожих товаров</p>
+        <?php endif; ?>
+      
+      <div class="swiper-pagination swiper-pagination-alt swiper-pagination-catalog-card"></div>
 
-          <div class="swiper-button-wrapper swiper-button-wrapper-alt swiper-button-wrapper-catalog-card">
-            <div class="swiper-button-product swiper-button-next-product swiper-button-next"></div>
-            <div class="swiper-button-product swiper-button-prev-product swiper-button-prev"></div>
-          </div>
-
-        </div>
-        <a class="catalog-card__button-catalog filter" href="/catalog.php">Смотреть весь каталог</a>
+      <div class="swiper-button-wrapper swiper-button-wrapper-alt swiper-button-wrapper-catalog-card">
+        <div class="swiper-button-product swiper-button-next-product swiper-button-next"></div>
+        <div class="swiper-button-product swiper-button-prev-product swiper-button-prev"></div>
       </div>
-  </div>
+
+    </div>
+    <a class="catalog-card__button-catalog filter" href="/catalog">Смотреть весь каталог</a>
+</section>
 </main>
 
 <?= $this->include('layouts/footer'); ?>

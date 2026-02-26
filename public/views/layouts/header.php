@@ -60,7 +60,7 @@
                 </a>
                 <ul class="header__list">
                     <li class="header__item header__item-mob">
-                        <a class="header__link" href="/index">Главная</a>
+                        <a class="header__link" href="/index.php">Главная</a>
                     </li>
                     <li class="header__item">
                         <a class="header__link" href="/catalog">Каталог</a>
@@ -76,10 +76,10 @@
 
             <div class="footer__column-contacts footer__column-contacts-menu">
                 <a class="footer__phone" href="tel:<?= preg_replace('/[^0-9+]/', '', $this->settings->phone) ?>"><?= $this->settings->phone ?></a>
-                <a class="footer__mail" href="mailto:grola@mail.ru">grola@mail.ru</a>
-                <address class="footer__address">Санкт-Петербург, Складской проезд, д.4</address>
+                <a class="footer__mail" href="mailto:<?= $this->settings->email ?>"><?= $this->settings->email ?></a>
+                <address class="footer__address"><?= $this->settings->city ?> <?= $this->settings->address ?></address>
             </div>
-            <div class="header__wrapper">
+            <div class="header__wrapper header__wrapper-alt">
                 <a class="header__soc-tel filter" href="tel:<?= preg_replace('/[^0-9+]/', '', $this->settings->phone) ?>"> <span><?= $this->settings->phone ?></span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.38567 1.04166H6.5115C6.63863 1.04166 6.76274 1.08042 6.86726 1.15279C6.97178 1.22515 7.05176 1.32766 7.0965 1.44666L8.30984 4.67166C8.34983 4.77831 8.35991 4.89386 8.339 5.00582L7.73067 8.26582C8.47817 10.0225 9.71234 11.2033 11.7582 12.2625L14.979 11.6375C15.0935 11.6154 15.2118 11.6258 15.3207 11.6675L18.5557 12.9008C18.6739 12.9459 18.7757 13.0258 18.8476 13.1299C18.9195 13.2341 18.958 13.3576 18.9582 13.4842V16.4708C18.9582 17.8258 17.7648 18.925 16.3682 18.6208C13.824 18.0675 9.10984 16.66 5.80817 13.3583C2.64484 10.1958 1.58484 5.82749 1.229 3.46666C1.02484 2.11832 2.10567 1.04166 3.38567 1.04166Z" fill="#2B2E3A" />
@@ -88,13 +88,11 @@
                 
 
                 <? if(!empty($this->messengers)): ?>
-                    <div class="header__wrapper-soc">
                         <? foreach($this->messengers AS $item): ?>
                             <a class="filter" href="#">
                                 <img src="<?= $item->image ?>">
                             </a>
                         <? endforeach; ?>
-                    </ul>
                 <? endif; ?>
 
                 <button class="header__button-sum" onclick="openModal()" type="button">Рассчитать</button>

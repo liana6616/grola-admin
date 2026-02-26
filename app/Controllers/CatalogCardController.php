@@ -6,6 +6,7 @@ use app\Models\Catalog;
 use app\Models\Categories;
 use app\Models\Gallery;
 use app\Models\Files;
+use app\Models\Messengers;
 
 class CatalogCardController extends Controller {
     protected function handle(...$params) {
@@ -23,13 +24,24 @@ class CatalogCardController extends Controller {
         
         // Передаём товар в шаблон
         $view->product = $products[0];
+
+        // ПОХОЖИЕ ТОВАРЫ
+        $view->similar_products = Catalog::where("WHERE `show`=1 AND is_draft=0 AND category_id = {$view->product->category_id} AND id != {$view->product->id} ORDER BY rate DESC, id ASC") ?: [];
         
-        // Получаем категорию (для хлебных крошек)
+        // Получаем категорию и childs для ссылок
         if (!empty($view->product->category_id)) {
             $view->category = Categories::findById($view->product->category_id);
+            
+            // Получаем родительские категории для правильных ссылок
+            $parent_id = $view->category->parent ?? 0;
+            $view->childs = Categories::getChilds($parent_id) ?: [];
         }
+
+        $view->messengers = Messengers::where('WHERE `show`=1 ORDER BY rate DESC, id ASC') ?: [];
         
-        $view->gallery = Gallery::where("WHERE `show`=1 AND `type`='product' ORDER BY rate DESC, id ASC") ?: [];
+        // ИСПРАВЛЕНО: возвращаем -1 для галереи
+        $view->gallery = Gallery::where("WHERE `show`=1 AND `type`='product' AND `ids` = " . ($view->product->id - 1) . " ORDER BY rate DESC, id ASC") ?: [];
+        
         $view->file = Files::where("WHERE `show`=1 AND `type`='catalog' ORDER BY rate DESC, id ASC") ?: [];
 
         return $view->show('pages/catalog-card.php');

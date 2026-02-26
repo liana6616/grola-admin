@@ -73,11 +73,8 @@ a {
 main {
   width: -webkit-fill-available;
   height: 100%;
-  margin-top: 100px;
-
+  margin-top: 83px;
   position: relative;
-  top: -20px;
-
 }
 
 .title {
@@ -140,8 +137,19 @@ main {
   justify-content: space-between;
 }
 
+body:has(.header__button-menu.active) main,
+body:has(.header__button-menu.active) .hero,
+body:has(.header__button-menu.active) .catalog,
+body:has(.header__button-menu.active) .categories {
+  overflow: hidden;
+}
+
 .header__button-menu-close{
   display: none;
+}
+
+.header__wrapper.header__wrapper-alt{
+  gap: 28px;
 }
 
 .header__button-sum:hover,
@@ -290,18 +298,6 @@ main {
   line-height: 118%;
   color: #fff;
 }
-
-/* .hero::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:url(/public/images/hero.jpg) no-repeat center;
-  background-size: cover;
-  z-index: -1;
-} */
 
 .hero__img {
   position: absolute;
@@ -481,13 +477,8 @@ main {
 
 .categories__item.swiper-slide {
   position: relative;
-  /* padding-top: 86px; */
   width: 17%!important;
 }
-/* 
-.categories__item.swiper-slide:nth-child(5) {
-  max-width: 166px;
-} */
 
 .categories__item::after {
   position: absolute;
@@ -530,6 +521,7 @@ main {
 
 .catalog-card__list.swiper-wrapper {
   flex-wrap: nowrap;
+  max-height: fit-content;
 }
 
 .card-swiper.swiper-wrapper {
@@ -574,7 +566,6 @@ main {
   transform: none;
 }
 
-
 .catalog-card__list-alt .catalog-card__item a {
   display: flex;
   justify-content: space-between;
@@ -587,7 +578,6 @@ main {
   flex-wrap: wrap;
   gap: 15px;
   justify-content: flex-start;
-  /* min-height: 580px; */
   padding-bottom: 110px;
   height: -webkit-fill-available;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -796,8 +786,28 @@ main {
   background: rgba(69, 127, 202, 1);
 }
 
-.swiper-button-next-product.swiper-button-next {
-  right: 0;
+/* Показываем кнопки всегда */
+.swiper-button-next,
+.swiper-button-prev {
+    display: flex !important;
+}
+
+/* Убираем автоматическое скрытие */
+.swiper-button-next.swiper-button-lock,
+.swiper-button-prev.swiper-button-lock {
+    display: flex !important; 
+}
+
+.swiper-button-next.swiper-button-disabled:hover,
+.swiper-button-prev.swiper-button-disabled:hover {
+    opacity: 0.5 !important;
+    cursor: default !important;
+}
+
+.swiper-button-next-card.swiper-button-next-product.swiper-button-next {
+  right: 50px;
+  top: 5px;
+  display: none!important;
 }
 
 .swiper-button-prev-product.swiper-button-prev {
@@ -1197,30 +1207,6 @@ main {
   margin: 110px auto 90px;
 }
 
-/* .choose__svg {
-  position: relative;
-  width: 32px;
-  height: 32px;
-  background: #2B2E3A;
-}
-
-.choose__item:nth-child(2n) .choose__svg {
-  width: 28px;
-  height: 28px;
-}
-
-.choose__item:nth-child(3n) .choose__svg {
-  width: 29px;
-  height: 29px;
-}
-
-.choose__svg svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
 .choose__block {
   position: relative;
   display: flex;
@@ -1283,18 +1269,6 @@ main {
 .choose__item:not(:last-child) {
   border-right: 1px solid #D4D4D4;
 }
-
-/* .choose__item:nth-child(1) .choose__svg {
-  border-radius: 100px;
-}
-
-.choose__item:nth-child(2) .choose__svg {
-  transform: rotate(45deg);
-}
-
-.choose__item:nth-child(2) .choose__svg svg {
-  transform: translate(-50%, -50%) rotate(-45deg);
-} */
 
 /* partners */
 .partners {
@@ -1522,6 +1496,7 @@ main {
 .breadcrumps a,
 .breadcrumps,
 .breadcrumps span {
+  position: relative;
   font-family: 'Gordita', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -1606,18 +1581,6 @@ main {
   background: #ffffff;
   opacity: 0.6;
 }
-
-/* .hero-about::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:url(/public/images/about/hero.jpg) no-repeat center;
-  background-size: 100% 100%;
-  z-index: -1;
-} */
 
 .hero-about__img {
   position: absolute;
@@ -1921,9 +1884,7 @@ main {
 
 .details__list {
   display: flex;
-  flex-direction: column;
-  gap: 22px;
-  width: 43.1%;
+  gap: 100px;
 }
 
 .details__item {
@@ -2276,6 +2237,14 @@ main {
   font-weight: 500;
   font-size: 16px;
   color: #2b2e3a;
+}
+
+.catalog__button-filter svg {
+  display: none;
+}
+
+.catalog__button-filter.active svg {
+  display: block;
 }
 
 .filter:hover,
@@ -2676,8 +2645,6 @@ main {
   background: #ffffff;
 }
 
-
-
 .swiper-vertical>.swiper-wrapper {
   flex-direction: column;
   display: flex;
@@ -2774,7 +2741,6 @@ main {
   background: #ffffff;
   padding: 55px 60px 60px 60px;
   width: 49.5%;
-  /* max-height: 565px; */
 }
 
 .card-swiper .swiper-slide {
