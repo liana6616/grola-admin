@@ -809,34 +809,34 @@ window.showTab = function(tabId, btn) {
   document.getElementById(tabId)?.classList.add('active');
 };
 
-// Вертикальный мини-свайпер
-var swiperThumbs = new Swiper(".mySwiperCardMini", {
-  loop: true,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-  direction: "vertical",
-  navigation: {
-      nextEl: ".swiper-button-next-card",
-      prevEl: ".swiper-button-prev-card",
-  }
-});
+// // Вертикальный мини-свайпер
+// var swiperThumbs = new Swiper(".mySwiperCardMini", {
+//   loop: true,
+//   slidesPerView: 4,
+//   freeMode: true,
+//   watchSlidesProgress: true,
+//   direction: "vertical",
+//   navigation: {
+//       nextEl: ".swiper-button-next-card",
+//       prevEl: ".swiper-button-prev-card",
+//   }
+// });
 
-var swiper = new Swiper(".mySwiperCard", {
-  // spaceBetween: 10,
-  loop: true,
-  thumbs: {
-      swiper: swiperThumbs,
-  },
-  pagination: {
-      el: '.swiper-pagination-catalog',
-      clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next-card",
-    prevEl: ".swiper-button-prev-card",
-  }
-});
+// var swiper = new Swiper(".mySwiperCard", {
+//   // spaceBetween: 10,
+//   loop: true,
+//   thumbs: {
+//       swiper: swiperThumbs,
+//   },
+//   pagination: {
+//       el: '.swiper-pagination-catalog',
+//       clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next-card",
+//     prevEl: ".swiper-button-prev-card",
+//   }
+// });
 
 
 // Кнопки фильтров (Применить / Сбросить)

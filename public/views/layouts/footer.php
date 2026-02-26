@@ -69,9 +69,36 @@
       <img class="modal__img" src="/public/src/images/modal.jpg">
 
       <form class="form__wrapper form__wrapper-modal" id="feedbackForm">
+          <?php
+            $articleValue = '';
+
+            if (isset($this->product) && is_object($this->product) && isset($this->product->id)) {
+                                try {
+                    $paramValue = \app\Models\CatalogParams::findWhere("WHERE catalog_id = " . (int)$this->product->id);
+                    
+                    if (!empty($paramValue)) {
+                        foreach($paramValue as $catalogParam) {
+                            if (!isset($catalogParam->param_id)) continue;
+                            
+                            $paramName = \app\Models\Params::findById($catalogParam->param_id);
+                            
+                            if ($paramName && isset($paramName->name) && $paramName->name == 'Артикул:') {
+                                $articleValue = $catalogParam->value ?? '';
+                                break;
+                            }
+                        }
+                    }
+                } catch (Exception $e) {
+                    error_log('Ошибка получения артикула: ' . $e->getMessage());
+                    $articleValue = '';
+                }
+            }
+          ?>
           <h2 class="form__mod-title title">Оставить заявку</h2>
+          <input type="hidden" name="article" value="<?= $articleValue ?>">
           <div class="form__wrapper-hidden-article">
-            <span class="form__article">Артикул: 422790A</span>
+
+            <span class="form__article">Артикул <?= $articleValue ?></span>
             <span  class="form__article-name">Контейнер КГ-04</span>
           </div>
           <div class="form__group form__group-mod">

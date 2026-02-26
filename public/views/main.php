@@ -5,7 +5,7 @@
       <div class="hero__wrapper-block">
         <div>
           <h1 class="hero__big-title hero__big-title--alt"><?= $this->page->name ?></h1>
-          <span class="hero__text">Любой сложности</span>
+          <span class="hero__text">Любой 1сложности</span>
         </div>
         
         <? if(!empty($this->categories)): ?>

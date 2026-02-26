@@ -11,7 +11,7 @@ return [
     
     'helpers/([-a-zA-Z0-9._/]+)' => 'HelpersController/$1',
 
-    'user/ajax' => 'userAjax',
+    'user/ajax' => 'UserAjax', 
 
 
     'catalog/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)' => 'CatalogCardController/$1/$2/$3',

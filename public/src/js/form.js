@@ -1,28 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const feedbackForm = document.getElementById('feedbackForm');
     
-    if (feedbackForm) {
-        feedbackForm.addEventListener('submit', function(e) {
+    // Используем делегирование событий - вешаем обработчик на весь документ
+    document.addEventListener('submit', function(e) {
+        
+        // Проверяем, что отправляется именно наша форма
+        if (e.target && e.target.id === 'feedbackForm') {
             e.preventDefault();
             
-            const formData = new FormData(this);
+            const form = e.target;
+            const formData = new FormData(form);
             formData.append('action', 'formsAdd');
             formData.append('url', window.location.pathname);
             
-            const submitBtn = this.querySelector('button[type="submit"]');
+            // Отладка
+            console.log('Отправка формы из модального окна');
+            for (let pair of formData.entries()) {
+                console.log(pair[0] + ':', pair[1]);
+            }
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.disabled = true;
             submitBtn.textContent = 'Отправка...';
             
-            fetch('user/ajax', {
+            fetch('/user/ajax', {
                 method: 'POST',
                 body: formData
             })
             .then(response => response.json())
             .then(data => {
+                console.log('Ответ:', data);
                 if (data.success) {
                     alert('✓ ' + data.message);
-                    feedbackForm.reset();
+                    form.reset();
+                    
+                    // Закрываем модальное окно
+                    const modal = document.getElementById('modal-overlay');
+                    if (modal) {
+                        modal.style.display = 'none';
+                        // или modal.classList.remove('active') - в зависимости от вашего кода
+                    }
                 } else {
                     alert('✗ ' + (data.message || 'Ошибка при отправке'));
                 }
@@ -35,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalText;
             });
-        });
-    }
+        }
+    });
+    
 });
