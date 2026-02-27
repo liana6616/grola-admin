@@ -117,7 +117,22 @@ class CatalogController extends Controller {
             }
 
             $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
-            $view->breadCrumbs = Pages::breadCrumbs($page->id);
+            
+            $catalogUrl = '/'.$page->url;
+
+            $breadCrumbs = Pages::breadCrumbs($page->id);
+            if (!empty($selectedSubcat)) {
+                $subcategory = Categories::findById($selectedSubcat);
+                if (!empty($subcategory)) {
+                    $categoryUrl = Categories::getUrl($category->id);
+                    $breadCrumbs[] = array('id' => $category->id, 'name' => $category->name, 'url' => $catalogUrl.$categoryUrl, 'url_show' => true);
+                    $breadCrumbs[] = array('id' => $subcategory->id, 'name' => $subcategory->name, 'url' => '');
+                }
+            }
+            elseif (!empty($category)) {
+                $breadCrumbs[] = array('id' => $category->id, 'name' => $category->name, 'url' => '');
+            }
+            $view->breadCrumbs = $breadCrumbs;
 
             self::setSeo($view, $page);
 

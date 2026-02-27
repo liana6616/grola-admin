@@ -1,27 +1,21 @@
 <?= $this->include('layouts/header'); ?>
 
-<main class="main">
-    <ul class="breadcrumps__wrapper">
-        <li class="breadcrumps">
-            <a href="index.php">Главная</a>
-        </li>
-        <li class="breadcrumps">
-            <a href="">Политика в отношении обработки персональных данных</a>
-        </li>
-    </ul>
-    
-    <div class="policy">
+    <main class="main">        
+        <div class="model">
+            <?= $this->include('components/breadCrumbs'); ?>
 
-        <h1><?= $this->page->name ?></h1>
+            <h1><?= $this->page->name ?></h1>
 
-        <? if(!empty($this->page->text)): ?>
-            <div class="text" itemprop="articleBody">
-                <?= $this->page->text ?>
-            </div>
-        <? endif; ?>
+            <ul class="model__list">
+                <li class="model__item">
+                    <div class="model__text">
+                        <?= $this->page->text ?>
+                    </div>
+                </li>
+            </ul>
 
-    </div>
+        </div>
 
-</main>
+    </main>
 
 <?= $this->include('layouts/footer'); ?>

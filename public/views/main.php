@@ -126,14 +126,14 @@
           <div class="form__checkbox-group form__checkbox-group-login">
               <input type="checkbox" id="agreement" name="agreement" required>
               <label for="agreement">
-                  <p class="form__checkbox-group-text">Я принимаю условия <a href="/policy.php">Публичной оферты</a></p> 
+                  <p class="form__checkbox-group-text">Я принимаю условия <a href="/public-offer">Публичной оферты</a></p> 
               </label>
           </div>
 
           <div class="form__checkbox-group form__checkbox-group-login">
               <input type="checkbox" id="agreement-polity" name="agreement-polity" required>
               <label for="agreement-polity">
-                  <p class="form__checkbox-group-text">Ознакомлен с  <a href="/policy.php">Политикой в отношении обработки персональных данных</a> и даю Согласие на их обработку и распространение</p>
+                  <p class="form__checkbox-group-text">Ознакомлен с  <a href="/policy">Политикой в отношении обработки персональных данных</a> и даю Согласие на их обработку и распространение</p>
               </label>
           </div>
 

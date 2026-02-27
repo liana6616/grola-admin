@@ -149,7 +149,7 @@ body:has(.header__button-menu.active) .categories {
 }
 
 .header__wrapper.header__wrapper-alt{
-  gap: 28px;
+  gap: 25px;
 }
 
 .header__button-sum:hover,
@@ -281,6 +281,10 @@ body:has(.header__button-menu.active) .categories {
   display: none;
 }
 
+body:has(.header__button-menu.active) {
+  overflow: hidden;
+}
+
 .hero {
   position: relative;
   top: 0;
@@ -301,17 +305,20 @@ body:has(.header__button-menu.active) .categories {
 
 .hero__img {
   position: absolute;
-  content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   z-index: -1;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero__img-mob {
   display: none;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero__wrapper-block {
@@ -1016,6 +1023,7 @@ body:has(.header__button-menu.active) .categories {
 .photo {
   max-width: 1440px;
   margin: 0 auto 90px;
+  overflow: hidden;
 }
 
 .photo_popular__name.popular__name {
@@ -1495,7 +1503,7 @@ body:has(.header__button-menu.active) .categories {
   font-weight: 400;
   font-size: 14px;
   color: #2b2e3a;
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 
 .breadcrumps:not(:last-child)::after  {
@@ -1510,14 +1518,14 @@ body:has(.header__button-menu.active) .categories {
   opacity: 0.6;
 }
 
-/* policy */
-.policy {
+/* model */
+.model {
   max-width: 1000px;
   margin: 0 auto 80px;
   margin-top: 20px;
 }
 
-.policy h1 {
+.model h1 {
   font-weight: 700;
   font-size: 50px;
   line-height: 100%;
@@ -1525,14 +1533,14 @@ body:has(.header__button-menu.active) .categories {
   margin-bottom: 35px;
 }
 
-.policy__text p {
+.model__text p {
   font-weight: 400;
   font-size: 16px;
   line-height: 138%;
   color: rgba(43, 46, 58, 0.8);
 }
 
-.policy__text p strong {
+.model__text p strong {
   font-weight: 700;
   font-size: 16px;
   line-height: 138%;
@@ -1540,11 +1548,11 @@ body:has(.header__button-menu.active) .categories {
   margin-bottom: 25px;
 }
 
-.policy__item {
+.model__item {
   margin-bottom: 20px;
 }
 
-.breadcrumps__wrapper.breadcrumps__wrapper-policy {
+.breadcrumps__wrapper.breadcrumps__wrapper-model {
   max-width: 1000px;
   margin: 50px auto 0;
 }
@@ -1578,17 +1586,20 @@ body:has(.header__button-menu.active) .categories {
 
 .hero-about__img {
   position: absolute;
-  content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   z-index: -1;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-about__img-mob {
   display: none;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-about__wrapper-block {
@@ -1913,6 +1924,10 @@ body:has(.header__button-menu.active) .categories {
   visibility: visible;
 }
 
+.modal-overlay.active body {
+  overflow: hidden;
+}
+
 .modal-container {
   padding: 20px 60px 20px 20px;
   display: flex;
@@ -2227,19 +2242,25 @@ body:has(.header__button-menu.active) .categories {
 }
 
 .catalog__button-filter {
+  position: relative;
+  display: flex;
   font-family: 'Gordita',sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #2b2e3a;
 }
 
-.catalog__button-filter svg {
+/* .catalog__button-filter .catalog__filter-sort-up {
   display: none;
 }
 
-.catalog__button-filter.active svg {
+.catalog__button-filter .catalog__filter-sort-down {
   display: block;
-}
+} */
+
+/* .catalog__button-filter.active svg {
+  display: block;
+} */
 
 .filter:hover,
 .filter:focus-visible,
@@ -2249,6 +2270,70 @@ body:has(.header__button-menu.active) .categories {
 
 .catalog__button-filter.active {
   color: rgba(69, 127, 202, 1);
+}
+
+.catalog__button-filter--sorting[data-order="DESC"] .catalog__filter-sort-up,
+.catalog__button-filter--sum[data-order="DESC"] .catalog__filter-sort-up {
+  display: none;
+}
+
+.catalog__button-filter--sorting[data-order="DESC"] .catalog__filter-sort-down,
+.catalog__button-filter--sum[data-order="DESC"] .catalog__filter-sort-down {
+  display: block;
+}
+
+.catalog__button-filter--sorting::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 29px;
+  height: 20px;
+  background:url(/public/src/images/icons/arrow-down-grey.svg) no-repeat right bottom;
+  background-size: 29px 20px;
+}
+
+.catalog__button-filter--sorting[data-order="ASC"]::after,
+.catalog__button-filter--sum[data-order="ASC"]::after {
+  background:url(/public/src/images/icons/arrow-up-grey.svg) no-repeat right bottom;
+}
+
+.catalog__button-filter--sorting[data-order="DESC"] .catalog__filter-sort-up,
+.catalog__button-filter--sum[data-order="DESC"] .catalog__filter-sort-up {
+  display: none;
+}
+
+.catalog__button-filter--sorting[data-order="DESC"] .catalog__filter-sort-down,
+.catalog__button-filter--sum[data-order="DESC"] .catalog__filter-sort-down {
+  display: block;
+}
+
+.catalog__button-filter--sorting.active::after,
+.catalog__button-filter--sum.active::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 29px;
+  height: 20px;
+  background:url(/public/src/images/icons/arrow-down-blue.svg) no-repeat right bottom;
+  background-size: 29px 20px;
+}
+
+.catalog__button-filter--sorting[data-order="ASC"].active::after,
+.catalog__button-filter--sum[data-order="ASC"].active::after {
+  background:url(/public/src/images/icons/arrow-up-blue.svg) no-repeat right bottom;
+}
+
+.catalog__button-filter--sum::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 29px;
+  height: 20px;
+  background:url(/public/src/images/icons/arrow-down-grey.svg) no-repeat right bottom;
+  background-size: 29px 20px;
 }
 
 .catalog__filter-wrapper-sort {
@@ -2381,30 +2466,14 @@ body:has(.header__button-menu.active) .categories {
   padding-right: 34px;
 }
 
-.catalog__button-filter::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  width: 29px;
-  height: 20px;
-  background:url(/public/src/images/icons/button-arrow.svg) no-repeat right bottom;
-  background-size: 29px 20px;
-}
 
-.catalog__button-filter.active svg {
-  display: none;
-}
-
-.catalog__button-filter.active::after {
-  background:url(/public/src/images/icons/button-rotate.svg) no-repeat right bottom;
-}
 
 /* catalog list отсюда .catalog-card__list-alt */
 .catalog-card__list-alt {
   flex-wrap: nowrap;
   flex-direction: column;
-  min-height: auto;
+  min-height: fit-content;
+  max-height: fit-content;
 }
 
 .catalog-card__list-alt .catalog-card__item {
@@ -2568,6 +2637,7 @@ body:has(.header__button-menu.active) .categories {
 /* Активная вкладка */
 .tabs__pane.active {
   display: flex;
+  flex-wrap: wrap;
   gap: 66px;
   opacity: 1;
   transform: translateY(0);
@@ -2586,6 +2656,7 @@ body:has(.header__button-menu.active) .categories {
   transition: all 0.3s ease;
   opacity: 0.4;
   margin: 0;
+  border-bottom: 1px solid white;
 }
 
 .tabs__btn:not(:last-child) {

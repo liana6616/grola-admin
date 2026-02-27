@@ -52,10 +52,9 @@ class PageController extends Controller {
                     case 10: return self::about($view); break; // about
                     case 12: return self::contacts($view); break; 
                     case 14: return self::catalog($view); break;
-                    case 16: return self::policy($view); break;  
 
                     // case 9: return self::faq($view); break; // FAQ
-                    default: return $view->show('page.php'); break; // Обычные страницы
+                    default: return $view->show('pages.php'); break; // Обычные страницы
                 }
             }
 
@@ -241,32 +240,6 @@ class PageController extends Controller {
             error_log('Ошибка в PageController::catalog: ' . $e->getMessage());
             $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
             return $view->show('pages/catalog.php');
-        }
-    }
-
-    protected static function policy($view){
-        try {
-            $page = Pages::findById(14);
-            if (!$page) {
-                throw new \Exception('Страница policy не найдена');
-            }
-
-            $view->edit = Admins::edit("pages?edit={$page->id}", $view->edit_seo);
-            $view->breadCrumbs = Pages::breadCrumbs($page->id);
-
-
-
-            // Устанавливаем SEO для страницы policy
-            self::setSeo($view, $page);
-
-            return $view->show('pages/policy.php');
-
-        } catch (\Exception $e) {
-            error_log('Ошибка в PageController::policy: ' . $e->getMessage());
-
-            // Показываем страницу FAQ с сообщением об ошибке
-            $view->error_message = 'Временно недоступно. Приносим извинения за неудобства.';
-            return $view->show('pages/policy.php');
         }
     }
 }

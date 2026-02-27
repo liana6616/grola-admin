@@ -3,14 +3,8 @@
     <main>
         <section class="hero-about">
             <div class="hero-about__wrapper-block">
-                <ul class="breadcrumps__wrapper">
-                    <li class="breadcrumps">
-                        <a href="index.php">Главная</a>
-                    </li>
-                    <li class="breadcrumps">
-                        <span><?= $this->page->name ?></span>
-                    </li>
-                </ul>
+                <?= $this->include('components/breadCrumbs'); ?>
+
 
                 <h1 class="hero__big-title"><?= $this->page->name ?></h1>
 
@@ -24,28 +18,7 @@
                         <? endforeach; ?>
                     </ul>
                 <? endif; ?>
-                <!-- <ul class="hero__list-about">
-                    <li class="hero__item-about">
-                        <span class="hero-about__sum">250</span>
-                        <span class="hero-about__text">Специалистов высочайшей <br> квалификации</span>
-                    </li>
-                    <li class="hero__item-about">
-                        <span class="hero-about__sum">12 000</span>
-                        <span class="hero-about__text">Тонн перерабатываемого <br> металла в год</span>
-                    </li>
-                    <li class="hero__item-about">
-                        <span class="hero-about__sum">120</span>
-                        <span class="hero-about__text">Точек продаж</span>
-                    </li>
-                    <li class="hero__item-about">
-                        <span class="hero-about__sum">100%</span>
-                        <span class="hero-about__text">Заказов <br> доставляем в срок</span>
-                    </li>
-                    <li class="hero__item-about">
-                        <span class="hero-about__sum">8 лет</span>
-                        <span class="hero-about__text">Развития <br> на Российском рынке</span>
-                    </li>
-                </ul> -->
+
             </div>
             <img class="hero-about__img" src="<?= $this->page->image ?>">
             <img class="hero-about__img-mob" src="<?= $this->page->image2 ?>">
@@ -58,20 +31,6 @@
                 <div class="about__text">   
                     <?= $this->page->text ?>
                 </div>
-                <!-- <p class="about__text"><?= nl2br($obj->text) ?>
-                    Компания «Версия-Центр» была создана в 1993 году. За это время мы выполнили множество проектов различной сложности и приобрели огромный опыт по изготовлению и реализации металлических изделий бытового и промышленного назначения.
-                    <br>
-                    <br>
-                    На данный момент мы предлагаем нашим клиентам не только качественную современную продукцию, но и высокий сервис обслуживания, оптимальные цены и многообразие самых различных изделий из металла.
-                    <br>
-                    <br>
-                    <span class="about__text-alt">
-                        «Грола» - стабильная и проверенная временем компания. Большой опыт и производственные возможности позволяют нам быстро реагировать на изменения и потребности рынка. Мы производим как серийную продукцию, так и различные нестандартные изделия. Мы стремимся работать на результат, а самым важным для нас является максимальное удовлетворение требований клиента по качеству продукции, своевременность отгрузки товара и решение важных вопросов в оперативном порядке.
-                        <br>
-                        <br>
-                        Мы готовы воплотить в жизнь любые ваши идеи и предложить оптимальные решения для вашего бизнеса. Свяжитесь с нами, и наши специалисты помогут разработать проект, который будет максимально соответствовать вашим требованиям.
-                    </span>
-                </p> -->
             </div>
 
             <img class="about__img" src="/public/src/images/about/about.jpg" width="473" height="474" >
@@ -209,14 +168,14 @@
                 <div class="form__checkbox-group form__checkbox-group-login">
                     <input type="checkbox" id="agreement" name="agreement" required>
                     <label for="agreement">
-                        <p class="form__checkbox-group-text">Я принимаю условия 1 <a href="/policy.php">Публичной оферты</a></p>
+                        <p class="form__checkbox-group-text">Я принимаю условия 1 <a href="/public-offer">Публичной оферты</a></p>
                     </label>
                 </div>
 
                 <div class="form__checkbox-group form__checkbox-group-login">
                     <input type="checkbox" id="agreement-polity" name="agreement-polity" required>
                     <label for="agreement-polity">
-                        <p class="form__checkbox-group-text">Ознакомлен с <a href="/policy.php">Политикой в отношении обработки персональных данных</a> и даю Согласие на их обработку и распространение</p>
+                        <p class="form__checkbox-group-text">Ознакомлен с <a href="/policy">Политикой в отношении обработки персональных данных</a> и даю Согласие на их обработку и распространение</p>
                     </label>
                 </div>
 

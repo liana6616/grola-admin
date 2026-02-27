@@ -49,7 +49,7 @@
         <a class="footer__polity filter" href="/policy">Политика конфиденциальности</a>
         <div class="footer__bottom__wrapper">
           <a class="filter" href="#">Публичная оферта</a>
-          <a class="filter" href="/policy">Согласие на обработку персональных данных</a>
+          <a class="filter" href="/public-offer">Согласие на обработку персональных данных</a>
         </div>
       </div>
       <a class="footer__development filter" href="https://visualteam.ru/">Разработка: Visualteam</a>
@@ -121,14 +121,14 @@
           <div class="form__checkbox-group form__checkbox-group-mod form__checkbox-group-login">
               <input type="checkbox" id="agreement" name="agreement" required>
               <label for="agreement">
-                  <p class="form__checkbox-group-text form__checkbox-group-text-mod">Я принимаю условия <a href="/policy.php">Публичной оферты</a></p> 
+                  <p class="form__checkbox-group-text form__checkbox-group-text-mod">Я принимаю условия <a href="/public-offer">Публичной оферты</a></p> 
               </label>
           </div>
 
           <div class="form__checkbox-group form__checkbox-group-mod form__checkbox-group-login">
               <input type="checkbox" id="agreement-polity" name="agreement-polity" required>
               <label for="agreement-polity">
-                  <p class="form__checkbox-group-text form__checkbox-group-text-mod">Ознакомлен с <a href="/policy.php">Политикой в отношении обработки персональных данных</a> и даю Согласие на их обработку и распространение</p>
+                  <p class="form__checkbox-group-text form__checkbox-group-text-mod">Ознакомлен с <a href="/policy">Политикой в отношении обработки персональных данных</a> и даю Согласие на их обработку и распространение</p>
               </label>
           </div>
 
@@ -152,7 +152,7 @@
           Продолжая навигацию по сайту,  вы соглашаетесь с правилами использования  <a href="/policy.php">cookie-файлов</a>.
       </p>
       <button class="cookies-win-button" type="button" id="acceptCookies" class="button__button font-size--16" onclick="document.getElementById('cookiesWin').style.display='none';">Ok</button>
-      <a class="cookies-win-link" href="/policy.php" target="_blank">Политика конфиденциальности</a>
+      <a class="cookies-win-link" href="/policy" target="_blank">Политика конфиденциальности</a>
     </div>
   </div>
 
@@ -174,7 +174,7 @@
   <script src="/public/src/js/lib/jquery.ui.touch-punch.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0ac7ca37-a7d0-424c-a7d3-130ebbc4b580"></script>
   <!-- <script src="/public/src/js/app.js?v=<?= rand() ?>"></script> -->
-  <script type="module" src="/public/src/js/index.js"></script>
+  <script type="module" src="/public/src/js/index.js?<?= rand() ?>"></script>
   <script type="module" src="/public/src/js/form.js"></script>
 
 	<? include_once VIEWS.'/schema/organization.php' ?>

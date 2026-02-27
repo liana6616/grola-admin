@@ -72,3 +72,7 @@
 
 [2026-02-16 11:23:21] Fatal Error: Cannot redeclare app\Controllers\PageController::catalogCategory() in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/PageController.php on line 285
 
+[2026-02-26 12:13:22] Fatal Error: Declaration of app\Controllers\UserAjax::sendJsonError($message, $code = 400) must be compatible with app\Controller::sendJsonError($message, $code = 400, $data = []) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/UserAjax.php on line 45
+
+[2026-02-26 12:17:47] Fatal Error: Declaration of app\Controllers\UserAjax::sendJsonError($message) must be compatible with app\Controller::sendJsonError($message, $code = 400, $data = []) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/UserAjax.php on line 45
+

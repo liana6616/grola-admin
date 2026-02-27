@@ -3,14 +3,8 @@
 <main>
 
   <section class="contacts">
-    <ul class="breadcrumps__wrapper">
-      <li class="breadcrumps">
-          <a href="index.php">Главная</a>
-      </li>
-        <li class="breadcrumps">
-            <span><?= $this->page->name ?></span>
-        </li>
-    </ul>
+    <?= $this->include('components/breadCrumbs'); ?>
+
     <h1 class="contacts__big-title">Контакты</h1>
     <div class="contacts__block">
       <ul class="contacts__address-list">
@@ -87,14 +81,14 @@
         <div class="form__checkbox-group form__checkbox-group-login">
             <input type="checkbox" id="agreement" name="agreement" required>
             <label for="agreement">
-                <p class="form__checkbox-group-text">Я принимаю условия  <a href="/policy.php">Публичной оферты</a></p> 
+                <p class="form__checkbox-group-text">Я принимаю условия  <a href="/public-offer">Публичной оферты</a></p> 
             </label>
         </div>
 
         <div class="form__checkbox-group form__checkbox-group-login">
             <input type="checkbox" id="agreement-polity" name="agreement-polity" required>
             <label for="agreement-polity">
-                <p class="form__checkbox-group-text">Ознакомлен с  <a href="/policy.php">Политикой в отношении обработки персональных данных</a> и даю Согласие на их обработку и распространение</p>
+                <p class="form__checkbox-group-text">Ознакомлен с  <a href="/policy">Политикой в отношении обработки персональных данных</a> и даю Согласие на их обработку и распространение</p>
             </label>
         </div>
 

@@ -2,23 +2,9 @@
 
 <main>
     <div class="card">
-      <ul class="breadcrumps__wrapper">
-        <li class="breadcrumps">
-            <a href="index.php">Главная</a>
-        </li>
-        <li class="breadcrumps">
-            <a href="">Каталог</a>
-        </li>
-        <li class="breadcrumps">
-            <a href="">Для склада</a>
-        </li>
-        <li class="breadcrumps">
-            <a href="">Поддоны и подставки для бочек металлические</a>
-        </li>
-        <li class="breadcrumps">
-            <a href="">Контейнер КГ-04</a>
-        </li>
-      </ul>
+        <?= $this->include('components/breadCrumbs'); ?>
+
+      
 
       <div class="card__name-wrapper">
         <div class="swiper-wrapper-card-btn">

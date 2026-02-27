@@ -13,7 +13,7 @@
     <? $i = 1; 
 	foreach($this->breadCrumbs AS $bc) : ?>
 
-		<? if($bc['url'] != '/'.URI && !empty($bc['url'])): ?>
+		<? if(($bc['url'] != '/'.URI || !empty($bc['url_show'])) && !empty($bc['url'])): ?>
 			<li class="breadcrumps">
 				<a href="<?= $bc['url'] ?>" itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
 					<span itemprop="item">

@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
     linkItems.forEach(item => item.classList.remove('active'));
 
     // Если на нужной странице - добавляем active
-    if (currentPath === '/about.php' || currentPath === '/contacts.php') {
+    if (currentPath === '/about' || currentPath === '/contacts') {
         const activeItem = document.querySelector(`.header__item-link .header__link[href="${currentPath}"]`);
         if (activeItem && activeItem.parentElement) {
         activeItem.parentElement.classList.add('active');
@@ -684,12 +684,35 @@ $(function() {
             
             tooltips.eq(0).text(ui.values[0] + ' ₽').css('left', leftPos + '%');
             tooltips.eq(1).text(ui.values[1] + ' ₽').css('right', rightPos + '%');
+
+            var form = $('#filter-form');
+            $('input[name=price_min]', form).val(ui.values[0]);
+            $('input[name=price_max]', form).val(ui.values[1]);
         },
         stop: function(event, ui) {
-            window.location.href = window.location.pathname + '?price_min=' + ui.values[0] + '&price_max=' + ui.values[1];
+            filterForm();
+            //window.location.href = window.location.pathname + '?price_min=' + ui.values[0] + '&price_max=' + ui.values[1];
         }
     });
+
+    function filterForm() {
+        var data = $('#filter-form').serialize();
+        window.location.href = window.location.pathname + '?' + data;
+    }
     
+    $('body').on('click', '.js-filter', function(event){
+      event.preventDefault();
+
+      var sort = $(this).attr('data-sort');
+      var order = $(this).attr('data-order');
+    
+      var form = $('#filter-form');
+      $('input[name=sort]', form).val(sort);
+      $('input[name=order]', form).val(order);
+
+      filterForm();
+    });
+
     // Ваша функция addTouchSupport остается без изменений
     function addTouchSupport() {
         var sliderElement = $(".catalog__filter-weight");

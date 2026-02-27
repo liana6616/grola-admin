@@ -19210,3 +19210,449 @@ Stack trace:
 
 )
 
+[26-Feb-2026 12:13:22 Europe/Moscow] PHP Fatal error:  Declaration of app\Controllers\UserAjax::sendJsonError($message, $code = 400) must be compatible with app\Controller::sendJsonError($message, $code = 400, $data = []) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/UserAjax.php on line 45
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(66): require_once()
+#1 [internal function]: {closure:/home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php:62}('app\\Controllers...')
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Router.php(48): class_exists('app\\Controllers...')
+#3 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(318): app\Router->run()
+#4 {main}
+[26-Feb-2026 12:17:47 Europe/Moscow] PHP Fatal error:  Declaration of app\Controllers\UserAjax::sendJsonError($message) must be compatible with app\Controller::sendJsonError($message, $code = 400, $data = []) in /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/UserAjax.php on line 45
+Stack trace:
+#0 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(66): require_once()
+#1 [internal function]: {closure:/home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php:62}('app\\Controllers...')
+#2 /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Router.php(48): class_exists('app\\Controllers...')
+#3 /home/a0644240/domains/grola-admin.potok4.ru/public_html/index.php(318): app\Router->run()
+#4 {main}
+[26-Feb-2026 12:19:14 Europe/Moscow] === UserAjax handle called ===
+[26-Feb-2026 12:19:14 Europe/Moscow] Request Method: POST
+[26-Feb-2026 12:19:14 Europe/Moscow] POST data: Array
+(
+    [type] => 1
+    [name] => Лиана Вербовская
+    [phone] => +7 999 999 99 99
+    [mail] => verbovskayaliana@gmail.com
+    [question] => 
+    [agreement] => on
+    [agreement-polity] => on
+    [action] => formsAdd
+    [url] => /
+)
+
+[26-Feb-2026 12:19:14 Europe/Moscow] Action: formsAdd
+[26-Feb-2026 12:19:14 Europe/Moscow] formsAdd started
+[26-Feb-2026 12:19:14 Europe/Moscow] Form data - Name: Лиана Вербовская, Phone: +7 999 999 99 99, Email: verbovskayaliana@gmail.com, Text: 
+[26-Feb-2026 12:19:14 Europe/Moscow] Settings loaded, to: 
+[26-Feb-2026 12:19:14 Europe/Moscow] Attempting to send mail to: 
+[26-Feb-2026 12:19:14 Europe/Moscow] Mail send result: false
+[26-Feb-2026 12:19:14 Europe/Moscow] Mail error: Array
+(
+    [type] => 2
+    [message] => mail(): Sendmail exited with non-zero exit code 1
+    [file] => /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/UserAjax.php
+    [line] => 163
+)
+
+[26-Feb-2026 12:21:26 Europe/Moscow] === UserAjax handle called ===
+[26-Feb-2026 12:21:26 Europe/Moscow] Request Method: POST
+[26-Feb-2026 12:21:26 Europe/Moscow] POST data: Array
+(
+    [type] => 1
+    [name] => Лиана Вербовская
+    [phone] => +7 999 999 99 99
+    [mail] => verbovskayaliana@gmail.com
+    [question] => 
+    [agreement] => on
+    [agreement-polity] => on
+    [action] => formsAdd
+    [url] => /
+)
+
+[26-Feb-2026 12:21:26 Europe/Moscow] Action: formsAdd
+[26-Feb-2026 12:21:26 Europe/Moscow] formsAdd started
+[26-Feb-2026 12:21:26 Europe/Moscow] Form data - Name: Лиана Вербовская, Phone: +7 999 999 99 99, Email: verbovskayaliana@gmail.com, Text: 
+[26-Feb-2026 12:21:26 Europe/Moscow] Settings loaded, to: 
+[26-Feb-2026 12:21:26 Europe/Moscow] Attempting to send mail to: 
+[26-Feb-2026 12:21:26 Europe/Moscow] Mail send result: false
+[26-Feb-2026 12:21:26 Europe/Moscow] Mail error: Array
+(
+    [type] => 2
+    [message] => mail(): Sendmail exited with non-zero exit code 1
+    [file] => /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/UserAjax.php
+    [line] => 163
+)
+
+[26-Feb-2026 12:21:43 Europe/Moscow] === UserAjax handle called ===
+[26-Feb-2026 12:21:43 Europe/Moscow] Request Method: POST
+[26-Feb-2026 12:21:43 Europe/Moscow] POST data: Array
+(
+    [type] => 1
+    [name] => Лиана Вербовская
+    [phone] => +7 999 999 99 99
+    [mail] => verbovskayaliana@gmail.com
+    [question] => 
+    [agreement] => on
+    [agreement-polity] => on
+    [action] => formsAdd
+    [url] => /
+)
+
+[26-Feb-2026 12:21:43 Europe/Moscow] Action: formsAdd
+[26-Feb-2026 12:21:43 Europe/Moscow] formsAdd started
+[26-Feb-2026 12:21:43 Europe/Moscow] Form data - Name: Лиана Вербовская, Phone: +7 999 999 99 99, Email: verbovskayaliana@gmail.com, Text: 
+[26-Feb-2026 12:21:43 Europe/Moscow] Settings loaded, to: 
+[26-Feb-2026 12:21:43 Europe/Moscow] Attempting to send mail to: 
+[26-Feb-2026 12:21:43 Europe/Moscow] Mail send result: false
+[26-Feb-2026 12:21:43 Europe/Moscow] Mail error: Array
+(
+    [type] => 2
+    [message] => mail(): Sendmail exited with non-zero exit code 1
+    [file] => /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/UserAjax.php
+    [line] => 163
+)
+
+[26-Feb-2026 12:23:05 Europe/Moscow] === UserAjax handle called ===
+[26-Feb-2026 12:23:05 Europe/Moscow] Request Method: POST
+[26-Feb-2026 12:23:05 Europe/Moscow] POST data: Array
+(
+    [type] => 1
+    [name] => Лиана Вербовская
+    [phone] => +7 999 999 99 99
+    [mail] => verbovskayaliana@gmail.com
+    [question] => 
+    [agreement] => on
+    [agreement-polity] => on
+    [action] => test
+    [url] => /
+)
+
+[26-Feb-2026 12:23:05 Europe/Moscow] Action: test
+[26-Feb-2026 12:23:05 Europe/Moscow] test method called
+[26-Feb-2026 12:24:22 Europe/Moscow] === UserAjax handle called ===
+[26-Feb-2026 12:24:22 Europe/Moscow] Request Method: POST
+[26-Feb-2026 12:24:22 Europe/Moscow] POST data: Array
+(
+    [type] => 1
+    [name] => Лиана Вербовская
+    [phone] => +7 999 999 99 99
+    [mail] => verbovskayaliana@gmail.com
+    [question] => 
+    [agreement] => on
+    [agreement-polity] => on
+    [action] => test
+    [url] => /
+)
+
+[26-Feb-2026 12:24:22 Europe/Moscow] Action: test
+[26-Feb-2026 12:24:22 Europe/Moscow] test method called
+[26-Feb-2026 12:24:40 Europe/Moscow] === UserAjax handle called ===
+[26-Feb-2026 12:24:40 Europe/Moscow] Request Method: POST
+[26-Feb-2026 12:24:40 Europe/Moscow] POST data: Array
+(
+    [type] => 1
+    [name] => Лиана Вербовская
+    [phone] => +7 999 999 99 99
+    [mail] => verbovskayaliana@gmail.com
+    [question] => 
+    [agreement] => on
+    [agreement-polity] => on
+    [action] => test
+    [url] => /
+)
+
+[26-Feb-2026 12:24:40 Europe/Moscow] Action: test
+[26-Feb-2026 12:24:40 Europe/Moscow] test method called
+[26-Feb-2026 12:25:52 Europe/Moscow] === UserAjax handle called ===
+[26-Feb-2026 12:25:52 Europe/Moscow] Request Method: POST
+[26-Feb-2026 12:25:52 Europe/Moscow] POST data: Array
+(
+    [type] => 1
+    [name] => Лиана Вербовская
+    [phone] => +7 999 999 99 99
+    [mail] => verbovskayaliana@gmail.com
+    [question] => 
+    [agreement] => on
+    [agreement-polity] => on
+    [action] => test
+    [url] => /
+)
+
+[26-Feb-2026 12:25:52 Europe/Moscow] Action: test
+[26-Feb-2026 12:25:52 Europe/Moscow] test method called
+[26-Feb-2026 12:50:59 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 12:58:08 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 12:58:08 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 12:58:11 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 12:58:11 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 12:58:16 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 12:58:16 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 12:58:33 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 12:58:33 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:00:00 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:00:00 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:00:10 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:00:10 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:00:33 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:00:33 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:01:08 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 13:01:08 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 13:01:08 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 13:01:12 Europe/Moscow] uploadGallery called: inputName=gallery, id=1
+[26-Feb-2026 13:01:12 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 13:01:12 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 13:01:33 Europe/Moscow] uploadGallery called: inputName=gallery, id=9
+[26-Feb-2026 13:01:33 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 13:01:33 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 13:01:36 Europe/Moscow] uploadGallery called: inputName=gallery, id=9
+[26-Feb-2026 13:01:36 Europe/Moscow] FILES array exists: yes
+[26-Feb-2026 13:01:36 Europe/Moscow] FILES content: Array
+(
+    [name] => Array
+        (
+            [0] => 
+        )
+
+    [full_path] => Array
+        (
+            [0] => 
+        )
+
+    [type] => Array
+        (
+            [0] => 
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => 
+        )
+
+    [error] => Array
+        (
+            [0] => 4
+        )
+
+    [size] => Array
+        (
+            [0] => 0
+        )
+
+)
+
+[26-Feb-2026 13:01:50 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:01:50 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:02:00 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:02:00 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:02:02 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:02:10 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:02:10 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:03:34 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:03:34 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:04:44 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:04:44 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:05:08 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:05:08 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:05:14 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:05:14 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:06:35 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:06:35 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:06:50 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:06:58 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:07:11 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:07:25 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:07:38 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:07:46 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:11:08 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:11:14 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:11:14 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:11:23 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:11:23 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:23:45 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:23:45 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:28:20 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:28:20 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:28:56 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:28:56 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:29:04 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:29:04 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:29:06 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:29:06 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:29:12 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:29:12 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:30:05 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:30:05 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:30:07 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:30:07 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:31:13 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:31:13 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:33:27 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:33:27 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:33:38 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:33:49 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:34:06 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:34:06 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:34:06 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:34:06 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:34:06 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:34:06 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:34:08 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:34:08 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:37:16 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:37:16 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:39:00 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:39:00 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:39:59 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:39:59 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:40:01 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:40:01 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:40:03 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:40:03 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:41:51 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:41:51 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:24 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:24 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:30 Europe/Moscow] Ошибка в PageController::about: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:30 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:32 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:32 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:33 Europe/Moscow] ������ � CatalogController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:34 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:34 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:42:38 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:38 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:47 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:47 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:48 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:42:48 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:43:07 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:43:07 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:43:32 Europe/Moscow] Ошибка в PageController::contacts: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:43:32 Europe/Moscow] Ошибка в PageController->handle: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:44:43 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:44:43 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:45:31 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:45:31 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:46:14 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:46:14 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:47:18 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:47:18 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:53:05 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:53:05 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:56:51 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:56:51 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 13:59:57 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 13:59:57 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 14:05:02 Europe/Moscow] Ошибка в PageController::main: Included file /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/layouts/modal.php not found
+[26-Feb-2026 14:05:02 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 14:05:26 Europe/Moscow] Ошибка в PageController::main: Included file /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/layouts/modal.php not found
+[26-Feb-2026 14:05:26 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 14:06:56 Europe/Moscow] Ошибка в PageController::main: Included file /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views//modal.php not found
+[26-Feb-2026 14:06:56 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 14:07:01 Europe/Moscow] Ошибка в PageController::main: Included file /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views//modal.php not found
+[26-Feb-2026 14:07:01 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 14:07:16 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 14:07:16 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 14:07:49 Europe/Moscow] Ошибка в PageController::main: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[26-Feb-2026 14:07:49 Europe/Moscow] Ошибка в PageController->handle: Template /home/a0644240/domains/grola-admin.potok4.ru/public_html/public/views/errors/main_unavailable.php not found
+[26-Feb-2026 16:57:31 Europe/Moscow] Class file not found: /home/a0644240/domains/grola-admin.potok4.ru/public_html/app/Controllers/Error.php
+
+

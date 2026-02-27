@@ -1,21 +1,21 @@
 <?php
-// ========== ФУНКЦИЯ ДЛЯ КРОШЕК ТОВАРА ==========
+
 function getProductBreadcrumbs($product, $category = null, $subcategory = null) {
     $breadcrumbs = [];
     
-    // 1. Главная
+    // 1. 
     $breadcrumbs[] = [
-        'name' => 'Главная',
+        'name' => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅ',
         'url' => '/'
     ];
     
-    // 2. Каталог (всегда)
+    // 2.
     $breadcrumbs[] = [
-        'name' => 'Каталог',
+        'name' => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅ',
         'url' => '/catalog.php'
     ];
     
-    // 3. Если есть категория - добавляем её
+    // 3. 
     if (!empty($category)) {
         $breadcrumbs[] = [
             'name' => $category['name'],
@@ -23,7 +23,7 @@ function getProductBreadcrumbs($product, $category = null, $subcategory = null) 
         ];
     }
     
-    // 4. Если есть подкатегория - добавляем её
+    // 4. 
     if (!empty($subcategory)) {
         $breadcrumbs[] = [
             'name' => $subcategory['name'],
@@ -31,16 +31,16 @@ function getProductBreadcrumbs($product, $category = null, $subcategory = null) 
         ];
     }
     
-    // 5. Текущий товар (последний - без ссылки)
+    // 5. 
     $breadcrumbs[] = [
-        'name' => $product->name ?? 'Товар',
+        'name' => $product->name ?? 'пїЅпїЅпїЅпїЅпїЅ',
         'url' => null
     ];
     
     return $breadcrumbs;
 }
 
-// ========== ФУНКЦИЯ ДЛЯ ВЫВОДА КРОШЕК ==========
+
 function showBreadcrumbs($breadcrumbs) {
     if (empty($breadcrumbs)) return '';
     ?>
@@ -69,12 +69,11 @@ function showBreadcrumbs($breadcrumbs) {
     <?php
 }
 
-// ========== ПРОСТОЙ ВАРИАНТ (ЕСЛИ НЕТ КАТЕГОРИЙ) ==========
 function showSimpleBreadcrumbs($productName) {
     ?>
     <ul class="breadcrumps__wrapper">
-        <li class="breadcrumps"><a href="/">Главная</a></li>
-        <li class="breadcrumps"><a href="/catalog.php">Каталог</a></li>
+        <li class="breadcrumps"><a href="/">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
+        <li class="breadcrumps"><a href="/catalog.php">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
         <li class="breadcrumps"><span><?= htmlspecialchars($productName) ?></span></li>
     </ul>
     <?php
