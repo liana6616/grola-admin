@@ -20,7 +20,7 @@
         <div class="footer__column-contacts">
           <a class="footer__phone filter" href="tel:<?= preg_replace('/[^0-9+]/', '', $this->settings->phone) ?>"><?= $this->settings->phone ?></a>
           <a class="footer__mail filter" href="<?= $this->settings->email ?>"><?= $this->settings->email ?></a>
-          <address class="footer__address filter"><?= $this->settings->city ?> <?= $this->settings->address ?></address>
+          <address class="footer__address"><?= $this->settings->city ?> <?= $this->settings->address ?></address>
         </div>
 
         <div class="footer__column-social">

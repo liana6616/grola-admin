@@ -2248,19 +2248,8 @@ body:has(.header__button-menu.active) {
   font-weight: 500;
   font-size: 16px;
   color: #2b2e3a;
+  cursor: pointer;
 }
-
-/* .catalog__button-filter .catalog__filter-sort-up {
-  display: none;
-}
-
-.catalog__button-filter .catalog__filter-sort-down {
-  display: block;
-} */
-
-/* .catalog__button-filter.active svg {
-  display: block;
-} */
 
 .filter:hover,
 .filter:focus-visible,
