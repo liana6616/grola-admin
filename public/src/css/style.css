@@ -87,7 +87,7 @@ main {
   font-weight: 700;
   font-size: 22px;
   line-height: 118%;
-    max-width: 50%;
+  max-width: 55%;
 }
 
 .header {
@@ -347,7 +347,7 @@ body:has(.header__button-menu.active) {
 .hero__big-title--alt::after {
   position: absolute;
   content: "";
-  top: -14px;
+  top: -20px;
   left: -15px;
   width: 21px;
   height: 19px;
@@ -2704,8 +2704,13 @@ body:has(.header__button-menu.active) {
   height: 565px;
 }
 
+.card__mini-swiper-wrapper {
+  flex-direction: column;
+  gap: 10px;
+}
+
 .swiper.mySwiperCard {
-  max-width: 565px;
+  width: 39.4%;
   max-height: 565px;
   background: #ffffff;
 }
@@ -2717,8 +2722,10 @@ body:has(.header__button-menu.active) {
 }
 
 .card__name-wrapper {
+  width: 100%;
   position: relative;
   display: flex;
+  gap: 15px;
   justify-content: space-between;
   margin-top: 25px;
 }

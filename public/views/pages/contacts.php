@@ -23,7 +23,7 @@
         <li class="contacts__address-item">
           <span class="contacts__address-name">Время работы офиса:</span>
           <p class="contacts__time">
-            <?= $this->settings->time_job ?>
+            <?= nl2br($this->settings->time_job) ?>
           </p>
         </li>
       </ul>

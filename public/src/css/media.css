@@ -1,7 +1,7 @@
 @media (max-width: 765px) {
   .title {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 30px;
     padding: 0;
     line-height: 100%;
   }
@@ -202,6 +202,10 @@
   .footer__column-contacts.footer__column-contacts-menu .footer__address {
     color: #2b2e3a;
   }
+
+  .header__wrapper.header__wrapper-alt {
+    gap: 20px;
+  }
 }
 
 /* menu */
@@ -209,6 +213,10 @@
   .header__item.header__item-mob {
     display: flex;
     align-items: center;
+  }
+
+  .footer__address {
+    font-size: 15px;
   }
 }
 
@@ -495,7 +503,7 @@
 
   .catalog-card__name,
   .catalog-card__parameters {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .catalog-card__title.title-small {
@@ -512,7 +520,7 @@
   }
 
   .catalog-card__list {
-    min-height: auto;
+    min-height: fit-content;
     max-height: fit-content;
     justify-content: space-between;
   }
@@ -1053,11 +1061,11 @@
 
 @media (max-width: 768px) {
   .model {
-    margin: 8px 20px 50px;
+    margin: 28px 20px 50px;
   }
 
   .model h1 {
-    font-size: 32px;
+    font-size: 30px;
     line-height: 100%;
     margin-bottom: 27px;
   }
@@ -1181,19 +1189,6 @@
     margin-top: 30px;
   }
 
-  /* .hero-about::after {
-    height: 350px;
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 350px;
-    background: url(/public/images/about/about-mob.jpg) no-repeat center;
-    background-size: cover;
-    z-index: -1;
-  } */
-
   .hero-about__img {
     display: none;
   }
@@ -1248,6 +1243,10 @@
       display: block;
     }
   }
+
+  .hero-about {
+    overflow: hidden;
+  }
 }
 
 /* about */
@@ -1281,7 +1280,7 @@
   }
 
   .about__title {
-    font-size: 32px;
+    font-size: 30px;
     line-height: 141%;
     margin-bottom: 18px;
   }
@@ -1422,9 +1421,17 @@
 }
 
 @media (max-width: 768px) {  
+  .contacts .breadcrumps__wrapper {
+    margin: 0 10px 10px;
+  }
+
+  .contacts__address-text {
+    font-size: 15px;
+  }
+
   .contacts__big-title {
     font-size: 32px;
-    margin-bottom: 20px;
+    margin: 0 10px 20px;
   }
 
   .contacts__block {
@@ -1494,6 +1501,11 @@
     bottom: -30px;
     max-width: -webkit-fill-available;
     max-height: 210px;
+    object-position: 0 60%;
+  }
+
+  .form__group.form__group-mod {
+    margin-bottom: 17px;
   }
 }
 
@@ -1939,12 +1951,17 @@
     position: absolute;
     content: "";
     top: 50%;
-    right: 19px;
+    right: 15px;
     width: 15px;
     height: 15px;
-    background:url(/public/images/icons/arrow-bottom.svg) no-repeat right bottom;
+    background:url(/public/src/images/icons/arrow-bottom.svg) no-repeat right bottom;
     background-size: 15px 15px;
     transform: translate(0, -50%);
+    transition: transform 0.3s ease;
+  }
+
+  .catalog__dropdown-checkbox:checked + .catalog__dropdown-toggle::after {
+      transform: translateY(-50%) rotate(180deg);
   }
 
   .catalog__dropdown-toggle::before {
@@ -1983,7 +2000,7 @@
 
   .catalog__button-category {
     border: 0;
-    font-size: 14px;
+    font-size: 13px;
     text-align: left;
     padding: 5px 15px;
     margin-bottom: 12px;
@@ -1991,7 +2008,7 @@
 
   .catalog__dropdown-text {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     color: #2b2e3a;
   }
 
@@ -2054,23 +2071,26 @@
     width: -webkit-fill-available;
   }
 
-  .swiper.mySwiperCard {
-    margin: 0 5px;
-    max-width: 450px;
-    min-height: 565px;
-  }
-
   .card__button-submit {
     margin-top: auto;
   }
 
   .swiper.mySwiperCard {
+    margin: 0 5px;
+    max-width: 450px;
+    min-height: 565px;
     max-height: 490px;
     min-height: 490px;
+    width: 100%;
   }
 
   .swiper-button-wrapper-card {
     display: none;
+  }
+
+  .swiper-button-wrapper-card-mob .swiper-button-next-card.swiper-button-next-product.swiper-button-next {
+    display: block!important;
+    top: 50%;
   }
 }
 
@@ -2095,6 +2115,10 @@
   .tabs {
     padding: 30px 20px;
     margin: 40px 10px;
+  }
+
+  .card-swiper.swiper-wrapper {
+    padding: 30px;
   }
 }
 
@@ -2188,8 +2212,7 @@
     margin-right: 10px;
   }
 
-  .swiper-button-wrapper-card-mob .swiper-button-next-card.swiper-button-next-product.swiper-button-next {
-    display: block!important;
-    top: 50%;
+  .card-swiper.swiper-wrapper {
+    padding: 0;
   }
 }

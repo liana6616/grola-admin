@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
+      function checkAndHidePagination(swiper, paginationSelector, minSlidesForPagination) {
+      setTimeout(() => {
+          if (swiper && swiper.slides) {
+              const slidesCount = swiper.slides.length;
+              const paginationElement = document.querySelector(paginationSelector);
+              
+              if (paginationElement) {
+                  if (slidesCount <= minSlidesForPagination) {
+                      paginationElement.style.display = 'none';
+                  } else {
+                      paginationElement.style.display = '';
+                  }
+              }
+          }
+      }, 100);
+    }
   // Функция для создания пагинации с 4 точками
   function createFourBulletsPagination(swiper, current, total) {
       let bullets = '';
@@ -43,6 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
               slidesPerView: 4,
               allowTouchMove: true,
               spaceBetween: 0,
+          }
+      },
+      on: {
+          init: function() {
+              // Для catalog card показываем пагинацию только если слайдов > 4
+              checkAndHidePagination(this, '.swiper-pagination-catalog-card', 2);
+          },
+          resize: function() {
+              checkAndHidePagination(this, '.swiper-pagination-catalog-card', 2);
           }
       }
   });
@@ -236,7 +261,16 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         768: {
             allowTouchMove: false,
-        }
+        },
+      on: {
+          init: function() {
+              // Для catalog показываем пагинацию только если слайдов > 4
+              checkAndHidePagination(this, '.swiper-pagination-catalog', 2);
+          },
+          resize: function() {
+              checkAndHidePagination(this, '.swiper-pagination-catalog', 2);
+          }
+      }
     }
   });
 });
@@ -689,9 +723,11 @@ $(function() {
             $('input[name=price_min]', form).val(ui.values[0]);
             $('input[name=price_max]', form).val(ui.values[1]);
         },
+        // это чтобы применялись фильтры автоматически толкьона пк
         stop: function(event, ui) {
-            filterForm();
-            //window.location.href = window.location.pathname + '?price_min=' + ui.values[0] + '&price_max=' + ui.values[1];
+            if (window.innerWidth > 980) {
+                filterForm();
+            }   
         }
     });
 
@@ -808,15 +844,15 @@ document.addEventListener('DOMContentLoaded', function() {
     listBtn.onclick = () => switchView(true);
 });
 
-const text = document.querySelector('.catalog__dropdown-text');
-const buttons = document.querySelectorAll('.catalog__button-category');
+// const text = document.querySelector('.catalog__dropdown-text');
+// const buttons = document.querySelectorAll('.catalog__button-category');
 
-buttons.forEach(btn => btn.onclick = () => {
-  buttons.forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  if(text) text.textContent = btn.textContent;
-  if(window.innerWidth <= 768 && categoryToggle) categoryToggle.checked = false;
-});
+// buttons.forEach(btn => btn.onclick = () => {
+//   buttons.forEach(b => b.classList.remove('active'));
+//   btn.classList.add('active');
+//   if(text) text.textContent = btn.textContent;
+//   if(window.innerWidth <= 768 && categoryToggle) categoryToggle.checked = false;
+// });
 
 
 // tab-card
@@ -867,28 +903,61 @@ $(function() {
     var originalMin = $(".catalog__filter-weight").data('min');
     var originalMax = $(".catalog__filter-weight").data('max');
     
-    $('.catalog__button-filter-add').on('click', function() {
+    // Отключаем автоотправку формы при любых изменениях
+    $('.catalog__button-filter--sorting, .catalog__button-filter--sum').off('click').on('click', function(e) {
+        e.preventDefault();
+        
+        // Просто меняем классы активности визуально
+        if ($(this).hasClass('active')) {
+            // Если это кнопка сортировки
+            $(this).toggleClass('active-order');
+        } else {
+            // Для кнопок сортировки
+            $('.catalog__button-filter--sorting').removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+    
+    // Кнопка "Применить фильтры"
+    $('.catalog__button-filter-add.filter').on('click', function() {
         var sliderValues = $(".catalog__filter-weight").slider("values");
         var minPrice = sliderValues[0];
         var maxPrice = sliderValues[1];
         
+        // Получаем выбранную сортировку
+        var activeSort = $('.catalog__button-filter--sorting.active');
+        var sort = activeSort.data('sort');
+        var order = activeSort.data('order');
+        
+        // Если есть кнопка с active-order (для цены)
+        if ($('.catalog__button-filter--sum.active-order').length) {
+            sort = 'price';
+            order = $('.catalog__button-filter--sum.active-order').data('order');
+        }
+        
         var url = new URL(window.location.href);
         
+        // Устанавливаем параметры
         url.searchParams.set('price_min', minPrice);
         url.searchParams.set('price_max', maxPrice);
         
-        var sort = new URLSearchParams(window.location.search).get('sort');
-        var order = new URLSearchParams(window.location.search).get('order');
-        var subcat = new URLSearchParams(window.location.search).get('subcat');
+        if (sort) {
+            url.searchParams.set('sort', sort);
+            url.searchParams.set('order', order);
+        }
         
-        if (sort) url.searchParams.set('sort', sort);
-        if (order) url.searchParams.set('order', order);
-        if (subcat) url.searchParams.set('subcat', subcat);
+        // Получаем subcat из скрытой формы
+        var subcat = $('#filter-form input[name="subcat"]').val();
+        if (subcat && subcat !== '0') {
+            url.searchParams.set('subcat', subcat);
+        }
         
+        // Перезагружаем страницу с новыми параметрами
         window.location.href = url.toString();
     });
     
-    $('.catalog__button-filter-delete').on('click', function() {
+    // Кнопка "Сбросить все"
+    $('.catalog__button-filter-delete.filter').on('click', function() {
         var url = new URL(window.location.href);
         
         url.searchParams.delete('price_min');
@@ -900,11 +969,7 @@ $(function() {
         window.location.href = url.toString();
     });
     
-    $('.catalog__button-filter-add, .catalog__button-filter-delete').on('click', function() {
-        $('.catalog__button-filter-names').removeClass('active');
-        $('.catalog__wrapper-filter').removeClass('active');
-    });
-    
+    // Кнопка сброса цены (если есть)
     $('.catalog__button-filter-delete-price').on('click', function() {
         var url = new URL(window.location.href);
         
@@ -918,5 +983,11 @@ $(function() {
         tips.eq(1).text(originalMax + '₽').css('right', '0%');
         
         window.location.href = url.toString();
+    });
+    
+    // Закрытие фильтров (если нужно)
+    $('.catalog__button-filter-add, .catalog__button-filter-delete').on('click', function() {
+        $('.catalog__button-filter-names').removeClass('active');
+        $('.catalog__wrapper-filter').removeClass('active');
     });
 });

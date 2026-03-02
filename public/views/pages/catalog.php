@@ -40,23 +40,46 @@
         </ul>
     <? endif; ?>
 
-
-    <? if(!empty($this->childs) && count($this->childs) > 1): ?>
-        <div class="catalog__wrapper-category">
-            <a href="?subcat=0" class="catalog__button-category filter <?= ($this->selectedSubcat == 0) ? 'active' : '' ?>">Все категории</a>
-
-            <? 
-            $first = true;
-            foreach($this->childs AS $item): 
-                if($first) {
-                    $first = false;
-                    continue; // пропускаем родительскую категорию
-                }
-            ?>
-                <a href="?subcat=<?= $item->id ?>" class="catalog__button-category filter <?= ($this->selectedSubcat == $item->id) ? 'active' : '' ?>">
-                    <?= $item->name ?>
+    <!-- на моб подкатегории -->
+<? if (!empty($this->childs) && count($this->childs) > 1 && empty($this->is_mainCategories)): ?>
+        <div class="catalog__category-container">
+            <input type="checkbox" id="categoryToggle" class="catalog__dropdown-checkbox">
+            <label for="categoryToggle" class="catalog__dropdown-toggle">
+                <span class="catalog__dropdown-text">
+                    <?php 
+                    // Показываем название выбранной категории или "Все категории"
+                    if ($this->selectedSubcat == 0 || empty($this->selectedSubcat)): 
+                        echo 'Все категории';
+                    else:
+                        // Ищем выбранную категорию в массиве childs
+                        foreach ($this->childs as $item):
+                            if ($item->id == $this->selectedSubcat):
+                                echo htmlspecialchars($item->name);
+                                break;
+                            endif;
+                        endforeach;
+                    endif; 
+                    ?>
+                </span>
+            </label>
+            <div class="catalog__wrapper-category">
+                <a href="?subcat=0" class="catalog__button-category filter <?= ($this->selectedSubcat == 0) ? 'active' : '' ?>">
+                    Все категории
                 </a>
-            <? endforeach; ?>
+
+                <?php 
+                $first = true;
+                foreach ($this->childs as $item): 
+                    if ($first) {
+                        $first = false;
+                        continue; // пропускаем родительскую категорию
+                    }
+                ?>
+                    <a href="?subcat=<?= (int)$item->id ?>" class="catalog__button-category filter <?= ($this->selectedSubcat == $item->id) ? 'active' : '' ?>">
+                        <?= htmlspecialchars($item->name) ?>
+                    </a>
+                <?php endforeach; ?>
+            </div>
         </div>
     <? endif; ?>
 

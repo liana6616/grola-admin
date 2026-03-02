@@ -2,7 +2,9 @@
     <div class="footer__top">
       <div class="footer__left-wrapper">
         <div class="footer__wrapper-logo">
+          <a href="/index.php">
             <img src="/public/src/images/icons/logo-light.svg" width="160" height="51" alt="Иконка лого">
+          </a>
             <span class="footer__text footer__text-desktop">© grola.ru 2025</span>
         </div>
         <ul class="footer__list">
